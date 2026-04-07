@@ -86,5 +86,24 @@ const totalDue = computed(() =>
         </svg>
       </NuxtLink>
     </div>
+
+    <!-- Sentence practice entry -->
+    <NuxtLink
+      to="/sentences"
+      class="mt-4 flex items-center gap-4 rounded-2xl border bg-gray-50 border-gray-200 p-4 transition-all active:scale-[0.98]"
+    >
+      <div class="bg-white rounded-xl p-3 border border-gray-100 flex-shrink-0">
+        <svg class="w-6 h-6 text-swedish-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+        </svg>
+      </div>
+      <div class="flex-1 min-w-0">
+        <p class="font-semibold text-gray-900 text-sm">Satzübungen</p>
+        <p class="text-xs text-gray-500 mt-0.5">Sätze aktiv auf Schwedisch konstruieren</p>
+      </div>
+      <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </NuxtLink>
   </div>
 </template>
