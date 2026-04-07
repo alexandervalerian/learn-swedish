@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-swedish-blue: #006AA7;
+  --color-swedish-yellow: #FECC02;
+  --color-swedish-blue-dark: #005389;
+  --color-swedish-blue-light: #e8f4fd;
+}
+
+.card-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  position: relative;
+}
+
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card-back-face {
+  transform: rotateY(180deg);
+}
