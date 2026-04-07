@@ -1,0 +1,160 @@
+{
+  "level": "B2",
+  "topics": [
+    {
+      "id": "b2_gr_01",
+      "title": "S-Passiv",
+      "category": "Verben",
+      "explanation": "Das s-Passiv wird gebildet, indem man ein -s an die aktive Verbform anhängt (Präsens: -s, Präteritum: -s, Infinitiv: -s). Es eignet sich besonders für generische, habituelle oder dauerhafte Handlungen. Der Agens (Handelnde) kann mit 'av' angegeben werden, wird aber oft weggelassen.",
+      "rule": "Aktiv:  Man säljer boken.      → Man verkauft das Buch.\nPassiv: Boken säljs.             → Das Buch wird verkauft.\nPräsens: säljer → säljs\nPräteritum: sålde → såldes\nInfinitiv: sälja → säljas\nPerfekt: har sålts",
+      "examples": [
+        { "swedish": "Boken säljs i alla affärer.", "german": "Das Buch wird in allen Läden verkauft.", "highlight": "säljs" },
+        { "swedish": "Dörren öppnas klockan åtta.", "german": "Die Tür wird um acht Uhr geöffnet.", "highlight": "öppnas" },
+        { "swedish": "Svenska talas i Sverige och Finland.", "german": "Schwedisch wird in Schweden und Finnland gesprochen.", "highlight": "talas" },
+        { "swedish": "Brevet skickades igår.", "german": "Der Brief wurde gestern geschickt.", "highlight": "skickades" }
+      ],
+      "exercises": [
+        { "prompt": "Boken ___ (verkauft werden, Präsens von sälja → s-Passiv)", "translation": "Das Buch wird verkauft.", "answer": "säljs" },
+        { "prompt": "Svenska ___ av miljoner människor. (gesprochen werden, tala → s-Passiv)", "translation": "Schwedisch wird von Millionen Menschen gesprochen.", "answer": "talas" },
+        { "prompt": "Dörren ___ varje kväll. (geschlossen werden, stänga → Präs.)", "translation": "Die Tür wird jeden Abend geschlossen.", "answer": "stängs" },
+        { "prompt": "Brevet ___. (geschickt werden, skicka → Präteritum)", "translation": "Der Brief wurde geschickt.", "answer": "skickades" },
+        { "prompt": "Huset ___ för tio år sedan. (gebaut werden, bygga → Präteritum)", "translation": "Das Haus wurde vor zehn Jahren gebaut.", "answer": "byggdes" }
+      ]
+    },
+    {
+      "id": "b2_gr_02",
+      "title": "Bli-Passiv",
+      "category": "Verben",
+      "explanation": "Das bli-Passiv wird mit 'bli' + Partizip Perfekt gebildet und drückt konkrete, einmalige Ereignisse aus. Im Gegensatz zum s-Passiv beschreibt es einen Übergang oder eine Veränderung. Das Partizip kongruiert mit dem Subjekt (utrum/neutrum, Singular/Plural).",
+      "rule": "bli + Partizip Perfekt:\nen bok: Boken blev skriven av henne.\nett brev: Brevet blev skrivet av honom.\nPlural: Böckerna blev skrivna.\nPräsens: blir skriven/skrivet/skrivna\nPräteritum: blev skriven/skrivet/skrivna\nPerfekt: har blivit skriven/skrivet/skrivna",
+      "examples": [
+        { "swedish": "Fönstret blev krossat.", "german": "Das Fenster wurde eingeschlagen.", "highlight": "blev krossat" },
+        { "swedish": "Hon blev vald till ordförande.", "german": "Sie wurde zur Vorsitzenden gewählt.", "highlight": "blev vald" },
+        { "swedish": "Huset har blivit renoverat.", "german": "Das Haus ist renoviert worden.", "highlight": "blivit renoverat" },
+        { "swedish": "Boken blir läst av många.", "german": "Das Buch wird von vielen gelesen.", "highlight": "blir läst" }
+      ],
+      "exercises": [
+        { "prompt": "Fönstret ___ krossat. (wurde, Präteritum von bli)", "translation": "Das Fenster wurde eingeschlagen.", "answer": "blev" },
+        { "prompt": "Hon ___ vald. (wurde gewählt, Präteritum)", "translation": "Sie wurde gewählt.", "answer": "blev" },
+        { "prompt": "Huset ___ renoverat nästa år. (wird renoviert, Präsens von bli)", "translation": "Das Haus wird nächstes Jahr renoviert.", "answer": "blir" },
+        { "prompt": "Boken har ___ läst av tusentals personer. (Partizip von bli)", "translation": "Das Buch ist von Tausenden gelesen worden.", "answer": "blivit" }
+      ]
+    },
+    {
+      "id": "b2_gr_03",
+      "title": "Partizip Präsens",
+      "category": "Verben",
+      "explanation": "Das Partizip Präsens wird durch Anhängen von -ande (Gruppe 1, 2, 4) oder -ende (Gruppe 3) an den Verbstamm gebildet. Es kann als Adjektiv, Adverb oder Nomen verwendet werden. Als Adjektiv ist es unveränderlich (keine Genuskongruenz). Es entspricht dem deutschen '-end' (laufend, singend).",
+      "rule": "Gr. 1: tala   + ande  → talande   (sprechend)\nGr. 2: läsa   + ande  → läsande   (lesend)\nGr. 3: bo     + ende  → boende    (wohnend, auch Subst.)\nGr. 4: komma  + ande  → kommande  (kommend)\nUnveränderlich als Adjektiv: en talande papegoja / ett talande exempel",
+      "examples": [
+        { "swedish": "En talande papegoja sitter i buren.", "german": "Ein sprechender Papagei sitzt im Käfig.", "highlight": "talande" },
+        { "swedish": "Det kommande mötet är viktigt.", "german": "Das kommende Treffen ist wichtig.", "highlight": "kommande" },
+        { "swedish": "Han hittade en leende kvinna på bilden.", "german": "Er fand eine lächelnde Frau auf dem Bild.", "highlight": "leende" },
+        { "swedish": "Det är en utmanande uppgift.", "german": "Das ist eine herausfordernde Aufgabe.", "highlight": "utmanande" }
+      ],
+      "exercises": [
+        { "prompt": "tala → en ___ papegoja (sprechend, Partizip Präsens)", "translation": "ein sprechender Papagei", "answer": "talande" },
+        { "prompt": "komma → det ___ mötet (das kommende)", "translation": "das kommende Treffen", "answer": "kommande" },
+        { "prompt": "le → en ___ flicka (lächelnd)", "translation": "ein lächelndes Mädchen", "answer": "leende" },
+        { "prompt": "utmana → en ___ fråga (herausfordernd)", "translation": "eine herausfordernde Frage", "answer": "utmanande" }
+      ]
+    },
+    {
+      "id": "b2_gr_04",
+      "title": "Partizip Perfekt und Supinum",
+      "category": "Verben",
+      "explanation": "Im Schwedischen gibt es zwei Formen, die dem deutschen Partizip II entsprechen: das Supinum (nur als Hilfsverb beim Perfekt/Plusquamperfekt) und das Partizip Perfekt (als Adjektiv, im Passiv). Das Partizip Perfekt kongruiert mit dem Nomen, das Supinum ist unveränderlich.",
+      "rule": "Supinum (unveränderlich, nur nach har/hade):\n  tala → talat | läsa → läst | bo → bott | skriva → skrivit\n\nPartizip Perfekt (kongruiert wie Adjektiv):\n  skriven (en) / skrivet (ett) / skrivna (Plural)\n  talad / talat / talade\nVerwendung: Dörren är stängd. / Huset är stängt.",
+      "examples": [
+        { "swedish": "Jag har skrivit ett brev. (Supinum)", "german": "Ich habe einen Brief geschrieben.", "highlight": "skrivit" },
+        { "swedish": "Dörren är stängd. (Part. Perf.)", "german": "Die Tür ist geschlossen.", "highlight": "stängd" },
+        { "swedish": "Huset är stängt. (Part. Perf., ett-Wort)", "german": "Das Haus ist geschlossen.", "highlight": "stängt" },
+        { "swedish": "De stängda dörrarna. (Part. Perf., Plural)", "german": "Die geschlossenen Türen.", "highlight": "stängda" }
+      ],
+      "exercises": [
+        { "prompt": "Jag har ___ brevet. (skriva, Supinum)", "translation": "Ich habe den Brief geschrieben.", "answer": "skrivit" },
+        { "prompt": "Dörren är ___. (stänga, Part. Perf. en-Wort)", "translation": "Die Tür ist geschlossen.", "answer": "stängd" },
+        { "prompt": "Fönstret är ___. (stänga, Part. Perf. ett-Wort)", "translation": "Das Fenster ist geschlossen.", "answer": "stängt" },
+        { "prompt": "Vi har ___ boken. (läsa, Supinum)", "translation": "Wir haben das Buch gelesen.", "answer": "läst" },
+        { "prompt": "De ___ dörrarna. (stänga, Part. Perf. Plural)", "translation": "Die geschlossenen Türen.", "answer": "stängda" }
+      ]
+    },
+    {
+      "id": "b2_gr_05",
+      "title": "Partikelverben",
+      "category": "Verben",
+      "explanation": "Partikelverben (partikelverb) bestehen aus einem Verb und einer trennbaren Partikel (Präposition oder Adverb). Die Partikel verändert die Bedeutung des Verbs grundlegend. Im Schwedischen kann die Partikel bei trennbaren Verben getrennt werden, wenn ein Objekt folgt.",
+      "rule": "komma ihåg  → sich erinnern an\nta upp      → aufgreifen / hochnehmen\nge upp      → aufgeben\nstänga av   → ausschalten\nsätta på    → einschalten\nse ut       → aussehen\nhålla på (att) → dabei sein zu\nGekoppelt oder getrennt: Han stänger av lampan. / Han stänger lampan av.",
+      "examples": [
+        { "swedish": "Kom ihåg att ringa!", "german": "Vergiss nicht anzurufen! (Denk dran!)", "highlight": "Kom ihåg" },
+        { "swedish": "Hon gav upp hoppet.", "german": "Sie gab die Hoffnung auf.", "highlight": "gav upp" },
+        { "swedish": "Stäng av telefonen!", "german": "Schalte das Telefon aus!", "highlight": "Stäng av" },
+        { "swedish": "Han ser trött ut.", "german": "Er sieht müde aus.", "highlight": "ser ut" },
+        { "swedish": "De håller på att renovera huset.", "german": "Sie sind dabei, das Haus zu renovieren.", "highlight": "håller på" }
+      ],
+      "exercises": [
+        { "prompt": "Kom ___ att ta med paraplyet! (ihåg = denk dran)", "translation": "Vergiss nicht, den Regenschirm mitzunehmen!", "answer": "ihåg" },
+        { "prompt": "Hon ___ trött ___. (ser … ut = aussehen)", "translation": "Sie sieht müde aus.", "answer": "ser ut" },
+        { "prompt": "___ av datorn! (stänga = ausschalten, Imperativ)", "translation": "Schalte den Computer aus!", "answer": "stäng" },
+        { "prompt": "Han ___ aldrig ___. (ge … upp = aufgeben)", "translation": "Er gibt nie auf.", "answer": "ger upp" }
+      ]
+    },
+    {
+      "id": "b2_gr_06",
+      "title": "Plusquamperfekt",
+      "category": "Verben",
+      "explanation": "Das Plusquamperfekt (hadeperfekt) wird mit 'hade' + Supinum gebildet und bezeichnet eine Handlung, die vor einer anderen Handlung in der Vergangenheit stattfand. Es entspricht dem deutschen Plusquamperfekt (hatte gemacht, war gegangen). Es wird vor allem in erzählenden Texten verwendet.",
+      "rule": "hade + Supinum:\nJag hade ätit → ich hatte gegessen\nHon hade skrivit → sie hatte geschrieben\nDe hade kommit → sie waren gekommen\nKontext: Temporal- oder Kausalsatz mit Referenz auf frühere Vergangenheit",
+      "examples": [
+        { "swedish": "När jag kom hem, hade hon redan ätit.", "german": "Als ich nach Hause kam, hatte sie schon gegessen.", "highlight": "hade ätit" },
+        { "swedish": "Han berättade att han hade bott i Paris.", "german": "Er erzählte, dass er in Paris gelebt hatte.", "highlight": "hade bott" },
+        { "swedish": "Filmen hade redan börjat när vi kom.", "german": "Der Film hatte schon angefangen, als wir kamen.", "highlight": "hade börjat" },
+        { "swedish": "Jag hade aldrig sett något sådant.", "german": "Ich hatte so etwas noch nie gesehen.", "highlight": "hade sett" }
+      ],
+      "exercises": [
+        { "prompt": "När jag kom, ___ hon redan ___. (äta, Plusquamperf.)", "translation": "Als ich kam, hatte sie schon gegessen.", "answer": "hade ätit" },
+        { "prompt": "Han berättade att han ___ boken ___. (läsa, Plusquamperf.)", "translation": "Er erzählte, dass er das Buch gelesen hatte.", "answer": "hade läst" },
+        { "prompt": "Filmen ___ redan ___. (börja, Plusquamperf.)", "translation": "Der Film hatte schon begonnen.", "answer": "hade börjat" },
+        { "prompt": "Jag ___ aldrig ___ Stockholm förut. (besöka, Plusquamperf.)", "translation": "Ich hatte Stockholm noch nie besucht.", "answer": "hade besökt" }
+      ]
+    },
+    {
+      "id": "b2_gr_07",
+      "title": "Indirekte Rede",
+      "category": "Satzstruktur",
+      "explanation": "In der indirekten Rede ändert sich im Schwedischen oft das Tempus (Zeitverschiebung) und die Pronomen. Die direkte Rede wird mit 'att' eingeleitet. Das Präsens der direkten Rede wird im Nebensatz zum Präteritum, wenn der Hauptsatz in der Vergangenheit steht.",
+      "rule": "Direkt:   Han sa: 'Jag är trött.'    → Er sagte: 'Ich bin müde.'\nIndirekt:  Han sa att han var trött.  → Er sagte, dass er müde sei/war.\nDirekt:   Hon sa: 'Jag kan komma.'  \nIndirekt:  Hon sa att hon kunde komma.\nPräsens → Präteritum  |  Futur (ska) → skulle  |  Perfekt → Plusquamperfekt",
+      "examples": [
+        { "swedish": "Han sa att han var trött.", "german": "Er sagte, dass er müde sei.", "highlight": "var" },
+        { "swedish": "Hon berättade att hon hade jobbat hela dagen.", "german": "Sie erzählte, dass sie den ganzen Tag gearbeitet hatte.", "highlight": "hade jobbat" },
+        { "swedish": "De frågade om vi ville följa med.", "german": "Sie fragten, ob wir mitkommen wollten.", "highlight": "om vi ville" },
+        { "swedish": "Han sa att han skulle ringa senare.", "german": "Er sagte, dass er später anrufen würde.", "highlight": "skulle ringa" }
+      ],
+      "exercises": [
+        { "prompt": "Hon sa att hon ___ trött. (vara, Zeitverschiebung: war)", "translation": "Sie sagte, dass sie müde sei.", "answer": "var" },
+        { "prompt": "Han berättade att han ___ till Paris. (resa, Zeitverschiebung: gereist war)", "translation": "Er erzählte, dass er nach Paris gereist war.", "answer": "hade rest" },
+        { "prompt": "De sa att de ___ komma. (kunna, Zeitverschiebung: könnten)", "translation": "Sie sagten, dass sie kommen könnten.", "answer": "kunde" },
+        { "prompt": "Hon frågade ___ vi ville äta. (ob)", "translation": "Sie fragte, ob wir essen wollten.", "answer": "om" }
+      ]
+    },
+    {
+      "id": "b2_gr_08",
+      "title": "Konnektoren",
+      "category": "Satzstruktur",
+      "explanation": "Konnektoren (satsadverbial) verbinden Aussagen und strukturieren den Text. Im Gegensatz zu unterordnenden Konjunktionen leiten sie keine Nebensätze ein, sondern stehen am Satzanfang oder nach dem Verb im Hauptsatz. Sie sind stilistisch wichtig für kohärente, gehobene Texte.",
+      "rule": "dock        → jedoch, allerdings (Einschränkung)\ndessutom   → außerdem, dazu (Ergänzung)\ndäremot    → dagegen, hingegen (Kontrast)\nså att      → so dass (Folge)\nslutligen   → schließlich, zuletzt\nvisserligen → zwar … (oft mit 'men' kombiniert)\nå ena sidan … å andra sidan → einerseits … andererseits\nsamtidigt  → gleichzeitig",
+      "examples": [
+        { "swedish": "Det är dyrt. Dessutom är det långt bort.", "german": "Es ist teuer. Außerdem ist es weit entfernt.", "highlight": "Dessutom" },
+        { "swedish": "Han är snäll, dock lite naiv.", "german": "Er ist nett, jedoch etwas naiv.", "highlight": "dock" },
+        { "swedish": "Å ena sidan gillar jag jobbet, å andra sidan är det stressigt.", "german": "Einerseits mag ich die Arbeit, andererseits ist sie stressig.", "highlight": "Å ena sidan" },
+        { "swedish": "Jag är trött. Slutligen sov jag.", "german": "Ich war müde. Schließlich schlief ich.", "highlight": "Slutligen" }
+      ],
+      "exercises": [
+        { "prompt": "Det är dyrt. ___ är det opraktiskt. (außerdem)", "translation": "Es ist teuer. Außerdem ist es unpraktisch.", "answer": "dessutom" },
+        { "prompt": "Han är duktig, ___ lite lat. (jedoch)", "translation": "Er ist fähig, jedoch etwas faul.", "answer": "dock" },
+        { "prompt": "___ sidan gillar jag det, å andra sidan inte. (einerseits, erster Teil)", "translation": "Einerseits mag ich es, andererseits nicht.", "answer": "å ena" },
+        { "prompt": "___ är priset för högt. (dagegen/hingegen)", "translation": "Dagegen ist der Preis zu hoch.", "answer": "däremot" }
+      ]
+    }
+  ]
+}

@@ -29,6 +29,10 @@ interface QuestionResult {
   correct: boolean
 }
 
+import { type CefrLevel } from '~/stores/user'
+
+const userStore = useUserStore()
+
 const allLevels = [
   { data: a1, label: 'A1', pill: 'bg-emerald-100 text-emerald-700', activePill: 'bg-emerald-500 text-white' },
   { data: a2, label: 'A2', pill: 'bg-sky-100 text-sky-700', activePill: 'bg-sky-500 text-white' },
@@ -36,6 +40,10 @@ const allLevels = [
   { data: b2, label: 'B2', pill: 'bg-amber-100 text-amber-700', activePill: 'bg-amber-500 text-white' },
   { data: c1, label: 'C1', pill: 'bg-rose-100 text-rose-700', activePill: 'bg-rose-500 text-white' },
 ]
+
+const visibleLevels = computed(() =>
+  allLevels.filter(l => userStore.isLevelUnlocked(l.label as CefrLevel))
+)
 
 const typeLabel: Record<ExamType, string> = {
   'sv-de': 'SV → DE',
@@ -45,7 +53,7 @@ const typeLabel: Record<ExamType, string> = {
 
 // ---- Setup state ----
 const phase = ref<'setup' | 'question' | 'results'>('setup')
-const selectedLevel = ref('A1')
+const selectedLevel = ref<string>(userStore.startingLevel)
 const selectedCount = ref<10 | 20 | 'all'>(10)
 const selectedTypes = ref<ExamType[]>(['sv-de', 'de-sv', 'lueckentext'])
 const canStart = computed(() => selectedTypes.value.length > 0)
@@ -207,7 +215,7 @@ const scorePercent = computed(() =>
         <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Niveau</p>
         <div class="flex gap-2 flex-wrap">
           <button
-            v-for="lvl in allLevels"
+            v-for="lvl in visibleLevels"
             :key="lvl.label"
             class="px-3 py-1.5 rounded-full text-sm font-semibold transition-colors"
             :class="selectedLevel === lvl.label ? lvl.activePill : lvl.pill"

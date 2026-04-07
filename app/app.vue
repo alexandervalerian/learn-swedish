@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const store = useProgressStore()
-onMounted(() => store.load())
+const userStore = useUserStore()
+onMounted(() => {
+  store.load()
+  userStore.load()
+})
 </script>
 
 <template>
@@ -8,6 +12,6 @@ onMounted(() => store.load())
     <main class="pb-20 min-h-screen">
       <NuxtPage />
     </main>
-    <BottomNav />
+    <BottomNav v-if="userStore.onboardingComplete" />
   </div>
 </template>

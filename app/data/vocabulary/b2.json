@@ -2,45 +2,1055 @@
   "level": "B2",
   "description": "Selbstständige Sprachverwendung (gehobene Stufe)",
   "words": [
-    { "id": "b2_001", "swedish": "konsekvens", "german": "Konsequenz / Folge", "example": "Handlingen fick allvarliga konsekvenser.", "exampleTranslation": "Die Handlung hatte ernsthafte Konsequenzen." },
-    { "id": "b2_002", "swedish": "perspektiv", "german": "Perspektive / Gesichtspunkt", "example": "Från mitt perspektiv ser det annorlunda ut.", "exampleTranslation": "Aus meiner Perspektive sieht es anders aus." },
-    { "id": "b2_003", "swedish": "analys", "german": "Analyse", "example": "Analysen visar tydliga trender.", "exampleTranslation": "Die Analyse zeigt klare Trends." },
-    { "id": "b2_004", "swedish": "argument", "german": "Argument", "example": "Det är ett starkt argument.", "exampleTranslation": "Das ist ein starkes Argument." },
-    { "id": "b2_005", "swedish": "strategi", "german": "Strategie", "example": "Vi behöver en ny strategi.", "exampleTranslation": "Wir brauchen eine neue Strategie." },
-    { "id": "b2_006", "swedish": "fenomen", "german": "Phänomen", "example": "Norrsken är ett naturligt fenomen.", "exampleTranslation": "Nordlichter sind ein natürliches Phänomen." },
-    { "id": "b2_007", "swedish": "aspekt", "german": "Aspekt / Gesichtspunkt", "example": "Vi måste överväga alla aspekter.", "exampleTranslation": "Wir müssen alle Aspekte berücksichtigen." },
-    { "id": "b2_008", "swedish": "kommunikation", "german": "Kommunikation", "example": "Kommunikation är nyckeln till framgång.", "exampleTranslation": "Kommunikation ist der Schlüssel zum Erfolg." },
-    { "id": "b2_009", "swedish": "organisation", "german": "Organisation", "example": "Hon leder en stor organisation.", "exampleTranslation": "Sie leitet eine große Organisation." },
-    { "id": "b2_010", "swedish": "administration", "german": "Verwaltung / Administration", "example": "Administrationen är komplex.", "exampleTranslation": "Die Verwaltung ist komplex." },
-    { "id": "b2_011", "swedish": "att analysera", "german": "analysieren", "example": "Vi måste analysera datan.", "exampleTranslation": "Wir müssen die Daten analysieren." },
-    { "id": "b2_012", "swedish": "att argumentera", "german": "argumentieren", "example": "Han argumenterar övertygande.", "exampleTranslation": "Er argumentiert überzeugend." },
-    { "id": "b2_013", "swedish": "att kommunicera", "german": "kommunizieren", "example": "Det är viktigt att kommunicera tydligt.", "exampleTranslation": "Es ist wichtig, klar zu kommunizieren." },
-    { "id": "b2_014", "swedish": "att implementera", "german": "implementieren / umsetzen", "example": "Vi ska implementera den nya planen.", "exampleTranslation": "Wir werden den neuen Plan umsetzen." },
-    { "id": "b2_015", "swedish": "att utvärdera", "german": "evaluieren / auswerten / bewerten", "example": "Vi behöver utvärdera resultaten.", "exampleTranslation": "Wir müssen die Ergebnisse auswerten." },
-    { "id": "b2_016", "swedish": "att föreställa sig", "german": "sich vorstellen / sich etwas vorstellen", "example": "Föreställ dig en värld utan krig.", "exampleTranslation": "Stell dir eine Welt ohne Krieg vor." },
-    { "id": "b2_017", "swedish": "att samarbeta", "german": "zusammenarbeiten / kooperieren", "example": "Vi måste samarbeta bättre.", "exampleTranslation": "Wir müssen besser zusammenarbeiten." },
-    { "id": "b2_018", "swedish": "att motivera", "german": "motivieren / begründen", "example": "Han vet hur man motiverar teamet.", "exampleTranslation": "Er weiß, wie man das Team motiviert." },
-    { "id": "b2_019", "swedish": "att kritisera", "german": "kritisieren", "example": "Man bör kritisera konstruktivt.", "exampleTranslation": "Man sollte konstruktiv kritisieren." },
-    { "id": "b2_020", "swedish": "tvetydig", "german": "mehrdeutig / zweideutig / ambig", "example": "Svaret var tvetydigt.", "exampleTranslation": "Die Antwort war zweideutig." },
-    { "id": "b2_021", "swedish": "övertygande", "german": "überzeugend", "example": "Hon gav ett övertygande argument.", "exampleTranslation": "Sie brachte ein überzeugendes Argument vor." },
-    { "id": "b2_022", "swedish": "avgörande", "german": "entscheidend / ausschlaggebend", "example": "Det var ett avgörande ögonblick.", "exampleTranslation": "Das war ein entscheidender Moment." },
-    { "id": "b2_023", "swedish": "hållbar", "german": "nachhaltig / haltbar", "example": "Vi behöver hållbar energi.", "exampleTranslation": "Wir brauchen nachhaltige Energie." },
-    { "id": "b2_024", "swedish": "innovativ", "german": "innovativ", "example": "Det är en innovativ lösning.", "exampleTranslation": "Das ist eine innovative Lösung." },
-    { "id": "b2_025", "swedish": "värdefull", "german": "wertvoll", "example": "Det är en värdefull erfarenhet.", "exampleTranslation": "Das ist eine wertvolle Erfahrung." },
-    { "id": "b2_026", "swedish": "välgrundad", "german": "fundiert / wohlbegründet", "example": "Han hade välgrundade synpunkter.", "exampleTranslation": "Er hatte fundierte Ansichten." },
-    { "id": "b2_027", "swedish": "genomtänkt", "german": "durchdacht / wohlüberlegt", "example": "Det är ett genomtänkt förslag.", "exampleTranslation": "Das ist ein durchdachter Vorschlag." },
-    { "id": "b2_028", "swedish": "subtil", "german": "subtil / fein", "example": "Skillnaden är subtil.", "exampleTranslation": "Der Unterschied ist subtil." },
-    { "id": "b2_029", "swedish": "integritet", "german": "Integrität / Privatsphäre", "example": "Vi respekterar din integritet.", "exampleTranslation": "Wir respektieren deine Privatsphäre." },
-    { "id": "b2_030", "swedish": "trovärdighet", "german": "Glaubwürdigkeit", "example": "Hans trovärdighet är viktig.", "exampleTranslation": "Seine Glaubwürdigkeit ist wichtig." },
-    { "id": "b2_031", "swedish": "förtroende", "german": "Vertrauen", "example": "Förtroende tar tid att bygga.", "exampleTranslation": "Vertrauen braucht Zeit, um aufgebaut zu werden." },
-    { "id": "b2_032", "swedish": "kompetens", "german": "Kompetenz / Fähigkeit", "example": "Han visar hög kompetens.", "exampleTranslation": "Er zeigt hohe Kompetenz." },
-    { "id": "b2_033", "swedish": "expertis", "german": "Expertise / Fachkenntnis", "example": "Vi behöver expertis inom detta område.", "exampleTranslation": "Wir brauchen Expertise auf diesem Gebiet." },
-    { "id": "b2_034", "swedish": "konsensus", "german": "Konsens / Einigkeit", "example": "Vi nådde konsensus.", "exampleTranslation": "Wir haben einen Konsens erreicht." },
-    { "id": "b2_035", "swedish": "paradox", "german": "Paradox / Widerspruch", "example": "Det är en paradox.", "exampleTranslation": "Das ist ein Paradox." },
-    { "id": "b2_036", "swedish": "nuans", "german": "Nuance", "example": "Man måste förstå nyanserna.", "exampleTranslation": "Man muss die Nuancen verstehen." },
-    { "id": "b2_037", "swedish": "tendens", "german": "Tendenz / Neigung", "example": "Det finns en tendens att öka.", "exampleTranslation": "Es gibt eine Tendenz zu steigen." },
-    { "id": "b2_038", "swedish": "kontext", "german": "Kontext / Zusammenhang", "example": "Det beror på kontexten.", "exampleTranslation": "Das hängt vom Kontext ab." },
-    { "id": "b2_039", "swedish": "implikation", "german": "Implikation / Bedeutung", "example": "Vad är implikationerna?", "exampleTranslation": "Was sind die Implikationen?" },
-    { "id": "b2_040", "swedish": "prioritet", "german": "Priorität", "example": "Vad är din högsta prioritet?", "exampleTranslation": "Was ist deine höchste Priorität?" }
+    {
+      "id": "b2_001",
+      "swedish": "konsekvens",
+      "german": "Konsequenz / Folge",
+      "example": "Handlingen fick allvarliga konsekvenser.",
+      "exampleTranslation": "Die Handlung hatte ernsthafte Konsequenzen."
+    },
+    {
+      "id": "b2_002",
+      "swedish": "perspektiv",
+      "german": "Perspektive / Gesichtspunkt",
+      "example": "Från mitt perspektiv ser det annorlunda ut.",
+      "exampleTranslation": "Aus meiner Perspektive sieht es anders aus."
+    },
+    {
+      "id": "b2_003",
+      "swedish": "analys",
+      "german": "Analyse",
+      "example": "Analysen visar tydliga trender.",
+      "exampleTranslation": "Die Analyse zeigt klare Trends."
+    },
+    {
+      "id": "b2_004",
+      "swedish": "argument",
+      "german": "Argument",
+      "example": "Det är ett starkt argument.",
+      "exampleTranslation": "Das ist ein starkes Argument."
+    },
+    {
+      "id": "b2_005",
+      "swedish": "strategi",
+      "german": "Strategie",
+      "example": "Vi behöver en ny strategi.",
+      "exampleTranslation": "Wir brauchen eine neue Strategie."
+    },
+    {
+      "id": "b2_006",
+      "swedish": "fenomen",
+      "german": "Phänomen",
+      "example": "Norrsken är ett naturligt fenomen.",
+      "exampleTranslation": "Nordlichter sind ein natürliches Phänomen."
+    },
+    {
+      "id": "b2_007",
+      "swedish": "aspekt",
+      "german": "Aspekt / Gesichtspunkt",
+      "example": "Vi måste överväga alla aspekter.",
+      "exampleTranslation": "Wir müssen alle Aspekte berücksichtigen."
+    },
+    {
+      "id": "b2_008",
+      "swedish": "kommunikation",
+      "german": "Kommunikation",
+      "example": "Kommunikation är nyckeln till framgång.",
+      "exampleTranslation": "Kommunikation ist der Schlüssel zum Erfolg."
+    },
+    {
+      "id": "b2_009",
+      "swedish": "organisation",
+      "german": "Organisation",
+      "example": "Hon leder en stor organisation.",
+      "exampleTranslation": "Sie leitet eine große Organisation."
+    },
+    {
+      "id": "b2_010",
+      "swedish": "administration",
+      "german": "Verwaltung / Administration",
+      "example": "Administrationen är komplex.",
+      "exampleTranslation": "Die Verwaltung ist komplex."
+    },
+    {
+      "id": "b2_011",
+      "swedish": "att analysera",
+      "german": "analysieren",
+      "example": "Vi måste analysera datan.",
+      "exampleTranslation": "Wir müssen die Daten analysieren."
+    },
+    {
+      "id": "b2_012",
+      "swedish": "att argumentera",
+      "german": "argumentieren",
+      "example": "Han argumenterar övertygande.",
+      "exampleTranslation": "Er argumentiert überzeugend."
+    },
+    {
+      "id": "b2_013",
+      "swedish": "att kommunicera",
+      "german": "kommunizieren",
+      "example": "Det är viktigt att kommunicera tydligt.",
+      "exampleTranslation": "Es ist wichtig, klar zu kommunizieren."
+    },
+    {
+      "id": "b2_014",
+      "swedish": "att implementera",
+      "german": "implementieren / umsetzen",
+      "example": "Vi ska implementera den nya planen.",
+      "exampleTranslation": "Wir werden den neuen Plan umsetzen."
+    },
+    {
+      "id": "b2_015",
+      "swedish": "att utvärdera",
+      "german": "evaluieren / auswerten / bewerten",
+      "example": "Vi behöver utvärdera resultaten.",
+      "exampleTranslation": "Wir müssen die Ergebnisse auswerten."
+    },
+    {
+      "id": "b2_016",
+      "swedish": "att föreställa sig",
+      "german": "sich vorstellen / sich etwas vorstellen",
+      "example": "Föreställ dig en värld utan krig.",
+      "exampleTranslation": "Stell dir eine Welt ohne Krieg vor."
+    },
+    {
+      "id": "b2_017",
+      "swedish": "att samarbeta",
+      "german": "zusammenarbeiten / kooperieren",
+      "example": "Vi måste samarbeta bättre.",
+      "exampleTranslation": "Wir müssen besser zusammenarbeiten."
+    },
+    {
+      "id": "b2_018",
+      "swedish": "att motivera",
+      "german": "motivieren / begründen",
+      "example": "Han vet hur man motiverar teamet.",
+      "exampleTranslation": "Er weiß, wie man das Team motiviert."
+    },
+    {
+      "id": "b2_019",
+      "swedish": "att kritisera",
+      "german": "kritisieren",
+      "example": "Man bör kritisera konstruktivt.",
+      "exampleTranslation": "Man sollte konstruktiv kritisieren."
+    },
+    {
+      "id": "b2_020",
+      "swedish": "tvetydig",
+      "german": "mehrdeutig / zweideutig / ambig",
+      "example": "Svaret var tvetydigt.",
+      "exampleTranslation": "Die Antwort war zweideutig."
+    },
+    {
+      "id": "b2_021",
+      "swedish": "övertygande",
+      "german": "überzeugend",
+      "example": "Hon gav ett övertygande argument.",
+      "exampleTranslation": "Sie brachte ein überzeugendes Argument vor."
+    },
+    {
+      "id": "b2_022",
+      "swedish": "avgörande",
+      "german": "entscheidend / ausschlaggebend",
+      "example": "Det var ett avgörande ögonblick.",
+      "exampleTranslation": "Das war ein entscheidender Moment."
+    },
+    {
+      "id": "b2_023",
+      "swedish": "hållbar",
+      "german": "nachhaltig / haltbar",
+      "example": "Vi behöver hållbar energi.",
+      "exampleTranslation": "Wir brauchen nachhaltige Energie."
+    },
+    {
+      "id": "b2_024",
+      "swedish": "innovativ",
+      "german": "innovativ",
+      "example": "Det är en innovativ lösning.",
+      "exampleTranslation": "Das ist eine innovative Lösung."
+    },
+    {
+      "id": "b2_025",
+      "swedish": "värdefull",
+      "german": "wertvoll",
+      "example": "Det är en värdefull erfarenhet.",
+      "exampleTranslation": "Das ist eine wertvolle Erfahrung."
+    },
+    {
+      "id": "b2_026",
+      "swedish": "välgrundad",
+      "german": "fundiert / wohlbegründet",
+      "example": "Han hade välgrundade synpunkter.",
+      "exampleTranslation": "Er hatte fundierte Ansichten."
+    },
+    {
+      "id": "b2_027",
+      "swedish": "genomtänkt",
+      "german": "durchdacht / wohlüberlegt",
+      "example": "Det är ett genomtänkt förslag.",
+      "exampleTranslation": "Das ist ein durchdachter Vorschlag."
+    },
+    {
+      "id": "b2_028",
+      "swedish": "subtil",
+      "german": "subtil / fein",
+      "example": "Skillnaden är subtil.",
+      "exampleTranslation": "Der Unterschied ist subtil."
+    },
+    {
+      "id": "b2_029",
+      "swedish": "integritet",
+      "german": "Integrität / Privatsphäre",
+      "example": "Vi respekterar din integritet.",
+      "exampleTranslation": "Wir respektieren deine Privatsphäre."
+    },
+    {
+      "id": "b2_030",
+      "swedish": "trovärdighet",
+      "german": "Glaubwürdigkeit",
+      "example": "Hans trovärdighet är viktig.",
+      "exampleTranslation": "Seine Glaubwürdigkeit ist wichtig."
+    },
+    {
+      "id": "b2_031",
+      "swedish": "förtroende",
+      "german": "Vertrauen",
+      "example": "Förtroende tar tid att bygga.",
+      "exampleTranslation": "Vertrauen braucht Zeit, um aufgebaut zu werden."
+    },
+    {
+      "id": "b2_032",
+      "swedish": "kompetens",
+      "german": "Kompetenz / Fähigkeit",
+      "example": "Han visar hög kompetens.",
+      "exampleTranslation": "Er zeigt hohe Kompetenz."
+    },
+    {
+      "id": "b2_033",
+      "swedish": "expertis",
+      "german": "Expertise / Fachkenntnis",
+      "example": "Vi behöver expertis inom detta område.",
+      "exampleTranslation": "Wir brauchen Expertise auf diesem Gebiet."
+    },
+    {
+      "id": "b2_034",
+      "swedish": "konsensus",
+      "german": "Konsens / Einigkeit",
+      "example": "Vi nådde konsensus.",
+      "exampleTranslation": "Wir haben einen Konsens erreicht."
+    },
+    {
+      "id": "b2_035",
+      "swedish": "paradox",
+      "german": "Paradox / Widerspruch",
+      "example": "Det är en paradox.",
+      "exampleTranslation": "Das ist ein Paradox."
+    },
+    {
+      "id": "b2_036",
+      "swedish": "nuans",
+      "german": "Nuance",
+      "example": "Man måste förstå nyanserna.",
+      "exampleTranslation": "Man muss die Nuancen verstehen."
+    },
+    {
+      "id": "b2_037",
+      "swedish": "tendens",
+      "german": "Tendenz / Neigung",
+      "example": "Det finns en tendens att öka.",
+      "exampleTranslation": "Es gibt eine Tendenz zu steigen."
+    },
+    {
+      "id": "b2_038",
+      "swedish": "kontext",
+      "german": "Kontext / Zusammenhang",
+      "example": "Det beror på kontexten.",
+      "exampleTranslation": "Das hängt vom Kontext ab."
+    },
+    {
+      "id": "b2_039",
+      "swedish": "implikation",
+      "german": "Implikation / Bedeutung",
+      "example": "Vad är implikationerna?",
+      "exampleTranslation": "Was sind die Implikationen?"
+    },
+    {
+      "id": "b2_040",
+      "swedish": "prioritet",
+      "german": "Priorität",
+      "example": "Vad är din högsta prioritet?",
+      "exampleTranslation": "Was ist deine höchste Priorität?"
+    },
+    {
+      "id": "b2_041",
+      "swedish": "hypotes",
+      "german": "Hypothese",
+      "example": "Hypotesen måste testas.",
+      "exampleTranslation": "Die Hypothese muss getestet werden."
+    },
+    {
+      "id": "b2_042",
+      "swedish": "teori",
+      "german": "Theorie",
+      "example": "Teorin stöds av forskningen.",
+      "exampleTranslation": "Die Theorie wird von der Forschung gestützt."
+    },
+    {
+      "id": "b2_043",
+      "swedish": "metod",
+      "german": "Methode",
+      "example": "Vi använde en kvalitativ metod.",
+      "exampleTranslation": "Wir haben eine qualitative Methode verwendet."
+    },
+    {
+      "id": "b2_044",
+      "swedish": "empirisk",
+      "german": "empirisch",
+      "example": "Studien bygger på empiriska data.",
+      "exampleTranslation": "Die Studie basiert auf empirischen Daten."
+    },
+    {
+      "id": "b2_045",
+      "swedish": "kvantitativ",
+      "german": "quantitativ",
+      "example": "En kvantitativ studie genomfördes.",
+      "exampleTranslation": "Eine quantitative Studie wurde durchgeführt."
+    },
+    {
+      "id": "b2_046",
+      "swedish": "kvalitativ",
+      "german": "qualitativ",
+      "example": "Kvalitativ forskning ger djupare förståelse.",
+      "exampleTranslation": "Qualitative Forschung bietet tieferes Verständnis."
+    },
+    {
+      "id": "b2_047",
+      "swedish": "slutsats",
+      "german": "Schlussfolgerung",
+      "example": "Vilken slutsats kan vi dra?",
+      "exampleTranslation": "Welche Schlussfolgerung können wir ziehen?"
+    },
+    {
+      "id": "b2_048",
+      "swedish": "abstrakt",
+      "german": "abstrakt",
+      "example": "Begreppet är mycket abstrakt.",
+      "exampleTranslation": "Der Begriff ist sehr abstrakt."
+    },
+    {
+      "id": "b2_049",
+      "swedish": "konkret",
+      "german": "konkret",
+      "example": "Vi behöver konkreta förslag.",
+      "exampleTranslation": "Wir brauchen konkrete Vorschläge."
+    },
+    {
+      "id": "b2_050",
+      "swedish": "systematisk",
+      "german": "systematisch",
+      "example": "Vi genomförde en systematisk undersökning.",
+      "exampleTranslation": "Wir führten eine systematische Untersuchung durch."
+    },
+    {
+      "id": "b2_051",
+      "swedish": "metafor",
+      "german": "Metapher",
+      "example": "Han använde en träffande metafor.",
+      "exampleTranslation": "Er benutzte eine treffende Metapher."
+    },
+    {
+      "id": "b2_052",
+      "swedish": "ironi",
+      "german": "Ironie",
+      "example": "Ironin i texten var tydlig.",
+      "exampleTranslation": "Die Ironie im Text war deutlich."
+    },
+    {
+      "id": "b2_053",
+      "swedish": "sarkasm",
+      "german": "Sarkasmus",
+      "example": "Hans sarkasm blev inte uppskattad.",
+      "exampleTranslation": "Sein Sarkasmus wurde nicht geschätzt."
+    },
+    {
+      "id": "b2_054",
+      "swedish": "allegori",
+      "german": "Allegorie",
+      "example": "Romanen är en allegori om makt.",
+      "exampleTranslation": "Der Roman ist eine Allegorie über Macht."
+    },
+    {
+      "id": "b2_055",
+      "swedish": "symbolik",
+      "german": "Symbolik",
+      "example": "Symboliken i dikten är komplex.",
+      "exampleTranslation": "Die Symbolik im Gedicht ist komplex."
+    },
+    {
+      "id": "b2_056",
+      "swedish": "narrativ",
+      "german": "Narrativ / Erzählung",
+      "example": "Det dominerande narrativet ifrågasattes.",
+      "exampleTranslation": "Das vorherrschende Narrativ wurde infrage gestellt."
+    },
+    {
+      "id": "b2_057",
+      "swedish": "berättarperspektiv",
+      "german": "Erzählperspektive",
+      "example": "Berättarperspektivet skiftar i romanen.",
+      "exampleTranslation": "Die Erzählperspektive wechselt im Roman."
+    },
+    {
+      "id": "b2_058",
+      "swedish": "stilistik",
+      "german": "Stilistik",
+      "example": "Stilistiken avslöjar författarens avsikt.",
+      "exampleTranslation": "Die Stilistik verrät die Absicht des Autors."
+    },
+    {
+      "id": "b2_059",
+      "swedish": "lag",
+      "german": "Gesetz",
+      "example": "Lagen gäller alla medborgare.",
+      "exampleTranslation": "Das Gesetz gilt für alle Bürger."
+    },
+    {
+      "id": "b2_060",
+      "swedish": "dom",
+      "german": "Urteil",
+      "example": "Domstolen avkunnade sin dom.",
+      "exampleTranslation": "Das Gericht verkündete sein Urteil."
+    },
+    {
+      "id": "b2_061",
+      "swedish": "rättegång",
+      "german": "Gerichtsverhandlung / Prozess",
+      "example": "Rättegången varade i tre dagar.",
+      "exampleTranslation": "Die Gerichtsverhandlung dauerte drei Tage."
+    },
+    {
+      "id": "b2_062",
+      "swedish": "prejudikat",
+      "german": "Präzedenzfall",
+      "example": "Domen skapade ett viktigt prejudikat.",
+      "exampleTranslation": "Das Urteil schuf einen wichtigen Präzedenzfall."
+    },
+    {
+      "id": "b2_063",
+      "swedish": "parlament",
+      "german": "Parlament",
+      "example": "Parlamentet röstade om den nya lagen.",
+      "exampleTranslation": "Das Parlament stimmte über das neue Gesetz ab."
+    },
+    {
+      "id": "b2_064",
+      "swedish": "förordning",
+      "german": "Verordnung",
+      "example": "Förordningen trädde i kraft.",
+      "exampleTranslation": "Die Verordnung trat in Kraft."
+    },
+    {
+      "id": "b2_065",
+      "swedish": "direktiv",
+      "german": "Richtlinie / Direktive",
+      "example": "EU-direktivet ska implementeras.",
+      "exampleTranslation": "Die EU-Richtlinie soll umgesetzt werden."
+    },
+    {
+      "id": "b2_066",
+      "swedish": "grundlag",
+      "german": "Grundgesetz / Verfassung",
+      "example": "Grundlagen skyddar de grundläggande rättigheterna.",
+      "exampleTranslation": "Das Grundgesetz schützt die Grundrechte."
+    },
+    {
+      "id": "b2_067",
+      "swedish": "investering",
+      "german": "Investition",
+      "example": "Det var en klok investering.",
+      "exampleTranslation": "Das war eine kluge Investition."
+    },
+    {
+      "id": "b2_068",
+      "swedish": "aktie",
+      "german": "Aktie",
+      "example": "Aktiekursen steg kraftigt.",
+      "exampleTranslation": "Der Aktienkurs stieg stark."
+    },
+    {
+      "id": "b2_069",
+      "swedish": "obligation",
+      "german": "Anleihe / Obligation",
+      "example": "Obligationer anses vara säkrare.",
+      "exampleTranslation": "Anleihen gelten als sicherer."
+    },
+    {
+      "id": "b2_070",
+      "swedish": "budget",
+      "german": "Budget / Haushalt",
+      "example": "Budgeten måste godkännas.",
+      "exampleTranslation": "Der Haushalt muss genehmigt werden."
+    },
+    {
+      "id": "b2_071",
+      "swedish": "finansiering",
+      "german": "Finanzierung",
+      "example": "Finansieringen är säkrad.",
+      "exampleTranslation": "Die Finanzierung ist gesichert."
+    },
+    {
+      "id": "b2_072",
+      "swedish": "avkastning",
+      "german": "Rendite / Ertrag",
+      "example": "Avkastningen var hög.",
+      "exampleTranslation": "Die Rendite war hoch."
+    },
+    {
+      "id": "b2_073",
+      "swedish": "riskhantering",
+      "german": "Risikomanagement",
+      "example": "Riskhantering är avgörande för företag.",
+      "exampleTranslation": "Risikomanagement ist entscheidend für Unternehmen."
+    },
+    {
+      "id": "b2_074",
+      "swedish": "affärsmodell",
+      "german": "Geschäftsmodell",
+      "example": "Deras affärsmodell är innovativ.",
+      "exampleTranslation": "Ihr Geschäftsmodell ist innovativ."
+    },
+    {
+      "id": "b2_075",
+      "swedish": "marknadsstrategi",
+      "german": "Marktstrategie",
+      "example": "Vi behöver en ny marknadsstrategi.",
+      "exampleTranslation": "Wir brauchen eine neue Marktstrategie."
+    },
+    {
+      "id": "b2_076",
+      "swedish": "konkurrenskraft",
+      "german": "Wettbewerbsfähigkeit",
+      "example": "Konkurrenskraften måste stärkas.",
+      "exampleTranslation": "Die Wettbewerbsfähigkeit muss gestärkt werden."
+    },
+    {
+      "id": "b2_077",
+      "swedish": "experiment",
+      "german": "Experiment",
+      "example": "Experimentet bekräftade hypotesen.",
+      "exampleTranslation": "Das Experiment bestätigte die Hypothese."
+    },
+    {
+      "id": "b2_078",
+      "swedish": "variabel",
+      "german": "Variable",
+      "example": "Forskarna kontrollerade alla variabler.",
+      "exampleTranslation": "Die Forscher kontrollierten alle Variablen."
+    },
+    {
+      "id": "b2_079",
+      "swedish": "kontrollgrupp",
+      "german": "Kontrollgruppe",
+      "example": "Kontrollgruppen fick inget läkemedel.",
+      "exampleTranslation": "Die Kontrollgruppe erhielt kein Medikament."
+    },
+    {
+      "id": "b2_080",
+      "swedish": "statistik",
+      "german": "Statistik",
+      "example": "Statistiken visar en tydlig trend.",
+      "exampleTranslation": "Die Statistik zeigt einen klaren Trend."
+    },
+    {
+      "id": "b2_081",
+      "swedish": "korrelation",
+      "german": "Korrelation",
+      "example": "Det finns en korrelation mellan de två.",
+      "exampleTranslation": "Es gibt eine Korrelation zwischen den beiden."
+    },
+    {
+      "id": "b2_082",
+      "swedish": "kausalitet",
+      "german": "Kausalität",
+      "example": "Korrelation innebär inte kausalitet.",
+      "exampleTranslation": "Korrelation bedeutet nicht Kausalität."
+    },
+    {
+      "id": "b2_083",
+      "swedish": "resultat",
+      "german": "Ergebnis / Resultat",
+      "example": "Resultaten publicerades i en tidskrift.",
+      "exampleTranslation": "Die Ergebnisse wurden in einer Zeitschrift veröffentlicht."
+    },
+    {
+      "id": "b2_084",
+      "swedish": "publicering",
+      "german": "Veröffentlichung / Publikation",
+      "example": "Publiceringen fick stor uppmärksamhet.",
+      "exampleTranslation": "Die Veröffentlichung erhielt große Aufmerksamkeit."
+    },
+    {
+      "id": "b2_085",
+      "swedish": "peer review",
+      "german": "Peer-Review / Begutachtung",
+      "example": "Artikeln genomgick peer review.",
+      "exampleTranslation": "Der Artikel durchlief ein Peer-Review-Verfahren."
+    },
+    {
+      "id": "b2_086",
+      "swedish": "reproducerbarhet",
+      "german": "Reproduzierbarkeit",
+      "example": "Reproducerbarhet är centralt för forskning.",
+      "exampleTranslation": "Reproduzierbarkeit ist zentral für die Forschung."
+    },
+    {
+      "id": "b2_087",
+      "swedish": "att ifrågasätta",
+      "german": "infrage stellen / hinterfragen",
+      "example": "Vi måste ifrågasätta antagandena.",
+      "exampleTranslation": "Wir müssen die Annahmen hinterfragen."
+    },
+    {
+      "id": "b2_088",
+      "swedish": "att betvivla",
+      "german": "bezweifeln",
+      "example": "Jag betvivlar att det stämmer.",
+      "exampleTranslation": "Ich bezweifle, dass das stimmt."
+    },
+    {
+      "id": "b2_089",
+      "swedish": "att fastslå",
+      "german": "feststellen / festsetzen",
+      "example": "Domstolen fastslog att lagen gäller.",
+      "exampleTranslation": "Das Gericht stellte fest, dass das Gesetz gilt."
+    },
+    {
+      "id": "b2_090",
+      "swedish": "att uppskatta",
+      "german": "schätzen / einschätzen",
+      "example": "Det är svårt att uppskatta kostnaden.",
+      "exampleTranslation": "Es ist schwierig, die Kosten einzuschätzen."
+    },
+    {
+      "id": "b2_091",
+      "swedish": "att omvärdera",
+      "german": "neu bewerten / umwerten",
+      "example": "Vi behöver omvärdera vår strategi.",
+      "exampleTranslation": "Wir müssen unsere Strategie neu bewerten."
+    },
+    {
+      "id": "b2_092",
+      "swedish": "att omdefiniera",
+      "german": "umdefinieren / neu definieren",
+      "example": "Begreppet har omdefinierats.",
+      "exampleTranslation": "Der Begriff wurde umdefiniert."
+    },
+    {
+      "id": "b2_093",
+      "swedish": "att syntetisera",
+      "german": "synthetisieren / zusammenführen",
+      "example": "Forskarna syntetiserade resultaten.",
+      "exampleTranslation": "Die Forscher führten die Ergebnisse zusammen."
+    },
+    {
+      "id": "b2_094",
+      "swedish": "att problematisera",
+      "german": "problematisieren",
+      "example": "Författaren problematiserar frågan.",
+      "exampleTranslation": "Der Autor problematisiert die Frage."
+    },
+    {
+      "id": "b2_095",
+      "swedish": "att kontextualisera",
+      "german": "kontextualisieren / in einen Kontext setzen",
+      "example": "Vi måste kontextualisera resultaten.",
+      "exampleTranslation": "Wir müssen die Ergebnisse in einen Kontext setzen."
+    },
+    {
+      "id": "b2_096",
+      "swedish": "att legitimera",
+      "german": "legitimieren",
+      "example": "Hur legitimerar vi beslutet?",
+      "exampleTranslation": "Wie legitimieren wir die Entscheidung?"
+    },
+    {
+      "id": "b2_097",
+      "swedish": "kontroversiell",
+      "german": "kontrovers / umstritten",
+      "example": "Frågan är kontroversiell.",
+      "exampleTranslation": "Die Frage ist umstritten."
+    },
+    {
+      "id": "b2_098",
+      "swedish": "omtvistad",
+      "german": "umstritten / strittig",
+      "example": "Resultatet är omtvistat.",
+      "exampleTranslation": "Das Ergebnis ist umstritten."
+    },
+    {
+      "id": "b2_099",
+      "swedish": "vittgående",
+      "german": "weitreichend / weitgehend",
+      "example": "Beslutet fick vittgående konsekvenser.",
+      "exampleTranslation": "Die Entscheidung hatte weitreichende Folgen."
+    },
+    {
+      "id": "b2_100",
+      "swedish": "genomgripande",
+      "german": "durchgreifend / tiefgreifend",
+      "example": "Samhället genomgick genomgripande förändringar.",
+      "exampleTranslation": "Die Gesellschaft durchlief tiefgreifende Veränderungen."
+    },
+    {
+      "id": "b2_101",
+      "swedish": "oberäknelig",
+      "german": "unberechenbar",
+      "example": "Hans beteende är oberäkneligt.",
+      "exampleTranslation": "Sein Verhalten ist unberechenbar."
+    },
+    {
+      "id": "b2_102",
+      "swedish": "oförutsägbar",
+      "german": "unvorhersehbar",
+      "example": "Framtiden är oförutsägbar.",
+      "exampleTranslation": "Die Zukunft ist unvorhersehbar."
+    },
+    {
+      "id": "b2_103",
+      "swedish": "inkonsekvent",
+      "german": "inkonsequent / widersprüchlich",
+      "example": "Argumentet är inkonsekvent.",
+      "exampleTranslation": "Das Argument ist inkonsequent."
+    },
+    {
+      "id": "b2_104",
+      "swedish": "mångfacetterad",
+      "german": "vielschichtig / facettenreich",
+      "example": "Problemet är mångfacetterat.",
+      "exampleTranslation": "Das Problem ist vielschichtig."
+    },
+    {
+      "id": "b2_105",
+      "swedish": "tvärvetenskaplig",
+      "german": "interdisziplinär",
+      "example": "Forskningen är tvärvetenskaplig.",
+      "exampleTranslation": "Die Forschung ist interdisziplinär."
+    },
+    {
+      "id": "b2_106",
+      "swedish": "å ena sidan",
+      "german": "einerseits",
+      "example": "Å ena sidan finns det fördelar.",
+      "exampleTranslation": "Einerseits gibt es Vorteile."
+    },
+    {
+      "id": "b2_107",
+      "swedish": "å andra sidan",
+      "german": "andererseits",
+      "example": "Å andra sidan finns det risker.",
+      "exampleTranslation": "Andererseits gibt es Risiken."
+    },
+    {
+      "id": "b2_108",
+      "swedish": "dessutom",
+      "german": "außerdem / zudem",
+      "example": "Dessutom bör vi nämna kostnaderna.",
+      "exampleTranslation": "Außerdem sollten wir die Kosten erwähnen."
+    },
+    {
+      "id": "b2_109",
+      "swedish": "emellertid",
+      "german": "jedoch / allerdings",
+      "example": "Emellertid finns det undantag.",
+      "exampleTranslation": "Jedoch gibt es Ausnahmen."
+    },
+    {
+      "id": "b2_110",
+      "swedish": "däremot",
+      "german": "dagegen / hingegen",
+      "example": "Resultaten var däremot överraskande.",
+      "exampleTranslation": "Die Ergebnisse waren hingegen überraschend."
+    },
+    {
+      "id": "b2_111",
+      "swedish": "följaktligen",
+      "german": "folglich / demzufolge",
+      "example": "Följaktligen måste vi agera.",
+      "exampleTranslation": "Folglich müssen wir handeln."
+    },
+    {
+      "id": "b2_112",
+      "swedish": "således",
+      "german": "somit / demnach",
+      "example": "Således kan vi dra slutsatsen.",
+      "exampleTranslation": "Somit können wir die Schlussfolgerung ziehen."
+    },
+    {
+      "id": "b2_113",
+      "swedish": "i enlighet med",
+      "german": "in Übereinstimmung mit / gemäß",
+      "example": "I enlighet med lagen ska detta rapporteras.",
+      "exampleTranslation": "Gemäß dem Gesetz muss dies gemeldet werden."
+    },
+    {
+      "id": "b2_114",
+      "swedish": "trots detta",
+      "german": "trotzdem / dennoch",
+      "example": "Trots detta fortsatte de.",
+      "exampleTranslation": "Trotzdem machten sie weiter."
+    },
+    {
+      "id": "b2_115",
+      "swedish": "med hänsyn till",
+      "german": "unter Berücksichtigung von / in Anbetracht",
+      "example": "Med hänsyn till omständigheterna var det rimligt.",
+      "exampleTranslation": "In Anbetracht der Umstände war es angemessen."
+    },
+    {
+      "id": "b2_116",
+      "swedish": "företeelse",
+      "german": "Erscheinung / Phänomen",
+      "example": "Det är en vanlig företeelse.",
+      "exampleTranslation": "Das ist eine häufige Erscheinung."
+    },
+    {
+      "id": "b2_117",
+      "swedish": "sammanhang",
+      "german": "Zusammenhang / Kontext",
+      "example": "Man måste se det i sitt sammanhang.",
+      "exampleTranslation": "Man muss es in seinem Zusammenhang sehen."
+    },
+    {
+      "id": "b2_118",
+      "swedish": "förutsättning",
+      "german": "Voraussetzung / Bedingung",
+      "example": "Det är en viktig förutsättning.",
+      "exampleTranslation": "Das ist eine wichtige Voraussetzung."
+    },
+    {
+      "id": "b2_119",
+      "swedish": "påstående",
+      "german": "Behauptung / Aussage",
+      "example": "Påståendet saknar bevis.",
+      "exampleTranslation": "Die Behauptung entbehrt jeder Beweise."
+    },
+    {
+      "id": "b2_120",
+      "swedish": "antagande",
+      "german": "Annahme",
+      "example": "Antagandet visade sig vara felaktigt.",
+      "exampleTranslation": "Die Annahme erwies sich als falsch."
+    },
+    {
+      "id": "b2_121",
+      "swedish": "resonemang",
+      "german": "Argumentation / Schlussfolgerung",
+      "example": "Hans resonemang var logiskt.",
+      "exampleTranslation": "Seine Argumentation war logisch."
+    },
+    {
+      "id": "b2_122",
+      "swedish": "bedömning",
+      "german": "Beurteilung / Einschätzung",
+      "example": "Min bedömning är att det fungerar.",
+      "exampleTranslation": "Meine Einschätzung ist, dass es funktioniert."
+    },
+    {
+      "id": "b2_123",
+      "swedish": "att granska",
+      "german": "überprüfen / prüfen",
+      "example": "Vi måste granska rapporten.",
+      "exampleTranslation": "Wir müssen den Bericht überprüfen."
+    },
+    {
+      "id": "b2_124",
+      "swedish": "att belysa",
+      "german": "beleuchten / verdeutlichen",
+      "example": "Studien belyser viktiga frågor.",
+      "exampleTranslation": "Die Studie beleuchtet wichtige Fragen."
+    },
+    {
+      "id": "b2_125",
+      "swedish": "att formulera",
+      "german": "formulieren",
+      "example": "Kan du formulera det tydligare?",
+      "exampleTranslation": "Kannst du es klarer formulieren?"
+    },
+    {
+      "id": "b2_126",
+      "swedish": "att urskilja",
+      "german": "unterscheiden / erkennen",
+      "example": "Det är svårt att urskilja skillnaderna.",
+      "exampleTranslation": "Es ist schwer, die Unterschiede zu erkennen."
+    },
+    {
+      "id": "b2_127",
+      "swedish": "vederhäftig",
+      "german": "fundiert / seriös / zuverlässig",
+      "example": "Källan är vederhäftig.",
+      "exampleTranslation": "Die Quelle ist zuverlässig."
+    },
+    {
+      "id": "b2_128",
+      "swedish": "nyanserad",
+      "german": "nuanciert / differenziert",
+      "example": "En nyanserad debatt är nödvändig.",
+      "exampleTranslation": "Eine differenzierte Debatte ist notwendig."
+    },
+    {
+      "id": "b2_129",
+      "swedish": "övervägande",
+      "german": "Abwägung / Erwägung",
+      "example": "Efter noggrant övervägande fattade vi beslutet.",
+      "exampleTranslation": "Nach sorgfältiger Erwägung trafen wir die Entscheidung."
+    },
+    {
+      "id": "b2_130",
+      "swedish": "ställningstagande",
+      "german": "Stellungnahme / Position",
+      "example": "Vi måste ta ett ställningstagande.",
+      "exampleTranslation": "Wir müssen eine Stellungnahme abgeben."
+    },
+    {
+      "id": "b2_131",
+      "swedish": "synvinkel",
+      "german": "Blickwinkel / Perspektive",
+      "example": "Från en annan synvinkel ser det annorlunda ut.",
+      "exampleTranslation": "Aus einem anderen Blickwinkel sieht es anders aus."
+    },
+    {
+      "id": "b2_132",
+      "swedish": "infallsvinkel",
+      "german": "Ansatz / Betrachtungswinkel",
+      "example": "Det finns flera möjliga infallsvinklar.",
+      "exampleTranslation": "Es gibt mehrere mögliche Betrachtungswinkel."
+    },
+    {
+      "id": "b2_133",
+      "swedish": "att härleda",
+      "german": "ableiten / herleiten",
+      "example": "Slutsatsen kan härledas från datan.",
+      "exampleTranslation": "Die Schlussfolgerung lässt sich aus den Daten ableiten."
+    },
+    {
+      "id": "b2_134",
+      "swedish": "att verifiera",
+      "german": "verifizieren / bestätigen",
+      "example": "Informationen måste verifieras.",
+      "exampleTranslation": "Die Information muss verifiziert werden."
+    },
+    {
+      "id": "b2_135",
+      "swedish": "att tillämpa",
+      "german": "anwenden",
+      "example": "Teorin kan tillämpas i praktiken.",
+      "exampleTranslation": "Die Theorie kann in der Praxis angewendet werden."
+    },
+    {
+      "id": "b2_136",
+      "swedish": "tvetydighet",
+      "german": "Zweideutigkeit / Ambiguität",
+      "example": "Tvetydigheten i texten var avsiktlig.",
+      "exampleTranslation": "Die Zweideutigkeit im Text war absichtlich."
+    },
+    {
+      "id": "b2_137",
+      "swedish": "objektivitet",
+      "german": "Objektivität",
+      "example": "Objektivitet är viktigt i forskning.",
+      "exampleTranslation": "Objektivität ist wichtig in der Forschung."
+    },
+    {
+      "id": "b2_138",
+      "swedish": "subjektivitet",
+      "german": "Subjektivität",
+      "example": "Viss subjektivitet är oundviklig.",
+      "exampleTranslation": "Eine gewisse Subjektivität ist unvermeidlich."
+    },
+    {
+      "id": "b2_139",
+      "swedish": "tillförlitlighet",
+      "german": "Zuverlässigkeit / Verlässlichkeit",
+      "example": "Tillförlitligheten hos data ifrågasattes.",
+      "exampleTranslation": "Die Zuverlässigkeit der Daten wurde infrage gestellt."
+    },
+    {
+      "id": "b2_140",
+      "swedish": "giltighet",
+      "german": "Gültigkeit / Validität",
+      "example": "Studiens giltighet bekräftades.",
+      "exampleTranslation": "Die Gültigkeit der Studie wurde bestätigt."
+    },
+    {
+      "id": "b2_141",
+      "swedish": "att generalisera",
+      "german": "verallgemeinern",
+      "example": "Man kan inte generalisera utifrån ett enda fall.",
+      "exampleTranslation": "Man kann nicht von einem einzigen Fall verallgemeinern."
+    },
+    {
+      "id": "b2_142",
+      "swedish": "att specificera",
+      "german": "spezifizieren / genauer angeben",
+      "example": "Kan du specificera vad du menar?",
+      "exampleTranslation": "Kannst du genauer angeben, was du meinst?"
+    },
+    {
+      "id": "b2_143",
+      "swedish": "att sammanfatta",
+      "german": "zusammenfassen",
+      "example": "Låt mig sammanfatta diskussionen.",
+      "exampleTranslation": "Lass mich die Diskussion zusammenfassen."
+    },
+    {
+      "id": "b2_144",
+      "swedish": "att understryka",
+      "german": "unterstreichen / betonen",
+      "example": "Jag vill understryka vikten av detta.",
+      "exampleTranslation": "Ich möchte die Wichtigkeit davon unterstreichen."
+    },
+    {
+      "id": "b2_145",
+      "swedish": "att avfärda",
+      "german": "abweisen / zurückweisen",
+      "example": "Kritiken avfärdades.",
+      "exampleTranslation": "Die Kritik wurde zurückgewiesen."
+    },
+    {
+      "id": "b2_146",
+      "swedish": "att bemöta",
+      "german": "erwidern / entgegnen",
+      "example": "Hon bemötte kritiken sakligt.",
+      "exampleTranslation": "Sie erwiderte die Kritik sachlich."
+    },
+    {
+      "id": "b2_147",
+      "swedish": "begreppsmässig",
+      "german": "begrifflich / konzeptuell",
+      "example": "Det finns en begreppsmässig skillnad.",
+      "exampleTranslation": "Es gibt einen begrifflichen Unterschied."
+    },
+    {
+      "id": "b2_148",
+      "swedish": "omfattande",
+      "german": "umfassend / umfangreich",
+      "example": "En omfattande studie genomfördes.",
+      "exampleTranslation": "Eine umfassende Studie wurde durchgeführt."
+    },
+    {
+      "id": "b2_149",
+      "swedish": "otillräcklig",
+      "german": "unzureichend",
+      "example": "Bevisen var otillräckliga.",
+      "exampleTranslation": "Die Beweise waren unzureichend."
+    },
+    {
+      "id": "b2_150",
+      "swedish": "rigorös",
+      "german": "rigoros / streng",
+      "example": "Studien följde en rigorös metodik.",
+      "exampleTranslation": "Die Studie folgte einer rigorosen Methodik."
+    }
   ]
 }

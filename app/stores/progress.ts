@@ -11,11 +11,13 @@ import {
 
 const STORAGE_KEY = 'swedish_progress'
 export const DAILY_NEW_LIMIT = 10
+export const DAILY_CARD_TARGET = 40
 
 interface StoredData {
   cards: Record<string, CardState>
   streak: { lastDate: string | null; count: number }
   newToday: { date: string; count: number }
+  dailyProgress: { date: string; remaining: number; learned: number }
 }
 
 export const useProgressStore = defineStore('progress', () => {
@@ -28,6 +30,21 @@ export const useProgressStore = defineStore('progress', () => {
     date: '',
     count: 0
   })
+  const dailyProgress = ref<{ date: string; remaining: number; learned: number }>({
+    date: today(),
+    remaining: DAILY_CARD_TARGET,
+    learned: 0
+  })
+
+  function syncDailyProgressDate() {
+    const todayStr = today()
+    if (dailyProgress.value.date === todayStr) return
+    dailyProgress.value = {
+      date: todayStr,
+      remaining: DAILY_CARD_TARGET,
+      learned: 0
+    }
+  }
 
   function load() {
     const raw = localStorage.getItem(STORAGE_KEY)
@@ -37,6 +54,12 @@ export const useProgressStore = defineStore('progress', () => {
       cards.value = data.cards ?? {}
       streak.value = data.streak ?? { lastDate: null, count: 0 }
       newToday.value = data.newToday ?? { date: '', count: 0 }
+      dailyProgress.value = {
+        date: data.dailyProgress?.date ?? today(),
+        remaining: data.dailyProgress?.remaining ?? DAILY_CARD_TARGET,
+        learned: data.dailyProgress?.learned ?? 0
+      }
+      syncDailyProgressDate()
     } catch {
       // corrupted storage — start fresh
     }
@@ -46,7 +69,8 @@ export const useProgressStore = defineStore('progress', () => {
     const data: StoredData = {
       cards: cards.value,
       streak: streak.value,
-      newToday: newToday.value
+      newToday: newToday.value,
+      dailyProgress: dailyProgress.value
     }
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
   }
@@ -59,9 +83,22 @@ export const useProgressStore = defineStore('progress', () => {
     return newToday.value.date === today() ? newToday.value.count : 0
   }
 
+  function dailyRemaining(): number {
+    syncDailyProgressDate()
+    return dailyProgress.value.remaining
+  }
+
+  function dailyLearnedToday(): number {
+    syncDailyProgressDate()
+    return dailyProgress.value.learned
+  }
+
   function rateCard(id: string, rating: Rating) {
+    syncDailyProgressDate()
     const wasNew = getCard(id).lastReviewed === null
     cards.value[id] = updateCard(getCard(id), rating)
+    dailyProgress.value.remaining = Math.max(0, dailyProgress.value.remaining - 1)
+    dailyProgress.value.learned++
     if (wasNew) {
       if (newToday.value.date !== today()) {
         newToday.value = { date: today(), count: 1 }
@@ -111,6 +148,25 @@ export const useProgressStore = defineStore('progress', () => {
     return wordIds.filter(id => isDue(getCard(id)))
   }
 
+  // Returns unmastered card IDs, working through levels in order.
+  // Within each level: due reviews first, then new (unseen) cards.
+  // If `target` is provided, the result is capped to that size.
+  function dailySessionIds(levelWordIds: string[][], target?: number): string[] {
+    const result: string[] = []
+    for (const ids of levelWordIds) {
+      const due = ids.filter(id => {
+        const card = getCard(id)
+        return card.lastReviewed !== null && isDue(card) && !isMastered(card)
+      })
+      const newCards = ids.filter(id => getCard(id).lastReviewed === null)
+      result.push(...[...due, ...newCards])
+      if (target !== undefined && result.length >= target) {
+        return result.slice(0, target)
+      }
+    }
+    return result
+  }
+
   function statsForLevel(wordIds: string[]) {
     const total = wordIds.length
     const seen = wordIds.filter(id => getCard(id).lastReviewed !== null).length
@@ -127,6 +183,7 @@ export const useProgressStore = defineStore('progress', () => {
     cards,
     streak,
     newToday,
+    dailyProgress,
     load,
     getCard,
     rateCard,
@@ -134,7 +191,10 @@ export const useProgressStore = defineStore('progress', () => {
     newIds,
     dueIds,
     newCardsSeenToday,
+    dailyRemaining,
+    dailyLearnedToday,
     statsForLevel,
+    dailySessionIds,
     DAILY_NEW_LIMIT
   }
 })

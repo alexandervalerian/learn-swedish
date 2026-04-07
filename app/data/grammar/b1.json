@@ -1,0 +1,208 @@
+{
+  "level": "B1",
+  "topics": [
+    {
+      "id": "b1_gr_01",
+      "title": "Modalverben",
+      "category": "Verben",
+      "explanation": "Schwedische Modalverben stehen immer mit dem Infinitiv ohne 'att'. Sie sind für alle Personen gleich (keine Konjugation). 'Brukar' drückt eine regelmäßige Gewohnheit aus und entspricht etwa 'pflegen zu' oder wird im Deutschen oft mit Präsens übersetzt.",
+      "rule": "kan   → können   (Fähigkeit)\nska   → werden/sollen   (Plan, Zukunft)\nvill  → wollen\nmåste → müssen\nbör   → sollen/sollten (Empfehlung)\nfår   → dürfen / bekommen\nbrukar → pflegen zu (Gewohnheit)\n→ alle + Infinitiv OHNE att",
+      "examples": [
+        { "swedish": "Jag kan simma.", "german": "Ich kann schwimmen.", "highlight": "kan" },
+        { "swedish": "Hon ska resa imorgon.", "german": "Sie wird/soll morgen reisen.", "highlight": "ska" },
+        { "swedish": "Vi måste studera.", "german": "Wir müssen studieren.", "highlight": "måste" },
+        { "swedish": "Du bör äta frukost.", "german": "Du solltest Frühstück essen.", "highlight": "bör" },
+        { "swedish": "Han brukar jogga på morgonen.", "german": "Er joggt normalerweise morgens.", "highlight": "brukar" }
+      ],
+      "exercises": [
+        { "prompt": "Jag ___ inte simma. (kann nicht)", "translation": "Ich kann nicht schwimmen.", "answer": "kan" },
+        { "prompt": "Du ___ läsa det här. (solltest)", "translation": "Du solltest das lesen.", "answer": "bör" },
+        { "prompt": "Vi ___ gå nu. (müssen)", "translation": "Wir müssen jetzt gehen.", "answer": "måste" },
+        { "prompt": "Hon ___ inte röka här. (darf nicht)", "translation": "Sie darf hier nicht rauchen.", "answer": "får" },
+        { "prompt": "Han ___ spela gitarr. (pflegt zu/spielt normalerweise)", "translation": "Er spielt normalerweise Gitarre.", "answer": "brukar" },
+        { "prompt": "De ___ komma imorgon. (werden)", "translation": "Sie werden morgen kommen.", "answer": "ska" }
+      ]
+    },
+    {
+      "id": "b1_gr_02",
+      "title": "Nebensatzwortstellung (BIFF-Regel)",
+      "category": "Satzstruktur",
+      "explanation": "Im schwedischen Nebensatz steht die Verneinung 'inte' und andere Satzadverbien (oft, aldrig, alltid, redan, bara) VOR dem konjugierten Verb. Im Hauptsatz stehen sie dahinter. Die Eselsbrücke ist BIFF: Bisatsintern Frekvensadverbial Före Finit verb (Nebensatzinternes Frequenzadverbial vor Finitum).",
+      "rule": "Hauptsatz:  Jag vet det inte.           (… weiß es nicht.)\nNebensatz:  Jag vet att han inte vet det. (… dass er es nicht weiß.)\nMerke:   Konjunktion + Subjekt + (inte/aldrig/alltid) + Verb",
+      "examples": [
+        { "swedish": "Jag vet att han inte bor här.", "german": "Ich weiß, dass er nicht hier wohnt.", "highlight": "inte bor" },
+        { "swedish": "Hon säger att hon alltid tränar.", "german": "Sie sagt, dass sie immer trainiert.", "highlight": "alltid tränar" },
+        { "swedish": "Om du inte förstår, fråga läraren.", "german": "Wenn du nicht verstehst, frage den Lehrer.", "highlight": "inte förstår" },
+        { "swedish": "Jag tror att de redan har ätit.", "german": "Ich glaube, dass sie schon gegessen haben.", "highlight": "redan har" }
+      ],
+      "exercises": [
+        { "prompt": "Jag vet att han ___ arbetar här. (nicht)", "translation": "Ich weiß, dass er nicht hier arbeitet.", "answer": "inte" },
+        { "prompt": "Hon säger att hon ___ tränar. (immer, vor Verb)", "translation": "Sie sagt, dass sie immer trainiert.", "answer": "alltid" },
+        { "prompt": "Om du ___ förstår, säg till. (nicht)", "translation": "Wenn du nicht verstehst, sag Bescheid.", "answer": "inte" },
+        { "prompt": "Jag tror att de ___ har hört av sig. (noch nicht)", "translation": "Ich glaube, dass sie sich noch nicht gemeldet haben.", "answer": "inte" },
+        { "prompt": "Det är synd att hon ___ kan komma. (nicht)", "translation": "Es ist schade, dass sie nicht kommen kann.", "answer": "inte" }
+      ]
+    },
+    {
+      "id": "b1_gr_03",
+      "title": "Präteritum starker Verben",
+      "category": "Verben",
+      "explanation": "Starke Verben (oregelbundna verb) bilden ihr Präteritum durch Stammveränderung (Vokalwechsel), ähnlich wie im Deutschen. Es gibt verschiedene Ablautklassen. Die häufigsten starken Verben müssen auswendig gelernt werden.",
+      "rule": "skriva  → skrev    (schreiben/schrieb)\nkomma   → kom      (kommen/kam)\ngå      → gick     (gehen/ging)\nse      → såg      (sehen/sah)\nta      → tog      (nehmen/nahm)\nge      → gav      (geben/gab)\nveta    → visste   (wissen/wusste)\nligga   → låg      (liegen/lag)",
+      "examples": [
+        { "swedish": "Jag gick hem tidigt.", "german": "Ich ging früh nach Hause.", "highlight": "gick" },
+        { "swedish": "Hon såg filmen igår.", "german": "Sie sah den Film gestern.", "highlight": "såg" },
+        { "swedish": "Vi fick ett brev.", "german": "Wir bekamen einen Brief.", "highlight": "fick" },
+        { "swedish": "Han tog bussen till jobbet.", "german": "Er nahm den Bus zur Arbeit.", "highlight": "tog" },
+        { "swedish": "De kom hem sent.", "german": "Sie kamen spät nach Hause.", "highlight": "kom" }
+      ],
+      "exercises": [
+        { "prompt": "Igår ___ jag till affären. (gå → Prät.)", "translation": "Gestern ging ich zum Geschäft.", "answer": "gick" },
+        { "prompt": "Hon ___ ett brev. (skriva → Prät.)", "translation": "Sie schrieb einen Brief.", "answer": "skrev" },
+        { "prompt": "Vi ___ en film. (se → Prät.)", "translation": "Wir sahen einen Film.", "answer": "såg" },
+        { "prompt": "Han ___ hem klockan tio. (komma → Prät.)", "translation": "Er kam um zehn Uhr nach Hause.", "answer": "kom" },
+        { "prompt": "Jag ___ inte vad han sa. (veta → Prät.)", "translation": "Ich wusste nicht, was er sagte.", "answer": "visste" },
+        { "prompt": "De ___ en present. (ge → Prät.)", "translation": "Sie gaben ein Geschenk.", "answer": "gav" }
+      ]
+    },
+    {
+      "id": "b1_gr_04",
+      "title": "Perfekt",
+      "category": "Verben",
+      "explanation": "Das Perfekt wird mit 'har' (haben) + Supinum gebildet. Das Supinum ist eine eigene Form des Verbs (nicht mit dem Partizip Perfekt identisch). Das Perfekt wird für Handlungen verwendet, die in der Vergangenheit stattgefunden haben und Relevanz für die Gegenwart haben – ähnlich wie im Deutschen.",
+      "rule": "har + Supinum:\nGr. 1: tala  → talat\nGr. 2: läsa  → läst\nGr. 3: bo    → bott\nStarke Vb.: skriva → skrivit | komma → kommit | gå → gått\nHilfsverb: jag har talat / du har talat … (alle gleich)",
+      "examples": [
+        { "swedish": "Jag har aldrig besökt Japan.", "german": "Ich habe Japan noch nie besucht.", "highlight": "har besökt" },
+        { "swedish": "Hon har precis ätit.", "german": "Sie hat gerade gegessen.", "highlight": "har ätit" },
+        { "swedish": "Vi har bott här i tio år.", "german": "Wir haben hier zehn Jahre gewohnt.", "highlight": "har bott" },
+        { "swedish": "Har du hört den här låten?", "german": "Hast du dieses Lied gehört?", "highlight": "Har hört" }
+      ],
+      "exercises": [
+        { "prompt": "Jag ___ aldrig ___ sushi. (Perfekt von äta)", "translation": "Ich habe noch nie Sushi gegessen.", "answer": "har ätit" },
+        { "prompt": "Hon ___ just ___ hem. (Perfekt von komma)", "translation": "Sie ist gerade nach Hause gekommen.", "answer": "har kommit" },
+        { "prompt": "Vi ___ den filmen redan ___. (Perfekt von se)", "translation": "Wir haben den Film schon gesehen.", "answer": "har sett" },
+        { "prompt": "___ du ___ till Sverige? (Perfekt von resa, Frage)", "translation": "Bist du nach Schweden gereist?", "answer": "har rest" }
+      ]
+    },
+    {
+      "id": "b1_gr_05",
+      "title": "Relativsätze mit som",
+      "category": "Satzstruktur",
+      "explanation": "Das Relativpronomen 'som' entspricht dem deutschen 'der/die/das/den/dem' im Relativsatz und 'der/die/das/den/dem/dessen' usw. Im Schwedischen ist 'som' unveränderlich – es gibt keine Kasusformen. 'som' kann sowohl Subjekt als auch Objekt im Relativsatz sein.",
+      "rule": "'som' = der/die/das/den/dem (Relativpronomen, unveränderlich)\nMannen som bor här.     (Der Mann, der hier wohnt.)\nBoken som jag läser.   (Das Buch, das ich lese.)\nVid Objekt kann 'som' weggelassen werden: Boken jag läser.",
+      "examples": [
+        { "swedish": "Det är mannen som hjälpte mig.", "german": "Das ist der Mann, der mir geholfen hat.", "highlight": "som" },
+        { "swedish": "Boken som jag läser är lång.", "german": "Das Buch, das ich lese, ist lang.", "highlight": "som" },
+        { "swedish": "Jag känner en flicka som talar fem språk.", "german": "Ich kenne ein Mädchen, das fünf Sprachen spricht.", "highlight": "som" },
+        { "swedish": "Huset som vi bor i är gammalt.", "german": "Das Haus, in dem wir wohnen, ist alt.", "highlight": "som" }
+      ],
+      "exercises": [
+        { "prompt": "Det är boken ___ jag sökte. (die/das ich suchte)", "translation": "Das ist das Buch, das ich suchte.", "answer": "som" },
+        { "prompt": "Mannen ___ bor här är lärare. (der hier wohnt)", "translation": "Der Mann, der hier wohnt, ist Lehrer.", "answer": "som" },
+        { "prompt": "Filmen ___ vi såg var bra. (die wir sahen)", "translation": "Der Film, den wir sahen, war gut.", "answer": "som" },
+        { "prompt": "Jag har en vän ___ kan spela gitarr. (der … kann)", "translation": "Ich habe einen Freund, der Gitarre spielen kann.", "answer": "som" }
+      ]
+    },
+    {
+      "id": "b1_gr_06",
+      "title": "Reflexivverben und Reflexivpronomen",
+      "category": "Pronomen",
+      "explanation": "Schwedische Reflexivpronomen richten sich nach der Person: 'mig' (mich), 'dig' (dich), 'sig' (sich – 3. Person Singular und Plural). Im Gegensatz zum Deutschen gibt es für die 3. Person nur 'sig', egal ob Singular oder Plural. Viele Verben können reflexiv oder nicht-reflexiv verwendet werden.",
+      "rule": "jag → mig    (Ich wasche mich: Jag tvättar mig.)\ndu  → dig    (Du kämmst dich: Du kammar dig.)\nhan/hon/det → sig   (Er ruht sich aus: Han vilar sig.)\nvi  → oss    (Wir setzen uns: Vi sätter oss.)\nni  → er     \nde  → sig    (Sie freuen sich: De känner sig glada.)",
+      "examples": [
+        { "swedish": "Jag tvättar mig varje morgon.", "german": "Ich wasche mich jeden Morgen.", "highlight": "mig" },
+        { "swedish": "Han klär på sig.", "german": "Er zieht sich an.", "highlight": "sig" },
+        { "swedish": "Vi sätter oss vid bordet.", "german": "Wir setzen uns an den Tisch.", "highlight": "oss" },
+        { "swedish": "De känner sig trötta.", "german": "Sie fühlen sich müde.", "highlight": "sig" }
+      ],
+      "exercises": [
+        { "prompt": "Jag tvättar ___ händerna. (mich/mir)", "translation": "Ich wasche mir die Hände.", "answer": "mig" },
+        { "prompt": "Han sätter ___ ned. (sich)", "translation": "Er setzt sich hin.", "answer": "sig" },
+        { "prompt": "Vi roar ___ bra. (uns)", "translation": "Wir amüsieren uns gut.", "answer": "oss" },
+        { "prompt": "Hur känner du ___? (dich)", "translation": "Wie fühlst du dich?", "answer": "dig" },
+        { "prompt": "De skyndar ___ till stationen. (sich)", "translation": "Sie beeilen sich zum Bahnhof.", "answer": "sig" }
+      ]
+    },
+    {
+      "id": "b1_gr_07",
+      "title": "Komparativ und Superlativ (irregulär)",
+      "category": "Adjektive",
+      "explanation": "Einige häufige schwedische Adjektive bilden Komparativ und Superlativ unregelmäßig – ähnlich wie 'gut/besser/am besten' im Deutschen. Diese Formen müssen auswendig gelernt werden. Bei 'liten' (klein) gibt es zudem Besonderheiten in der Pluralform.",
+      "rule": "bra    → bättre   → bäst     (gut/besser/am besten)\ndålig  → sämre    → sämst    (schlecht/schlechter)\ngammal → äldre    → äldst    (alt/älter/am ältesten)\nstor   → större   → störst   (groß/größer/am größten)\nliten  → mindre   → minst    (klein/kleiner/am kleinsten)\nmycket → mer      → mest     (viel/mehr/am meisten)\nlite   → mindre   → minst    (wenig/weniger/am wenigsten)",
+      "examples": [
+        { "swedish": "Den här filmen är bättre.", "german": "Dieser Film ist besser.", "highlight": "bättre" },
+        { "swedish": "Det här är det bästa restaurangen.", "german": "Das ist das beste Restaurant.", "highlight": "bästa" },
+        { "swedish": "Han är äldre än sin syster.", "german": "Er ist älter als seine Schwester.", "highlight": "äldre" },
+        { "swedish": "Vi behöver mer tid.", "german": "Wir brauchen mehr Zeit.", "highlight": "mer" }
+      ],
+      "exercises": [
+        { "prompt": "bra → ___ (Komparativ: besser)", "translation": "gut → besser", "answer": "bättre" },
+        { "prompt": "bra → ___ (Superlativ: am besten)", "translation": "gut → am besten", "answer": "bäst" },
+        { "prompt": "stor → ___ (Komparativ: größer)", "translation": "groß → größer", "answer": "större" },
+        { "prompt": "liten → ___ (Komparativ: kleiner)", "translation": "klein → kleiner", "answer": "mindre" },
+        { "prompt": "gammal → ___ (Komparativ: älter)", "translation": "alt → älter", "answer": "äldre" },
+        { "prompt": "dålig → ___ (Superlativ: am schlechtesten)", "translation": "schlecht → am schlechtesten", "answer": "sämst" }
+      ]
+    },
+    {
+      "id": "b1_gr_08",
+      "title": "Zukunftsausdrücke",
+      "category": "Verben",
+      "explanation": "Im Schwedischen gibt es verschiedene Möglichkeiten, die Zukunft auszudrücken. 'ska' drückt eine Absicht oder einen Plan aus (oft mit menschlicher Kontrolle), 'kommer att' eine Vorhersage oder ein wahrscheinliches Ereignis, 'tänker' eine persönliche Absicht. Oft sind sie austauschbar.",
+      "rule": "ska + Infinitiv    → Plan/Vorhaben/Zukunft allgemein\n                     Jag ska resa imorgon. (Ich werde morgen reisen.)\nkommer att + Inf.  → Vorhersage/Erwartung\n                     Det kommer att regna. (Es wird regnen.)\ntänker + Infinitiv → persönliche Absicht\n                     Jag tänker studera ikväll. (Ich habe vor, heute Abend zu lernen.)",
+      "examples": [
+        { "swedish": "Jag ska besöka mina föräldrar i helgen.", "german": "Ich werde meine Eltern am Wochenende besuchen.", "highlight": "ska besöka" },
+        { "swedish": "Det kommer att bli kallt imorgon.", "german": "Es wird morgen kalt werden.", "highlight": "kommer att bli" },
+        { "swedish": "Hon tänker börja träna.", "german": "Sie hat vor, mit dem Training anzufangen.", "highlight": "tänker börja" },
+        { "swedish": "Vi ska äta middag klockan sju.", "german": "Wir werden um sieben Uhr zu Abend essen.", "highlight": "ska äta" }
+      ],
+      "exercises": [
+        { "prompt": "Jag ___ resa till Japan nästa år. (Vorhaben: ska)", "translation": "Ich werde nächstes Jahr nach Japan reisen.", "answer": "ska" },
+        { "prompt": "Det ___ regna imorgon. (Vorhersage: kommer att)", "translation": "Es wird morgen regnen.", "answer": "kommer att" },
+        { "prompt": "Han ___ studera medicin. (Absicht: tänker)", "translation": "Er hat vor, Medizin zu studieren.", "answer": "tänker" },
+        { "prompt": "Vi ___ ses imorgon. (Plan: ska)", "translation": "Wir werden uns morgen sehen.", "answer": "ska" }
+      ]
+    },
+    {
+      "id": "b1_gr_09",
+      "title": "Imperativ",
+      "category": "Verben",
+      "explanation": "Der schwedische Imperativ (Befehlsform) entspricht dem Verbstamm. Bei Gruppe-1-Verben wird die -ar-Endung des Präsens einfach weggelassen (talar → tala!). Bei Gruppe-2-Verben ist der Imperativ oft identisch mit dem Infinitiv oder dem Verbstamm. Für höflichere Aufforderungen verwendet man 'skulle du kunna…' oder den Infinitiv.",
+      "rule": "Gr. 1: tala!  (sprich!) ← talar ohne -r ← tala (Inf.)\nGr. 2: läs!   (lies!) ← läser ohne -er\nGr. 3: bo kvar! (bleib!) ← bor ohne -r\nGr. 4: gå!   (geh!) | kom! (komm!) | ta! (nimm!)\nVerneinung: inte + Imperativ: Inte gå dit! (Geh nicht dorthin!)",
+      "examples": [
+        { "swedish": "Tala långsammare, tack!", "german": "Sprich langsamer, bitte!", "highlight": "Tala" },
+        { "swedish": "Läs boken!", "german": "Lies das Buch!", "highlight": "Läs" },
+        { "swedish": "Kom hit!", "german": "Komm her!", "highlight": "Kom" },
+        { "swedish": "Gå inte dit!", "german": "Geh nicht dorthin!", "highlight": "Gå" },
+        { "swedish": "Var snäll!", "german": "Sei nett!", "highlight": "Var" }
+      ],
+      "exercises": [
+        { "prompt": "___ hit! (komma → Imperativ)", "translation": "Komm her!", "answer": "kom" },
+        { "prompt": "___ försiktigt! (gå → Imperativ)", "translation": "Geh vorsichtig!", "answer": "gå" },
+        { "prompt": "___ inte! (glömma → Imperativ)", "translation": "Vergiss nicht!", "answer": "glöm" },
+        { "prompt": "___ boken! (läsa → Imperativ)", "translation": "Lies das Buch!", "answer": "läs" },
+        { "prompt": "___ lugn! (vara → Imperativ)", "translation": "Sei ruhig!", "answer": "var" }
+      ]
+    },
+    {
+      "id": "b1_gr_10",
+      "title": "Unterordnende Konjunktionen",
+      "category": "Satzstruktur",
+      "explanation": "Unterordnende Konjunktionen leiten Nebensätze ein. Im Schwedischen gelten dann die Nebensatzregeln (BIFF). Die wichtigste Konjunktion ist 'att' (dass), die nach Verben des Sagens, Denkens und Fühlens steht. Andere Konjunktionen bestimmen Zeit, Bedingung oder Grund.",
+      "rule": "att      → dass:    Jag tror att han är trött.\nom       → wenn/ob: Om du vill, kan vi gå.\nnär      → wenn/als: När jag var ung, bodde vi i Malmö.\neftersom → weil:     Jag stannar hemma eftersom jag är sjuk.\nfast/fastän → obwohl: Fast hon är trött, jobbar hon.\nmedan    → während:  Medan han sov, lagade jag mat.\ninnan    → bevor:    Diska, innan du går!\nefter att → nachdem: Jag ska ringa efter att jag ätit.",
+      "examples": [
+        { "swedish": "Jag tror att han är trött.", "german": "Ich glaube, dass er müde ist.", "highlight": "att" },
+        { "swedish": "Stanna hemma om du är sjuk.", "german": "Bleib zu Hause, wenn du krank bist.", "highlight": "om" },
+        { "swedish": "Jag lärde mig svenska eftersom jag älskar Sverige.", "german": "Ich lernte Schwedisch, weil ich Schweden liebe.", "highlight": "eftersom" },
+        { "swedish": "Fast hon är trött, fortsätter hon.", "german": "Obwohl sie müde ist, macht sie weiter.", "highlight": "Fast" }
+      ],
+      "exercises": [
+        { "prompt": "Jag vet ___ han bor i Stockholm. (dass)", "translation": "Ich weiß, dass er in Stockholm wohnt.", "answer": "att" },
+        { "prompt": "Ring mig ___ du är framme. (wenn/sobald)", "translation": "Ruf mich an, wenn du angekommen bist.", "answer": "när" },
+        { "prompt": "Jag stannar hemma ___ jag är sjuk. (weil)", "translation": "Ich bleibe zu Hause, weil ich krank bin.", "answer": "eftersom" },
+        { "prompt": "___ det regnar, stannar vi inne. (wenn/falls)", "translation": "Wenn es regnet, bleiben wir drin.", "answer": "om" },
+        { "prompt": "Diska, ___ du går! (bevor)", "translation": "Spül ab, bevor du gehst!", "answer": "innan" }
+      ]
+    }
+  ]
+}

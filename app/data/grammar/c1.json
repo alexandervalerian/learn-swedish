@@ -1,0 +1,160 @@
+{
+  "level": "C1",
+  "topics": [
+    {
+      "id": "c1_gr_01",
+      "title": "Konjunktiv / Optativ",
+      "category": "Verben",
+      "explanation": "Der schwedische Konjunktiv (konjunktiv) ist im modernen Schwedisch weitgehend veraltet, taucht aber in festen Wendungen, Wünschen und formellen Texten auf. Der Optativ (optativ) drückt Wünsche und Hoffnungen aus. 'Vore' (wäre) ist die Konjunktivform von 'att vara' und wird für irreale Bedingungen verwendet.",
+      "rule": "vore  → wäre (irrealer Konditional: Om jag vore rik… Wenn ich reich wäre…)\nmåtte → möge/möchte (Wunsch: Måtte du ha det bra!)\nleve  → es lebe (Optativ: Leve Sverige!)\nbleve → würde (veraltet, ersetzt durch 'skulle bli')\nModern: Om jag vore (att vara) / Om det vore sant.",
+      "examples": [
+        { "swedish": "Om jag vore rik, skulle jag resa hela världen.", "german": "Wenn ich reich wäre, würde ich die ganze Welt bereisen.", "highlight": "vore" },
+        { "swedish": "Måtte allt gå bra för dig!", "german": "Möge alles gut für dich gehen!", "highlight": "Måtte" },
+        { "swedish": "Leve kungen!", "german": "Es lebe der König!", "highlight": "Leve" },
+        { "swedish": "Det vore bra om du kom.", "german": "Es wäre gut, wenn du käme.", "highlight": "vore" }
+      ],
+      "exercises": [
+        { "prompt": "Om jag ___ president, skulle jag ändra lagen. (wäre, Konjunktiv von vara)", "translation": "Wenn ich Präsident wäre, würde ich das Gesetz ändern.", "answer": "vore" },
+        { "prompt": "___ allt gå bra! (Möge, Optativ)", "translation": "Möge alles gut gehen!", "answer": "måtte" },
+        { "prompt": "Det ___ trevligt om du kunde stanna. (wäre gut)", "translation": "Es wäre schön, wenn du bleiben könntest.", "answer": "vore" },
+        { "prompt": "___ friheten! (Es lebe, Optativ)", "translation": "Es lebe die Freiheit!", "answer": "leve" }
+      ]
+    },
+    {
+      "id": "c1_gr_02",
+      "title": "Partizipialkonstruktionen",
+      "category": "Satzstruktur",
+      "explanation": "Partizipialkonstruktionen können in formellen und literarischen Texten Relativsätze ersetzen. Das Partizip Präsens ersetzt einen Relativsatz mit aktivem Verb, das Partizip Perfekt einen Relativsatz im Passiv. Diese Konstruktionen sind kürzer und stilistisch eleganter.",
+      "rule": "Relativsatz → Partizipialkonstruktion:\nMannen som sjunger = Den sjungande mannen     (der singende Mann)\nBoken som är skriven av Strindberg = Den av Strindberg skrivna boken\nEn student som studerar svenska = En svenskstuderande student\nPartizip Präsens: Verb + -ande/-ende (unveränderlich als Adj.)\nPartizip Perfekt: kongruiert (skriven/skrivet/skrivna)",
+      "examples": [
+        { "swedish": "Den sjungande flickan heter Lisa.", "german": "Das singende Mädchen heißt Lisa.", "highlight": "sjungande" },
+        { "swedish": "Det av regeringen fattade beslutet.", "german": "Der von der Regierung gefasste Beschluss.", "highlight": "fattade" },
+        { "swedish": "En välkänd svensk författare.", "german": "Ein bekannter schwedischer Autor.", "highlight": "välkänd" },
+        { "swedish": "De kommande utmaningarna kräver samarbete.", "german": "Die kommenden Herausforderungen erfordern Zusammenarbeit.", "highlight": "kommande" }
+      ],
+      "exercises": [
+        { "prompt": "Mannen som sjunger → den ___ mannen (singend, Partizip Präsens)", "translation": "Der singende Mann", "answer": "sjungande" },
+        { "prompt": "Boken som skrevs av Strindberg → den av Strindberg ___ boken (geschrieben, Part. Perf. en-Wort)", "translation": "Das von Strindberg geschriebene Buch", "answer": "skrivna" },
+        { "prompt": "Barnet som leker → det ___ barnet (spielend)", "translation": "Das spielende Kind", "answer": "lekande" },
+        { "prompt": "Utmaningarna som kommer → de ___ utmaningarna (kommend)", "translation": "Die kommenden Herausforderungen", "answer": "kommande" }
+      ]
+    },
+    {
+      "id": "c1_gr_03",
+      "title": "Nominalisierung",
+      "category": "Wortbildung",
+      "explanation": "Nominalisierung bezeichnet die Umwandlung von Verben oder Adjektiven in Nomen. Im Schwedischen gibt es mehrere Suffixe für Verbalsubstantive. Die häufigsten sind -ning/-ande für Handlungen und -else/-nad für Zustände oder Ergebnisse. Die Nominalisierung ist in formellen und akademischen Texten sehr häufig.",
+      "rule": "-ning:   forskning (Forschung), städning (Reinigung), utbildning (Ausbildung)\n-ande:   boende (Wohnen/Wohnende), varande (Sein/Seiende)\n-else:   känsla→känselse, förståelse (Verständnis)\n-nad:    betalning/betalnad → veraltet; kostnader (Kosten)\n-are:    lärare (Lehrer), skrivare (Schreiber/Drucker)\nAtt + Verb als Subjekt: Att läsa är viktigt.",
+      "examples": [
+        { "swedish": "Forskning är viktigt för samhället.", "german": "Forschung ist wichtig für die Gesellschaft.", "highlight": "Forskning" },
+        { "swedish": "Utbildning ger möjligheter.", "german": "Bildung schafft Möglichkeiten.", "highlight": "Utbildning" },
+        { "swedish": "Boendet i Stockholm är dyrt.", "german": "Das Wohnen in Stockholm ist teuer.", "highlight": "Boendet" },
+        { "swedish": "Förståelsen för kulturen är viktig.", "german": "Das Verständnis für die Kultur ist wichtig.", "highlight": "Förståelsen" }
+      ],
+      "exercises": [
+        { "prompt": "forska (forschen) → ___ (Forschung, -ning)", "translation": "Forschung", "answer": "forskning" },
+        { "prompt": "utbilda (ausbilden) → ___ (Ausbildung, -ning)", "translation": "Ausbildung/Bildung", "answer": "utbildning" },
+        { "prompt": "bo (wohnen) → ___ (das Wohnen/die Wohnenden, -ande)", "translation": "das Wohnen", "answer": "boende" },
+        { "prompt": "förstå (verstehen) → ___ (Verständnis, -else)", "translation": "Verständnis", "answer": "förståelse" },
+        { "prompt": "undervisa (unterrichten) → ___ (Unterricht, -ning)", "translation": "Unterricht", "answer": "undervisning" }
+      ]
+    },
+    {
+      "id": "c1_gr_04",
+      "title": "ska vs. kommer att",
+      "category": "Verben",
+      "explanation": "Obwohl 'ska' und 'kommer att' beide die Zukunft ausdrücken, gibt es wichtige Bedeutungsunterschiede. 'Ska' impliziert menschlichen Willen, Planung oder Versprechen. 'Kommer att' drückt eine neutrale Vorhersage aus, oft unabhängig vom Willen des Sprechers. In informeller Sprache wird der Unterschied oft verwischt.",
+      "rule": "ska:          Plan, Absicht, Versprechen, Erwartung mit Handlungskontrolle\n               Jag ska ringa dig. (Ich werde dich anrufen – ich verspreche es.)\nkommer att:   neutrale Vorhersage, Erwartung ohne Handlungskontrolle\n               Det kommer att regna. (Es wird regnen – Wettervorhersage.)\nMerke: Bei Dingen/Naturphänomenen meist 'kommer att'.\nBei Personen und Plänen meist 'ska'.",
+      "examples": [
+        { "swedish": "Jag ska göra det imorgon. (Versprechen)", "german": "Ich werde es morgen machen. (Versprechen)", "highlight": "ska" },
+        { "swedish": "Det kommer att bli kallt i vinter. (Vorhersage)", "german": "Es wird diesen Winter kalt werden. (Vorhersage)", "highlight": "kommer att" },
+        { "swedish": "Hon ska bli läkare. (Plan/Ziel)", "german": "Sie wird Ärztin werden. (Ihr Plan)", "highlight": "ska" },
+        { "swedish": "Projektet kommer att ta lång tid. (Erwartung)", "german": "Das Projekt wird lange dauern. (Erwartung)", "highlight": "kommer att" }
+      ],
+      "exercises": [
+        { "prompt": "Jag ___ ringa dig ikväll. (Versprechen)", "translation": "Ich werde dich heute Abend anrufen (verspreche es).", "answer": "ska" },
+        { "prompt": "Det ___ regna imorgon. (Wettervorhersage)", "translation": "Es wird morgen regnen.", "answer": "kommer att" },
+        { "prompt": "Hon ___ bli chef nästa år. (Plan)", "translation": "Sie wird nächstes Jahr Chefin werden (ihr Plan).", "answer": "ska" },
+        { "prompt": "Befolkningen ___ öka. (demografische Vorhersage)", "translation": "Die Bevölkerung wird wachsen.", "answer": "kommer att" }
+      ]
+    },
+    {
+      "id": "c1_gr_05",
+      "title": "S-Passiv vs. Bli-Passiv",
+      "category": "Verben",
+      "explanation": "S-Passiv und Bli-Passiv sind beide korrekt, unterscheiden sich aber in Stilistik und Bedeutung. Das s-Passiv ist häufiger in schriftlichen, formellen Texten und bei generischen, habituellen Handlungen. Das bli-Passiv ist häufiger gesprochen und bei konkreten Einzelereignissen.",
+      "rule": "S-Passiv:    generisch, formell, habituell\n  Huset säljs för en miljon.  (Das Haus wird für eine Million verkauft.)\nBli-Passiv:  konkret, einmalig, gesprochene Sprache\n  Huset blev sålt för en miljon.  (Das Haus wurde für eine Million verkauft.)\nS-Passiv Inf: att säljas vs. Bli-Passiv Inf: att bli såld\nBei Zustandsbeschreibung: vara + Part. Perf.: Dörren var stängd.",
+      "examples": [
+        { "swedish": "Tidningen ges ut varje fredag. (s-Passiv, habituell)", "german": "Die Zeitung erscheint jeden Freitag.", "highlight": "ges ut" },
+        { "swedish": "Huset blev sålt igår. (bli-Passiv, einmalig)", "german": "Das Haus wurde gestern verkauft.", "highlight": "blev sålt" },
+        { "swedish": "Lagen ändrades förra året. (s-Passiv, formell)", "german": "Das Gesetz wurde letztes Jahr geändert.", "highlight": "ändrades" },
+        { "swedish": "Han blev attackerad på gatan. (bli-Passiv, konkret)", "german": "Er wurde auf der Straße angegriffen.", "highlight": "blev attackerad" }
+      ],
+      "exercises": [
+        { "prompt": "Tidningen ___ varje dag. (utges, s-Passiv – habituell)", "translation": "Die Zeitung wird täglich veröffentlicht.", "answer": "ges ut" },
+        { "prompt": "Boken ___ skriven av Astrid Lindgren. (bli-Passiv, Präteritum – einmalig)", "translation": "Das Buch wurde von Astrid Lindgren geschrieben.", "answer": "blev" },
+        { "prompt": "Lagen ___ år 2010. (ändra, s-Passiv Präteritum – formell)", "translation": "Das Gesetz wurde 2010 geändert.", "answer": "ändrades" },
+        { "prompt": "Han ___ attackerad. (bli-Passiv, Präteritum – konkret)", "translation": "Er wurde angegriffen.", "answer": "blev" }
+      ]
+    },
+    {
+      "id": "c1_gr_06",
+      "title": "Komposita",
+      "category": "Wortbildung",
+      "explanation": "Das Schwedische bildet zusammengesetzte Wörter (sammansatta ord) sehr häufig. Das letzte Element (Grundwort) bestimmt Genus und Deklinationsklasse. Die Elemente werden ohne Leerzeichen zusammengeschrieben. Manchmal wird ein Fugen-s eingefügt. Lange Komposita sind im Schwedischen sehr typisch.",
+      "rule": "Grundwort bestimmt Genus: ett äpple + träd → ett äppleträd (en-/ett-Wort)\nFugen-s: arbete + smarknad → arbetsmarknad (Arbeitsmarkt)\nKette: barn + sjukhus = barnsjukhus (Kinderkrankenhaus)\nMerke: Komposita IMMER zusammen schreiben!\nFalsch: barn sjukhus  ✓ Richtig: barnsjukhus",
+      "examples": [
+        { "swedish": "Arbetsmarknaden är stabil.", "german": "Der Arbeitsmarkt ist stabil.", "highlight": "Arbetsmarknaden" },
+        { "swedish": "Barnsjukhuset är nytt.", "german": "Das Kinderkrankenhaus ist neu.", "highlight": "Barnsjukhuset" },
+        { "swedish": "Järnvägsstationen är nära.", "german": "Der Bahnhof ist in der Nähe.", "highlight": "Järnvägsstationen" },
+        { "swedish": "Miljöpolitiken diskuteras.", "german": "Die Umweltpolitik wird diskutiert.", "highlight": "Miljöpolitiken" }
+      ],
+      "exercises": [
+        { "prompt": "arbete + marknad = ___ (Arbeitsmarkt, mit Fugen-s)", "translation": "Arbeitsmarkt", "answer": "arbetsmarknad" },
+        { "prompt": "barn + sjukhus = ___ (Kinderkrankenhaus)", "translation": "Kinderkrankenhaus", "answer": "barnsjukhus" },
+        { "prompt": "järnväg + station = ___ (Bahnhof, mit Fugen-s)", "translation": "Bahnhof", "answer": "järnvägsstation" },
+        { "prompt": "miljö + politik = ___ (Umweltpolitik)", "translation": "Umweltpolitik", "answer": "miljöpolitik" },
+        { "prompt": "sommar + sol = ___ (Sommersonne)", "translation": "Sommersonne", "answer": "sommarsol" }
+      ]
+    },
+    {
+      "id": "c1_gr_07",
+      "title": "Präfixe und Suffixe",
+      "category": "Wortbildung",
+      "explanation": "Durch Präfixe und Suffixe können neue Wörter aus bekannten Stämmen gebildet werden. Das Verständnis häufiger Wortbildungselemente hilft, unbekannte Wörter zu erschließen. Im Schwedischen sind besonders 'o-' (un-), 'sam-' (ge-), '-ig' (-ig) und '-lig' (-lich) produktiv.",
+      "rule": "Präfixe:\no-     → Verneinung: olycklig (unglücklich), olämplig (ungeeignet)\nmis-   → falsch: missförstånd (Missverständnis)\nsam-   → zusammen: samarbete (Zusammenarbeit)\nSuffixe:\n-ig    → Adjektiv: viktig (wichtig), rolig (lustig/unterhaltsam)\n-lig   → Adjektiv: vänlig (freundlich), möjlig (möglich)\n-het   → abstraktes Nomen: vänlighet (Freundlichkeit)\n-are   → Agens: lärare (Lehrer), skrivare (Drucker)",
+      "examples": [
+        { "swedish": "Det är en olycklig situation.", "german": "Das ist eine unglückliche Situation.", "highlight": "olycklig" },
+        { "swedish": "Samarbete är viktigt.", "german": "Zusammenarbeit ist wichtig.", "highlight": "Samarbete" },
+        { "swedish": "Hon är mycket vänlig.", "german": "Sie ist sehr freundlich.", "highlight": "vänlig" },
+        { "swedish": "Det uppstod ett missförstånd.", "german": "Es entstand ein Missverständnis.", "highlight": "missförstånd" }
+      ],
+      "exercises": [
+        { "prompt": "lycklig (glücklich) → ___ (unglücklich, Präfix o-)", "translation": "unglücklich", "answer": "olycklig" },
+        { "prompt": "arbete (Arbeit) → sam___ (Zusammenarbeit, Präfix sam-)", "translation": "Zusammenarbeit", "answer": "samarbete" },
+        { "prompt": "vän (Freund) → ___lig (freundlich, Suffix -lig)", "translation": "freundlich", "answer": "vänlig" },
+        { "prompt": "vänlig (freundlich) → ___het (Freundlichkeit, Suffix -het)", "translation": "Freundlichkeit", "answer": "vänlighet" },
+        { "prompt": "möjlig (möglich) → o___ (unmöglich)", "translation": "unmöglich", "answer": "omöjlig" }
+      ]
+    },
+    {
+      "id": "c1_gr_08",
+      "title": "Formelle Sprache und du-Reform",
+      "category": "Register",
+      "explanation": "In den 1960er Jahren fand in Schweden die 'du-reform' statt: Die formelle Anrede mit 'ni' (Sie) wurde durch das allgemeine 'du' ersetzt. Heute wird 'ni' nur in sehr formellen oder ironischen Kontexten oder in der Gastronomie/im Einzelhandel als Service-Anrede verwendet. In formellen Texten gibt es dennoch stilistische Unterschiede.",
+      "rule": "Informal (Standard): du → 'du' für alle (auch Fremde, Chefs, Könige!)\nFormell (selten): ni → als höfliche Einzelanrede in einigen Berufen\nSchriftlich formell:\n  Passiv-Konstruktionen statt persönlicher Ansprache\n  Nominalisierungen statt Verben\n  Komplexere Satzstrukturen\n  Vermeidung von Umgangssprache (typ, liksom, ju, va)",
+      "examples": [
+        { "swedish": "Du är välkommen att kontakta oss.", "german": "Sie sind willkommen, uns zu kontaktieren. (formeller Brief)", "highlight": "Du" },
+        { "swedish": "Kan jag hjälpa dig? (Alltag) / Kan jag hjälpa er? (Service)", "german": "Kann ich Ihnen helfen?", "highlight": "dig / er" },
+        { "swedish": "Ansökan lämnas in senast den 15 mars.", "german": "Der Antrag ist bis spätestens 15. März einzureichen.", "highlight": "lämnas in" },
+        { "swedish": "Det rekommenderas att du läser manualen.", "german": "Es wird empfohlen, dass Sie das Handbuch lesen.", "highlight": "rekommenderas" }
+      ],
+      "exercises": [
+        { "prompt": "Formell Brief: '___ är välkommen att kontakta oss.' (Sie/du – Schwedisch verwendet nur dies)", "translation": "Sie sind willkommen, uns zu kontaktieren.", "answer": "du" },
+        { "prompt": "Passiv statt aktiv (formell): 'Man lämnar in ansökan.' → 'Ansökan ___ in.' (lämna, s-Passiv)", "translation": "Der Antrag wird eingereicht.", "answer": "lämnas" },
+        { "prompt": "Formeller Stil: 'Det ___ att alla deltar.' (rekommenderas – man empfiehlt)", "translation": "Es wird empfohlen, dass alle teilnehmen.", "answer": "rekommenderas" },
+        { "prompt": "Service-Anrede (Restaurant): 'Kan jag hjälpa ___?' (Ihnen – formell Plural/Service)", "translation": "Kann ich Ihnen helfen?", "answer": "er" }
+      ]
+    }
+  ]
+}

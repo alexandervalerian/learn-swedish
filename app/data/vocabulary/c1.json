@@ -2,35 +2,705 @@
   "level": "C1",
   "description": "Kompetente Sprachverwendung",
   "words": [
-    { "id": "c1_001", "swedish": "sofistikerad", "german": "anspruchsvoll / raffiniert / ausgereift", "example": "Det är en sofistikerad lösning.", "exampleTranslation": "Das ist eine ausgereite Lösung." },
-    { "id": "c1_002", "swedish": "nyanserad", "german": "nuanciert / differenziert", "example": "Hon gav en nyanserad analys.", "exampleTranslation": "Sie gab eine nuancierte Analyse." },
-    { "id": "c1_003", "swedish": "vedertagen", "german": "allgemein anerkannt / üblich / etabliert", "example": "Det är en vedertagen sanning.", "exampleTranslation": "Das ist eine allgemein anerkannte Wahrheit." },
-    { "id": "c1_004", "swedish": "framträdande", "german": "prominent / herausragend / bedeutend", "example": "Han är en framträdande politiker.", "exampleTranslation": "Er ist ein prominenter Politiker." },
-    { "id": "c1_005", "swedish": "rättvisa", "german": "Gerechtigkeit", "example": "Vi kämpar för rättvisa.", "exampleTranslation": "Wir kämpfen für Gerechtigkeit." },
-    { "id": "c1_006", "swedish": "jämlikhet", "german": "Gleichheit / Gleichberechtigung", "example": "Jämlikhet är en grundläggande värdering.", "exampleTranslation": "Gleichheit ist ein grundlegender Wert." },
-    { "id": "c1_007", "swedish": "mångfald", "german": "Vielfalt / Diversität", "example": "Mångfald berikar samhället.", "exampleTranslation": "Vielfalt bereichert die Gesellschaft." },
-    { "id": "c1_008", "swedish": "demokrati", "german": "Demokratie", "example": "Demokrati kräver delaktighet.", "exampleTranslation": "Demokratie erfordert Beteiligung." },
-    { "id": "c1_009", "swedish": "lagstiftning", "german": "Gesetzgebung / Gesetz", "example": "Lagstiftningen behöver uppdateras.", "exampleTranslation": "Die Gesetzgebung muss aktualisiert werden." },
-    { "id": "c1_010", "swedish": "konstitution", "german": "Verfassung / Konstitution", "example": "Konstitutionen skyddar medborgarnas rättigheter.", "exampleTranslation": "Die Verfassung schützt die Rechte der Bürger." },
-    { "id": "c1_011", "swedish": "yttrandefrihet", "german": "Redefreiheit / Meinungsfreiheit", "example": "Yttrandefriheten är fundamental.", "exampleTranslation": "Die Redefreiheit ist grundlegend." },
-    { "id": "c1_012", "swedish": "diskriminering", "german": "Diskriminierung", "example": "Diskriminering är oacceptabelt.", "exampleTranslation": "Diskriminierung ist inakzeptabel." },
-    { "id": "c1_013", "swedish": "segregation", "german": "Segregation / Trennung", "example": "Segregation skadar samhället.", "exampleTranslation": "Segregation schadet der Gesellschaft." },
-    { "id": "c1_014", "swedish": "integration", "german": "Integration", "example": "Integration tar tid.", "exampleTranslation": "Integration braucht Zeit." },
-    { "id": "c1_015", "swedish": "solidaritet", "german": "Solidarität", "example": "Solidaritet är viktig i svåra tider.", "exampleTranslation": "Solidarität ist in schweren Zeiten wichtig." },
-    { "id": "c1_016", "swedish": "tolerans", "german": "Toleranz", "example": "Vi värnar om tolerans.", "exampleTranslation": "Wir pflegen Toleranz." },
-    { "id": "c1_017", "swedish": "representation", "german": "Repräsentation / Vertretung", "example": "Representation i politiken är viktig.", "exampleTranslation": "Repräsentation in der Politik ist wichtig." },
-    { "id": "c1_018", "swedish": "kränkning", "german": "Verletzung (von Rechten) / Kränkung", "example": "Det är en kränkning av mänskliga rättigheter.", "exampleTranslation": "Das ist eine Verletzung der Menschenrechte." },
-    { "id": "c1_019", "swedish": "hedervärd", "german": "ehrenwert / achtbar / respektabel", "example": "Hon är en hedervärd människa.", "exampleTranslation": "Sie ist ein achtbarer Mensch." },
-    { "id": "c1_020", "swedish": "oföränderlig", "german": "unveränderlich / unabänderlich", "example": "Vissa principer är oföränderliga.", "exampleTranslation": "Einige Prinzipien sind unveränderlich." },
-    { "id": "c1_021", "swedish": "samvetsgrann", "german": "gewissenhaft / pflichtbewusst", "example": "Hon är mycket samvetsgrann.", "exampleTranslation": "Sie ist sehr gewissenhaft." },
-    { "id": "c1_022", "swedish": "förankrad", "german": "verankert / verwurzelt / verbreitet", "example": "Traditionen är djupt förankrad.", "exampleTranslation": "Die Tradition ist tief verankert." },
-    { "id": "c1_023", "swedish": "ambivalent", "german": "ambivalent / zwiespältig", "example": "Jag känner mig ambivalent inför beslutet.", "exampleTranslation": "Ich fühle mich dem Beschluss gegenüber zwiespältig." },
-    { "id": "c1_024", "swedish": "kompromiss", "german": "Kompromiss", "example": "Vi nådde en kompromiss.", "exampleTranslation": "Wir haben einen Kompromiss gefunden." },
-    { "id": "c1_025", "swedish": "paradigmskifte", "german": "Paradigmenwechsel", "example": "Det är ett paradigmskifte inom forskningen.", "exampleTranslation": "Das ist ein Paradigmenwechsel in der Forschung." },
-    { "id": "c1_026", "swedish": "implikation", "german": "Implikation / tiefere Bedeutung", "example": "Implikationerna är vittgående.", "exampleTranslation": "Die Implikationen sind weitreichend." },
-    { "id": "c1_027", "swedish": "evidens", "german": "Evidenz / Belege / Beweise", "example": "Det finns stark evidens för detta.", "exampleTranslation": "Es gibt starke Belege dafür." },
-    { "id": "c1_028", "swedish": "kognition", "german": "Kognition / Denkvermögen", "example": "Kognition påverkas av sömn.", "exampleTranslation": "Kognition wird durch Schlaf beeinflusst." },
-    { "id": "c1_029", "swedish": "motstridig", "german": "widersprüchlich / gegensätzlich", "example": "Informationen är motstridig.", "exampleTranslation": "Die Informationen sind widersprüchlich." },
-    { "id": "c1_030", "swedish": "övergripande", "german": "übergreifend / umfassend / übergeordnet", "example": "Det övergripande målet är tydligt.", "exampleTranslation": "Das übergeordnete Ziel ist klar." }
+    {
+      "id": "c1_001",
+      "swedish": "sofistikerad",
+      "german": "anspruchsvoll / raffiniert / ausgereift",
+      "example": "Det är en sofistikerad lösning.",
+      "exampleTranslation": "Das ist eine ausgereite Lösung."
+    },
+    {
+      "id": "c1_002",
+      "swedish": "nyanserad",
+      "german": "nuanciert / differenziert",
+      "example": "Hon gav en nyanserad analys.",
+      "exampleTranslation": "Sie gab eine nuancierte Analyse."
+    },
+    {
+      "id": "c1_003",
+      "swedish": "vedertagen",
+      "german": "allgemein anerkannt / üblich / etabliert",
+      "example": "Det är en vedertagen sanning.",
+      "exampleTranslation": "Das ist eine allgemein anerkannte Wahrheit."
+    },
+    {
+      "id": "c1_004",
+      "swedish": "framträdande",
+      "german": "prominent / herausragend / bedeutend",
+      "example": "Han är en framträdande politiker.",
+      "exampleTranslation": "Er ist ein prominenter Politiker."
+    },
+    {
+      "id": "c1_005",
+      "swedish": "rättvisa",
+      "german": "Gerechtigkeit",
+      "example": "Vi kämpar för rättvisa.",
+      "exampleTranslation": "Wir kämpfen für Gerechtigkeit."
+    },
+    {
+      "id": "c1_006",
+      "swedish": "jämlikhet",
+      "german": "Gleichheit / Gleichberechtigung",
+      "example": "Jämlikhet är en grundläggande värdering.",
+      "exampleTranslation": "Gleichheit ist ein grundlegender Wert."
+    },
+    {
+      "id": "c1_007",
+      "swedish": "mångfald",
+      "german": "Vielfalt / Diversität",
+      "example": "Mångfald berikar samhället.",
+      "exampleTranslation": "Vielfalt bereichert die Gesellschaft."
+    },
+    {
+      "id": "c1_008",
+      "swedish": "demokrati",
+      "german": "Demokratie",
+      "example": "Demokrati kräver delaktighet.",
+      "exampleTranslation": "Demokratie erfordert Beteiligung."
+    },
+    {
+      "id": "c1_009",
+      "swedish": "lagstiftning",
+      "german": "Gesetzgebung / Gesetz",
+      "example": "Lagstiftningen behöver uppdateras.",
+      "exampleTranslation": "Die Gesetzgebung muss aktualisiert werden."
+    },
+    {
+      "id": "c1_010",
+      "swedish": "konstitution",
+      "german": "Verfassung / Konstitution",
+      "example": "Konstitutionen skyddar medborgarnas rättigheter.",
+      "exampleTranslation": "Die Verfassung schützt die Rechte der Bürger."
+    },
+    {
+      "id": "c1_011",
+      "swedish": "yttrandefrihet",
+      "german": "Redefreiheit / Meinungsfreiheit",
+      "example": "Yttrandefriheten är fundamental.",
+      "exampleTranslation": "Die Redefreiheit ist grundlegend."
+    },
+    {
+      "id": "c1_012",
+      "swedish": "diskriminering",
+      "german": "Diskriminierung",
+      "example": "Diskriminering är oacceptabelt.",
+      "exampleTranslation": "Diskriminierung ist inakzeptabel."
+    },
+    {
+      "id": "c1_013",
+      "swedish": "segregation",
+      "german": "Segregation / Trennung",
+      "example": "Segregation skadar samhället.",
+      "exampleTranslation": "Segregation schadet der Gesellschaft."
+    },
+    {
+      "id": "c1_014",
+      "swedish": "integration",
+      "german": "Integration",
+      "example": "Integration tar tid.",
+      "exampleTranslation": "Integration braucht Zeit."
+    },
+    {
+      "id": "c1_015",
+      "swedish": "solidaritet",
+      "german": "Solidarität",
+      "example": "Solidaritet är viktig i svåra tider.",
+      "exampleTranslation": "Solidarität ist in schweren Zeiten wichtig."
+    },
+    {
+      "id": "c1_016",
+      "swedish": "tolerans",
+      "german": "Toleranz",
+      "example": "Vi värnar om tolerans.",
+      "exampleTranslation": "Wir pflegen Toleranz."
+    },
+    {
+      "id": "c1_017",
+      "swedish": "representation",
+      "german": "Repräsentation / Vertretung",
+      "example": "Representation i politiken är viktig.",
+      "exampleTranslation": "Repräsentation in der Politik ist wichtig."
+    },
+    {
+      "id": "c1_018",
+      "swedish": "kränkning",
+      "german": "Verletzung (von Rechten) / Kränkung",
+      "example": "Det är en kränkning av mänskliga rättigheter.",
+      "exampleTranslation": "Das ist eine Verletzung der Menschenrechte."
+    },
+    {
+      "id": "c1_019",
+      "swedish": "hedervärd",
+      "german": "ehrenwert / achtbar / respektabel",
+      "example": "Hon är en hedervärd människa.",
+      "exampleTranslation": "Sie ist ein achtbarer Mensch."
+    },
+    {
+      "id": "c1_020",
+      "swedish": "oföränderlig",
+      "german": "unveränderlich / unabänderlich",
+      "example": "Vissa principer är oföränderliga.",
+      "exampleTranslation": "Einige Prinzipien sind unveränderlich."
+    },
+    {
+      "id": "c1_021",
+      "swedish": "samvetsgrann",
+      "german": "gewissenhaft / pflichtbewusst",
+      "example": "Hon är mycket samvetsgrann.",
+      "exampleTranslation": "Sie ist sehr gewissenhaft."
+    },
+    {
+      "id": "c1_022",
+      "swedish": "förankrad",
+      "german": "verankert / verwurzelt / verbreitet",
+      "example": "Traditionen är djupt förankrad.",
+      "exampleTranslation": "Die Tradition ist tief verankert."
+    },
+    {
+      "id": "c1_023",
+      "swedish": "ambivalent",
+      "german": "ambivalent / zwiespältig",
+      "example": "Jag känner mig ambivalent inför beslutet.",
+      "exampleTranslation": "Ich fühle mich dem Beschluss gegenüber zwiespältig."
+    },
+    {
+      "id": "c1_024",
+      "swedish": "kompromiss",
+      "german": "Kompromiss",
+      "example": "Vi nådde en kompromiss.",
+      "exampleTranslation": "Wir haben einen Kompromiss gefunden."
+    },
+    {
+      "id": "c1_025",
+      "swedish": "paradigmskifte",
+      "german": "Paradigmenwechsel",
+      "example": "Det är ett paradigmskifte inom forskningen.",
+      "exampleTranslation": "Das ist ein Paradigmenwechsel in der Forschung."
+    },
+    {
+      "id": "c1_026",
+      "swedish": "implikation",
+      "german": "Implikation / tiefere Bedeutung",
+      "example": "Implikationerna är vittgående.",
+      "exampleTranslation": "Die Implikationen sind weitreichend."
+    },
+    {
+      "id": "c1_027",
+      "swedish": "evidens",
+      "german": "Evidenz / Belege / Beweise",
+      "example": "Det finns stark evidens för detta.",
+      "exampleTranslation": "Es gibt starke Belege dafür."
+    },
+    {
+      "id": "c1_028",
+      "swedish": "kognition",
+      "german": "Kognition / Denkvermögen",
+      "example": "Kognition påverkas av sömn.",
+      "exampleTranslation": "Kognition wird durch Schlaf beeinflusst."
+    },
+    {
+      "id": "c1_029",
+      "swedish": "motstridig",
+      "german": "widersprüchlich / gegensätzlich",
+      "example": "Informationen är motstridig.",
+      "exampleTranslation": "Die Informationen sind widersprüchlich."
+    },
+    {
+      "id": "c1_030",
+      "swedish": "övergripande",
+      "german": "übergreifend / umfassend / übergeordnet",
+      "example": "Det övergripande målet är tydligt.",
+      "exampleTranslation": "Das übergeordnete Ziel ist klar."
+    },
+    {
+      "id": "c1_031",
+      "swedish": "epistemologi",
+      "german": "Epistemologie / Erkenntnistheorie",
+      "example": "Epistemologi handlar om kunskapens natur.",
+      "exampleTranslation": "Epistemologie befasst sich mit dem Wesen der Erkenntnis."
+    },
+    {
+      "id": "c1_032",
+      "swedish": "ontologi",
+      "german": "Ontologie / Seinslehre",
+      "example": "Ontologi undersöker vad som existerar.",
+      "exampleTranslation": "Ontologie untersucht, was existiert."
+    },
+    {
+      "id": "c1_033",
+      "swedish": "axiom",
+      "german": "Axiom / Grundsatz",
+      "example": "Teorin bygger på ett antal axiom.",
+      "exampleTranslation": "Die Theorie basiert auf einer Reihe von Axiomen."
+    },
+    {
+      "id": "c1_034",
+      "swedish": "dikotomi",
+      "german": "Dichotomie / Zweiteilung",
+      "example": "Dikotomin mellan natur och kultur ifrågasätts.",
+      "exampleTranslation": "Die Dichotomie zwischen Natur und Kultur wird infrage gestellt."
+    },
+    {
+      "id": "c1_035",
+      "swedish": "polarisering",
+      "german": "Polarisierung",
+      "example": "Polariseringen i samhället ökar.",
+      "exampleTranslation": "Die Polarisierung in der Gesellschaft nimmt zu."
+    },
+    {
+      "id": "c1_036",
+      "swedish": "relativism",
+      "german": "Relativismus",
+      "example": "Moralisk relativism är omdiskuterad.",
+      "exampleTranslation": "Moralischer Relativismus ist umstritten."
+    },
+    {
+      "id": "c1_037",
+      "swedish": "empirism",
+      "german": "Empirismus",
+      "example": "Empirism betonar erfarenhetens roll.",
+      "exampleTranslation": "Empirismus betont die Rolle der Erfahrung."
+    },
+    {
+      "id": "c1_038",
+      "swedish": "rationalism",
+      "german": "Rationalismus",
+      "example": "Rationalism hävdar förnuftets primat.",
+      "exampleTranslation": "Rationalismus beansprucht den Vorrang der Vernunft."
+    },
+    {
+      "id": "c1_039",
+      "swedish": "determinism",
+      "german": "Determinismus",
+      "example": "Determinism innebär att allt är förutbestämt.",
+      "exampleTranslation": "Determinismus bedeutet, dass alles vorherbestimmt ist."
+    },
+    {
+      "id": "c1_040",
+      "swedish": "pragmatism",
+      "german": "Pragmatismus",
+      "example": "Pragmatism fokuserar på praktiska konsekvenser.",
+      "exampleTranslation": "Pragmatismus konzentriert sich auf praktische Konsequenzen."
+    },
+    {
+      "id": "c1_041",
+      "swedish": "postulat",
+      "german": "Postulat / Grundannahme",
+      "example": "Det vetenskapliga postulatet måste prövas.",
+      "exampleTranslation": "Das wissenschaftliche Postulat muss überprüft werden."
+    },
+    {
+      "id": "c1_042",
+      "swedish": "hypotesprövning",
+      "german": "Hypothesenprüfung",
+      "example": "Hypotesprövning är centralt inom vetenskap.",
+      "exampleTranslation": "Hypothesenprüfung ist zentral in der Wissenschaft."
+    },
+    {
+      "id": "c1_043",
+      "swedish": "falsifierbarhet",
+      "german": "Falsifizierbarkeit",
+      "example": "Falsifierbarhet är ett kriterium för vetenskaplighet.",
+      "exampleTranslation": "Falsifizierbarkeit ist ein Kriterium für Wissenschaftlichkeit."
+    },
+    {
+      "id": "c1_044",
+      "swedish": "replikering",
+      "german": "Replikation / Wiederholung",
+      "example": "Replikering av studier är viktigt.",
+      "exampleTranslation": "Die Replikation von Studien ist wichtig."
+    },
+    {
+      "id": "c1_045",
+      "swedish": "metaanalys",
+      "german": "Metaanalyse",
+      "example": "Metaanalysen sammanställde trettio studier.",
+      "exampleTranslation": "Die Metaanalyse fasste dreißig Studien zusammen."
+    },
+    {
+      "id": "c1_046",
+      "swedish": "systematisk granskning",
+      "german": "systematische Überprüfung / Systematic Review",
+      "example": "En systematisk granskning av litteraturen genomfördes.",
+      "exampleTranslation": "Eine systematische Überprüfung der Literatur wurde durchgeführt."
+    },
+    {
+      "id": "c1_047",
+      "swedish": "konsensusbaserad",
+      "german": "konsensbasiert",
+      "example": "Riktlinjerna är konsensusbaserade.",
+      "exampleTranslation": "Die Richtlinien sind konsensbasiert."
+    },
+    {
+      "id": "c1_048",
+      "swedish": "att nyansera",
+      "german": "nuancieren / differenzieren",
+      "example": "Vi behöver nyansera bilden.",
+      "exampleTranslation": "Wir müssen das Bild differenzieren."
+    },
+    {
+      "id": "c1_049",
+      "swedish": "att problematisera",
+      "german": "problematisieren",
+      "example": "Forskaren problematiserar den vedertagna synen.",
+      "exampleTranslation": "Der Forscher problematisiert die gängige Sichtweise."
+    },
+    {
+      "id": "c1_050",
+      "swedish": "att syntetisera",
+      "german": "synthetisieren / zusammenführen",
+      "example": "Att syntetisera olika perspektiv är utmanande.",
+      "exampleTranslation": "Verschiedene Perspektiven zusammenzuführen ist herausfordernd."
+    },
+    {
+      "id": "c1_051",
+      "swedish": "att artikulera",
+      "german": "artikulieren / ausdrücken",
+      "example": "Hon artikulerade sina tankar tydligt.",
+      "exampleTranslation": "Sie artikulierte ihre Gedanken klar."
+    },
+    {
+      "id": "c1_052",
+      "swedish": "att kontextualisera",
+      "german": "kontextualisieren",
+      "example": "Vi måste kontextualisera fynden historiskt.",
+      "exampleTranslation": "Wir müssen die Befunde historisch kontextualisieren."
+    },
+    {
+      "id": "c1_053",
+      "swedish": "att fördjupa",
+      "german": "vertiefen",
+      "example": "Vi behöver fördjupa vår förståelse.",
+      "exampleTranslation": "Wir müssen unser Verständnis vertiefen."
+    },
+    {
+      "id": "c1_054",
+      "swedish": "att renodla",
+      "german": "purifizieren / klar herausarbeiten",
+      "example": "Vi behöver renodla argumentet.",
+      "exampleTranslation": "Wir müssen das Argument klar herausarbeiten."
+    },
+    {
+      "id": "c1_055",
+      "swedish": "att subtilisera",
+      "german": "verfeinern / subtilisieren",
+      "example": "Analysen behöver subtiliseras.",
+      "exampleTranslation": "Die Analyse muss verfeinert werden."
+    },
+    {
+      "id": "c1_056",
+      "swedish": "implikatur",
+      "german": "Implikatur (Sprachphilosophie)",
+      "example": "Implikaturen i utsagan var tydlig.",
+      "exampleTranslation": "Die Implikatur der Aussage war deutlich."
+    },
+    {
+      "id": "c1_057",
+      "swedish": "pretext",
+      "german": "Vorwand / Pretext",
+      "example": "Säkerhet användes som pretext.",
+      "exampleTranslation": "Sicherheit wurde als Vorwand benutzt."
+    },
+    {
+      "id": "c1_058",
+      "swedish": "subtext",
+      "german": "Subtext",
+      "example": "Subtexten i romanen handlar om förlust.",
+      "exampleTranslation": "Der Subtext des Romans handelt von Verlust."
+    },
+    {
+      "id": "c1_059",
+      "swedish": "resonans",
+      "german": "Resonanz",
+      "example": "Budskapet fick stor resonans.",
+      "exampleTranslation": "Die Botschaft fand große Resonanz."
+    },
+    {
+      "id": "c1_060",
+      "swedish": "konnotation",
+      "german": "Konnotation",
+      "example": "Ordets konnotation är negativ.",
+      "exampleTranslation": "Die Konnotation des Wortes ist negativ."
+    },
+    {
+      "id": "c1_061",
+      "swedish": "denotation",
+      "german": "Denotation",
+      "example": "Denotationen skiljer sig från konnotationen.",
+      "exampleTranslation": "Die Denotation unterscheidet sich von der Konnotation."
+    },
+    {
+      "id": "c1_062",
+      "swedish": "semiotik",
+      "german": "Semiotik / Zeichenlehre",
+      "example": "Semiotik studerar tecken och symboler.",
+      "exampleTranslation": "Semiotik untersucht Zeichen und Symbole."
+    },
+    {
+      "id": "c1_063",
+      "swedish": "diskurs",
+      "german": "Diskurs",
+      "example": "Den politiska diskursen har förändrats.",
+      "exampleTranslation": "Der politische Diskurs hat sich verändert."
+    },
+    {
+      "id": "c1_064",
+      "swedish": "jantelagen",
+      "german": "das Jantegesetz (schwed. Sozialnorm)",
+      "example": "Jantelagen präglar fortfarande delar av det svenska samhället.",
+      "exampleTranslation": "Das Jantegesetz prägt noch immer Teile der schwedischen Gesellschaft."
+    },
+    {
+      "id": "c1_065",
+      "swedish": "förvaltningsrätt",
+      "german": "Verwaltungsrecht",
+      "example": "Förvaltningsrätten prövade beslutet.",
+      "exampleTranslation": "Das Verwaltungsgericht prüfte die Entscheidung."
+    },
+    {
+      "id": "c1_066",
+      "swedish": "ombudsman",
+      "german": "Ombudsmann / Ombudsperson",
+      "example": "Ombudsmannen utreder medborgarnas klagomål.",
+      "exampleTranslation": "Der Ombudsmann untersucht die Beschwerden der Bürger."
+    },
+    {
+      "id": "c1_067",
+      "swedish": "folkhögskola",
+      "german": "Volkshochschule (schwed. Bildungseinrichtung)",
+      "example": "Folkhögskolan erbjuder kurser för vuxna.",
+      "exampleTranslation": "Die Volkshochschule bietet Kurse für Erwachsene an."
+    },
+    {
+      "id": "c1_068",
+      "swedish": "arbetsmarknad",
+      "german": "Arbeitsmarkt",
+      "example": "Arbetsmarknaden har förändrats kraftigt.",
+      "exampleTranslation": "Der Arbeitsmarkt hat sich stark verändert."
+    },
+    {
+      "id": "c1_069",
+      "swedish": "avtalsrätt",
+      "german": "Vertragsrecht",
+      "example": "Avtalsrätten reglerar avtal mellan parter.",
+      "exampleTranslation": "Das Vertragsrecht regelt Verträge zwischen Parteien."
+    },
+    {
+      "id": "c1_070",
+      "swedish": "kollektivavtal",
+      "german": "Tarifvertrag",
+      "example": "Kollektivavtalet förhandlades fram av facket.",
+      "exampleTranslation": "Der Tarifvertrag wurde von der Gewerkschaft ausgehandelt."
+    },
+    {
+      "id": "c1_071",
+      "swedish": "mångbottnad",
+      "german": "vielschichtig / mehrdeutig",
+      "example": "Romanen är mångbottnad.",
+      "exampleTranslation": "Der Roman ist vielschichtig."
+    },
+    {
+      "id": "c1_072",
+      "swedish": "långtgående",
+      "german": "weitgehend / weitreichend",
+      "example": "Reformen hade långtgående effekter.",
+      "exampleTranslation": "Die Reformen hatten weitreichende Auswirkungen."
+    },
+    {
+      "id": "c1_073",
+      "swedish": "djupgående",
+      "german": "tiefgehend / eingehend",
+      "example": "En djupgående analys krävs.",
+      "exampleTranslation": "Eine eingehende Analyse ist erforderlich."
+    },
+    {
+      "id": "c1_074",
+      "swedish": "inflytelserik",
+      "german": "einflussreich",
+      "example": "Hon var en inflytelserik tänkare.",
+      "exampleTranslation": "Sie war eine einflussreiche Denkerin."
+    },
+    {
+      "id": "c1_075",
+      "swedish": "genomgripande",
+      "german": "durchgreifend / tiefgreifend",
+      "example": "Genomgripande reformer behövs.",
+      "exampleTranslation": "Tiefgreifende Reformen sind nötig."
+    },
+    {
+      "id": "c1_076",
+      "swedish": "svåröverskådlig",
+      "german": "unübersichtlich / schwer überschaubar",
+      "example": "Situationen är svåröverskådlig.",
+      "exampleTranslation": "Die Situation ist unübersichtlich."
+    },
+    {
+      "id": "c1_077",
+      "swedish": "vittomfattande",
+      "german": "weitumfassend / breit gefächert",
+      "example": "Studien var vittomfattande.",
+      "exampleTranslation": "Die Studie war breit gefächert."
+    },
+    {
+      "id": "c1_078",
+      "swedish": "tveeggad",
+      "german": "zweischneidig",
+      "example": "Globaliseringen är ett tveeggat svärd.",
+      "exampleTranslation": "Die Globalisierung ist ein zweischneidiges Schwert."
+    },
+    {
+      "id": "c1_079",
+      "swedish": "inte desto mindre",
+      "german": "nichtsdestoweniger / trotzdem",
+      "example": "Inte desto mindre måste vi fortsätta.",
+      "exampleTranslation": "Nichtsdestoweniger müssen wir weitermachen."
+    },
+    {
+      "id": "c1_080",
+      "swedish": "oaktat detta",
+      "german": "ungeachtet dessen",
+      "example": "Oaktat detta kvarstår problemet.",
+      "exampleTranslation": "Ungeachtet dessen besteht das Problem fort."
+    },
+    {
+      "id": "c1_081",
+      "swedish": "i förlängningen",
+      "german": "letztendlich / auf lange Sicht",
+      "example": "I förlängningen påverkar det oss alla.",
+      "exampleTranslation": "Auf lange Sicht betrifft es uns alle."
+    },
+    {
+      "id": "c1_082",
+      "swedish": "med beaktande av",
+      "german": "unter Berücksichtigung von",
+      "example": "Med beaktande av alla faktorer är beslutet rimligt.",
+      "exampleTranslation": "Unter Berücksichtigung aller Faktoren ist die Entscheidung angemessen."
+    },
+    {
+      "id": "c1_083",
+      "swedish": "med reservation för",
+      "german": "mit Vorbehalt / unter Vorbehalt",
+      "example": "Med reservation för eventuella ändringar.",
+      "exampleTranslation": "Unter Vorbehalt eventueller Änderungen."
+    },
+    {
+      "id": "c1_084",
+      "swedish": "utan att förringa",
+      "german": "ohne zu schmälern / ohne abzuwerten",
+      "example": "Utan att förringa hans insats behöver vi se kritiskt på resultaten.",
+      "exampleTranslation": "Ohne seinen Einsatz zu schmälern, müssen wir die Ergebnisse kritisch betrachten."
+    },
+    {
+      "id": "c1_085",
+      "swedish": "hermeneutik",
+      "german": "Hermeneutik / Interpretationslehre",
+      "example": "Hermeneutik är centralt inom humanvetenskaperna.",
+      "exampleTranslation": "Hermeneutik ist zentral in den Geisteswissenschaften."
+    },
+    {
+      "id": "c1_086",
+      "swedish": "fenomenologi",
+      "german": "Phänomenologie",
+      "example": "Fenomenologi studerar medvetandets strukturer.",
+      "exampleTranslation": "Phänomenologie untersucht die Strukturen des Bewusstseins."
+    },
+    {
+      "id": "c1_087",
+      "swedish": "dialektik",
+      "german": "Dialektik",
+      "example": "Den hegenska dialektiken är inflytelserik.",
+      "exampleTranslation": "Die hegelsche Dialektik ist einflussreich."
+    },
+    {
+      "id": "c1_088",
+      "swedish": "premiss",
+      "german": "Prämisse",
+      "example": "Argumentet vilar på en svag premiss.",
+      "exampleTranslation": "Das Argument beruht auf einer schwachen Prämisse."
+    },
+    {
+      "id": "c1_089",
+      "swedish": "syllogism",
+      "german": "Syllogismus / logischer Schluss",
+      "example": "Syllogismen är en grundläggande logisk form.",
+      "exampleTranslation": "Der Syllogismus ist eine grundlegende logische Form."
+    },
+    {
+      "id": "c1_090",
+      "swedish": "tautologi",
+      "german": "Tautologie",
+      "example": "Påståendet är en tautologi.",
+      "exampleTranslation": "Die Aussage ist eine Tautologie."
+    },
+    {
+      "id": "c1_091",
+      "swedish": "paradox",
+      "german": "Paradoxon",
+      "example": "Paradoxen med tolerans diskuterades.",
+      "exampleTranslation": "Das Paradoxon der Toleranz wurde diskutiert."
+    },
+    {
+      "id": "c1_092",
+      "swedish": "etik",
+      "german": "Ethik",
+      "example": "Etiken väger tungt i medicinsk forskning.",
+      "exampleTranslation": "Die Ethik wiegt schwer in der medizinischen Forschung."
+    },
+    {
+      "id": "c1_093",
+      "swedish": "normativ",
+      "german": "normativ",
+      "example": "Det är ett normativt ställningstagande.",
+      "exampleTranslation": "Das ist eine normative Stellungnahme."
+    },
+    {
+      "id": "c1_094",
+      "swedish": "deskriptiv",
+      "german": "deskriptiv / beschreibend",
+      "example": "Studien är deskriptiv, inte normativ.",
+      "exampleTranslation": "Die Studie ist deskriptiv, nicht normativ."
+    },
+    {
+      "id": "c1_095",
+      "swedish": "teleologisk",
+      "german": "teleologisch / zweckgerichtet",
+      "example": "Ett teleologiskt perspektiv betonar ändamålet.",
+      "exampleTranslation": "Eine teleologische Perspektive betont den Zweck."
+    },
+    {
+      "id": "c1_096",
+      "swedish": "reduktionism",
+      "german": "Reduktionismus",
+      "example": "Reduktionism förenklar komplexa fenomen.",
+      "exampleTranslation": "Reduktionismus vereinfacht komplexe Phänomene."
+    },
+    {
+      "id": "c1_097",
+      "swedish": "holism",
+      "german": "Holismus / Ganzheitlichkeit",
+      "example": "Holism betonar helheten.",
+      "exampleTranslation": "Holismus betont das Ganze."
+    },
+    {
+      "id": "c1_098",
+      "swedish": "paradigm",
+      "german": "Paradigma",
+      "example": "Vi befinner oss i ett nytt paradigm.",
+      "exampleTranslation": "Wir befinden uns in einem neuen Paradigma."
+    },
+    {
+      "id": "c1_099",
+      "swedish": "hegemonisk",
+      "german": "hegemonial / vorherrschend",
+      "example": "Den hegemoniska diskursen utmanas.",
+      "exampleTranslation": "Der vorherrschende Diskurs wird herausgefordert."
+    },
+    {
+      "id": "c1_100",
+      "swedish": "intersubjektiv",
+      "german": "intersubjektiv",
+      "example": "Kunskap kan vara intersubjektiv.",
+      "exampleTranslation": "Wissen kann intersubjektiv sein."
+    }
   ]
 }

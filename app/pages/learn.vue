@@ -5,14 +5,29 @@ import b1 from '~/data/vocabulary/b1.json'
 import b2 from '~/data/vocabulary/b2.json'
 import c1 from '~/data/vocabulary/c1.json'
 import type { Rating } from '~/composables/useSpacedRepetition'
-import { DAILY_NEW_LIMIT } from '~/stores/progress'
+import { DAILY_NEW_LIMIT, DAILY_CARD_TARGET } from '~/stores/progress'
+import { type CefrLevel, LEVEL_ORDER } from '~/stores/user'
 
 const store = useProgressStore()
+const userStore = useUserStore()
 const route = useRoute()
 
 const allWords = [...a1.words, ...a2.words, ...b1.words, ...b2.words, ...c1.words]
 
+const allLevelWordIdArrays = [
+  a1.words.map(w => w.id),
+  a2.words.map(w => w.id),
+  b1.words.map(w => w.id),
+  b2.words.map(w => w.id),
+  c1.words.map(w => w.id),
+]
+
 const levelFilter = computed(() => route.query.level as string | undefined)
+const isDailyMode = computed(() => route.query.mode === 'daily')
+
+const unlockedLevelWordIdArrays = computed(() =>
+  allLevelWordIdArrays.filter((_, i) => userStore.isLevelUnlocked(LEVEL_ORDER[i]))
+)
 
 const filteredWords = computed(() =>
   levelFilter.value
@@ -39,18 +54,35 @@ const sessionNewCount = ref(0)
 const overDailyLimit = ref(false)
 
 function startSession() {
-  const remaining = DAILY_NEW_LIMIT - store.newCardsSeenToday()
-  overDailyLimit.value = remaining <= 0
-  const reviews = resolveIds(store.reviewIds(wordIds.value))
-  const newCards = resolveIds(store.newIds(wordIds.value, Math.max(remaining, wordIds.value.length)))
-  sessionReviewCount.value = reviews.length
-  sessionNewCount.value = newCards.length
-  // Shuffle reviews and new cards together
-  const combined = [...reviews, ...newCards].sort(() => Math.random() - 0.5)
-  queue.value = combined
-  currentIndex.value = 0
-  reviewedCount.value = 0
-  done.value = combined.length === 0
+  // Guard: redirect if accessing a locked level
+  if (levelFilter.value && !userStore.isLevelUnlocked(levelFilter.value as CefrLevel)) {
+    navigateTo('/')
+    return
+  }
+
+  if (isDailyMode.value) {
+    const ids = store.dailySessionIds(unlockedLevelWordIdArrays.value)
+    const words = resolveIds(ids)
+    sessionReviewCount.value = ids.filter(id => store.getCard(id).lastReviewed !== null).length
+    sessionNewCount.value = ids.filter(id => store.getCard(id).lastReviewed === null).length
+    queue.value = words.sort(() => Math.random() - 0.5)
+    currentIndex.value = 0
+    reviewedCount.value = 0
+    done.value = words.length === 0
+    overDailyLimit.value = false
+  } else {
+    const remaining = DAILY_NEW_LIMIT - store.newCardsSeenToday()
+    overDailyLimit.value = remaining <= 0
+    const reviews = resolveIds(store.reviewIds(wordIds.value))
+    const newCards = resolveIds(store.newIds(wordIds.value, Math.max(remaining, wordIds.value.length)))
+    sessionReviewCount.value = reviews.length
+    sessionNewCount.value = newCards.length
+    const combined = [...reviews, ...newCards].sort(() => Math.random() - 0.5)
+    queue.value = combined
+    currentIndex.value = 0
+    reviewedCount.value = 0
+    done.value = combined.length === 0
+  }
 }
 
 function toggleMode() {
@@ -65,6 +97,13 @@ onMounted(() => {
 })
 
 const current = computed(() => queue.value[currentIndex.value])
+const doneCount = computed(() =>
+  isDailyMode.value ? store.dailyLearnedToday() : reviewedCount.value
+)
+const dailyGoalToday = DAILY_CARD_TARGET
+const dailyGoalReached = computed(() =>
+  isDailyMode.value && store.dailyRemaining() <= 0
+)
 
 function levelForId(id: string): string {
   return id.split('_')[0]!.toUpperCase()
@@ -99,10 +138,10 @@ function onRate(rating: Rating) {
       </NuxtLink>
       <div class="flex-1">
         <h2 class="font-bold text-gray-900">
-          {{ levelFilter ? `Niveau ${levelFilter}` : 'Alle Niveau' }}
+          {{ isDailyMode ? 'Tagespensum' : (levelFilter ? `Niveau ${levelFilter}` : 'Alle Niveau') }}
         </h2>
         <p v-if="!done" class="text-xs text-gray-400">
-          {{ currentIndex + 1 }} / {{ queue.length }} ·
+          {{ currentIndex + 1 }} / {{ queue.length }}<span v-if="isDailyMode"> heute</span> ·
           <span v-if="sessionReviewCount">{{ sessionReviewCount }} Wdh.</span>
           <span v-if="sessionReviewCount && sessionNewCount"> · </span>
           <span v-if="sessionNewCount" class="text-swedish-blue">{{ sessionNewCount }} neu</span>
@@ -133,15 +172,21 @@ function onRate(rating: Rating) {
     </div>
 
     <!-- Over daily limit banner -->
-    <div v-if="overDailyLimit && !done && queue.length > 0" class="mb-4 rounded-xl bg-amber-50 border border-amber-200 px-4 py-2 text-xs text-amber-700">
+    <div v-if="overDailyLimit && !isDailyMode && !done && queue.length > 0" class="mb-4 rounded-xl bg-amber-50 border border-amber-200 px-4 py-2 text-xs text-amber-700">
       Tagesempfehlung erreicht — du lernst extra Karten.
+    </div>
+
+    <!-- Daily goal reached banner -->
+    <div v-if="dailyGoalReached && !done && queue.length > 0" class="mb-4 rounded-xl bg-sky-50 border border-sky-200 px-4 py-2 text-xs text-sky-800">
+      Tagesziel erreicht - du kannst mit extra Karten weitermachen.
     </div>
 
     <!-- Done state -->
     <div v-if="done" class="text-center py-16">
       <div class="text-5xl mb-4">🎉</div>
       <h3 class="text-xl font-bold text-gray-900 mb-2">Gut gemacht!</h3>
-      <p class="text-gray-500 mb-2">Du hast {{ reviewedCount }} Karten wiederholt.</p>
+      <p class="text-gray-500 mb-2">Du hast {{ doneCount }} Karten wiederholt.</p>
+      <p v-if="isDailyMode" class="text-xs text-gray-400 mb-2">Tagesziel: {{ dailyGoalToday }} Karten</p>
       <p v-if="store.streak.count > 1" class="text-swedish-blue font-semibold mb-8">
         🔥 {{ store.streak.count }} Tage in Folge!
       </p>
@@ -160,13 +205,24 @@ function onRate(rating: Rating) {
       <h3 class="text-xl font-bold text-gray-900 mb-2">Alles erledigt!</h3>
       <p class="text-gray-500 mb-2">Keine Karten für heute fällig.</p>
       <p class="text-xs text-gray-400 mb-8">Keine neuen oder fälligen Karten für dieses Niveau.</p>
-      <NuxtLink
-        to="/"
-        class="inline-block px-6 py-3 rounded-xl text-white font-semibold"
-        style="background-color: #006AA7;"
-      >
-        Zurück
-      </NuxtLink>
+      <div class="flex flex-col gap-3 items-center">
+        <NuxtLink
+          to="/sentences"
+          class="inline-block px-6 py-3 rounded-xl text-white font-semibold"
+          style="background-color: #006AA7;"
+        >
+          Satzübungen starten
+        </NuxtLink>
+        <NuxtLink
+          to="/grammar"
+          class="inline-block px-6 py-3 rounded-xl font-semibold border border-gray-200 text-gray-700 hover:border-swedish-blue hover:text-swedish-blue transition-colors"
+        >
+          Grammatik üben
+        </NuxtLink>
+        <NuxtLink to="/" class="text-sm text-gray-500 hover:text-gray-700">
+          Zurück zur Übersicht
+        </NuxtLink>
+      </div>
     </div>
 
     <!-- Flash card -->

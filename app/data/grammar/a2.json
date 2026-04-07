@@ -1,0 +1,217 @@
+{
+  "level": "A2",
+  "topics": [
+    {
+      "id": "a2_gr_01",
+      "title": "Präsens regulärer Verben",
+      "category": "Verben",
+      "explanation": "Schwedische Verben werden im Präsens für alle Personen gleich konjugiert – es gibt keine Personenendungen. Die Form richtet sich nach der Konjugationsgruppe des Verbs. Gruppe 1 (häufigste): Infinitiv auf -a, Präsens auf -ar. Gruppe 2: Infinitiv auf -a oder Konsonant, Präsens auf -er. Gruppe 3: Kurzverben, Präsens auf -r.",
+      "rule": "Gr. 1: tala  → talar   (sprechen)\nGr. 2a: läsa  → läser   (lesen, Stammveränderung: läs-)\nGr. 2b: köpa  → köper   (kaufen)\nGr. 3: bo    → bor     (wohnen)\nGr. 4: gå    → går     (gehen, unregelmäßig)",
+      "examples": [
+        { "swedish": "Jag talar svenska varje dag.", "german": "Ich spreche jeden Tag Schwedisch.", "highlight": "talar" },
+        { "swedish": "Hon läser en bok.", "german": "Sie liest ein Buch.", "highlight": "läser" },
+        { "swedish": "Vi bor i Lund.", "german": "Wir wohnen in Lund.", "highlight": "bor" },
+        { "swedish": "Han köper mat.", "german": "Er kauft Lebensmittel.", "highlight": "köper" },
+        { "swedish": "De går till skolan.", "german": "Sie gehen zur Schule.", "highlight": "går" }
+      ],
+      "exercises": [
+        { "prompt": "Hon ___ på jobbet. (arbeta, Gr. 1)", "translation": "Sie arbeitet auf der Arbeit.", "answer": "arbetar" },
+        { "prompt": "Jag ___ musik. (lyssna på, Gr. 1)", "translation": "Ich höre Musik.", "answer": "lyssnar" },
+        { "prompt": "De ___ i ett hus. (bo, Gr. 3)", "translation": "Sie wohnen in einem Haus.", "answer": "bor" },
+        { "prompt": "Han ___ tidningen. (läsa, Gr. 2)", "translation": "Er liest die Zeitung.", "answer": "läser" },
+        { "prompt": "Vi ___ mat. (laga, Gr. 1)", "translation": "Wir kochen Essen.", "answer": "lagar" },
+        { "prompt": "Jag ___ hem nu. (gå, Gr. 4)", "translation": "Ich gehe jetzt nach Hause.", "answer": "går" }
+      ]
+    },
+    {
+      "id": "a2_gr_02",
+      "title": "Plural der Nomen",
+      "category": "Nomen",
+      "explanation": "Schwedische Nomen bilden ihren Plural nach fünf Deklinationsklassen. Die Klasse muss für jedes Wort gelernt werden, obwohl es Faustregeln gibt (z.B. en-Wörter auf -a meist Klasse 1 mit Plural -or). Im Unterschied zum Deutschen gibt es keine Umlautregeln als System.",
+      "rule": "Kl. 1: flicka  → flickor  (Mädchen, en-W. auf -a)\nKl. 2: hund    → hundar   (Hund)\nKl. 3: bil     → bilar    (Auto)\nKl. 4: äpple   → äpplen   (Apfel, ett-W. auf -e)\nKl. 5: hus     → hus      (Haus, unveränderlich)\n       barn    → barn     (Kind, unveränderlich)",
+      "examples": [
+        { "swedish": "Det finns många flickor i klassen.", "german": "Es gibt viele Mädchen in der Klasse.", "highlight": "flickor" },
+        { "swedish": "Jag har tre hundar.", "german": "Ich habe drei Hunde.", "highlight": "hundar" },
+        { "swedish": "Vi har två bilar.", "german": "Wir haben zwei Autos.", "highlight": "bilar" },
+        { "swedish": "Det finns fem rum i huset.", "german": "Im Haus gibt es fünf Zimmer.", "highlight": "rum" },
+        { "swedish": "Barnen leker i parken.", "german": "Die Kinder spielen im Park.", "highlight": "Barnen" }
+      ],
+      "exercises": [
+        { "prompt": "en flicka → många ___ (Klasse 1, -or)", "translation": "ein Mädchen → viele Mädchen", "answer": "flickor" },
+        { "prompt": "en hund → tre ___ (Klasse 2, -ar)", "translation": "ein Hund → drei Hunde", "answer": "hundar" },
+        { "prompt": "en bil → fem ___ (Klasse 2/3, -ar)", "translation": "ein Auto → fünf Autos", "answer": "bilar" },
+        { "prompt": "ett hus → många ___ (Klasse 5, keine Endung)", "translation": "ein Haus → viele Häuser", "answer": "hus" },
+        { "prompt": "ett barn → alla ___ (Klasse 5, keine Endung)", "translation": "ein Kind → alle Kinder", "answer": "barn" },
+        { "prompt": "en skola → två ___ (Klasse 1, -or)", "translation": "eine Schule → zwei Schulen", "answer": "skolor" }
+      ]
+    },
+    {
+      "id": "a2_gr_03",
+      "title": "Bestimmte Pluralform",
+      "category": "Nomen",
+      "explanation": "Im Schwedischen hat die bestimmte Pluralform (die Autos, die Kinder) ebenfalls eine Suffix-Endung. Diese richtet sich nach der Deklinationsklasse. Wichtig: Die bestimmte Pluralform wird durch Anhängen einer weiteren Endung an die unbestimmte Pluralform gebildet.",
+      "rule": "Kl. 1: flickor  + na  → flickorna\nKl. 2: hundar  + na  → hundarna\nKl. 3: bilar   + na  → bilarna\nKl. 4: äpplen  + a   → äpplena\nKl. 5 (ett): hus + en → husen  |  barn + en → barnen",
+      "examples": [
+        { "swedish": "Flickorna sjunger.", "german": "Die Mädchen singen.", "highlight": "Flickorna" },
+        { "swedish": "Hundarna sover.", "german": "Die Hunde schlafen.", "highlight": "Hundarna" },
+        { "swedish": "Bilarna är röda.", "german": "Die Autos sind rot.", "highlight": "Bilarna" },
+        { "swedish": "Husen är vita.", "german": "Die Häuser sind weiß.", "highlight": "Husen" },
+        { "swedish": "Barnen leker utomhus.", "german": "Die Kinder spielen draußen.", "highlight": "Barnen" }
+      ],
+      "exercises": [
+        { "prompt": "flickor  →  ___ (die Mädchen, bestimmt)", "translation": "die Mädchen (bestimmte Form)", "answer": "flickorna" },
+        { "prompt": "hundar  →  ___ (die Hunde, bestimmt)", "translation": "die Hunde (bestimmte Form)", "answer": "hundarna" },
+        { "prompt": "bilar  →  ___ (die Autos, bestimmt)", "translation": "die Autos (bestimmte Form)", "answer": "bilarna" },
+        { "prompt": "hus  →  ___ (die Häuser, bestimmt)", "translation": "die Häuser (bestimmte Form)", "answer": "husen" },
+        { "prompt": "barn  →  ___ (die Kinder, bestimmt)", "translation": "die Kinder (bestimmte Form)", "answer": "barnen" }
+      ]
+    },
+    {
+      "id": "a2_gr_04",
+      "title": "Adjektivkongruenz",
+      "category": "Adjektive",
+      "explanation": "Schwedische Adjektive passen sich in Genus und Numerus an das Nomen an. Bei indefiniter Verwendung: Grundform (en-Wörter), -t-Form (ett-Wörter), -a-Form (Plural). Bei definitiver Verwendung steht immer die -a-Form, egal welches Genus oder Numerus. Vor bestimmten Nomen wird zudem der bestimmte Artikel 'den/det/de' vorangestellt.",
+      "rule": "Unbestimmt:  en stor bil  |  ett stort hus  |  stora bilar\nBestimmt:    den stora bilen  |  det stora huset  |  de stora bilarna\nMerke: Im Bestimmten immer -a!",
+      "examples": [
+        { "swedish": "Jag har en ny bil.", "german": "Ich habe ein neues Auto.", "highlight": "ny" },
+        { "swedish": "Det är ett nytt hus.", "german": "Das ist ein neues Haus.", "highlight": "nytt" },
+        { "swedish": "De nya bilarna är dyra.", "german": "Die neuen Autos sind teuer.", "highlight": "nya" },
+        { "swedish": "Den gamla mannen sover.", "german": "Der alte Mann schläft.", "highlight": "gamla" },
+        { "swedish": "Det stora huset är vitt.", "german": "Das große Haus ist weiß.", "highlight": "stora" }
+      ],
+      "exercises": [
+        { "prompt": "en ___ dag (schön, en-Wort unbestimmt)", "translation": "ein schöner Tag", "answer": "fin" },
+        { "prompt": "ett ___ barn (klein, ett-Wort unbestimmt)", "translation": "ein kleines Kind", "answer": "litet" },
+        { "prompt": "den ___ boken (neu, bestimmt)", "translation": "das neue Buch", "answer": "nya" },
+        { "prompt": "det ___ huset (groß, bestimmt)", "translation": "das große Haus", "answer": "stora" },
+        { "prompt": "de ___ hundarna (liten → Plural, bestimmt)", "translation": "die kleinen Hunde", "answer": "små" },
+        { "prompt": "ett ___ rum (groß, ett-Wort unbestimmt)", "translation": "ein großes Zimmer", "answer": "stort" }
+      ]
+    },
+    {
+      "id": "a2_gr_05",
+      "title": "Grundlegende Präpositionen",
+      "category": "Präpositionen",
+      "explanation": "Schwedische Präpositionen stimmen oft nicht eins zu eins mit den deutschen überein. Besonders 'i' (in, bei zeitlicher/räumlicher Lage) und 'på' (auf, an, in – oft bei Aktivitäten, Orten wie Arbeit/Schule) bereiten deutschen Lernern Schwierigkeiten.",
+      "rule": "i     → in (Lage, Zeit): i Sverige / i januari\npå    → auf/an/in (Ort, Tätigkeit): på jobbet / på måndag\ntill  → nach/zu (Richtung): till Stockholm\nfrån  → von/aus: från Sverige\nmed   → mit: med tåg\nav    → von/aus (Material, Zugehörigkeit): gjord av trä\nom    → in (zukünftige Zeit), über: om en timme / tala om",
+      "examples": [
+        { "swedish": "Jag bor i Stockholm.", "german": "Ich wohne in Stockholm.", "highlight": "i" },
+        { "swedish": "Hon arbetar på ett sjukhus.", "german": "Sie arbeitet in einem Krankenhaus.", "highlight": "på" },
+        { "swedish": "Vi reser till Norge.", "german": "Wir reisen nach Norwegen.", "highlight": "till" },
+        { "swedish": "Han kommer från Finland.", "german": "Er kommt aus Finnland.", "highlight": "från" },
+        { "swedish": "Vi åker med buss.", "german": "Wir fahren mit dem Bus.", "highlight": "med" }
+      ],
+      "exercises": [
+        { "prompt": "Jag bor ___ Sverige. (in)", "translation": "Ich wohne in Schweden.", "answer": "i" },
+        { "prompt": "Han jobbar ___ skolan. (an der)", "translation": "Er arbeitet an der Schule.", "answer": "på" },
+        { "prompt": "Vi reser ___ Berlin. (nach)", "translation": "Wir reisen nach Berlin.", "answer": "till" },
+        { "prompt": "Hon kommer ___ Tyskland. (aus)", "translation": "Sie kommt aus Deutschland.", "answer": "från" },
+        { "prompt": "Jag åker ___ tåg. (mit dem)", "translation": "Ich fahre mit dem Zug.", "answer": "med" },
+        { "prompt": "Vi ses ___ en timme. (in einer)", "translation": "Wir sehen uns in einer Stunde.", "answer": "om" }
+      ]
+    },
+    {
+      "id": "a2_gr_06",
+      "title": "V2-Regel",
+      "category": "Satzstruktur",
+      "explanation": "Das konjugierte Verb steht im schwedischen Hauptsatz immer an zweiter Position. Wenn ein anderes Satzglied (Adverbial, Objekt) an den Anfang gestellt wird, müssen Verb und Subjekt die Plätze tauschen (Inversion). Diese Regel kennt man aus dem Deutschen und ist im Schwedischen noch strenger einzuhalten.",
+      "rule": "Normal:    Jag äter lunch idag.\nInversion: Idag äter jag lunch.      ← Verb bleibt an 2. Stelle\nIdag NICHT: Idag jag äter lunch.    ← FALSCH",
+      "examples": [
+        { "swedish": "Igår åkte vi till Göteborg.", "german": "Gestern fuhren wir nach Göteborg.", "highlight": "åkte" },
+        { "swedish": "Nu förstår jag.", "german": "Jetzt verstehe ich.", "highlight": "förstår" },
+        { "swedish": "I sommar ska vi resa.", "german": "Im Sommer werden wir reisen.", "highlight": "ska" },
+        { "swedish": "Varje dag läser hon tidningen.", "german": "Jeden Tag liest sie die Zeitung.", "highlight": "läser" }
+      ],
+      "exercises": [
+        { "prompt": "Igår ___ jag trött. (war)", "translation": "Gestern war ich müde.", "answer": "var" },
+        { "prompt": "I morse ___ han kaffe. (trank)", "translation": "Heute Morgen trank er Kaffee.", "answer": "drack" },
+        { "prompt": "Nu ___ vi hem. (gehen)", "translation": "Jetzt gehen wir nach Hause.", "answer": "går" },
+        { "prompt": "I helgen ___ de på bio. (waren/gingen)", "translation": "Am Wochenende gingen sie ins Kino.", "answer": "var", "alternatives": ["gick"] }
+      ]
+    },
+    {
+      "id": "a2_gr_07",
+      "title": "Präteritum regulärer Verben",
+      "category": "Verben",
+      "explanation": "Das Präteritum (Imperfekt) der regulären Verben wird je nach Gruppe unterschiedlich gebildet. Gruppe 1 (-ar-Verben) bekommt die Endung -ade. Gruppe 2 (-er-Verben) bekommt -de oder -te (nach stimmlosen Konsonanten). Gruppe 3 (Kurzverben) bekommt -dde. Das Präteritum ist für alle Personen identisch.",
+      "rule": "Gr. 1:  tala  → talade    (sprach)\nGr. 2:  läsa  → läste     (las) | köpa → köpte\nGr. 2:  leva  → levde     (lebte)\nGr. 3:  bo    → bodde     (wohnte)\nAlle Personen gleich: jag/du/han/hon/vi/ni/de talade",
+      "examples": [
+        { "swedish": "Igår talade jag med min chef.", "german": "Gestern sprach ich mit meinem Chef.", "highlight": "talade" },
+        { "swedish": "Hon köpte en ny klänning.", "german": "Sie kaufte ein neues Kleid.", "highlight": "köpte" },
+        { "swedish": "Vi bodde i Berlin i två år.", "german": "Wir wohnten zwei Jahre in Berlin.", "highlight": "bodde" },
+        { "swedish": "Han läste boken på en dag.", "german": "Er las das Buch an einem Tag.", "highlight": "läste" }
+      ],
+      "exercises": [
+        { "prompt": "Jag ___ till skolan igår. (gå, Gr. 4 stark)", "translation": "Ich ging gestern zur Schule.", "answer": "gick" },
+        { "prompt": "Hon ___ mat i köket. (laga, Gr. 1 → -ade)", "translation": "Sie kochte in der Küche.", "answer": "lagade" },
+        { "prompt": "Vi ___ på hotell. (bo, Gr. 3 → -dde)", "translation": "Wir wohnten im Hotel.", "answer": "bodde" },
+        { "prompt": "Han ___ en bok. (köpa, Gr. 2 → -te)", "translation": "Er kaufte ein Buch.", "answer": "köpte" },
+        { "prompt": "De ___ svenska i skolan. (lära sig, Gr. 2 → -de)", "translation": "Sie lernten Schwedisch in der Schule.", "answer": "lärde" }
+      ]
+    },
+    {
+      "id": "a2_gr_08",
+      "title": "Possessivpronomen",
+      "category": "Pronomen",
+      "explanation": "Schwedische Possessivpronomen kongruieren mit dem Genus und Numerus des besessenen Nomens, nicht mit dem Besitzer. Es gibt drei Formen: Grundform (en-Wörter), t-Form (ett-Wörter) und -a-Form (Plural/bestimmt). 'Hans' (sein) und 'hennes' (ihr) sind unveränderlich.",
+      "rule": "1. Pers. Sg.:  min bil  /  mitt hus  /  mina bilar\n2. Pers. Sg.:  din bil  /  ditt hus  /  dina bilar\n3. Pers. Sg.:  hans / hennes / dess  (unveränderlich)\n1. Pers. Pl.:  vår bil  /  vårt hus  /  våra bilar\n2. Pers. Pl.:  er bil   /  ert hus   /  era bilar\n3. Pers. Pl.:  deras   (unveränderlich)",
+      "examples": [
+        { "swedish": "Det är min bok.", "german": "Das ist mein Buch.", "highlight": "min" },
+        { "swedish": "Det är mitt hus.", "german": "Das ist mein Haus.", "highlight": "mitt" },
+        { "swedish": "Det är mina skor.", "german": "Das sind meine Schuhe.", "highlight": "mina" },
+        { "swedish": "Var är din bil?", "german": "Wo ist dein Auto?", "highlight": "din" },
+        { "swedish": "Vår hund heter Max.", "german": "Unser Hund heißt Max.", "highlight": "Vår" }
+      ],
+      "exercises": [
+        { "prompt": "Det är ___ bok. (mein, en-Wort)", "translation": "Das ist mein Buch.", "answer": "min" },
+        { "prompt": "Det är ___ hus. (mein, ett-Wort)", "translation": "Das ist mein Haus.", "answer": "mitt" },
+        { "prompt": "Det är ___ skor. (meine, Plural)", "translation": "Das sind meine Schuhe.", "answer": "mina" },
+        { "prompt": "Var är ___ bil? (dein, en-Wort)", "translation": "Wo ist dein Auto?", "answer": "din" },
+        { "prompt": "___ hund är stor. (unser)", "translation": "Unser Hund ist groß.", "answer": "vår" },
+        { "prompt": "Det är ___ barn. (ihr, 3. Pers. Pl.)", "translation": "Das sind ihre Kinder.", "answer": "deras" }
+      ]
+    },
+    {
+      "id": "a2_gr_09",
+      "title": "Fragepronomen",
+      "category": "Pronomen",
+      "explanation": "Schwedische Fragepronomen werden wie im Deutschen zur Bildung von Ergänzungsfragen verwendet. Das Fragepronomen steht am Satzanfang, gefolgt vom Verb (V2-Regel). 'Vilken/vilket/vilka' (welcher/welches/welche) kongruiert mit dem Nomen.",
+      "rule": "vad      → was\nvem      → wer\nvar      → wo\nvarifrån → woher\nhur      → wie\nnär      → wann\nvarför   → warum\nvilken (en) / vilket (ett) / vilka (Pl.) → welcher/welches/welche",
+      "examples": [
+        { "swedish": "Vad heter du?", "german": "Wie heißt du?", "highlight": "Vad" },
+        { "swedish": "Vem är det?", "german": "Wer ist das?", "highlight": "Vem" },
+        { "swedish": "Var bor du?", "german": "Wo wohnst du?", "highlight": "Var" },
+        { "swedish": "Hur mår du?", "german": "Wie geht es dir?", "highlight": "Hur" },
+        { "swedish": "Vilken bok läser du?", "german": "Welches Buch liest du?", "highlight": "Vilken" }
+      ],
+      "exercises": [
+        { "prompt": "___ heter du? (Wie)", "translation": "Wie heißt du?", "answer": "vad" },
+        { "prompt": "___ bor du? (Wo)", "translation": "Wo wohnst du?", "answer": "var" },
+        { "prompt": "___ är klockan? (Wie – Uhrzeit)", "translation": "Wie spät ist es?", "answer": "hur" },
+        { "prompt": "___ kommer tåget? (Wann)", "translation": "Wann kommt der Zug?", "answer": "när" },
+        { "prompt": "___ är det? (Wer)", "translation": "Wer ist das?", "answer": "vem" },
+        { "prompt": "___ dag är det idag? (Welcher, en-Wort)", "translation": "Welcher Tag ist heute?", "answer": "vilken" }
+      ]
+    },
+    {
+      "id": "a2_gr_10",
+      "title": "Komparativ und Superlativ (regulär)",
+      "category": "Adjektive",
+      "explanation": "Der Komparativ regulärer Adjektive wird mit der Endung -are gebildet, der Superlativ mit -ast. Beide Formen sind für alle Genera und Personen gleich, müssen aber bei attributiver Verwendung mit dem Artikel dekliniert werden. Im Schwedischen gibt es keine Umlautveränderungen wie im Deutschen.",
+      "rule": "Positiv:    stor      (groß)\nKomparativ: större    → stör + re  ODER: snabb + are = snabbare\nSuperlativ: störst    → stör + st  ODER: snabb + ast = snabbast\nMerke: Die meisten Adj. bilden Komparativ auf -are und Superlativ auf -ast.",
+      "examples": [
+        { "swedish": "Den här bilen är snabbare.", "german": "Dieses Auto ist schneller.", "highlight": "snabbare" },
+        { "swedish": "Det här huset är störst.", "german": "Dieses Haus ist am größten.", "highlight": "störst" },
+        { "swedish": "Han är äldre än sin bror.", "german": "Er ist älter als sein Bruder.", "highlight": "äldre" },
+        { "swedish": "Det här är det billigaste alternativet.", "german": "Das ist die billigste Option.", "highlight": "billigaste" }
+      ],
+      "exercises": [
+        { "prompt": "snabb → ___ (Komparativ)", "translation": "schnell → schneller", "answer": "snabbare" },
+        { "prompt": "snabb → ___ (Superlativ)", "translation": "schnell → am schnellsten", "answer": "snabbast" },
+        { "prompt": "gammal → ___ (Komparativ: äldre)", "translation": "alt → älter", "answer": "äldre" },
+        { "prompt": "lång → ___ (Komparativ)", "translation": "lang/groß → länger/größer", "answer": "längre" },
+        { "prompt": "billig → ___ (Superlativ)", "translation": "billig → am billigsten", "answer": "billigast" }
+      ]
+    }
+  ]
+}

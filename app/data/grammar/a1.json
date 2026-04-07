@@ -1,0 +1,189 @@
+{
+  "level": "A1",
+  "topics": [
+    {
+      "id": "a1_gr_01",
+      "title": "Personalpronomen",
+      "category": "Pronomen",
+      "explanation": "Die schwedischen Personalpronomen ähneln den deutschen, sind aber einfacher. Für 'er/sie/es' gibt es 'han' (er), 'hon' (sie) und 'det'/'den' (es – je nach Genus des Nomens). Im modernen Schwedisch wird 'ni' (ihr) auch als höfliche Einzelanrede verwendet, aber das 'Sie' im deutschen Sinne ist im Alltag kaum gebräuchlich.",
+      "rule": "jag (ich)  ·  du (du)  ·  han (er)  ·  hon (sie)  ·  det/den (es)\nvi (wir)  ·  ni (ihr / Sie)  ·  de (sie, Plural)",
+      "examples": [
+        { "swedish": "Jag heter Erik.", "german": "Ich heiße Erik.", "highlight": "Jag" },
+        { "swedish": "Hon är min syster.", "german": "Sie ist meine Schwester.", "highlight": "Hon" },
+        { "swedish": "Vi bor i Stockholm.", "german": "Wir wohnen in Stockholm.", "highlight": "Vi" },
+        { "swedish": "De talar svenska.", "german": "Sie sprechen Schwedisch.", "highlight": "De" },
+        { "swedish": "Han är trött idag.", "german": "Er ist heute müde.", "highlight": "Han" }
+      ],
+      "exercises": [
+        { "prompt": "___ heter Anna. (ich)", "translation": "Ich heiße Anna.", "answer": "jag" },
+        { "prompt": "___ är min bror. (er)", "translation": "Er ist mein Bruder.", "answer": "han" },
+        { "prompt": "___ bor i Göteborg. (wir)", "translation": "Wir wohnen in Göteborg.", "answer": "vi" },
+        { "prompt": "___ talar tyska. (sie, Plural)", "translation": "Sie sprechen Deutsch.", "answer": "de" },
+        { "prompt": "___ är glad idag. (sie, Singular)", "translation": "Sie ist heute froh.", "answer": "hon" },
+        { "prompt": "Är ___ student? (du)", "translation": "Bist du Student?", "answer": "du" }
+      ]
+    },
+    {
+      "id": "a1_gr_02",
+      "title": "att vara – Präsens",
+      "category": "Verben",
+      "explanation": "Das Verb 'att vara' (sein) hat im Präsens nur eine einzige Form: 'är'. Im Gegensatz zum Deutschen (bin, bist, ist, sind, seid) wird 'är' für alle Personen gleichermaßen verwendet. Diese Vereinheitlichung ist typisch für das Schwedische und macht die Konjugation sehr einfach.",
+      "rule": "att vara → är  (alle Personen identisch)\njag är  ·  du är  ·  han/hon är  ·  vi är  ·  ni är  ·  de är",
+      "examples": [
+        { "swedish": "Jag är glad.", "german": "Ich bin froh.", "highlight": "är" },
+        { "swedish": "Du är snäll.", "german": "Du bist nett.", "highlight": "är" },
+        { "swedish": "Hon är lärare.", "german": "Sie ist Lehrerin.", "highlight": "är" },
+        { "swedish": "Vi är hungriga.", "german": "Wir sind hungrig.", "highlight": "är" },
+        { "swedish": "De är mina vänner.", "german": "Sie sind meine Freunde.", "highlight": "är" }
+      ],
+      "exercises": [
+        { "prompt": "Jag ___ student.", "translation": "Ich bin Student.", "answer": "är" },
+        { "prompt": "Du ___ trött.", "translation": "Du bist müde.", "answer": "är" },
+        { "prompt": "Han ___ min vän.", "translation": "Er ist mein Freund.", "answer": "är" },
+        { "prompt": "Vi ___ från Sverige.", "translation": "Wir sind aus Schweden.", "answer": "är" },
+        { "prompt": "De ___ glada.", "translation": "Sie sind froh.", "answer": "är" }
+      ]
+    },
+    {
+      "id": "a1_gr_03",
+      "title": "att ha – Präsens",
+      "category": "Verben",
+      "explanation": "Das Verb 'att ha' (haben) hat im Präsens ebenfalls nur eine Form: 'har'. Wie bei 'att vara' gibt es keine Personenendungen. 'att ha' wird auch als Hilfsverb beim Perfekt verwendet.",
+      "rule": "att ha → har  (alle Personen identisch)\njag har  ·  du har  ·  han/hon har  ·  vi har  ·  ni har  ·  de har",
+      "examples": [
+        { "swedish": "Jag har en hund.", "german": "Ich habe einen Hund.", "highlight": "har" },
+        { "swedish": "Hon har ett jobb.", "german": "Sie hat eine Arbeit.", "highlight": "har" },
+        { "swedish": "Vi har bråttom.", "german": "Wir haben es eilig.", "highlight": "har" },
+        { "swedish": "De har tre barn.", "german": "Sie haben drei Kinder.", "highlight": "har" }
+      ],
+      "exercises": [
+        { "prompt": "Jag ___ en katt.", "translation": "Ich habe eine Katze.", "answer": "har" },
+        { "prompt": "Han ___ ett stort hus.", "translation": "Er hat ein großes Haus.", "answer": "har" },
+        { "prompt": "Vi ___ tid.", "translation": "Wir haben Zeit.", "answer": "har" },
+        { "prompt": "___ du en bil?", "translation": "Hast du ein Auto?", "answer": "har" },
+        { "prompt": "De ___ många böcker.", "translation": "Sie haben viele Bücher.", "answer": "har" }
+      ]
+    },
+    {
+      "id": "a1_gr_04",
+      "title": "Genus und bestimmter Artikel",
+      "category": "Nomen",
+      "explanation": "Im Schwedischen gibt es zwei grammatische Geschlechter: Utrum (en-Wörter) und Neutrum (ett-Wörter). Etwa 75% aller Nomen sind en-Wörter. Der bestimmte Artikel wird nicht vorangestellt, sondern als Suffix an das Nomen angehängt: -en bei en-Wörtern und -et bei ett-Wörtern. Das Genus muss für jedes Wort einzeln gelernt werden.",
+      "rule": "Unbestimmt → Bestimmt:\nen bil  →  bilen   (das Auto)\nen dag  →  dagen   (der Tag)\nett hus  →  huset   (das Haus)\nett barn  →  barnet  (das Kind)",
+      "examples": [
+        { "swedish": "Bilen är röd.", "german": "Das Auto ist rot.", "highlight": "Bilen" },
+        { "swedish": "Huset är stort.", "german": "Das Haus ist groß.", "highlight": "Huset" },
+        { "swedish": "Hunden sover.", "german": "Der Hund schläft.", "highlight": "Hunden" },
+        { "swedish": "Barnet leker.", "german": "Das Kind spielt.", "highlight": "Barnet" },
+        { "swedish": "Katten dricker mjölk.", "german": "Die Katze trinkt Milch.", "highlight": "Katten" }
+      ],
+      "exercises": [
+        { "prompt": "en hund  →  ___", "translation": "ein Hund → der Hund", "answer": "hunden" },
+        { "prompt": "ett rum  →  ___", "translation": "ein Zimmer → das Zimmer", "answer": "rummet" },
+        { "prompt": "en stol  →  ___", "translation": "ein Stuhl → der Stuhl", "answer": "stolen" },
+        { "prompt": "ett bord  →  ___", "translation": "ein Tisch → der Tisch", "answer": "bordet" },
+        { "prompt": "en skola  →  ___", "translation": "eine Schule → die Schule", "answer": "skolan" },
+        { "prompt": "ett äpple  →  ___", "translation": "ein Apfel → der Apfel", "answer": "äpplet" }
+      ]
+    },
+    {
+      "id": "a1_gr_05",
+      "title": "Verneinung mit inte",
+      "category": "Satzstruktur",
+      "explanation": "Die Verneinung im Schwedischen wird mit 'inte' (nicht) gebildet. Im Hauptsatz steht 'inte' immer direkt nach dem konjugierten Verb. Im Gegensatz zum Deutschen ist die Position von 'inte' im Hauptsatz fest und unveränderlich.",
+      "rule": "Hauptsatz: Subjekt + Verb + inte + Rest\nJag talar inte tyska.  (Ich spreche nicht Deutsch.)\nHon är inte hemma.  (Sie ist nicht zu Hause.)",
+      "examples": [
+        { "swedish": "Jag talar inte tyska.", "german": "Ich spreche nicht Deutsch.", "highlight": "inte" },
+        { "swedish": "Han är inte trött.", "german": "Er ist nicht müde.", "highlight": "inte" },
+        { "swedish": "Vi har inte tid.", "german": "Wir haben keine Zeit.", "highlight": "inte" },
+        { "swedish": "Det regnar inte idag.", "german": "Es regnet heute nicht.", "highlight": "inte" }
+      ],
+      "exercises": [
+        { "prompt": "Jag förstår ___ svenska. (nicht)", "translation": "Ich verstehe nicht Schwedisch.", "answer": "inte" },
+        { "prompt": "Hon är ___ hemma. (nicht)", "translation": "Sie ist nicht zu Hause.", "answer": "inte" },
+        { "prompt": "Vi har ___ en bil. (keinen/nicht)", "translation": "Wir haben kein Auto.", "answer": "inte" },
+        { "prompt": "Han äter ___ kött. (kein)", "translation": "Er isst kein Fleisch.", "answer": "inte" },
+        { "prompt": "Det är ___ kallt. (nicht)", "translation": "Es ist nicht kalt.", "answer": "inte" }
+      ]
+    },
+    {
+      "id": "a1_gr_06",
+      "title": "Ja/Nein-Fragesätze",
+      "category": "Satzstruktur",
+      "explanation": "Ja/Nein-Fragen im Schwedischen werden durch Inversion gebildet: Das Verb wird vor das Subjekt gestellt. Diese Regel entspricht exakt dem Deutschen. Auf Ja/Nein-Fragen antwortet man im Schwedischen mit 'ja' (ja) oder 'nej' (nein).",
+      "rule": "Aussage:  Subjekt + Verb + …\nFrage:    Verb + Subjekt + …?\nDu är trött.  →  Är du trött?",
+      "examples": [
+        { "swedish": "Är du student?", "german": "Bist du Student?", "highlight": "Är du" },
+        { "swedish": "Har han en hund?", "german": "Hat er einen Hund?", "highlight": "Har han" },
+        { "swedish": "Talar hon svenska?", "german": "Spricht sie Schwedisch?", "highlight": "Talar hon" },
+        { "swedish": "Bor ni i Stockholm?", "german": "Wohnt ihr in Stockholm?", "highlight": "Bor ni" }
+      ],
+      "exercises": [
+        { "prompt": "___ du trött? (Bist)", "translation": "Bist du müde?", "answer": "är" },
+        { "prompt": "___ han hemma? (Ist)", "translation": "Ist er zu Hause?", "answer": "är" },
+        { "prompt": "___ du en bror? (Hast)", "translation": "Hast du einen Bruder?", "answer": "har" },
+        { "prompt": "___ hon svenska? (Spricht)", "translation": "Spricht sie Schwedisch?", "answer": "talar" },
+        { "prompt": "___ de i Malmö? (Wohnen)", "translation": "Wohnen sie in Malmö?", "answer": "bor" }
+      ]
+    },
+    {
+      "id": "a1_gr_07",
+      "title": "Grundlegende Wortstellung",
+      "category": "Satzstruktur",
+      "explanation": "Das Schwedische folgt der V2-Regel: Das konjugierte Verb steht immer an zweiter Position im Hauptsatz. Wenn ein Adverbial oder Objekt an den Satzanfang rückt, wechseln Verb und Subjekt die Plätze (Inversion). Diese Regel kennt man auch aus dem Deutschen.",
+      "rule": "Normal:   Jag äter lunch idag.         (Ich esse heute Mittag.)\nInversion: Idag äter jag lunch.          (Heute esse ich Mittag.)\nMerke: Verb immer an ZWEITER Stelle!",
+      "examples": [
+        { "swedish": "Jag dricker kaffe.", "german": "Ich trinke Kaffee.", "highlight": "dricker" },
+        { "swedish": "Idag äter jag lunch.", "german": "Heute esse ich Mittag.", "highlight": "äter" },
+        { "swedish": "Imorgon reser vi till Oslo.", "german": "Morgen fahren wir nach Oslo.", "highlight": "reser" },
+        { "swedish": "På kvällen läser hon en bok.", "german": "Abends liest sie ein Buch.", "highlight": "läser" }
+      ],
+      "exercises": [
+        { "prompt": "Imorgon ___ vi till Malmö. (fahren)", "translation": "Morgen fahren wir nach Malmö.", "answer": "åker" },
+        { "prompt": "Idag ___ jag hemma. (bleibe)", "translation": "Heute bleibe ich zu Hause.", "answer": "stannar" },
+        { "prompt": "På morgonen ___ han kaffe. (trinkt)", "translation": "Morgens trinkt er Kaffee.", "answer": "dricker" },
+        { "prompt": "Varje dag ___ hon tidningen. (liest)", "translation": "Jeden Tag liest sie die Zeitung.", "answer": "läser" }
+      ]
+    },
+    {
+      "id": "a1_gr_08",
+      "title": "Demonstrativpronomen",
+      "category": "Pronomen",
+      "explanation": "Das schwedische Demonstrativpronomen richtet sich nach dem Genus des Nomens. 'den här' steht bei en-Wörtern, 'det här' bei ett-Wörtern, 'de här' für die Mehrzahl. Das nachfolgende Nomen steht in der bestimmten Form. Für Entfernteres verwendet man 'den där / det där / de där'.",
+      "rule": "en-Wort: den här bilen    (dieses Auto)    | den där bilen   (jenes Auto)\nett-Wort: det här huset   (dieses Haus)    | det där huset   (jenes Haus)\nPlural:   de här bilarna  (diese Autos)    | de där bilarna  (jene Autos)",
+      "examples": [
+        { "swedish": "Den här boken är bra.", "german": "Dieses Buch ist gut.", "highlight": "Den här" },
+        { "swedish": "Det här huset är stort.", "german": "Dieses Haus ist groß.", "highlight": "Det här" },
+        { "swedish": "De här skorna är dyra.", "german": "Diese Schuhe sind teuer.", "highlight": "De här" },
+        { "swedish": "Den där mannen är min lärare.", "german": "Jener Mann ist mein Lehrer.", "highlight": "Den där" }
+      ],
+      "exercises": [
+        { "prompt": "___ boken är intressant. (dieses, en-Wort)", "translation": "Dieses Buch ist interessant.", "answer": "den här" },
+        { "prompt": "___ huset är nytt. (dieses, ett-Wort)", "translation": "Dieses Haus ist neu.", "answer": "det här" },
+        { "prompt": "___ mannen heter Lars. (dieser, en-Wort)", "translation": "Dieser Mann heißt Lars.", "answer": "den här" },
+        { "prompt": "___ barnen leker. (diese, Plural)", "translation": "Diese Kinder spielen.", "answer": "de här" },
+        { "prompt": "___ stolen är bekväm. (dieser)", "translation": "Dieser Stuhl ist bequem.", "answer": "den här" }
+      ]
+    },
+    {
+      "id": "a1_gr_09",
+      "title": "Infinitiv mit att",
+      "category": "Verben",
+      "explanation": "Der schwedische Infinitiv wird mit 'att' eingeleitet, ähnlich dem deutschen 'zu'. Nach Modalverben (kan, ska, vill, måste) und nach bestimmten Verben wird 'att' jedoch weggelassen. Die Grundform des Verbs (der Infinitiv) endet fast immer auf -a.",
+      "rule": "Mit att:    Jag vill lära mig att simma.  (Ich möchte schwimmen lernen.)\nOhne att:   Jag kan simma.               (Ich kann schwimmen.)\nModalverben + Infinitiv (ohne att): kan, ska, vill, måste, bör, får",
+      "examples": [
+        { "swedish": "Jag vill lära mig att simma.", "german": "Ich will schwimmen lernen.", "highlight": "att simma" },
+        { "swedish": "Det är roligt att resa.", "german": "Es macht Spaß zu reisen.", "highlight": "att resa" },
+        { "swedish": "Jag kan tala svenska.", "german": "Ich kann Schwedisch sprechen.", "highlight": "tala" },
+        { "swedish": "Hon börjar att arbeta.", "german": "Sie fängt an zu arbeiten.", "highlight": "att arbeta" }
+      ],
+      "exercises": [
+        { "prompt": "Det är svårt ___ lära sig svenska. (zu)", "translation": "Es ist schwer, Schwedisch zu lernen.", "answer": "att" },
+        { "prompt": "Jag vill ___ äta pizza. (essen, nach Modalverb → kein att)", "translation": "Ich will Pizza essen.", "answer": "äta" },
+        { "prompt": "Hon försöker ___ sova. (zu schlafen)", "translation": "Sie versucht zu schlafen.", "answer": "att" },
+        { "prompt": "Vi måste ___ gå nu. (gehen, nach Modalverb)", "translation": "Wir müssen jetzt gehen.", "answer": "gå" },
+        { "prompt": "Han börjar ___ förstå. (zu verstehen)", "translation": "Er beginnt zu verstehen.", "answer": "att" }
+      ]
+    }
+  ]
+}

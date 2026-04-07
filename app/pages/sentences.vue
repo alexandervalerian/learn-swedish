@@ -8,6 +8,10 @@ import c1 from '~/data/vocabulary/c1.json'
 const route = useRoute()
 const router = useRouter()
 
+import { type CefrLevel } from '~/stores/user'
+
+const userStore = useUserStore()
+
 const allLevels = [
   { data: a1, label: 'A1', cardClass: 'bg-emerald-50 border-emerald-200', badge: 'bg-emerald-100 text-emerald-700' },
   { data: a2, label: 'A2', cardClass: 'bg-sky-50 border-sky-200', badge: 'bg-sky-100 text-sky-700' },
@@ -15,6 +19,10 @@ const allLevels = [
   { data: b2, label: 'B2', cardClass: 'bg-amber-50 border-amber-200', badge: 'bg-amber-100 text-amber-700' },
   { data: c1, label: 'C1', cardClass: 'bg-rose-50 border-rose-200', badge: 'bg-rose-100 text-rose-700' },
 ]
+
+const visibleLevels = computed(() =>
+  allLevels.filter(l => userStore.isLevelUnlocked(l.label as CefrLevel))
+)
 
 const levelFilter = computed(() => route.query.level as string | undefined)
 const showPicker = computed(() => !levelFilter.value)
@@ -102,7 +110,7 @@ const scorePercent = computed(() =>
     <!-- Level picker -->
     <div v-if="showPicker" class="space-y-3">
       <button
-        v-for="lvl in allLevels"
+        v-for="lvl in visibleLevels"
         :key="lvl.label"
         class="w-full flex items-center justify-between rounded-2xl border px-4 py-4 transition-all active:scale-[0.98]"
         :class="lvl.cardClass"
