@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { RATING_LABELS, RATING_COLORS, type Rating } from '~/composables/useSpacedRepetition'
 
-defineProps<{
+const props = defineProps<{
   swedish: string
   german: string
   example: string
   exampleTranslation: string
   level: string
+  reverse?: boolean
 }>()
 
 const emit = defineEmits<{
@@ -36,16 +37,20 @@ const ratings: Rating[] = [0, 1, 2, 3]
       @click="flip"
     >
       <div class="card-inner w-full h-full" :class="{ flipped }">
-        <!-- Front: Swedish -->
+        <!-- Front -->
         <div class="card-face absolute inset-0 bg-white rounded-2xl shadow-lg flex flex-col items-center justify-center p-6 border border-gray-100">
           <span class="text-xs font-semibold uppercase tracking-widest text-swedish-blue mb-4">{{ level }}</span>
-          <p class="text-4xl font-bold text-gray-900 text-center leading-tight">{{ swedish }}</p>
+          <p class="text-4xl font-bold text-gray-900 text-center leading-tight">
+            {{ props.reverse ? german : swedish }}
+          </p>
           <p class="mt-6 text-sm text-gray-400">Tippen zum Umdrehen</p>
         </div>
 
-        <!-- Back: German -->
+        <!-- Back -->
         <div class="card-face card-back-face absolute inset-0 bg-swedish-blue rounded-2xl shadow-lg flex flex-col items-center justify-center p-6">
-          <p class="text-3xl font-bold text-white text-center leading-tight">{{ german }}</p>
+          <p class="text-3xl font-bold text-white text-center leading-tight">
+            {{ props.reverse ? swedish : german }}
+          </p>
           <div class="mt-4 border-t border-white/20 pt-4 w-full text-center">
             <p class="text-sm text-white/90 italic">{{ example }}</p>
             <p class="text-xs text-white/60 mt-1">{{ exampleTranslation }}</p>

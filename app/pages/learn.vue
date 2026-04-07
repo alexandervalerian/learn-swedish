@@ -25,14 +25,30 @@ const dueWords = computed(() =>
     .filter(Boolean)
 )
 
+const MODE_KEY = 'swedish_mode'
+const reverse = ref(false)
+
 const queue = ref<typeof allWords>([])
 const currentIndex = ref(0)
 const reviewedCount = ref(0)
 const done = ref(false)
 
-onMounted(() => {
+function startSession() {
   queue.value = [...dueWords.value]
-  if (queue.value.length === 0) done.value = true
+  currentIndex.value = 0
+  reviewedCount.value = 0
+  done.value = queue.value.length === 0
+}
+
+function toggleMode() {
+  reverse.value = !reverse.value
+  localStorage.setItem(MODE_KEY, reverse.value ? '1' : '0')
+  startSession()
+}
+
+onMounted(() => {
+  reverse.value = localStorage.getItem(MODE_KEY) === '1'
+  startSession()
 })
 
 const current = computed(() => queue.value[currentIndex.value])
@@ -68,7 +84,7 @@ function onRate(rating: Rating) {
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
       </NuxtLink>
-      <div>
+      <div class="flex-1">
         <h2 class="font-bold text-gray-900">
           {{ levelFilter ? `Niveau ${levelFilter}` : 'Alle Niveau' }}
         </h2>
@@ -76,6 +92,20 @@ function onRate(rating: Rating) {
           {{ currentIndex + 1 }} / {{ queue.length }} Karten
         </p>
       </div>
+
+      <!-- Mode toggle -->
+      <button
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors"
+        :class="reverse
+          ? 'bg-swedish-blue text-white border-swedish-blue'
+          : 'bg-white text-gray-600 border-gray-200 hover:border-swedish-blue hover:text-swedish-blue'"
+        @click="toggleMode"
+      >
+        <span>{{ reverse ? 'DE → SV' : 'SV → DE' }}</span>
+        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+        </svg>
+      </button>
     </div>
 
     <!-- Progress bar -->
@@ -126,6 +156,7 @@ function onRate(rating: Rating) {
       :example="current.example"
       :example-translation="current.exampleTranslation"
       :level="levelForId(current.id)"
+      :reverse="reverse"
       @rate="onRate"
     />
   </div>
