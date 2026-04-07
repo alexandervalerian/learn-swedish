@@ -99,6 +99,25 @@ const limitReached = computed(() => store.newCardsSeenToday() >= DAILY_NEW_LIMIT
       </NuxtLink>
     </div>
 
+    <!-- Exam entry -->
+    <NuxtLink
+      to="/exam"
+      class="mt-4 flex items-center gap-4 rounded-2xl border bg-gray-50 border-gray-200 p-4 transition-all active:scale-[0.98]"
+    >
+      <div class="bg-white rounded-xl p-3 border border-gray-100 flex-shrink-0">
+        <svg class="w-6 h-6 text-swedish-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+        </svg>
+      </div>
+      <div class="flex-1 min-w-0">
+        <p class="font-semibold text-gray-900 text-sm">Vokabelprüfung</p>
+        <p class="text-xs text-gray-500 mt-0.5">Wörter eintippen und Note erhalten</p>
+      </div>
+      <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </NuxtLink>
+
     <!-- Sentence practice entry -->
     <NuxtLink
       to="/sentences"
