@@ -5,6 +5,7 @@ import b1 from '~/data/vocabulary/b1.json'
 import b2 from '~/data/vocabulary/b2.json'
 import c1 from '~/data/vocabulary/c1.json'
 import type { Rating } from '~/composables/useSpacedRepetition'
+import { DAILY_NEW_LIMIT } from '~/stores/progress'
 
 const store = useProgressStore()
 const route = useRoute()
@@ -19,11 +20,11 @@ const filteredWords = computed(() =>
     : allWords
 )
 
-const dueWords = computed(() =>
-  store.dueIds(filteredWords.value.map(w => w.id))
-    .map(id => filteredWords.value.find(w => w.id === id)!)
-    .filter(Boolean)
-)
+const wordIds = computed(() => filteredWords.value.map(w => w.id))
+
+function resolveIds(ids: string[]) {
+  return ids.map(id => filteredWords.value.find(w => w.id === id)!).filter(Boolean)
+}
 
 const MODE_KEY = 'swedish_mode'
 const reverse = ref(false)
@@ -32,12 +33,24 @@ const queue = ref<typeof allWords>([])
 const currentIndex = ref(0)
 const reviewedCount = ref(0)
 const done = ref(false)
+const sessionReviewCount = ref(0)
+const sessionNewCount = ref(0)
+
+const overDailyLimit = ref(false)
 
 function startSession() {
-  queue.value = [...dueWords.value]
+  const remaining = DAILY_NEW_LIMIT - store.newCardsSeenToday()
+  overDailyLimit.value = remaining <= 0
+  const reviews = resolveIds(store.reviewIds(wordIds.value))
+  const newCards = resolveIds(store.newIds(wordIds.value, Math.max(remaining, wordIds.value.length)))
+  sessionReviewCount.value = reviews.length
+  sessionNewCount.value = newCards.length
+  // Shuffle reviews and new cards together
+  const combined = [...reviews, ...newCards].sort(() => Math.random() - 0.5)
+  queue.value = combined
   currentIndex.value = 0
   reviewedCount.value = 0
-  done.value = queue.value.length === 0
+  done.value = combined.length === 0
 }
 
 function toggleMode() {
@@ -89,7 +102,10 @@ function onRate(rating: Rating) {
           {{ levelFilter ? `Niveau ${levelFilter}` : 'Alle Niveau' }}
         </h2>
         <p v-if="!done" class="text-xs text-gray-400">
-          {{ currentIndex + 1 }} / {{ queue.length }} Karten
+          {{ currentIndex + 1 }} / {{ queue.length }} ·
+          <span v-if="sessionReviewCount">{{ sessionReviewCount }} Wdh.</span>
+          <span v-if="sessionReviewCount && sessionNewCount"> · </span>
+          <span v-if="sessionNewCount" class="text-swedish-blue">{{ sessionNewCount }} neu</span>
         </p>
       </div>
 
@@ -116,6 +132,11 @@ function onRate(rating: Rating) {
       />
     </div>
 
+    <!-- Over daily limit banner -->
+    <div v-if="overDailyLimit && !done && queue.length > 0" class="mb-4 rounded-xl bg-amber-50 border border-amber-200 px-4 py-2 text-xs text-amber-700">
+      Tagesempfehlung erreicht — du lernst extra Karten.
+    </div>
+
     <!-- Done state -->
     <div v-if="done" class="text-center py-16">
       <div class="text-5xl mb-4">🎉</div>
@@ -137,7 +158,8 @@ function onRate(rating: Rating) {
     <div v-else-if="queue.length === 0" class="text-center py-16">
       <div class="text-5xl mb-4">✅</div>
       <h3 class="text-xl font-bold text-gray-900 mb-2">Alles erledigt!</h3>
-      <p class="text-gray-500 mb-8">Keine Karten für heute fällig.</p>
+      <p class="text-gray-500 mb-2">Keine Karten für heute fällig.</p>
+      <p class="text-xs text-gray-400 mb-8">Keine neuen oder fälligen Karten für dieses Niveau.</p>
       <NuxtLink
         to="/"
         class="inline-block px-6 py-3 rounded-xl text-white font-semibold"

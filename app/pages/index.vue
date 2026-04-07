@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { DAILY_NEW_LIMIT } from '~/stores/progress'
 import a1 from '~/data/vocabulary/a1.json'
 import a2 from '~/data/vocabulary/a2.json'
 import b1 from '~/data/vocabulary/b1.json'
@@ -15,9 +16,13 @@ const levels = [
   { data: c1, color: 'bg-rose-50 border-rose-200', badge: 'bg-rose-100 text-rose-700' }
 ]
 
-const totalDue = computed(() =>
-  levels.reduce((sum, l) => sum + store.dueIds(l.data.words.map(w => w.id)).length, 0)
-)
+const allWordIds = computed(() => levels.flatMap(l => l.data.words.map(w => w.id)))
+
+const totalReviews = computed(() => store.reviewIds(allWordIds.value).length)
+
+const newAvailable = computed(() => store.newIds(allWordIds.value, allWordIds.value.length).length)
+
+const limitReached = computed(() => store.newCardsSeenToday() >= DAILY_NEW_LIMIT)
 </script>
 
 <template>
@@ -36,8 +41,15 @@ const totalDue = computed(() =>
     >
       <div class="flex items-center justify-between">
         <div>
-          <p class="text-sm font-medium text-white/80">Heute fällig</p>
-          <p class="text-3xl font-bold">{{ totalDue }} <span class="text-lg font-normal">Karten</span></p>
+          <p class="text-sm font-medium text-white/80">Heute lernen</p>
+          <p class="text-3xl font-bold">{{ totalReviews + newAvailable }} <span class="text-lg font-normal">Karten</span></p>
+          <p class="text-xs text-white/60 mt-0.5">
+            <span v-if="totalReviews">{{ totalReviews }} Wdh.</span>
+            <span v-if="totalReviews && newAvailable"> · </span>
+            <span v-if="newAvailable">{{ newAvailable }} neu</span>
+            <span v-if="!totalReviews && !newAvailable && !limitReached">Keine Karten fällig</span>
+            <span v-if="limitReached && !totalReviews">Empfehlung erreicht · Extra Karten möglich</span>
+          </p>
         </div>
         <div class="bg-white/20 rounded-xl p-3">
           <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
