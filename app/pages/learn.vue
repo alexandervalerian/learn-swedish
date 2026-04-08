@@ -5,7 +5,7 @@ import b1 from '~/data/vocabulary/b1.json'
 import b2 from '~/data/vocabulary/b2.json'
 import c1 from '~/data/vocabulary/c1.json'
 import type { Rating } from '~/composables/useSpacedRepetition'
-import { DAILY_NEW_LIMIT, DAILY_CARD_TARGET } from '~/stores/progress'
+import { DAILY_CARD_TARGET } from '~/stores/progress'
 import { type CefrLevel, LEVEL_ORDER } from '~/stores/user'
 
 const store = useProgressStore()
@@ -51,8 +51,6 @@ const done = ref(false)
 const sessionReviewCount = ref(0)
 const sessionNewCount = ref(0)
 
-const overDailyLimit = ref(false)
-
 function startSession() {
   // Guard: redirect if accessing a locked level
   if (levelFilter.value && !userStore.isLevelUnlocked(levelFilter.value as CefrLevel)) {
@@ -69,12 +67,9 @@ function startSession() {
     currentIndex.value = 0
     reviewedCount.value = 0
     done.value = words.length === 0
-    overDailyLimit.value = false
   } else {
-    const remaining = DAILY_NEW_LIMIT - store.newCardsSeenToday()
-    overDailyLimit.value = remaining <= 0
     const reviews = resolveIds(store.reviewIds(wordIds.value))
-    const newCards = resolveIds(store.newIds(wordIds.value, Math.max(remaining, 0)))
+    const newCards = resolveIds(store.newIds(wordIds.value, wordIds.value.length))
     sessionReviewCount.value = reviews.length
     sessionNewCount.value = newCards.length
     const combined = [...reviews, ...newCards].sort(() => Math.random() - 0.5)
@@ -101,8 +96,10 @@ const doneCount = computed(() =>
   isDailyMode.value ? store.dailyLearnedToday() : reviewedCount.value
 )
 const dailyGoalToday = DAILY_CARD_TARGET
+const dailyLearnedToday = computed(() => store.dailyLearnedToday())
+const dailyRemainingToday = computed(() => store.dailyRemaining())
 const dailyGoalReached = computed(() =>
-  isDailyMode.value && store.dailyRemaining() <= 0
+  isDailyMode.value && dailyRemainingToday.value <= 0
 )
 
 function levelForId(id: string): string {
@@ -120,7 +117,11 @@ function onRate(rating: Rating) {
   }
 
   if (currentIndex.value + 1 >= queue.value.length) {
-    done.value = true
+    if (isDailyMode.value) {
+      done.value = true
+    } else {
+      startSession()
+    }
   } else {
     currentIndex.value++
   }
@@ -140,11 +141,18 @@ function onRate(rating: Rating) {
         <h2 class="font-bold text-gray-900">
           {{ isDailyMode ? 'Tagespensum' : (levelFilter ? `Niveau ${levelFilter}` : 'Alle Niveau') }}
         </h2>
-        <p v-if="!done" class="text-xs text-gray-400">
-          {{ currentIndex + 1 }} / {{ queue.length }}<span v-if="isDailyMode"> heute</span> ·
-          <span v-if="sessionReviewCount">{{ sessionReviewCount }} Wdh.</span>
-          <span v-if="sessionReviewCount && sessionNewCount"> · </span>
-          <span v-if="sessionNewCount" class="text-swedish-blue">{{ sessionNewCount }} neu</span>
+        <p v-if="!done && queue.length > 0" class="text-xs text-gray-400">
+          <template v-if="isDailyMode">
+            {{ dailyLearnedToday }} / {{ dailyGoalToday }} heute ·
+            <span v-if="dailyRemainingToday > 0">{{ dailyRemainingToday }} offen</span>
+            <span v-else class="text-swedish-blue">Ziel erreicht</span>
+          </template>
+          <template v-else>
+            {{ currentIndex + 1 }} / {{ queue.length }} ·
+            <span v-if="sessionReviewCount">{{ sessionReviewCount }} Wdh.</span>
+            <span v-if="sessionReviewCount && sessionNewCount"> · </span>
+            <span v-if="sessionNewCount" class="text-swedish-blue">{{ sessionNewCount }} neu</span>
+          </template>
         </p>
       </div>
 
@@ -164,16 +172,11 @@ function onRate(rating: Rating) {
     </div>
 
     <!-- Progress bar -->
-    <div v-if="!done" class="mb-8 bg-gray-200 rounded-full h-1.5">
+    <div v-if="!done && queue.length > 0" class="mb-8 bg-gray-200 rounded-full h-1.5">
       <div
         class="h-1.5 rounded-full bg-swedish-blue transition-all duration-300"
         :style="{ width: `${(currentIndex / Math.max(queue.length, 1)) * 100}%` }"
       />
-    </div>
-
-    <!-- Over daily limit banner -->
-    <div v-if="overDailyLimit && !isDailyMode && !done && queue.length > 0" class="mb-4 rounded-xl bg-amber-50 border border-amber-200 px-4 py-2 text-xs text-amber-700">
-      Tagesempfehlung erreicht — du lernst extra Karten.
     </div>
 
     <!-- Daily goal reached banner -->
@@ -182,7 +185,7 @@ function onRate(rating: Rating) {
     </div>
 
     <!-- Done state -->
-    <div v-if="done" class="text-center py-16">
+    <div v-if="done && isDailyMode && queue.length > 0" class="text-center py-16">
       <div class="text-5xl mb-4">🎉</div>
       <h3 class="text-xl font-bold text-gray-900 mb-2">Gut gemacht!</h3>
       <p class="text-gray-500 mb-2">Du hast {{ doneCount }} Karten wiederholt.</p>
