@@ -33,6 +33,10 @@ import { type CefrLevel } from '~/stores/user'
 
 const route = useRoute()
 const userStore = useUserStore()
+const levelContext = computed(() => route.query.level as string | undefined)
+const backTarget = computed(() =>
+  levelContext.value ? `/level?level=${levelContext.value}` : '/'
+)
 
 const allLevels = [
   { data: a1, label: 'A1', pill: 'bg-emerald-100 text-emerald-700', activePill: 'bg-emerald-500 text-white' },
@@ -201,7 +205,7 @@ const scorePercent = computed(() =>
   <div class="max-w-lg mx-auto px-4 pt-6 pb-24">
     <!-- Header -->
     <div class="flex items-center gap-3 mb-6">
-      <NuxtLink to="/" class="text-gray-400 hover:text-gray-600 flex-shrink-0">
+      <NuxtLink :to="backTarget" class="text-gray-400 hover:text-gray-600 flex-shrink-0">
         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
         </svg>

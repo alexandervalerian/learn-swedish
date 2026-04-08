@@ -26,6 +26,9 @@ const visibleLevels = computed(() =>
 
 const levelFilter = computed(() => route.query.level as string | undefined)
 const showPicker = computed(() => !levelFilter.value)
+const backTarget = computed(() =>
+  levelFilter.value ? `/level?level=${levelFilter.value}` : '/'
+)
 
 const selectedLevel = computed(() =>
   allLevels.find(l => l.label === levelFilter.value) ?? null
@@ -89,7 +92,7 @@ const scorePercent = computed(() =>
     <!-- Header -->
     <div class="flex items-center gap-3 mb-6">
       <NuxtLink
-        :to="showPicker ? '/' : '/sentences'"
+        :to="showPicker ? '/' : backTarget"
         class="text-gray-400 hover:text-gray-600 flex-shrink-0"
       >
         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

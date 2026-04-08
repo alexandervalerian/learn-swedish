@@ -59,10 +59,31 @@ function markPracticed(id: string) {
 // ---- State machine ----
 type Phase = 'picker' | 'list' | 'topic'
 const route = useRoute()
+const router = useRouter()
 const phase = ref<Phase>('picker')
 const selectedLevel = ref<string>(userStore.startingLevel)
 const selectedTopic = ref<GrammarTopic | null>(null)
 const activeTab = ref<'erklaerung' | 'uebungen'>('erklaerung')
+const levelContext = computed(() => route.query.level as string | undefined)
+const backTarget = computed(() =>
+  levelContext.value ? `/level?level=${levelContext.value}` : '/'
+)
+
+function handleBack() {
+  if (phase.value === 'topic') {
+    phase.value = 'list'
+    return
+  }
+  if (phase.value === 'list' && levelContext.value) {
+    router.push(backTarget.value)
+    return
+  }
+  if (phase.value === 'list') {
+    phase.value = 'picker'
+    return
+  }
+  router.push('/')
+}
 
 onMounted(() => {
   const lvl = route.query.level as string | undefined
@@ -189,7 +210,7 @@ function highlightSentence(swedish: string, highlight: string): { before: string
     <div class="flex items-center gap-3 mb-6">
       <button
         class="text-gray-400 hover:text-gray-600 flex-shrink-0"
-        @click="phase === 'picker' ? $router.push('/') : phase === 'list' ? phase = 'picker' : phase = 'list'"
+        @click="handleBack"
       >
         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
