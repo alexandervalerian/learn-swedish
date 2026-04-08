@@ -58,10 +58,19 @@ function markPracticed(id: string) {
 
 // ---- State machine ----
 type Phase = 'picker' | 'list' | 'topic'
+const route = useRoute()
 const phase = ref<Phase>('picker')
 const selectedLevel = ref<string>(userStore.startingLevel)
 const selectedTopic = ref<GrammarTopic | null>(null)
 const activeTab = ref<'erklaerung' | 'uebungen'>('erklaerung')
+
+onMounted(() => {
+  const lvl = route.query.level as string | undefined
+  if (lvl && allLevels.some(l => l.label === lvl)) {
+    selectedLevel.value = lvl
+    phase.value = 'list'
+  }
+})
 
 // ---- Unlocked levels filter ----
 const visibleLevels = computed(() =>

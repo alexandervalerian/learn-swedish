@@ -62,12 +62,23 @@ function levelSeenPercent(wordIds: string[]): number {
             <span v-if="dailyIds.length === 0">Alle Karten gelernt!</span>
           </p>
         </div>
-        <div class="bg-white/20 rounded-xl p-3">
+        <div class="bg-white/20 rounded-xl p-3 flex-shrink-0">
           <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </div>
+      </div>
+      <!-- Daily progress bar -->
+      <div class="mt-3 bg-white/20 rounded-full h-1.5 overflow-hidden">
+        <div
+          class="h-full bg-white/80 rounded-full transition-all duration-500"
+          :style="{ width: `${Math.min(100, (dailyLearned / 40) * 100)}%` }"
+        />
+      </div>
+      <div class="flex justify-between text-[11px] text-white/60 mt-1">
+        <span>{{ dailyLearned }} gelernt</span>
+        <span>Ziel: 40</span>
       </div>
     </NuxtLink>
 
@@ -119,7 +130,7 @@ function levelSeenPercent(wordIds: string[]): number {
         <!-- Unlocked card -->
         <NuxtLink
           v-else
-          :to="`/learn?level=${lvl.data.level}`"
+          :to="`/level?level=${lvl.data.level}`"
           class="flex items-center gap-4 rounded-2xl border p-4 transition-all active:scale-[0.98]"
           :class="lvl.color"
         >
@@ -160,61 +171,5 @@ function levelSeenPercent(wordIds: string[]): number {
       </template>
     </div>
 
-    <!-- Grammar entry -->
-    <NuxtLink
-      to="/grammar"
-      class="mt-4 flex items-center gap-4 rounded-2xl border bg-gray-50 border-gray-200 p-4 transition-all active:scale-[0.98]"
-    >
-      <div class="bg-white rounded-xl p-3 border border-gray-100 flex-shrink-0">
-        <svg class="w-6 h-6 text-swedish-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
-      </div>
-      <div class="flex-1 min-w-0">
-        <p class="font-semibold text-gray-900 text-sm">Grammatik</p>
-        <p class="text-xs text-gray-500 mt-0.5">Regeln verstehen und mit Übungen festigen</p>
-      </div>
-      <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-      </svg>
-    </NuxtLink>
-
-    <!-- Exam entry -->
-    <NuxtLink
-      to="/exam"
-      class="mt-4 flex items-center gap-4 rounded-2xl border bg-gray-50 border-gray-200 p-4 transition-all active:scale-[0.98]"
-    >
-      <div class="bg-white rounded-xl p-3 border border-gray-100 flex-shrink-0">
-        <svg class="w-6 h-6 text-swedish-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-        </svg>
-      </div>
-      <div class="flex-1 min-w-0">
-        <p class="font-semibold text-gray-900 text-sm">Vokabelprüfung</p>
-        <p class="text-xs text-gray-500 mt-0.5">Wörter eintippen und Note erhalten</p>
-      </div>
-      <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-      </svg>
-    </NuxtLink>
-
-    <!-- Sentence practice entry -->
-    <NuxtLink
-      to="/sentences"
-      class="mt-4 flex items-center gap-4 rounded-2xl border bg-gray-50 border-gray-200 p-4 transition-all active:scale-[0.98]"
-    >
-      <div class="bg-white rounded-xl p-3 border border-gray-100 flex-shrink-0">
-        <svg class="w-6 h-6 text-swedish-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-        </svg>
-      </div>
-      <div class="flex-1 min-w-0">
-        <p class="font-semibold text-gray-900 text-sm">Satzübungen</p>
-        <p class="text-xs text-gray-500 mt-0.5">Sätze aktiv auf Schwedisch konstruieren</p>
-      </div>
-      <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-      </svg>
-    </NuxtLink>
   </div>
 </template>

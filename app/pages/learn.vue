@@ -74,7 +74,7 @@ function startSession() {
     const remaining = DAILY_NEW_LIMIT - store.newCardsSeenToday()
     overDailyLimit.value = remaining <= 0
     const reviews = resolveIds(store.reviewIds(wordIds.value))
-    const newCards = resolveIds(store.newIds(wordIds.value, Math.max(remaining, wordIds.value.length)))
+    const newCards = resolveIds(store.newIds(wordIds.value, Math.max(remaining, 0)))
     sessionReviewCount.value = reviews.length
     sessionNewCount.value = newCards.length
     const combined = [...reviews, ...newCards].sort(() => Math.random() - 0.5)

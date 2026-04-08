@@ -17,7 +17,7 @@ const LEGACY_GRAMMAR_KEY = 'swedish_grammar_progress'
 export const LEVEL_ORDER = ['A1', 'A2', 'B1', 'B2', 'C1'] as const
 export type CefrLevel = (typeof LEVEL_ORDER)[number]
 
-export const VOCAB_MASTERY_THRESHOLD = 0.80
+export const VOCAB_SEEN_THRESHOLD = 0.90
 
 const VOCAB_WORD_IDS: Record<CefrLevel, string[]> = {
   A1: a1Vocab.words.map(w => w.id),
@@ -119,7 +119,7 @@ export const useUserStore = defineStore('user', () => {
     const wordIds = VOCAB_WORD_IDS[level]
     const stats = progressStore.statsForLevel(wordIds)
     if (stats.total === 0) return false
-    const vocabDone = stats.mastered / stats.total >= VOCAB_MASTERY_THRESHOLD
+    const vocabDone = stats.seen / stats.total >= VOCAB_SEEN_THRESHOLD
 
     const topicIds = GRAMMAR_TOPIC_IDS[level]
     const grammarDone = topicIds.length === 0 || topicIds.every(id => grammarProgress.value.practiced.includes(id))

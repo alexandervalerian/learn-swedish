@@ -4,6 +4,7 @@ import a2 from '~/data/vocabulary/a2.json'
 import b1 from '~/data/vocabulary/b1.json'
 import b2 from '~/data/vocabulary/b2.json'
 import c1 from '~/data/vocabulary/c1.json'
+import { isMastered } from '~/composables/useSpacedRepetition'
 
 type SortMode = 'relevance' | 'alpha'
 type LevelFilter = 'ALL' | 'A1' | 'A2' | 'B1' | 'B2' | 'C1'
@@ -17,6 +18,8 @@ interface VocabularyWord {
   level: LevelFilter
   relevanceRank: number
 }
+
+const store = useProgressStore()
 
 const sortMode = ref<SortMode>('relevance')
 const levelFilter = ref<LevelFilter>('ALL')
@@ -105,9 +108,27 @@ const sortedWords = computed(() => {
             <p class="text-base font-semibold text-gray-900">{{ word.swedish }}</p>
             <p class="text-sm text-gray-600">{{ word.german }}</p>
           </div>
-          <span class="inline-flex rounded-full bg-gray-100 px-2 py-0.5 text-[11px] font-semibold text-gray-600">
-            {{ word.level }}
-          </span>
+          <div class="flex items-center gap-1.5 flex-shrink-0">
+            <!-- Learned status dot -->
+            <span
+              v-if="isMastered(store.getCard(word.id))"
+              class="w-2 h-2 rounded-full bg-green-500"
+              title="Gemeistert"
+            />
+            <span
+              v-else-if="store.getCard(word.id).lastReviewed !== null"
+              class="w-2 h-2 rounded-full bg-swedish-blue"
+              title="In Übung"
+            />
+            <span
+              v-else
+              class="w-2 h-2 rounded-full bg-gray-300"
+              title="Noch nicht gesehen"
+            />
+            <span class="inline-flex rounded-full bg-gray-100 px-2 py-0.5 text-[11px] font-semibold text-gray-600">
+              {{ word.level }}
+            </span>
+          </div>
         </div>
         <p class="mt-2 text-xs text-gray-500">
           {{ word.example }}

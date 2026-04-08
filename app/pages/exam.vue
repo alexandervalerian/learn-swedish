@@ -31,6 +31,7 @@ interface QuestionResult {
 
 import { type CefrLevel } from '~/stores/user'
 
+const route = useRoute()
 const userStore = useUserStore()
 
 const allLevels = [
@@ -57,6 +58,13 @@ const selectedLevel = ref<string>(userStore.startingLevel)
 const selectedCount = ref<10 | 20 | 'all'>(10)
 const selectedTypes = ref<ExamType[]>(['sv-de', 'de-sv', 'lueckentext'])
 const canStart = computed(() => selectedTypes.value.length > 0)
+
+onMounted(() => {
+  const lvl = route.query.level as string | undefined
+  if (lvl && allLevels.some(l => l.label === lvl)) {
+    selectedLevel.value = lvl
+  }
+})
 
 // ---- Question state ----
 const queue = ref<ExamQuestion[]>([])
