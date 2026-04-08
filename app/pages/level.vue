@@ -5,6 +5,7 @@ import b1 from '~/data/vocabulary/b1.json'
 import b2 from '~/data/vocabulary/b2.json'
 import c1 from '~/data/vocabulary/c1.json'
 import { type CefrLevel } from '~/stores/user'
+import { LEVEL_META } from '~/utils/levels'
 
 const route = useRoute()
 const router = useRouter()
@@ -13,11 +14,11 @@ const store = useProgressStore()
 const userStore = useUserStore()
 
 const levels = [
-  { data: a1, color: 'bg-emerald-50 border-emerald-200', badge: 'bg-emerald-100 text-emerald-700' },
-  { data: a2, color: 'bg-sky-50 border-sky-200', badge: 'bg-sky-100 text-sky-700' },
-  { data: b1, color: 'bg-violet-50 border-violet-200', badge: 'bg-violet-100 text-violet-700' },
-  { data: b2, color: 'bg-amber-50 border-amber-200', badge: 'bg-amber-100 text-amber-700' },
-  { data: c1, color: 'bg-rose-50 border-rose-200', badge: 'bg-rose-100 text-rose-700' },
+  { data: a1, ...LEVEL_META.A1 },
+  { data: a2, ...LEVEL_META.A2 },
+  { data: b1, ...LEVEL_META.B1 },
+  { data: b2, ...LEVEL_META.B2 },
+  { data: c1, ...LEVEL_META.C1 },
 ]
 
 const levelParam = computed(() => (route.query.level as string) || 'A1')
@@ -59,7 +60,9 @@ onMounted(() => {
         </div>
         <div>
           <div class="flex items-center gap-2 mb-1">
+            <span class="text-base leading-none">{{ lvl.emoji }}</span>
             <span class="text-xs font-bold px-2 py-0.5 rounded-full" :class="lvl.badge">{{ lvl.data.level }}</span>
+            <span class="text-xs font-medium text-gray-500">{{ lvl.name }}</span>
           </div>
           <p class="text-sm font-semibold text-gray-800">{{ lvl.data.description }}</p>
         </div>

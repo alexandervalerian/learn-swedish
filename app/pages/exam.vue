@@ -263,7 +263,7 @@ const scorePercent = computed(() =>
           <label
             v-for="t in (['sv-de', 'de-sv', 'lueckentext'] as ExamType[])"
             :key="t"
-            class="flex items-center gap-3 rounded-xl border border-gray-200 px-4 py-3 cursor-pointer hover:border-swedish-blue transition-colors"
+            class="flex items-center gap-3 rounded-xl border border-gray-200 bg-white px-4 py-3 cursor-pointer hover:border-swedish-blue transition-colors"
           >
             <input type="checkbox" v-model="selectedTypes" :value="t" class="accent-swedish-blue w-4 h-4" />
             <div>
@@ -375,6 +375,7 @@ const scorePercent = computed(() =>
         <p class="text-8xl font-black mb-1" :class="gradeColor">{{ grade.note }}</p>
         <p class="text-xl font-bold text-gray-900">{{ grade.label }}</p>
         <p class="text-gray-400 text-sm mt-1">{{ scorePercent }}% · {{ correctCount }} / {{ results.length }} richtig</p>
+        <p class="text-[11px] text-gray-300 mt-2">1 Sehr gut ≥92% · 2 Gut ≥81% · 3 Befriedigend ≥67% · 4 Ausreichend ≥50% · 5 Mangelhaft ≥30% · 6 Ungenügend</p>
       </div>
 
       <!-- Wrong answers -->

@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+- In all interactions and commit messages, be extremely concise and sacrifice grammar for the sake of concision.
+
 ## Commands
 
 ```bash
@@ -37,3 +39,6 @@ Each vocabulary word has an `id` like `a1_001`. The store maps word IDs to `Card
 Defined via `@theme` in `app/assets/css/main.css`:
 - `swedish-blue` = `#006AA7`
 - `swedish-yellow` = `#FECC02`
+
+## Plans
+- At the end of each plan, give me a list of unresolved questions to answer, if any. Make the questions extremely concise. Sacrifice grammar for the sake of concision.

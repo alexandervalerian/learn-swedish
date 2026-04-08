@@ -8,7 +8,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-50 font-sans">
+  <div class="min-h-screen bg-blue-50 font-sans">
     <main class="pb-20 min-h-screen">
       <NuxtPage />
     </main>

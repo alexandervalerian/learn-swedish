@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { type CefrLevel, LEVEL_ORDER } from '~/stores/user'
+import { LEVEL_META } from '~/utils/levels'
 
 definePageMeta({ layout: false })
 
@@ -28,23 +29,26 @@ function finish() {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+  <div class="min-h-screen flex items-center justify-center p-4" style="background-color: #006AA7;">
     <div class="w-full max-w-md">
 
-      <!-- Swedish flag accent -->
-      <div class="flex justify-center mb-8">
-        <div class="w-16 h-16 bg-swedish-blue rounded-2xl flex items-center justify-center shadow-lg">
-          <svg class="w-10 h-10 text-swedish-yellow" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-          </svg>
+      <!-- Swedish flag -->
+      <div class="flex flex-col items-center mb-6">
+        <svg viewBox="0 0 16 10" class="w-36 h-[90px] rounded-2xl shadow-lg mb-4">
+          <rect width="16" height="10" fill="#006AA7"/>
+          <rect x="5" width="2" height="10" fill="#FECC02"/>
+          <rect y="4" width="16" height="2" fill="#FECC02"/>
+        </svg>
+        <div class="flex gap-3 text-2xl">
+          <span>🌲</span><span>⛵</span><span>🏔️</span><span>❄️</span><span>🦌</span>
         </div>
       </div>
 
       <!-- Step 1: Name -->
       <Transition name="fade" mode="out-in">
         <div v-if="step === 1" key="step1">
-          <h1 class="text-3xl font-bold text-gray-900 text-center mb-2">Välkommen!</h1>
-          <p class="text-center text-gray-500 mb-8">Lär dig Svenska – Lerne Schwedisch</p>
+          <h1 class="text-3xl font-bold text-white text-center mb-2">Välkommen!</h1>
+          <p class="text-center text-white/70 mb-8">Dein schwedisches Abenteuer beginnt 🌿</p>
 
           <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
             <label class="block text-sm font-medium text-gray-700 mb-2">Wie heißt du?</label>
@@ -63,8 +67,8 @@ function finish() {
             :disabled="!nameInput.trim()"
             class="mt-4 w-full py-4 rounded-2xl font-semibold text-white text-lg transition-all"
             :class="nameInput.trim()
-              ? 'bg-swedish-blue active:scale-[0.98]'
-              : 'bg-gray-300 cursor-not-allowed'"
+              ? 'bg-white text-swedish-blue active:scale-[0.98]'
+              : 'bg-white/40 text-white/60 cursor-not-allowed'"
             @click="goToStep2"
           >
             Weiter
@@ -73,10 +77,10 @@ function finish() {
 
         <!-- Step 2: Level picker -->
         <div v-else key="step2">
-          <h1 class="text-2xl font-bold text-gray-900 text-center mb-1">
+          <h1 class="text-2xl font-bold text-white text-center mb-1">
             Hej, {{ nameInput.trim() }}!
           </h1>
-          <p class="text-center text-gray-500 mb-6">Auf welchem Niveau bist du?</p>
+          <p class="text-center text-white/70 mb-6">Auf welchem Niveau bist du?</p>
 
           <div class="space-y-3">
             <button
@@ -84,8 +88,8 @@ function finish() {
               :key="level"
               class="w-full flex items-center gap-4 p-4 rounded-2xl border-2 transition-all text-left"
               :class="selectedLevel === level
-                ? 'border-swedish-blue bg-swedish-blue-light'
-                : 'border-gray-100 bg-white'"
+                ? 'border-swedish-yellow border-2 bg-white shadow-md'
+                : 'border-white/30 bg-white/90'"
               @click="selectedLevel = level"
             >
               <span
@@ -93,7 +97,7 @@ function finish() {
                 :class="selectedLevel === level
                   ? 'bg-swedish-blue text-white'
                   : 'bg-gray-100 text-gray-600'"
-              >{{ level }}</span>
+              >{{ LEVEL_META[level].emoji }} {{ level }}</span>
               <div class="flex-1 min-w-0">
                 <p class="text-sm font-medium text-gray-800 truncate">{{ levelInfo[level].description }}</p>
                 <p class="text-xs text-gray-400">{{ levelInfo[level].hint }}</p>
@@ -105,7 +109,7 @@ function finish() {
           </div>
 
           <button
-            class="mt-6 w-full py-4 rounded-2xl font-semibold text-white text-lg bg-swedish-blue active:scale-[0.98] transition-all"
+            class="mt-6 w-full py-4 rounded-2xl font-semibold text-swedish-blue text-lg bg-white active:scale-[0.98] transition-all"
             @click="finish"
           >
             Lernen beginnen

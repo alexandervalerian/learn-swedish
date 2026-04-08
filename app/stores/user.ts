@@ -156,6 +156,31 @@ export const useUserStore = defineStore('user', () => {
     return _isLevelComplete(level)
   }
 
+  function changeName(newName: string) {
+    name.value = newName.trim()
+    save()
+  }
+
+  function changeStartingLevel(newLevel: CefrLevel) {
+    const newStartIdx = LEVEL_ORDER.indexOf(newLevel)
+    const oldStartIdx = LEVEL_ORDER.indexOf(startingLevel.value)
+    // If moving to a lower starting level, levels that were auto-unlocked become locked.
+    // Reset their grammar practiced (and studied) entries so progress must be re-earned.
+    if (newStartIdx < oldStartIdx) {
+      const topicIdsToRemove = LEVEL_ORDER
+        .slice(newStartIdx + 1, oldStartIdx + 1)
+        .flatMap(l => GRAMMAR_TOPIC_IDS[l])
+      grammarProgress.value.practiced = grammarProgress.value.practiced.filter(
+        id => !topicIdsToRemove.includes(id)
+      )
+      grammarProgress.value.studied = grammarProgress.value.studied.filter(
+        id => !topicIdsToRemove.includes(id)
+      )
+    }
+    startingLevel.value = newLevel
+    save()
+  }
+
   function grammarCompletionForLevel(level: CefrLevel): { practiced: number; total: number; complete: boolean } {
     const topicIds = GRAMMAR_TOPIC_IDS[level]
     const total = topicIds.length
@@ -171,10 +196,12 @@ export const useUserStore = defineStore('user', () => {
     load,
     save,
     completeOnboarding,
+    changeName,
     markStudied,
     markPracticed,
     isLevelUnlocked,
     isLevelComplete,
+    changeStartingLevel,
     grammarCompletionForLevel,
     unlockedLevels
   }

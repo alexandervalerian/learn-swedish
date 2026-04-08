@@ -41,8 +41,12 @@ function resolveIds(ids: string[]) {
   return ids.map(id => filteredWords.value.find(w => w.id === id)!).filter(Boolean)
 }
 
+type LearnMode = 'sv-de' | 'de-sv' | 'listen'
 const MODE_KEY = 'swedish_mode'
-const reverse = ref(false)
+const mode = ref<LearnMode>('sv-de')
+const reverse = computed(() => mode.value === 'de-sv')
+const listenMode = computed(() => mode.value === 'listen')
+const autoPlay = computed(() => mode.value === 'listen')
 
 const queue = ref<typeof allWords>([])
 const currentIndex = ref(0)
@@ -80,14 +84,10 @@ function startSession() {
   }
 }
 
-function toggleMode() {
-  reverse.value = !reverse.value
-  localStorage.setItem(MODE_KEY, reverse.value ? '1' : '0')
-  startSession()
-}
 
 onMounted(() => {
-  reverse.value = localStorage.getItem(MODE_KEY) === '1'
+  const saved = localStorage.getItem(MODE_KEY)
+  if (saved === 'de-sv' || saved === 'listen') mode.value = saved
   startSession()
 })
 
@@ -156,19 +156,6 @@ function onRate(rating: Rating) {
         </p>
       </div>
 
-      <!-- Mode toggle -->
-      <button
-        class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors"
-        :class="reverse
-          ? 'bg-swedish-blue text-white border-swedish-blue'
-          : 'bg-white text-gray-600 border-gray-200 hover:border-swedish-blue hover:text-swedish-blue'"
-        @click="toggleMode"
-      >
-        <span>{{ reverse ? 'DE → SV' : 'SV → DE' }}</span>
-        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
-        </svg>
-      </button>
     </div>
 
     <!-- Progress bar -->
@@ -185,18 +172,17 @@ function onRate(rating: Rating) {
     </div>
 
     <!-- Done state -->
-    <div v-if="done && isDailyMode && queue.length > 0" class="text-center py-16">
+    <div v-if="done && isDailyMode && queue.length > 0" class="rounded-2xl p-8 text-center" style="background-color: #006AA7;">
       <div class="text-5xl mb-4">🎉</div>
-      <h3 class="text-xl font-bold text-gray-900 mb-2">Gut gemacht!</h3>
-      <p class="text-gray-500 mb-2">Du hast {{ doneCount }} Karten wiederholt.</p>
-      <p v-if="isDailyMode" class="text-xs text-gray-400 mb-2">Tagesziel: {{ dailyGoalToday }} Karten</p>
-      <p v-if="store.streak.count > 1" class="text-swedish-blue font-semibold mb-8">
+      <h3 class="text-xl font-bold text-white mb-2">Bra jobbat! 🇸🇪</h3>
+      <p class="text-white/80 mb-2">Du hast {{ doneCount }} Karten wiederholt.</p>
+      <p v-if="isDailyMode" class="text-xs text-white/60 mb-2">Tagesziel: {{ dailyGoalToday }} Karten</p>
+      <p v-if="store.streak.count > 1" class="text-white font-semibold mb-8">
         🔥 {{ store.streak.count }} Tage in Folge!
       </p>
       <NuxtLink
         to="/"
-        class="inline-block px-6 py-3 rounded-xl text-white font-semibold"
-        style="background-color: #006AA7;"
+        class="inline-block px-6 py-3 rounded-xl bg-white text-swedish-blue font-semibold"
       >
         Zurück zur Übersicht
       </NuxtLink>
@@ -204,7 +190,7 @@ function onRate(rating: Rating) {
 
     <!-- No cards due -->
     <div v-else-if="queue.length === 0" class="text-center py-16">
-      <div class="text-5xl mb-4">✅</div>
+      <div class="text-5xl mb-4">🌲</div>
       <h3 class="text-xl font-bold text-gray-900 mb-2">Alles erledigt!</h3>
       <p class="text-gray-500 mb-2">Keine Karten für heute fällig.</p>
       <p class="text-xs text-gray-400 mb-8">Keine neuen oder fälligen Karten für dieses Niveau.</p>
@@ -238,6 +224,8 @@ function onRate(rating: Rating) {
       :example-translation="current.exampleTranslation"
       :level="levelForId(current.id)"
       :reverse="reverse"
+      :listen-mode="listenMode"
+      :auto-play="autoPlay"
       @rate="onRate"
     />
   </div>

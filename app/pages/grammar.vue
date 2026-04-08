@@ -36,15 +36,16 @@ interface GrammarLevel {
 
 // ---- Data ----
 const allLevels = [
-  { data: a1Grammar as GrammarLevel, label: 'A1', pill: 'bg-emerald-100 text-emerald-700', activePill: 'bg-emerald-500 text-white', cardClass: 'bg-emerald-50 border-emerald-200' },
-  { data: a2Grammar as GrammarLevel, label: 'A2', pill: 'bg-sky-100 text-sky-700', activePill: 'bg-sky-500 text-white', cardClass: 'bg-sky-50 border-sky-200' },
-  { data: b1Grammar as GrammarLevel, label: 'B1', pill: 'bg-violet-100 text-violet-700', activePill: 'bg-violet-500 text-white', cardClass: 'bg-violet-50 border-violet-200' },
-  { data: b2Grammar as GrammarLevel, label: 'B2', pill: 'bg-amber-100 text-amber-700', activePill: 'bg-amber-500 text-white', cardClass: 'bg-amber-50 border-amber-200' },
-  { data: c1Grammar as GrammarLevel, label: 'C1', pill: 'bg-rose-100 text-rose-700', activePill: 'bg-rose-500 text-white', cardClass: 'bg-rose-50 border-rose-200' },
+  { data: a1Grammar as GrammarLevel, label: 'A1', fullLabel: 'A1 – Anfänger',         ...LEVEL_META.A1, cardClass: LEVEL_META.A1.color },
+  { data: a2Grammar as GrammarLevel, label: 'A2', fullLabel: 'A2 – Grundlagen',        ...LEVEL_META.A2, cardClass: LEVEL_META.A2.color },
+  { data: b1Grammar as GrammarLevel, label: 'B1', fullLabel: 'B1 – Mittelstufe',       ...LEVEL_META.B1, cardClass: LEVEL_META.B1.color },
+  { data: b2Grammar as GrammarLevel, label: 'B2', fullLabel: 'B2 – Gute Mittelstufe',  ...LEVEL_META.B2, cardClass: LEVEL_META.B2.color },
+  { data: c1Grammar as GrammarLevel, label: 'C1', fullLabel: 'C1 – Fortgeschritten',   ...LEVEL_META.C1, cardClass: LEVEL_META.C1.color },
 ]
 
 // ---- Progress ----
 import { type CefrLevel } from '~/stores/user'
+import { LEVEL_META } from '~/utils/levels'
 
 const userStore = useUserStore()
 
@@ -218,18 +219,23 @@ function highlightSentence(swedish: string, highlight: string): { before: string
       </button>
       <div class="flex-1 min-w-0">
         <h2 class="font-bold text-gray-900">Grammatik</h2>
-        <p class="text-xs text-gray-400">
+        <!-- Breadcrumb -->
+        <p class="text-xs text-gray-400 mt-0.5 truncate">
           <template v-if="phase === 'picker'">Niveau wählen</template>
-          <template v-else-if="phase === 'list'">{{ selectedLevel }} · {{ currentLevelData.data.topics.length }} Themen</template>
-          <template v-else>{{ selectedLevel }} · {{ selectedTopic?.category }}</template>
+          <template v-else-if="phase === 'list'">
+            <button class="hover:text-swedish-blue transition-colors" @click="phase = 'picker'">Grammatik</button>
+            <span class="mx-1">›</span>
+            <span class="text-gray-600">{{ allLevels.find(l => l.label === selectedLevel)?.emoji }} {{ allLevels.find(l => l.label === selectedLevel)?.fullLabel }}</span>
+          </template>
+          <template v-else>
+            <button class="hover:text-swedish-blue transition-colors" @click="phase = 'picker'">Grammatik</button>
+            <span class="mx-1">›</span>
+            <button class="hover:text-swedish-blue transition-colors" @click="phase = 'list'">{{ allLevels.find(l => l.label === selectedLevel)?.emoji }} {{ allLevels.find(l => l.label === selectedLevel)?.fullLabel }}</button>
+            <span class="mx-1">›</span>
+            <span class="text-gray-600 truncate">{{ selectedTopic?.title }}</span>
+          </template>
         </p>
       </div>
-      <!-- Level badge in topic/list view -->
-      <span
-        v-if="phase !== 'picker'"
-        class="text-xs font-bold px-2 py-0.5 rounded-full"
-        :class="allLevels.find(l => l.label === selectedLevel)?.pill"
-      >{{ selectedLevel }}</span>
     </div>
 
     <!-- ── PICKER ── -->
@@ -244,7 +250,7 @@ function highlightSentence(swedish: string, highlight: string): { before: string
           @click="selectLevel(lvl.label)"
         >
           <div class="flex items-center gap-3">
-            <span class="text-xs font-bold px-2 py-0.5 rounded-full" :class="lvl.pill">{{ lvl.label }}</span>
+            <span class="text-xs font-bold px-2 py-0.5 rounded-full" :class="lvl.pill">{{ lvl.emoji }} {{ lvl.label }}</span>
             <span class="text-sm font-medium text-gray-700">{{ lvl.data.topics.length }} Grammatikthemen</span>
           </div>
           <div class="flex items-center gap-2">

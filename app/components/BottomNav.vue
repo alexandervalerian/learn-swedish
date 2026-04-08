@@ -10,6 +10,12 @@ const tabs = [
 
 <template>
   <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 safe-area-inset-bottom">
+    <!-- Swedish flag accent stripe -->
+    <div class="h-0.5 flex">
+      <div class="flex-1" style="background-color: #006AA7;"></div>
+      <div class="w-10" style="background-color: #FECC02;"></div>
+      <div class="flex-1" style="background-color: #006AA7;"></div>
+    </div>
     <div class="flex">
       <NuxtLink
         v-for="tab in tabs"

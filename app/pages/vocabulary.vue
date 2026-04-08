@@ -20,6 +20,8 @@ interface VocabularyWord {
 }
 
 const store = useProgressStore()
+const userStore = useUserStore()
+const { speak } = useSpeech()
 
 const sortMode = ref<SortMode>('relevance')
 const levelFilter = ref<LevelFilter>('ALL')
@@ -109,6 +111,14 @@ const sortedWords = computed(() => {
             <p class="text-sm text-gray-600">{{ word.german }}</p>
           </div>
           <div class="flex items-center gap-1.5 flex-shrink-0">
+            <!-- Speaker button -->
+            <button
+              class="w-8 h-8 flex items-center justify-center rounded-full text-gray-400 hover:text-swedish-blue hover:bg-blue-50 transition-colors focus:outline-none flex-shrink-0"
+              title="Aussprache anhören"
+              @click.stop="speak(`${word.swedish}. ${word.example}`)"
+            >
+              🔊
+            </button>
             <!-- Learned status dot -->
             <span
               v-if="isMastered(store.getCard(word.id))"
@@ -125,7 +135,11 @@ const sortedWords = computed(() => {
               class="w-2 h-2 rounded-full bg-gray-300"
               title="Noch nicht gesehen"
             />
-            <span class="inline-flex rounded-full bg-gray-100 px-2 py-0.5 text-[11px] font-semibold text-gray-600">
+            <span
+              class="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-semibold"
+              :class="userStore.isLevelUnlocked(word.level as any) ? 'bg-gray-100 text-gray-600' : 'bg-gray-100 text-gray-400'"
+            >
+              <svg v-if="!userStore.isLevelUnlocked(word.level as any)" class="w-2.5 h-2.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
               {{ word.level }}
             </span>
           </div>
