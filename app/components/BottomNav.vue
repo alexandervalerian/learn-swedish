@@ -9,27 +9,24 @@ const tabs = [
 </script>
 
 <template>
-  <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 safe-area-inset-bottom">
-    <!-- Swedish flag accent stripe -->
-    <div class="h-0.5 flex">
-      <div class="flex-1" style="background-color: #006AA7;"></div>
-      <div class="w-10" style="background-color: #FECC02;"></div>
-      <div class="flex-1" style="background-color: #006AA7;"></div>
-    </div>
+  <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-gray-100 safe-area-inset-bottom" style="box-shadow: 0 -1px 0 0 rgb(0 0 0 / 0.04);">
     <div class="flex">
       <NuxtLink
         v-for="tab in tabs"
         :key="tab.path"
         :to="tab.path"
-        class="flex-1 flex flex-col items-center py-3 gap-1 text-xs font-medium transition-colors"
-        :class="route.path === tab.path
-          ? 'text-swedish-blue'
-          : 'text-gray-400 hover:text-gray-600'"
+        class="flex-1 flex flex-col items-center py-2.5 gap-0.5 transition-colors"
+        :class="route.path === tab.path ? 'text-brand' : 'text-ink-tertiary'"
       >
-        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-          <path stroke-linecap="round" stroke-linejoin="round" :d="tab.icon" />
-        </svg>
-        {{ tab.label }}
+        <span
+          class="flex flex-col items-center gap-0.5 px-3 py-1 rounded-xl transition-colors"
+          :class="route.path === tab.path ? 'bg-brand-subtle' : ''"
+        >
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" :d="tab.icon" />
+          </svg>
+          <span class="text-[10px] font-semibold tracking-wide">{{ tab.label }}</span>
+        </span>
       </NuxtLink>
     </div>
   </nav>

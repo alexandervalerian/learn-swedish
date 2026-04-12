@@ -22,7 +22,6 @@ function makeTile(text: string): Tile {
   return { id: `t_${tileSeq++}`, text }
 }
 
-// Strip surrounding punctuation for comparison only
 function normalize(s: string): string {
   return s.toLowerCase().replace(/[^a-zåäöA-ZÅÄÖ\s]/g, '').trim()
 }
@@ -35,7 +34,6 @@ function buildBank(): Tile[] {
   const correctTokens = tokenize(props.swedish)
   const normalizedTokens = new Set(correctTokens.map(t => normalize(t)))
 
-  // Sample up to 4 distractors not appearing in the sentence
   const distractors = props.distractorPool
     .filter(w => !normalizedTokens.has(normalize(w)))
     .sort(() => Math.random() - 0.5)
@@ -89,30 +87,30 @@ function next() {
 <template>
   <div class="flex flex-col gap-4 w-full max-w-sm mx-auto">
     <!-- German prompt -->
-    <div class="bg-gray-50 border border-gray-100 rounded-2xl p-4 text-center">
-      <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-1">Deutsch</p>
-      <p class="text-lg font-medium text-gray-800">{{ german }}</p>
+    <div class="bg-surface-inset rounded-2xl p-4 text-center">
+      <p class="text-[10px] font-bold text-ink-tertiary uppercase tracking-widest mb-1">Deutsch</p>
+      <p class="text-lg font-medium text-ink-primary">{{ german }}</p>
     </div>
 
     <!-- Answer area -->
     <div
       class="min-h-[68px] border-2 border-dashed rounded-2xl p-3 flex flex-wrap gap-2 items-center transition-colors"
       :class="submitted
-        ? isCorrect ? 'border-green-400 bg-green-50' : 'border-red-300 bg-red-50'
+        ? isCorrect ? 'border-correct-border bg-correct-bg' : 'border-wrong-border bg-wrong-bg'
         : 'border-gray-200 bg-white'"
     >
-      <span v-if="!answer.length" class="text-sm text-gray-300 mx-auto select-none">
+      <span v-if="!answer.length" class="text-sm text-ink-tertiary/50 mx-auto select-none">
         Wörter hier eintippen...
       </span>
       <button
         v-for="tile in answer"
         :key="tile.id"
-        class="px-3 py-1.5 rounded-lg text-sm font-medium border transition-all"
+        class="px-3 py-1.5 rounded-xl text-sm font-medium border transition-all"
         :class="submitted
           ? isCorrect
-            ? 'bg-green-500 text-white border-green-500 cursor-default'
-            : 'bg-red-400 text-white border-red-400 cursor-default'
-          : 'bg-swedish-blue text-white border-swedish-blue active:scale-95'"
+            ? 'bg-correct text-white border-correct cursor-default'
+            : 'bg-wrong text-white border-wrong cursor-default'
+          : 'bg-brand text-white border-brand active:scale-95'"
         :disabled="submitted"
         @click="returnTile(tile)"
       >
@@ -122,9 +120,9 @@ function next() {
 
     <!-- Correct answer reveal -->
     <Transition name="slide-up">
-      <div v-if="submitted && !isCorrect" class="bg-swedish-blue-light rounded-xl px-4 py-3">
-        <p class="text-xs font-semibold text-swedish-blue mb-1">Richtige Antwort</p>
-        <p class="text-sm font-medium text-gray-900">{{ swedish }}</p>
+      <div v-if="submitted && !isCorrect" class="bg-brand-subtle border border-brand-muted rounded-xl px-4 py-3">
+        <p class="text-xs font-semibold text-brand mb-1">Richtige Antwort</p>
+        <p class="text-sm font-medium text-ink-primary">{{ swedish }}</p>
       </div>
     </Transition>
 
@@ -133,10 +131,10 @@ function next() {
       <button
         v-for="tile in bank"
         :key="tile.id"
-        class="px-3 py-1.5 rounded-lg text-sm font-medium bg-white border transition-all"
+        class="px-3 py-1.5 rounded-xl text-sm font-medium bg-white border transition-all"
         :class="submitted
-          ? 'border-gray-100 text-gray-300 cursor-default'
-          : 'border-gray-200 text-gray-700 hover:border-swedish-blue hover:text-swedish-blue active:scale-95'"
+          ? 'border-gray-100 text-ink-tertiary/40 cursor-default'
+          : 'border-gray-200 text-ink-secondary hover:border-brand hover:text-brand hover:bg-brand-subtle active:scale-95'"
         :disabled="submitted"
         @click="pickTile(tile)"
       >
@@ -148,17 +146,17 @@ function next() {
     <div class="flex gap-3 pt-1">
       <template v-if="!submitted">
         <button
-          class="flex-1 py-3 rounded-xl font-semibold text-sm transition-all"
+          class="flex-1 py-3 rounded-2xl font-semibold text-sm transition-all"
           :class="answer.length
-            ? 'bg-swedish-blue text-white active:scale-[0.98]'
-            : 'bg-gray-100 text-gray-300 cursor-not-allowed'"
+            ? 'bg-brand text-white active:scale-[0.98]'
+            : 'bg-surface-inset text-ink-tertiary cursor-not-allowed'"
           :disabled="!answer.length"
           @click="submit"
         >
           Prüfen
         </button>
         <button
-          class="px-5 py-3 rounded-xl text-sm text-gray-400 hover:text-gray-600 transition-colors"
+          class="btn-ghost"
           @click="emit('skip')"
         >
           Überspringen
@@ -167,8 +165,8 @@ function next() {
 
       <button
         v-else
-        class="flex-1 py-3 rounded-xl font-semibold text-sm text-white transition-all active:scale-[0.98]"
-        :class="isCorrect ? 'bg-green-500' : 'bg-swedish-blue'"
+        class="flex-1 py-3 rounded-2xl font-semibold text-sm text-white transition-all active:scale-[0.98]"
+        :class="isCorrect ? 'bg-correct' : 'bg-brand'"
         @click="next"
       >
         {{ isCorrect ? 'Weiter ✓' : 'Nächste →' }}

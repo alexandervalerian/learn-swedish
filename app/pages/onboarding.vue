@@ -29,46 +29,54 @@ function finish() {
 </script>
 
 <template>
-  <div class="min-h-screen flex items-center justify-center p-4" style="background-color: #006AA7;">
+  <div
+    class="min-h-screen flex items-center justify-center p-4 font-sans antialiased"
+    style="background: linear-gradient(160deg, var(--color-brand-dark) 0%, var(--color-brand) 65%, var(--color-brand-mid) 100%);"
+  >
     <div class="w-full max-w-md">
 
       <!-- Swedish flag -->
-      <div class="flex flex-col items-center mb-6">
-        <svg viewBox="0 0 16 10" class="w-36 h-[90px] rounded-2xl shadow-lg mb-4">
+      <div class="flex flex-col items-center mb-8">
+        <svg viewBox="0 0 16 10" class="w-36 h-[90px] rounded-2xl mb-5" style="box-shadow: var(--shadow-float);">
           <rect width="16" height="10" fill="#006AA7"/>
           <rect x="5" width="2" height="10" fill="#FECC02"/>
           <rect y="4" width="16" height="2" fill="#FECC02"/>
         </svg>
-        <div class="flex gap-3 text-2xl">
-          <span>🌲</span><span>⛵</span><span>🏔️</span><span>❄️</span><span>🦌</span>
+        <div class="flex gap-2">
+          <span
+            v-for="e in ['🌲','⛵','🏔️','❄️','🦌']"
+            :key="e"
+            class="text-xl bg-white/15 rounded-xl px-2.5 py-1.5"
+          >{{ e }}</span>
         </div>
       </div>
 
-      <!-- Step 1: Name -->
+      <!-- Steps -->
       <Transition name="fade" mode="out-in">
+        <!-- Step 1: Name -->
         <div v-if="step === 1" key="step1">
           <h1 class="text-3xl font-bold text-white text-center mb-2">Välkommen!</h1>
           <p class="text-center text-white/70 mb-8">Dein schwedisches Abenteuer beginnt 🌿</p>
 
-          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-            <label class="block text-sm font-medium text-gray-700 mb-2">Wie heißt du?</label>
+          <div class="bg-white rounded-2xl p-6" style="box-shadow: var(--shadow-float);">
+            <label class="block text-sm font-medium text-ink-secondary mb-2">Wie heißt du?</label>
             <input
               v-model="nameInput"
               type="text"
               maxlength="30"
               autofocus
               placeholder="Dein Name"
-              class="w-full border border-gray-200 rounded-xl px-4 py-3 text-lg focus:outline-none focus:ring-2 focus:ring-swedish-blue focus:border-transparent"
+              class="w-full border-2 border-gray-200 rounded-2xl px-4 py-3 text-lg focus:outline-none focus:border-brand transition-colors text-ink-primary"
               @keydown.enter="goToStep2"
             />
           </div>
 
           <button
             :disabled="!nameInput.trim()"
-            class="mt-4 w-full py-4 rounded-2xl font-semibold text-white text-lg transition-all"
+            class="mt-4 w-full py-4 rounded-2xl font-bold text-lg transition-all active:scale-[0.98]"
             :class="nameInput.trim()
-              ? 'bg-white text-swedish-blue active:scale-[0.98]'
-              : 'bg-white/40 text-white/60 cursor-not-allowed'"
+              ? 'bg-gold text-brand-deeper'
+              : 'bg-white/30 text-white/50 cursor-not-allowed'"
             @click="goToStep2"
           >
             Weiter
@@ -82,34 +90,35 @@ function finish() {
           </h1>
           <p class="text-center text-white/70 mb-6">Auf welchem Niveau bist du?</p>
 
-          <div class="space-y-3">
+          <div class="space-y-2">
             <button
               v-for="level in LEVEL_ORDER"
               :key="level"
               class="w-full flex items-center gap-4 p-4 rounded-2xl border-2 transition-all text-left"
               :class="selectedLevel === level
-                ? 'border-swedish-yellow border-2 bg-white shadow-md'
-                : 'border-white/30 bg-white/90'"
+                ? 'border-gold bg-white'
+                : 'border-white/25 bg-white/90'"
+              :style="selectedLevel === level ? 'box-shadow: var(--shadow-raised);' : ''"
               @click="selectedLevel = level"
             >
               <span
                 class="text-sm font-bold px-2.5 py-1 rounded-full flex-shrink-0"
                 :class="selectedLevel === level
-                  ? 'bg-swedish-blue text-white'
-                  : 'bg-gray-100 text-gray-600'"
+                  ? LEVEL_META[level].activePill
+                  : LEVEL_META[level].pill"
               >{{ LEVEL_META[level].emoji }} {{ level }}</span>
               <div class="flex-1 min-w-0">
-                <p class="text-sm font-medium text-gray-800 truncate">{{ levelInfo[level].description }}</p>
-                <p class="text-xs text-gray-400">{{ levelInfo[level].hint }}</p>
+                <p class="text-sm font-medium text-ink-primary truncate">{{ levelInfo[level].description }}</p>
+                <p class="text-xs text-ink-tertiary">{{ levelInfo[level].hint }}</p>
               </div>
-              <svg v-if="selectedLevel === level" class="w-5 h-5 text-swedish-blue flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg v-if="selectedLevel === level" class="w-5 h-5 text-brand flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
               </svg>
             </button>
           </div>
 
           <button
-            class="mt-6 w-full py-4 rounded-2xl font-semibold text-swedish-blue text-lg bg-white active:scale-[0.98] transition-all"
+            class="mt-6 w-full py-4 rounded-2xl font-bold text-brand-deeper text-lg bg-gold active:scale-[0.98] transition-all"
             @click="finish"
           >
             Lernen beginnen

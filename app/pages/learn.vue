@@ -56,7 +56,6 @@ const sessionReviewCount = ref(0)
 const sessionNewCount = ref(0)
 
 function startSession() {
-  // Guard: redirect if accessing a locked level
   if (levelFilter.value && !userStore.isLevelUnlocked(levelFilter.value as CefrLevel)) {
     navigateTo('/')
     return
@@ -84,7 +83,6 @@ function startSession() {
   }
 }
 
-
 onMounted(() => {
   const saved = localStorage.getItem(MODE_KEY)
   if (saved === 'de-sv' || saved === 'listen') mode.value = saved
@@ -111,7 +109,6 @@ function onRate(rating: Rating) {
   store.rateCard(current.value.id, rating)
   reviewedCount.value++
 
-  // If "Again", push to end of queue
   if (rating === 0) {
     queue.value.push(current.value)
   }
@@ -132,57 +129,60 @@ function onRate(rating: Rating) {
   <div class="max-w-lg mx-auto px-4 pt-6">
     <!-- Header -->
     <div class="flex items-center gap-3 mb-8">
-      <NuxtLink to="/" class="text-gray-400 hover:text-gray-600">
-        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <NuxtLink to="/" class="page-back-btn">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
       </NuxtLink>
       <div class="flex-1">
-        <h2 class="font-bold text-gray-900">
+        <h2 class="font-bold text-ink-primary">
           {{ isDailyMode ? 'Tagespensum' : (levelFilter ? `Niveau ${levelFilter}` : 'Alle Niveau') }}
         </h2>
-        <p v-if="!done && queue.length > 0" class="text-xs text-gray-400">
+        <p v-if="!done && queue.length > 0" class="text-xs text-ink-tertiary mt-0.5">
           <template v-if="isDailyMode">
             {{ dailyLearnedToday }} / {{ dailyGoalToday }} heute ·
             <span v-if="dailyRemainingToday > 0">{{ dailyRemainingToday }} offen</span>
-            <span v-else class="text-swedish-blue">Ziel erreicht</span>
+            <span v-else class="text-brand font-semibold">Ziel erreicht</span>
           </template>
           <template v-else>
             {{ currentIndex + 1 }} / {{ queue.length }} ·
             <span v-if="sessionReviewCount">{{ sessionReviewCount }} Wdh.</span>
             <span v-if="sessionReviewCount && sessionNewCount"> · </span>
-            <span v-if="sessionNewCount" class="text-swedish-blue">{{ sessionNewCount }} neu</span>
+            <span v-if="sessionNewCount" class="text-brand font-semibold">{{ sessionNewCount }} neu</span>
           </template>
         </p>
       </div>
-
     </div>
 
     <!-- Progress bar -->
-    <div v-if="!done && queue.length > 0" class="mb-8 bg-gray-200 rounded-full h-1.5">
+    <div v-if="!done && queue.length > 0" class="mb-8 progress-track">
       <div
-        class="h-1.5 rounded-full bg-swedish-blue transition-all duration-300"
+        class="progress-fill"
         :style="{ width: `${(currentIndex / Math.max(queue.length, 1)) * 100}%` }"
       />
     </div>
 
     <!-- Daily goal reached banner -->
-    <div v-if="dailyGoalReached && !done && queue.length > 0" class="mb-4 rounded-xl bg-sky-50 border border-sky-200 px-4 py-2 text-xs text-sky-800">
-      Tagesziel erreicht - du kannst mit extra Karten weitermachen.
+    <div v-if="dailyGoalReached && !done && queue.length > 0" class="mb-4 rounded-xl bg-brand-subtle border border-brand-muted px-4 py-2 text-xs text-brand">
+      Tagesziel erreicht – du kannst mit extra Karten weitermachen.
     </div>
 
     <!-- Done state -->
-    <div v-if="done && isDailyMode && queue.length > 0" class="rounded-2xl p-8 text-center" style="background-color: #006AA7;">
+    <div
+      v-if="done && isDailyMode && queue.length > 0"
+      class="rounded-2xl p-8 text-center"
+      style="background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-brand-dark) 100%); box-shadow: var(--shadow-raised);"
+    >
       <div class="text-5xl mb-4">🎉</div>
       <h3 class="text-xl font-bold text-white mb-2">Bra jobbat! 🇸🇪</h3>
       <p class="text-white/80 mb-2">Du hast {{ doneCount }} Karten wiederholt.</p>
       <p v-if="isDailyMode" class="text-xs text-white/60 mb-2">Tagesziel: {{ dailyGoalToday }} Karten</p>
       <p v-if="store.streak.count > 1" class="text-white font-semibold mb-8">
-        🔥 {{ store.streak.count }} Tage in Folge!
+        <span class="text-gold">🔥</span> {{ store.streak.count }} Tage in Folge!
       </p>
       <NuxtLink
         to="/"
-        class="inline-block px-6 py-3 rounded-xl bg-white text-swedish-blue font-semibold"
+        class="inline-block px-6 py-3 rounded-xl bg-white text-brand font-semibold transition-all active:scale-[0.98] hover:bg-gold-soft"
       >
         Zurück zur Übersicht
       </NuxtLink>
@@ -191,24 +191,23 @@ function onRate(rating: Rating) {
     <!-- No cards due -->
     <div v-else-if="queue.length === 0" class="text-center py-16">
       <div class="text-5xl mb-4">🌲</div>
-      <h3 class="text-xl font-bold text-gray-900 mb-2">Alles erledigt!</h3>
-      <p class="text-gray-500 mb-2">Keine Karten für heute fällig.</p>
-      <p class="text-xs text-gray-400 mb-8">Keine neuen oder fälligen Karten für dieses Niveau.</p>
+      <h3 class="text-xl font-bold text-ink-primary mb-2">Alles erledigt!</h3>
+      <p class="text-ink-secondary mb-2">Keine Karten für heute fällig.</p>
+      <p class="text-xs text-ink-tertiary mb-8">Keine neuen oder fälligen Karten für dieses Niveau.</p>
       <div class="flex flex-col gap-3 items-center">
         <NuxtLink
           to="/sentences"
-          class="inline-block px-6 py-3 rounded-xl text-white font-semibold"
-          style="background-color: #006AA7;"
+          class="btn-primary inline-block max-w-xs"
         >
           Satzübungen starten
         </NuxtLink>
         <NuxtLink
           to="/grammar"
-          class="inline-block px-6 py-3 rounded-xl font-semibold border border-gray-200 text-gray-700 hover:border-swedish-blue hover:text-swedish-blue transition-colors"
+          class="btn-secondary inline-block max-w-xs"
         >
           Grammatik üben
         </NuxtLink>
-        <NuxtLink to="/" class="text-sm text-gray-500 hover:text-gray-700">
+        <NuxtLink to="/" class="text-sm text-ink-tertiary hover:text-ink-secondary mt-1">
           Zurück zur Übersicht
         </NuxtLink>
       </div>

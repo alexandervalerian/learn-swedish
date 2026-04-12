@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RATING_LABELS, RATING_COLORS, type Rating } from '~/composables/useSpacedRepetition'
+import { RATING_LABELS, type Rating } from '~/composables/useSpacedRepetition'
 import { LEVEL_META } from '~/utils/levels'
 import type { CefrLevel } from '~/stores/user'
 
@@ -53,6 +53,13 @@ function rate(rating: Rating) {
 }
 
 const ratings: Rating[] = [0, 1, 2, 3]
+
+const ratingClass: Record<Rating, string> = {
+  0: 'bg-wrong-bg text-wrong border border-wrong-border rounded-2xl hover:bg-red-100',
+  1: 'bg-amber-50 text-amber-700 border border-amber-200 rounded-2xl hover:bg-amber-100',
+  2: 'bg-brand-subtle text-brand border border-brand-muted rounded-2xl hover:bg-blue-100',
+  3: 'bg-correct-bg text-correct border border-correct-border rounded-2xl hover:bg-green-100',
+}
 </script>
 
 <template>
@@ -65,46 +72,50 @@ const ratings: Rating[] = [0, 1, 2, 3]
     >
       <div class="card-inner w-full h-full" :class="{ flipped }">
         <!-- Front -->
-        <div class="card-face absolute inset-0 bg-white rounded-2xl shadow-lg flex flex-col items-center justify-center p-6 border border-gray-100">
-          <span class="text-xs font-semibold uppercase tracking-widest text-swedish-blue mb-4">{{ levelEmoji }} {{ level }}</span>
+        <div class="card-face absolute inset-0 bg-white rounded-2xl flex flex-col items-center justify-center p-6" style="box-shadow: var(--shadow-raised);">
+          <span class="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-mid mb-4">{{ levelEmoji }} {{ level }}</span>
 
-          <!-- Listen mode: large speaker, no text -->
+          <!-- Listen mode -->
           <template v-if="listenMode">
             <button
               class="w-20 h-20 flex items-center justify-center rounded-full text-5xl transition-colors focus:outline-none"
-              :class="speaking ? 'animate-pulse bg-blue-100' : 'hover:bg-blue-50'"
+              :class="speaking ? 'animate-pulse bg-brand-subtle' : 'hover:bg-brand-subtle'"
               @click.stop="speakWord"
             >
               🔊
             </button>
-            <p class="mt-4 text-sm text-gray-400">Tippen zum Anhören</p>
-            <p v-if="!flipped" class="mt-1 text-xs text-gray-300">Dann Karte umdrehen</p>
+            <p class="mt-4 text-sm text-ink-tertiary">Tippen zum Anhören</p>
+            <p v-if="!flipped" class="mt-1 text-xs text-ink-tertiary/60">Dann Karte umdrehen</p>
           </template>
 
-          <!-- Normal mode: word + speaker -->
+          <!-- Normal mode -->
           <template v-else>
-            <p class="text-4xl font-bold text-gray-900 text-center leading-tight">
+            <p class="text-[2.75rem] font-bold text-ink-primary text-center leading-tight">
               {{ props.reverse ? german : swedish }}
             </p>
             <button
-              class="mt-3 w-11 h-11 flex items-center justify-center rounded-full transition-colors focus:outline-none"
-              :class="speaking ? 'text-swedish-blue bg-blue-50' : 'text-gray-300 hover:text-swedish-blue hover:bg-blue-50'"
+              class="mt-3 w-11 h-11 flex items-center justify-center rounded-full transition-all focus:outline-none"
+              :class="speaking ? 'bg-brand-subtle text-brand animate-pulse' : 'bg-surface-inset text-ink-tertiary hover:bg-brand-subtle hover:text-brand'"
               @click.stop="speakWord"
             >
               🔊
             </button>
-            <p v-if="!flipped" class="mt-1 text-sm text-gray-400">Tippen zum Umdrehen</p>
+            <p v-if="!flipped" class="mt-2 text-xs text-ink-tertiary/70">Tippen zum Umdrehen</p>
           </template>
         </div>
 
         <!-- Back -->
-        <div class="card-face card-back-face absolute inset-0 bg-swedish-blue rounded-2xl shadow-lg flex flex-col overflow-hidden">
-          <div class="h-1 flex-shrink-0" style="background-color: #FECC02;"></div>
+        <div
+          class="card-face card-back-face absolute inset-0 rounded-2xl shadow-lg flex flex-col overflow-hidden"
+          style="background: radial-gradient(ellipse at 30% 0%, rgba(254,204,2,0.15) 0%, transparent 60%), var(--color-brand);"
+        >
+          <!-- Centered gold dash -->
+          <div class="w-8 h-0.5 bg-gold mx-auto mt-4 mb-0 rounded-full flex-shrink-0"></div>
           <div class="flex-1 flex flex-col items-center justify-center p-6">
-            <p class="text-3xl font-bold text-white text-center leading-tight">
+            <p class="text-2xl font-bold text-white text-center leading-tight">
               {{ props.reverse ? swedish : german }}
             </p>
-            <div class="mt-4 border-t border-white/20 pt-4 w-full text-center">
+            <div class="mt-4 bg-white/10 rounded-xl px-4 py-3 w-full text-center">
               <p class="text-sm text-white/90 italic">{{ example }}</p>
               <p class="text-xs text-white/60 mt-1">{{ exampleTranslation }}</p>
               <button
@@ -120,14 +131,14 @@ const ratings: Rating[] = [0, 1, 2, 3]
       </div>
     </div>
 
-    <!-- Rating buttons — only after flip -->
+    <!-- Rating buttons -->
     <Transition name="fade">
       <div v-if="flipped" class="grid grid-cols-4 gap-2 w-full">
         <button
           v-for="r in ratings"
           :key="r"
-          class="py-3 rounded-xl text-white text-sm font-semibold transition-all active:scale-95"
-          :class="RATING_COLORS[r]"
+          class="py-3 text-sm font-bold transition-all active:scale-95"
+          :class="ratingClass[r]"
           @click.stop="rate(r)"
         >
           {{ RATING_LABELS[r] }}

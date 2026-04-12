@@ -3,6 +3,7 @@ const props = defineProps<{
   percentage: number // 0–100
   size?: number
   strokeWidth?: number
+  color?: string
 }>()
 
 const size = computed(() => props.size ?? 72)
@@ -13,6 +14,7 @@ const offset = computed(
   () => circumference.value - (circumference.value * Math.min(props.percentage, 100)) / 100
 )
 const center = computed(() => size.value / 2)
+const ringColor = computed(() => props.color ?? '#006AA7')
 </script>
 
 <template>
@@ -22,7 +24,7 @@ const center = computed(() => size.value / 2)
       :cy="center"
       :r="radius"
       fill="none"
-      stroke="#e5e7eb"
+      stroke="#EEF2F7"
       :stroke-width="stroke"
     />
     <circle
@@ -30,7 +32,7 @@ const center = computed(() => size.value / 2)
       :cy="center"
       :r="radius"
       fill="none"
-      stroke="#006AA7"
+      :stroke="ringColor"
       :stroke-width="stroke"
       stroke-linecap="round"
       :stroke-dasharray="circumference"

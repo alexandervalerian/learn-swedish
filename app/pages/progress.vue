@@ -10,14 +10,12 @@ import { LEVEL_META } from '~/utils/levels'
 const store = useProgressStore()
 const userStore = useUserStore()
 
-// ---- Name editing ----
 const nameEdit = ref(userStore.name)
 function saveName() {
   if (nameEdit.value.trim() && nameEdit.value.trim() !== userStore.name)
     userStore.changeName(nameEdit.value)
 }
 
-// ---- Learn mode ----
 type LearnMode = 'sv-de' | 'de-sv' | 'listen'
 const MODE_KEY = 'swedish_mode'
 const learnMode = ref<LearnMode>(
@@ -35,16 +33,15 @@ const learnModes: { value: LearnMode; label: string }[] = [
   { value: 'listen', label: '🔊 Hören' },
 ]
 
-// ---- Level modal ----
 const showLevelModal = ref(false)
 const pendingLevel = ref<CefrLevel>(userStore.startingLevel)
 
 const levelOptions: { label: CefrLevel; fullLabel: string; pill: string; activePill: string }[] = [
-  { label: 'A1', fullLabel: '🌲 A1 – Anfänger', pill: 'bg-emerald-100 text-emerald-700', activePill: 'bg-emerald-500 text-white' },
-  { label: 'A2', fullLabel: '⛵ A2 – Grundlagen', pill: 'bg-sky-100 text-sky-700', activePill: 'bg-sky-500 text-white' },
-  { label: 'B1', fullLabel: '🏔️ B1 – Mittelstufe', pill: 'bg-violet-100 text-violet-700', activePill: 'bg-violet-500 text-white' },
-  { label: 'B2', fullLabel: '❄️ B2 – Gute Mittelstufe', pill: 'bg-amber-100 text-amber-700', activePill: 'bg-amber-500 text-white' },
-  { label: 'C1', fullLabel: '🦌 C1 – Fortgeschritten', pill: 'bg-rose-100 text-rose-700', activePill: 'bg-rose-500 text-white' },
+  { label: 'A1', fullLabel: '🌲 A1 – Anfänger',          pill: 'bg-a1-border text-a1-ink', activePill: 'bg-a1-accent text-white' },
+  { label: 'A2', fullLabel: '⛵ A2 – Grundlagen',         pill: 'bg-a2-border text-a2-ink', activePill: 'bg-a2-accent text-white' },
+  { label: 'B1', fullLabel: '🏔️ B1 – Mittelstufe',        pill: 'bg-b1-border text-b1-ink', activePill: 'bg-b1-accent text-white' },
+  { label: 'B2', fullLabel: '❄️ B2 – Gute Mittelstufe',   pill: 'bg-b2-border text-b2-ink', activePill: 'bg-b2-accent text-white' },
+  { label: 'C1', fullLabel: '🦌 C1 – Fortgeschritten',    pill: 'bg-c1-border text-c1-ink', activePill: 'bg-c1-accent text-white' },
 ]
 
 const willLoseLevels = computed(() => {
@@ -63,7 +60,6 @@ function confirmLevelChange() {
   showLevelModal.value = false
 }
 
-// ---- Export / Import ----
 const importInput = ref<HTMLInputElement | null>(null)
 const dataStatus = ref<{ type: 'success' | 'error'; msg: string } | null>(null)
 
@@ -84,9 +80,7 @@ function exportData() {
   URL.revokeObjectURL(url)
 }
 
-function triggerImport() {
-  importInput.value?.click()
-}
+function triggerImport() { importInput.value?.click() }
 
 function onImportFile(e: Event) {
   const file = (e.target as HTMLInputElement).files?.[0]
@@ -107,11 +101,9 @@ function onImportFile(e: Event) {
     }
   }
   reader.readAsText(file)
-  // reset so same file can be re-selected
   ;(e.target as HTMLInputElement).value = ''
 }
 
-// ---- Stats ----
 const levels = [
   { data: a1, ...LEVEL_META.A1 },
   { data: a2, ...LEVEL_META.A2 },
@@ -129,66 +121,66 @@ const totalStats = computed(() => {
 <template>
   <div class="max-w-lg mx-auto px-4 pt-8 pb-8">
     <!-- Header -->
-    <h1 class="text-2xl font-bold text-gray-900 mb-6">Fortschritt</h1>
+    <h1 class="text-2xl font-bold text-ink-primary mb-6">Fortschritt</h1>
 
-    <!-- Stats grid -->
+    <!-- Stats grid — differentiated cards -->
     <div class="grid grid-cols-3 gap-3 mb-6">
-      <div class="bg-white rounded-2xl border border-gray-100 p-4 text-center shadow-sm">
-        <p class="text-2xl font-bold text-gray-900">{{ store.streak.count }}</p>
-        <p class="text-xs text-gray-500 mt-1">🔥 Streak</p>
+      <div class="rounded-2xl p-4 text-center bg-gold-soft border border-amber-200/60" style="box-shadow: var(--shadow-card);">
+        <p class="text-2xl font-bold text-b2-ink">{{ store.streak.count }}</p>
+        <p class="text-xs text-b2-ink/70 mt-1">🔥 Streak</p>
       </div>
-      <div class="bg-white rounded-2xl border border-gray-100 p-4 text-center shadow-sm">
-        <p class="text-2xl font-bold text-swedish-blue">{{ totalStats.seen }}</p>
-        <p class="text-xs text-gray-500 mt-1">Gesehen</p>
+      <div class="rounded-2xl p-4 text-center bg-brand-subtle border border-brand-muted" style="box-shadow: var(--shadow-card);">
+        <p class="text-2xl font-bold text-brand">{{ totalStats.seen }}</p>
+        <p class="text-xs text-brand/70 mt-1">Gesehen</p>
       </div>
-      <div class="bg-white rounded-2xl border border-gray-100 p-4 text-center shadow-sm">
-        <p class="text-2xl font-bold text-green-600">{{ totalStats.mastered }}</p>
-        <p class="text-xs text-gray-500 mt-1">Gemeistert</p>
+      <div class="rounded-2xl p-4 text-center bg-correct-bg border border-correct-border" style="box-shadow: var(--shadow-card);">
+        <p class="text-2xl font-bold text-correct">{{ totalStats.mastered }}</p>
+        <p class="text-xs text-correct/70 mt-1">Gemeistert</p>
       </div>
     </div>
 
     <!-- Settings -->
-    <p class="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">Einstellungen</p>
-    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-6">
+    <p class="section-label">Einstellungen</p>
+    <div class="card overflow-hidden divide-y divide-surface-inset mb-6">
 
-      <!-- Name row -->
-      <div class="px-4 py-4 border-b border-gray-50 flex items-center justify-between gap-3">
-        <p class="text-sm font-medium text-gray-800">Dein Name</p>
+      <!-- Name -->
+      <div class="px-4 py-4 flex items-center justify-between gap-3">
+        <p class="text-sm font-medium text-ink-primary">Dein Name</p>
         <input
           v-model="nameEdit"
           type="text"
           maxlength="30"
-          class="text-right text-sm text-gray-600 bg-transparent border-b border-transparent focus:border-swedish-blue focus:outline-none w-32 transition-colors"
+          class="text-right text-sm text-ink-secondary bg-surface-inset rounded-lg px-2 py-1 border-0 focus:outline-none focus:ring-2 focus:ring-brand w-32 transition-all"
           @blur="saveName"
           @keydown.enter="($event.target as HTMLInputElement).blur()"
         />
       </div>
 
-      <!-- Niveau row -->
+      <!-- Niveau -->
       <div
-        class="px-4 py-4 border-b border-gray-50 flex items-center justify-between cursor-pointer active:bg-gray-50 transition-colors"
+        class="px-4 py-4 flex items-center justify-between cursor-pointer active:bg-surface-inset transition-colors"
         @click="openLevelModal"
       >
-        <p class="text-sm font-medium text-gray-800">Startniveau</p>
-        <div class="flex items-center gap-1.5 text-sm text-gray-600">
+        <p class="text-sm font-medium text-ink-primary">Startniveau</p>
+        <div class="flex items-center gap-1.5 text-sm text-ink-secondary">
           <span>{{ LEVEL_META[userStore.startingLevel].emoji }} {{ userStore.startingLevel }}</span>
-          <svg class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <svg class="w-4 h-4 text-ink-tertiary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </div>
       </div>
 
-      <!-- Learn mode row -->
-      <div class="px-4 py-4 border-b border-gray-50 flex items-center justify-between gap-3">
-        <p class="text-sm font-medium text-gray-800">Lernmodus</p>
-        <div class="flex gap-1 bg-gray-100 rounded-lg p-1">
+      <!-- Learn mode -->
+      <div class="px-4 py-4 flex items-center justify-between gap-3">
+        <p class="text-sm font-medium text-ink-primary">Lernmodus</p>
+        <div class="flex gap-1 bg-surface-inset rounded-xl p-1">
           <button
             v-for="m in learnModes"
             :key="m.value"
-            class="px-2.5 py-1 rounded-md text-xs font-semibold transition-all"
+            class="px-2.5 py-1 rounded-lg text-xs font-semibold transition-all"
             :class="learnMode === m.value
-              ? 'bg-white text-gray-900 shadow-sm'
-              : 'text-gray-500 hover:text-gray-700'"
+              ? 'bg-white text-ink-primary shadow-sm'
+              : 'text-ink-tertiary hover:text-ink-secondary'"
             @click="learnMode = m.value"
           >
             {{ m.label }}
@@ -196,46 +188,42 @@ const totalStats = computed(() => {
         </div>
       </div>
 
-      <!-- Export / Import row -->
+      <!-- Export / Import -->
       <div class="px-4 py-4">
-        <p class="text-sm font-medium text-gray-800 mb-3">Daten</p>
+        <p class="text-sm font-medium text-ink-primary mb-3">Daten</p>
         <div class="flex gap-2">
           <button
-            class="flex-1 py-2 rounded-xl border border-gray-200 text-sm font-semibold text-gray-600 hover:border-gray-300 transition-colors"
+            class="flex-1 py-2 rounded-xl border border-gray-200 text-sm font-semibold text-ink-secondary hover:border-brand hover:text-brand transition-colors"
             @click="exportData"
           >
             Exportieren ↓
           </button>
           <button
-            class="flex-1 py-2 rounded-xl border border-gray-200 text-sm font-semibold text-gray-600 hover:border-gray-300 transition-colors"
+            class="flex-1 py-2 rounded-xl border border-gray-200 text-sm font-semibold text-ink-secondary hover:border-brand hover:text-brand transition-colors"
             @click="triggerImport"
           >
             Importieren ↑
           </button>
           <input ref="importInput" type="file" accept=".json" class="hidden" @change="onImportFile" />
         </div>
-        <p v-if="dataStatus" class="mt-2 text-xs font-medium" :class="dataStatus.type === 'success' ? 'text-green-600' : 'text-red-500'">
+        <p v-if="dataStatus" class="mt-2 text-xs font-medium" :class="dataStatus.type === 'success' ? 'text-correct' : 'text-wrong'">
           {{ dataStatus.msg }}
         </p>
       </div>
     </div>
 
     <!-- Per-level breakdown -->
-    <p class="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">Nach Niveau</p>
-    <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+    <p class="section-label">Nach Niveau</p>
+    <div class="card overflow-hidden divide-y divide-surface-inset">
       <div
         v-for="(lvl, i) in levels"
         :key="lvl.data.level"
         class="px-4 py-4"
-        :class="[
-          i < levels.length - 1 ? 'border-b border-gray-50' : '',
-          !userStore.isLevelUnlocked(lvl.data.level as CefrLevel) ? 'opacity-40' : ''
-        ]"
+        :class="!userStore.isLevelUnlocked(lvl.data.level as CefrLevel) ? 'opacity-40' : ''"
       >
         <div class="flex items-center gap-4">
-          <!-- Locked: padlock -->
           <div v-if="!userStore.isLevelUnlocked(lvl.data.level as CefrLevel)" class="w-[52px] h-[52px] rounded-full border-2 border-gray-200 flex items-center justify-center flex-shrink-0">
-            <svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <svg class="w-5 h-5 text-ink-tertiary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
           </div>
@@ -244,8 +232,9 @@ const totalStats = computed(() => {
               :percentage="Math.round(store.statsForLevel(lvl.data.words.map(w => w.id)).mastered / lvl.data.words.length * 100)"
               :size="52"
               :stroke-width="5"
+              :color="lvl.ringColor"
             />
-            <span class="absolute inset-0 flex items-center justify-center text-xs font-bold text-gray-700">
+            <span class="absolute inset-0 flex items-center justify-center text-xs font-bold text-ink-secondary">
               {{ Math.round(store.statsForLevel(lvl.data.words.map(w => w.id)).mastered / lvl.data.words.length * 100) }}%
             </span>
           </div>
@@ -254,27 +243,27 @@ const totalStats = computed(() => {
             <div class="flex items-center justify-between mb-1">
               <div class="flex items-center gap-2">
                 <span class="font-bold text-sm" :class="lvl.textColor">{{ lvl.emoji }} {{ lvl.data.level }}</span>
-                <span v-if="!userStore.isLevelUnlocked(lvl.data.level as CefrLevel)" class="text-[10px] text-gray-400 font-medium">Gesperrt</span>
+                <span v-if="!userStore.isLevelUnlocked(lvl.data.level as CefrLevel)" class="text-[10px] text-ink-tertiary font-medium">Gesperrt</span>
               </div>
-              <span class="text-xs text-gray-400">{{ lvl.data.words.length }} Wörter</span>
+              <span class="text-xs text-ink-tertiary">{{ lvl.data.words.length }} Wörter</span>
             </div>
-            <div class="h-1.5 bg-gray-100 rounded-full overflow-hidden mb-2">
+            <div class="progress-track mb-2">
               <div
-                class="h-full rounded-full bg-swedish-blue transition-all duration-500"
+                class="progress-fill"
                 :style="{ width: `${store.statsForLevel(lvl.data.words.map(w => w.id)).seen / lvl.data.words.length * 100}%` }"
               />
             </div>
-            <div class="flex gap-3 text-xs text-gray-500">
+            <div class="flex gap-3 text-xs text-ink-tertiary">
               <span>{{ store.statsForLevel(lvl.data.words.map(w => w.id)).seen }} gesehen</span>
-              <span class="text-green-600 font-medium">{{ store.statsForLevel(lvl.data.words.map(w => w.id)).mastered }} gemeistert</span>
-              <span class="text-swedish-blue font-medium">{{ store.dueIds(lvl.data.words.map(w => w.id)).length }} fällig</span>
+              <span class="text-correct font-medium">{{ store.statsForLevel(lvl.data.words.map(w => w.id)).mastered }} gemeistert</span>
+              <span class="text-brand font-medium">{{ store.dueIds(lvl.data.words.map(w => w.id)).length }} fällig</span>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <p class="text-xs text-gray-400 text-center mt-4">
+    <p class="text-xs text-ink-tertiary text-center mt-4">
       Gesehen = mindestens einmal gelernt · Gemeistert = Abstand ≥ 21 Tage
     </p>
   </div>
@@ -286,10 +275,10 @@ const totalStats = computed(() => {
         v-if="showLevelModal"
         class="fixed inset-0 z-50 flex items-end sm:items-center justify-center"
       >
-        <div class="absolute inset-0 bg-black/40" @click="showLevelModal = false" />
-        <div class="relative w-full max-w-md bg-white rounded-t-2xl sm:rounded-2xl px-5 pt-5 pb-8 shadow-xl">
-          <h2 class="text-lg font-bold text-gray-900 mb-1">Startniveau ändern</h2>
-          <p class="text-sm text-gray-500 mb-4">Wähle das Niveau, ab dem du lernen möchtest.</p>
+        <div class="absolute inset-0 bg-brand-deeper/25" @click="showLevelModal = false" />
+        <div class="relative w-full max-w-md bg-white rounded-t-2xl sm:rounded-2xl px-5 pt-5 pb-8" style="box-shadow: var(--shadow-float);">
+          <h2 class="text-lg font-bold text-ink-primary mb-1">Startniveau ändern</h2>
+          <p class="text-sm text-ink-tertiary mb-4">Wähle das Niveau, ab dem du lernen möchtest.</p>
 
           <div class="space-y-2 mb-4">
             <button
@@ -297,7 +286,7 @@ const totalStats = computed(() => {
               :key="opt.label"
               class="w-full flex items-center gap-3 rounded-xl border px-4 py-3 transition-all text-left"
               :class="pendingLevel === opt.label
-                ? 'border-swedish-blue bg-blue-50'
+                ? 'border-brand bg-brand-subtle'
                 : 'border-gray-200 hover:border-gray-300'"
               @click="pendingLevel = opt.label"
             >
@@ -305,31 +294,24 @@ const totalStats = computed(() => {
                 class="text-xs font-bold px-2 py-0.5 rounded-full flex-shrink-0"
                 :class="pendingLevel === opt.label ? opt.activePill : opt.pill"
               >{{ opt.label }}</span>
-              <span class="text-sm text-gray-700">{{ opt.fullLabel }}</span>
-              <svg v-if="pendingLevel === opt.label" class="w-4 h-4 text-swedish-blue ml-auto flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <span class="text-sm text-ink-secondary">{{ opt.fullLabel }}</span>
+              <svg v-if="pendingLevel === opt.label" class="w-4 h-4 text-brand ml-auto flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
               </svg>
             </button>
           </div>
 
-          <div v-if="willLoseLevels.length > 0" class="mb-4 rounded-xl bg-amber-50 border border-amber-200 px-4 py-3">
-            <p class="text-xs text-amber-700 font-medium">
+          <div v-if="willLoseLevels.length > 0" class="mb-4 rounded-xl bg-b2-bg border border-b2-border px-4 py-3">
+            <p class="text-xs text-b2-ink font-medium">
               Grammatikfortschritt für {{ willLoseLevels.join(', ') }} wird zurückgesetzt.
             </p>
           </div>
 
           <div class="flex gap-3">
-            <button
-              class="flex-1 py-3 rounded-xl border border-gray-200 text-gray-600 font-semibold text-sm hover:border-gray-300 transition-colors"
-              @click="showLevelModal = false"
-            >
+            <button class="btn-secondary flex-none w-auto px-5 py-3" style="width: auto;" @click="showLevelModal = false">
               Abbrechen
             </button>
-            <button
-              class="flex-1 py-3 rounded-xl text-white font-semibold text-sm transition-all active:scale-[0.98]"
-              style="background-color: #006AA7;"
-              @click="confirmLevelChange"
-            >
+            <button class="btn-primary flex-1" @click="confirmLevelChange">
               Übernehmen
             </button>
           </div>

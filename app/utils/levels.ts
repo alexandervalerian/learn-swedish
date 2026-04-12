@@ -8,10 +8,11 @@ export const LEVEL_META: Record<CefrLevel, {
   pill: string
   activePill: string
   textColor: string
+  ringColor: string
 }> = {
-  A1: { emoji: '🌲', name: 'Wald',    color: 'bg-emerald-50 border-emerald-200', badge: 'bg-emerald-100 text-emerald-700', pill: 'bg-emerald-100 text-emerald-700', activePill: 'bg-emerald-500 text-white', textColor: 'text-emerald-600' },
-  A2: { emoji: '⛵', name: 'Schären', color: 'bg-sky-50 border-sky-200',         badge: 'bg-sky-100 text-sky-700',         pill: 'bg-sky-100 text-sky-700',         activePill: 'bg-sky-500 text-white',     textColor: 'text-sky-600' },
-  B1: { emoji: '🏔️', name: 'Fjäll',   color: 'bg-violet-50 border-violet-200',   badge: 'bg-violet-100 text-violet-700',   pill: 'bg-violet-100 text-violet-700',   activePill: 'bg-violet-500 text-white',  textColor: 'text-violet-600' },
-  B2: { emoji: '❄️', name: 'Vinter',  color: 'bg-amber-50 border-amber-200',     badge: 'bg-amber-100 text-amber-700',     pill: 'bg-amber-100 text-amber-700',     activePill: 'bg-amber-500 text-white',   textColor: 'text-amber-600' },
-  C1: { emoji: '🦌', name: 'Elch',    color: 'bg-rose-50 border-rose-200',       badge: 'bg-rose-100 text-rose-700',       pill: 'bg-rose-100 text-rose-700',       activePill: 'bg-rose-500 text-white',    textColor: 'text-rose-600' },
+  A1: { emoji: '🌲', name: 'Wald',    color: 'bg-a1-bg border-a1-border', badge: 'bg-a1-border text-a1-ink', pill: 'bg-a1-border text-a1-ink', activePill: 'bg-a1-accent text-white', textColor: 'text-a1-ink',  ringColor: '#2E7D32' },
+  A2: { emoji: '⛵', name: 'Schären', color: 'bg-a2-bg border-a2-border', badge: 'bg-a2-border text-a2-ink', pill: 'bg-a2-border text-a2-ink', activePill: 'bg-a2-accent text-white', textColor: 'text-a2-ink',  ringColor: '#1565C0' },
+  B1: { emoji: '🏔️', name: 'Fjäll',   color: 'bg-b1-bg border-b1-border', badge: 'bg-b1-border text-b1-ink', pill: 'bg-b1-border text-b1-ink', activePill: 'bg-b1-accent text-white', textColor: 'text-b1-ink',  ringColor: '#5E35B1' },
+  B2: { emoji: '❄️', name: 'Vinter',  color: 'bg-b2-bg border-b2-border', badge: 'bg-b2-border text-b2-ink', pill: 'bg-b2-border text-b2-ink', activePill: 'bg-b2-accent text-white', textColor: 'text-b2-ink',  ringColor: '#F57F17' },
+  C1: { emoji: '🦌', name: 'Elch',    color: 'bg-c1-bg border-c1-border', badge: 'bg-c1-border text-c1-ink', pill: 'bg-c1-border text-c1-ink', activePill: 'bg-c1-accent text-white', textColor: 'text-c1-ink',  ringColor: '#C62828' },
 }

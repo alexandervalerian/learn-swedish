@@ -4,20 +4,19 @@ import a2 from '~/data/vocabulary/a2.json'
 import b1 from '~/data/vocabulary/b1.json'
 import b2 from '~/data/vocabulary/b2.json'
 import c1 from '~/data/vocabulary/c1.json'
+import { type CefrLevel } from '~/stores/user'
+import { LEVEL_META } from '~/utils/levels'
 
 const route = useRoute()
 const router = useRouter()
-
-import { type CefrLevel } from '~/stores/user'
-
 const userStore = useUserStore()
 
 const allLevels = [
-  { data: a1, label: 'A1', cardClass: 'bg-emerald-50 border-emerald-200', badge: 'bg-emerald-100 text-emerald-700' },
-  { data: a2, label: 'A2', cardClass: 'bg-sky-50 border-sky-200', badge: 'bg-sky-100 text-sky-700' },
-  { data: b1, label: 'B1', cardClass: 'bg-violet-50 border-violet-200', badge: 'bg-violet-100 text-violet-700' },
-  { data: b2, label: 'B2', cardClass: 'bg-amber-50 border-amber-200', badge: 'bg-amber-100 text-amber-700' },
-  { data: c1, label: 'C1', cardClass: 'bg-rose-50 border-rose-200', badge: 'bg-rose-100 text-rose-700' },
+  { data: a1, label: 'A1', ...LEVEL_META.A1 },
+  { data: a2, label: 'A2', ...LEVEL_META.A2 },
+  { data: b1, label: 'B1', ...LEVEL_META.B1 },
+  { data: b2, label: 'B2', ...LEVEL_META.B2 },
+  { data: c1, label: 'C1', ...LEVEL_META.C1 },
 ]
 
 const visibleLevels = computed(() =>
@@ -43,7 +42,6 @@ const sentences = computed(() =>
   }))
 )
 
-// Swedish base words for distractors (individual vocabulary words, not sentences)
 const distractorPool = computed(() =>
   selectedLevel.value?.data.words.map(w => w.swedish) ?? []
 )
@@ -91,17 +89,14 @@ const scorePercent = computed(() =>
   <div class="max-w-lg mx-auto px-4 pt-6">
     <!-- Header -->
     <div class="flex items-center gap-3 mb-6">
-      <NuxtLink
-        :to="showPicker ? '/' : backTarget"
-        class="text-gray-400 hover:text-gray-600 flex-shrink-0"
-      >
-        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <NuxtLink :to="showPicker ? '/' : backTarget" class="page-back-btn">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
         </svg>
       </NuxtLink>
       <div class="flex-1 min-w-0">
-        <h2 class="font-bold text-gray-900">Satzübungen</h2>
-        <p class="text-xs text-gray-400">
+        <h2 class="font-bold text-ink-primary">Satzübungen</h2>
+        <p class="text-xs text-ink-tertiary">
           {{ showPicker
             ? 'Wähle ein Niveau'
             : `${levelFilter} · ${currentIndex + 1} / ${queue.length}`
@@ -116,16 +111,16 @@ const scorePercent = computed(() =>
         v-for="lvl in visibleLevels"
         :key="lvl.label"
         class="w-full flex items-center justify-between rounded-2xl border px-4 py-4 transition-all active:scale-[0.98]"
-        :class="lvl.cardClass"
+        :class="lvl.color"
         @click="goToLevel(lvl.label)"
       >
         <div class="flex items-center gap-3">
           <span class="text-xs font-bold px-2 py-0.5 rounded-full" :class="lvl.badge">
-            {{ lvl.label }}
+            {{ lvl.emoji }} {{ lvl.label }}
           </span>
-          <span class="text-sm font-medium text-gray-700">{{ lvl.data.words.length }} Sätze</span>
+          <span class="text-sm font-medium text-ink-secondary">{{ lvl.data.words.length }} Sätze</span>
         </div>
-        <svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg class="w-5 h-5 text-ink-tertiary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
       </button>
@@ -134,32 +129,27 @@ const scorePercent = computed(() =>
     <!-- Session complete -->
     <div v-else-if="done" class="text-center py-14">
       <div class="text-5xl mb-4">{{ scorePercent >= 80 ? '🌟' : '💪' }}</div>
-      <h3 class="text-xl font-bold text-gray-900 mb-1">Übung abgeschlossen!</h3>
-      <p class="text-gray-400 text-sm mb-6">{{ scorePercent }}% richtig</p>
+      <h3 class="text-xl font-bold text-ink-primary mb-1">Übung abgeschlossen!</h3>
+      <p class="text-ink-tertiary text-sm mb-6">{{ scorePercent }}% richtig</p>
 
       <div class="flex justify-center gap-8 mb-8">
         <div class="text-center">
-          <p class="text-3xl font-bold text-green-500">{{ correct }}</p>
-          <p class="text-xs text-gray-400 mt-1">Richtig</p>
+          <p class="text-3xl font-bold text-correct">{{ correct }}</p>
+          <p class="text-xs text-ink-tertiary mt-1">Richtig</p>
         </div>
         <div class="text-center">
-          <p class="text-3xl font-bold text-red-400">{{ incorrect }}</p>
-          <p class="text-xs text-gray-400 mt-1">Falsch</p>
+          <p class="text-3xl font-bold text-wrong">{{ incorrect }}</p>
+          <p class="text-xs text-ink-tertiary mt-1">Falsch</p>
         </div>
         <div class="text-center">
-          <p class="text-3xl font-bold text-gray-300">{{ queue.length - correct - incorrect }}</p>
-          <p class="text-xs text-gray-400 mt-1">Übersprungen</p>
+          <p class="text-3xl font-bold text-ink-tertiary/40">{{ queue.length - correct - incorrect }}</p>
+          <p class="text-xs text-ink-tertiary mt-1">Übersprungen</p>
         </div>
       </div>
 
-      <div class="flex flex-col gap-3">
-        <button
-          class="px-6 py-3 rounded-xl text-white font-semibold bg-swedish-blue active:scale-[0.98] transition-all"
-          @click="startSession"
-        >
-          Nochmal üben
-        </button>
-        <NuxtLink to="/sentences" class="text-sm text-gray-400 hover:text-gray-600 py-1">
+      <div class="flex flex-col gap-3 items-center max-w-xs mx-auto">
+        <button class="btn-primary" @click="startSession">Nochmal üben</button>
+        <NuxtLink to="/sentences" class="text-sm text-ink-tertiary hover:text-ink-secondary py-1">
           Anderes Niveau wählen
         </NuxtLink>
       </div>
@@ -167,10 +157,9 @@ const scorePercent = computed(() =>
 
     <!-- Session in progress -->
     <template v-else-if="current">
-      <!-- Progress bar -->
-      <div class="mb-6 bg-gray-200 rounded-full h-1.5">
+      <div class="mb-6 progress-track">
         <div
-          class="h-1.5 rounded-full bg-swedish-blue transition-all duration-300"
+          class="progress-fill"
           :style="{ width: `${(currentIndex / Math.max(queue.length, 1)) * 100}%` }"
         />
       </div>
