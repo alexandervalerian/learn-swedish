@@ -43,7 +43,7 @@ function resolveIds(ids: string[]) {
 
 type LearnMode = 'sv-de' | 'de-sv' | 'listen'
 const MODE_KEY = 'swedish_mode'
-const mode = ref<LearnMode>('sv-de')
+const mode = ref<LearnMode>('de-sv')
 const reverse = computed(() => mode.value === 'de-sv')
 const listenMode = computed(() => mode.value === 'listen')
 const autoPlay = computed(() => mode.value === 'listen')

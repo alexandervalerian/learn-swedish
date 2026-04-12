@@ -23,7 +23,7 @@ const learnMode = ref<LearnMode>(
     localStorage.getItem(MODE_KEY) as LearnMode
   )
     ? (localStorage.getItem(MODE_KEY) as LearnMode)
-    : 'sv-de'
+    : 'de-sv'
 )
 watch(learnMode, val => localStorage.setItem(MODE_KEY, val))
 
