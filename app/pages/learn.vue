@@ -69,7 +69,7 @@ function startSession() {
     queue.value = words.sort(() => Math.random() - 0.5)
     currentIndex.value = 0
     reviewedCount.value = 0
-    done.value = words.length === 0
+    done.value = words.length === 0 || store.dailyRemaining() <= 0
   } else {
     const reviews = resolveIds(store.reviewIds(wordIds.value))
     const newCards = resolveIds(store.newIds(wordIds.value, wordIds.value.length))
@@ -109,16 +109,16 @@ function onRate(rating: Rating) {
   store.rateCard(current.value.id, rating)
   reviewedCount.value++
 
-  if (rating === 0) {
-    queue.value.push(current.value)
+  if (rating === 0) queue.value.push(current.value)
+
+  if (isDailyMode.value && dailyGoalReached.value) {
+    done.value = true
+    return
   }
 
   if (currentIndex.value + 1 >= queue.value.length) {
-    if (isDailyMode.value) {
-      done.value = true
-    } else {
-      startSession()
-    }
+    if (isDailyMode.value) done.value = true
+    else startSession()
   } else {
     currentIndex.value++
   }
@@ -162,28 +162,40 @@ function onRate(rating: Rating) {
       />
     </div>
 
-    <!-- Daily goal reached banner -->
-    <div v-if="dailyGoalReached && !done && queue.length > 0" class="mb-4 rounded-xl bg-brand-subtle border border-brand-muted px-4 py-2 text-xs text-brand">
-      Tagesziel erreicht – du kannst mit extra Karten weitermachen.
-    </div>
-
-    <!-- Done state -->
+    <!-- Done state (daily) -->
     <div
-      v-if="done && isDailyMode && queue.length > 0"
+      v-if="done && isDailyMode"
       class="rounded-2xl p-8 text-center"
       style="background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-brand-dark) 100%); box-shadow: var(--shadow-raised);"
     >
       <div class="text-5xl mb-4">🎉</div>
       <h3 class="text-xl font-bold text-white mb-2">Bra jobbat! 🇸🇪</h3>
-      <p class="text-white/80 mb-2">Du hast {{ doneCount }} Karten wiederholt.</p>
-      <p v-if="isDailyMode" class="text-xs text-white/60 mb-2">Tagesziel: {{ dailyGoalToday }} Karten</p>
-      <p v-if="store.streak.count > 1" class="text-white font-semibold mb-8">
+      <p class="text-white/80 mb-2">{{ doneCount }} Karten heute gelernt.</p>
+      <p v-if="store.streak.count > 1" class="text-white font-semibold mb-6">
         <span class="text-gold">🔥</span> {{ store.streak.count }} Tage in Folge!
       </p>
-      <NuxtLink
-        to="/"
-        class="inline-block px-6 py-3 rounded-xl bg-white text-brand font-semibold transition-all active:scale-[0.98] hover:bg-gold-soft"
-      >
+      <p class="text-white/70 text-sm mb-4">Was möchtest du als nächstes üben?</p>
+      <div class="flex flex-col gap-3 mb-6">
+        <NuxtLink
+          to="/vocabulary"
+          class="inline-block px-6 py-3 rounded-xl bg-white text-brand font-semibold transition-all active:scale-[0.98] hover:bg-gold-soft"
+        >
+          Vokabeltest
+        </NuxtLink>
+        <NuxtLink
+          to="/grammar"
+          class="inline-block px-6 py-3 rounded-xl bg-white/20 text-white font-semibold transition-all active:scale-[0.98] hover:bg-white/30"
+        >
+          Grammatik üben
+        </NuxtLink>
+        <NuxtLink
+          to="/sentences"
+          class="inline-block px-6 py-3 rounded-xl bg-white/20 text-white font-semibold transition-all active:scale-[0.98] hover:bg-white/30"
+        >
+          Sätze bilden
+        </NuxtLink>
+      </div>
+      <NuxtLink to="/" class="text-sm text-white/60 hover:text-white">
         Zurück zur Übersicht
       </NuxtLink>
     </div>
