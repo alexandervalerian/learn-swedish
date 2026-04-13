@@ -17,7 +17,7 @@ interface StoredData {
   cards: Record<string, CardState>
   streak: { lastDate: string | null; count: number }
   newToday: { date: string; count: number }
-  dailyProgress: { date: string; remaining: number; learned: number }
+  dailyProgress: { date: string; remaining: number; learned: number; learnedIds: string[] }
 }
 
 export const useProgressStore = defineStore('progress', () => {
@@ -30,10 +30,11 @@ export const useProgressStore = defineStore('progress', () => {
     date: '',
     count: 0
   })
-  const dailyProgress = ref<{ date: string; remaining: number; learned: number }>({
+  const dailyProgress = ref<{ date: string; remaining: number; learned: number; learnedIds: string[] }>({
     date: today(),
     remaining: DAILY_CARD_TARGET,
-    learned: 0
+    learned: 0,
+    learnedIds: []
   })
 
   function syncDailyProgressDate() {
@@ -42,7 +43,8 @@ export const useProgressStore = defineStore('progress', () => {
     dailyProgress.value = {
       date: todayStr,
       remaining: DAILY_CARD_TARGET,
-      learned: 0
+      learned: 0,
+      learnedIds: []
     }
   }
 
@@ -57,7 +59,8 @@ export const useProgressStore = defineStore('progress', () => {
       dailyProgress.value = {
         date: data.dailyProgress?.date ?? today(),
         remaining: data.dailyProgress?.remaining ?? DAILY_CARD_TARGET,
-        learned: data.dailyProgress?.learned ?? 0
+        learned: data.dailyProgress?.learned ?? 0,
+        learnedIds: data.dailyProgress?.learnedIds ?? []
       }
       syncDailyProgressDate()
     } catch {
@@ -93,6 +96,11 @@ export const useProgressStore = defineStore('progress', () => {
     return dailyProgress.value.learned
   }
 
+  function dailyLearnedIds(): string[] {
+    syncDailyProgressDate()
+    return dailyProgress.value.learnedIds
+  }
+
   function rateCard(id: string, rating: Rating, countDaily = true) {
     syncDailyProgressDate()
     const wasNew = getCard(id).lastReviewed === null
@@ -100,6 +108,9 @@ export const useProgressStore = defineStore('progress', () => {
     if (countDaily) {
       dailyProgress.value.remaining = Math.max(0, dailyProgress.value.remaining - 1)
       dailyProgress.value.learned++
+      if (!dailyProgress.value.learnedIds.includes(id)) {
+        dailyProgress.value.learnedIds.push(id)
+      }
     }
     if (wasNew) {
       if (newToday.value.date !== today()) {
@@ -195,6 +206,7 @@ export const useProgressStore = defineStore('progress', () => {
     newCardsSeenToday,
     dailyRemaining,
     dailyLearnedToday,
+    dailyLearnedIds,
     statsForLevel,
     dailySessionIds,
     DAILY_NEW_LIMIT

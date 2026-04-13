@@ -195,7 +195,7 @@ function onRate(rating: Rating) {
       <p class="text-white/70 text-sm mb-4">Was möchtest du als nächstes üben?</p>
       <div class="flex flex-col gap-3 mb-6">
         <NuxtLink
-          :to="`/exam?level=${highestUnlockedLevel}`"
+          to="/exam?mode=daily"
           class="inline-block px-6 py-3 rounded-xl bg-white text-brand font-semibold transition-all active:scale-[0.98] hover:bg-gold-soft"
         >
           Vokabeltest

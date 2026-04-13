@@ -33,6 +33,7 @@ import { type CefrLevel } from '~/stores/user'
 
 const route = useRoute()
 const userStore = useUserStore()
+const progressStore = useProgressStore()
 const levelContext = computed(() => route.query.level as string | undefined)
 const backTarget = computed(() =>
   levelContext.value ? `/level?level=${levelContext.value}` : '/'
@@ -62,7 +63,20 @@ const selectedCount = ref<10 | 20 | 'all'>(10)
 const selectedTypes = ref<ExamType[]>(['sv-de', 'de-sv', 'lueckentext'])
 const canStart = computed(() => selectedTypes.value.length > 0)
 
+const isDailyExam = computed(() => route.query.mode === 'daily')
+
 onMounted(() => {
+  if (isDailyExam.value) {
+    progressStore.load()
+    const allWords = allLevels.flatMap(l => l.data.words as Word[])
+    const ids = new Set(progressStore.dailyLearnedIds())
+    const pool = allWords.filter(w => ids.has(w.id))
+    if (pool.length > 0) {
+      selectedTypes.value = ['de-sv']
+      startExam(pool)
+    }
+    return
+  }
   const lvl = route.query.level as string | undefined
   if (lvl && allLevels.some(l => l.label === lvl)) {
     selectedLevel.value = lvl
@@ -122,11 +136,16 @@ function calcGrade(correct: number, total: number): { note: number; label: strin
   return { note: 6, label: 'Ungenügend' }
 }
 
-function startExam() {
-  const lvl = allLevels.find(l => l.label === selectedLevel.value)!
-  const words: Word[] = [...(lvl.data.words as Word[])]
-  const n = selectedCount.value === 'all' ? words.length : selectedCount.value
-  const pool = words.sort(() => Math.random() - 0.5).slice(0, n)
+function startExam(wordOverride?: Word[]) {
+  let pool: Word[]
+  if (wordOverride) {
+    pool = wordOverride
+  } else {
+    const lvl = allLevels.find(l => l.label === selectedLevel.value)!
+    const words: Word[] = [...(lvl.data.words as Word[])]
+    const n = selectedCount.value === 'all' ? words.length : selectedCount.value
+    pool = words.sort(() => Math.random() - 0.5).slice(0, n)
+  }
 
   const questions: ExamQuestion[] = []
   for (let i = 0; i < pool.length; i++) {
@@ -272,7 +291,7 @@ const scorePercent = computed(() =>
         </div>
       </div>
 
-      <button class="btn-primary" :disabled="!canStart" @click="startExam">
+      <button class="btn-primary" :disabled="!canStart" @click="() => startExam()">
         Prüfung starten
       </button>
     </div>
@@ -381,7 +400,7 @@ const scorePercent = computed(() =>
       </div>
 
       <div class="flex flex-col gap-3">
-        <button class="btn-primary" @click="startExam">Nochmal prüfen</button>
+        <button class="btn-primary" @click="() => startExam()">Nochmal prüfen</button>
         <button class="btn-secondary" @click="phase = 'setup'">Einstellungen ändern</button>
       </div>
     </div>
