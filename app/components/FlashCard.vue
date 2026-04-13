@@ -134,7 +134,7 @@ const ratingClass: Record<Rating, string> = {
 
     <!-- Rating buttons -->
     <Transition name="fade">
-      <div v-if="flipped" class="grid grid-cols-4 gap-2 w-full">
+      <div v-if="flipped" class="grid gap-2 w-full" :class="ratings.length === 3 ? 'grid-cols-3' : 'grid-cols-4'">
         <button
           v-for="r in ratings"
           :key="r"
