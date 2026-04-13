@@ -93,12 +93,14 @@ export const useProgressStore = defineStore('progress', () => {
     return dailyProgress.value.learned
   }
 
-  function rateCard(id: string, rating: Rating) {
+  function rateCard(id: string, rating: Rating, countDaily = true) {
     syncDailyProgressDate()
     const wasNew = getCard(id).lastReviewed === null
     cards.value[id] = updateCard(getCard(id), rating)
-    dailyProgress.value.remaining = Math.max(0, dailyProgress.value.remaining - 1)
-    dailyProgress.value.learned++
+    if (countDaily) {
+      dailyProgress.value.remaining = Math.max(0, dailyProgress.value.remaining - 1)
+      dailyProgress.value.learned++
+    }
     if (wasNew) {
       if (newToday.value.date !== today()) {
         newToday.value = { date: today(), count: 1 }

@@ -12,6 +12,7 @@ const props = defineProps<{
   reverse?: boolean
   autoPlay?: boolean
   listenMode?: boolean
+  availableRatings?: Rating[]
 }>()
 
 const emit = defineEmits<{
@@ -52,7 +53,7 @@ function rate(rating: Rating) {
   emit('rate', rating)
 }
 
-const ratings: Rating[] = [0, 1, 2, 3]
+const ratings = computed<Rating[]>(() => props.availableRatings ?? [0, 1, 2, 3])
 
 const ratingClass: Record<Rating, string> = {
   0: 'bg-wrong-bg text-wrong border border-wrong-border rounded-2xl hover:bg-red-100',

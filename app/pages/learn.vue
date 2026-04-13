@@ -107,12 +107,27 @@ function levelForId(id: string): string {
   return id.split('_')[0]!.toUpperCase()
 }
 
+// Nochmal (0) in daily mode and Schwer (1) in non-daily mode don't count toward daily quota
+const dailyRatings: Rating[] = [0, 2, 3]
+const learnRatings: Rating[] = [1, 2, 3]
+const cardRatings = computed<Rating[]>(() => isDailyMode.value ? dailyRatings : learnRatings)
+
 function onRate(rating: Rating) {
   if (!current.value) return
-  store.rateCard(current.value.id, rating)
+  const skipCount = !isDailyMode.value || rating === 0
+  store.rateCard(current.value.id, rating, !skipCount)
   reviewedCount.value++
 
-  if (rating === 0) queue.value.push(current.value)
+  if (rating === 0) {
+    if (isDailyMode.value) {
+      // Insert within the remaining daily slots so it's shown before the goal is reached
+      const remaining = dailyRemainingToday.value
+      const insertAt = currentIndex.value + 1 + Math.floor(Math.random() * remaining)
+      queue.value.splice(Math.min(insertAt, queue.value.length), 0, current.value)
+    } else {
+      queue.value.push(current.value)
+    }
+  }
 
   if (isDailyMode.value && dailyGoalReached.value) {
     done.value = true
@@ -240,6 +255,7 @@ function onRate(rating: Rating) {
       :reverse="reverse"
       :listen-mode="listenMode"
       :auto-play="autoPlay"
+      :available-ratings="cardRatings"
       @rate="onRate"
     />
   </div>
