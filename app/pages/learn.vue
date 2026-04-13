@@ -99,6 +99,9 @@ const dailyRemainingToday = computed(() => store.dailyRemaining())
 const dailyGoalReached = computed(() =>
   isDailyMode.value && dailyRemainingToday.value <= 0
 )
+const highestUnlockedLevel = computed(() =>
+  [...LEVEL_ORDER].reverse().find(l => userStore.isLevelUnlocked(l)) ?? LEVEL_ORDER[0]
+)
 
 function levelForId(id: string): string {
   return id.split('_')[0]!.toUpperCase()
@@ -177,19 +180,19 @@ function onRate(rating: Rating) {
       <p class="text-white/70 text-sm mb-4">Was möchtest du als nächstes üben?</p>
       <div class="flex flex-col gap-3 mb-6">
         <NuxtLink
-          to="/vocabulary"
+          :to="`/exam?level=${highestUnlockedLevel}`"
           class="inline-block px-6 py-3 rounded-xl bg-white text-brand font-semibold transition-all active:scale-[0.98] hover:bg-gold-soft"
         >
           Vokabeltest
         </NuxtLink>
         <NuxtLink
-          to="/grammar"
+          :to="`/grammar?level=${highestUnlockedLevel}`"
           class="inline-block px-6 py-3 rounded-xl bg-white/20 text-white font-semibold transition-all active:scale-[0.98] hover:bg-white/30"
         >
           Grammatik üben
         </NuxtLink>
         <NuxtLink
-          to="/sentences"
+          :to="`/sentences?level=${highestUnlockedLevel}`"
           class="inline-block px-6 py-3 rounded-xl bg-white/20 text-white font-semibold transition-all active:scale-[0.98] hover:bg-white/30"
         >
           Sätze bilden
