@@ -108,10 +108,10 @@ const ratingClass: Record<Rating, string> = {
         <!-- Back -->
         <div
           class="card-face card-back-face absolute inset-0 rounded-2xl shadow-lg flex flex-col overflow-hidden"
-          style="background: radial-gradient(ellipse at 30% 0%, rgba(254,204,2,0.15) 0%, transparent 60%), var(--color-brand);"
+          style="background: var(--color-brand);"
         >
-          <!-- Centered gold dash -->
-          <div class="w-8 h-0.5 bg-gold mx-auto mt-4 mb-0 rounded-full flex-shrink-0"></div>
+          <!-- Gold top bar — structural accent, not decoration -->
+          <div class="h-1 bg-gold w-full flex-shrink-0 rounded-t-2xl"></div>
           <div class="flex-1 flex flex-col items-center justify-center p-6">
             <p class="text-2xl font-bold text-white text-center leading-tight">
               {{ props.reverse ? swedish : german }}

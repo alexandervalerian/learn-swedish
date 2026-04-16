@@ -123,19 +123,24 @@ const totalStats = computed(() => {
     <!-- Header -->
     <h1 class="text-2xl font-bold text-ink-primary mb-6">Fortschritt</h1>
 
-    <!-- Stats grid — differentiated cards -->
-    <div class="grid grid-cols-3 gap-3 mb-6">
-      <div class="rounded-2xl p-4 text-center bg-gold-soft border border-amber-200/60" style="box-shadow: var(--shadow-card);">
-        <p class="text-2xl font-bold text-b2-ink">{{ store.streak.count }}</p>
-        <p class="text-xs text-b2-ink/70 mt-1">🔥 Streak</p>
+    <!-- Stats — streak dominant, secondary stats stacked -->
+    <div class="flex gap-3 mb-6">
+      <div class="flex-1 rounded-2xl p-5 bg-gold-soft border border-amber-200/60 flex flex-col justify-between" style="box-shadow: var(--shadow-card); min-height: 96px;">
+        <p class="text-[10px] font-bold uppercase tracking-[0.1em] text-b2-ink/50">Streak</p>
+        <div>
+          <p class="text-4xl font-bold text-b2-ink leading-none">{{ store.streak.count }}</p>
+          <p class="text-xs text-b2-ink/60 mt-1">🔥 Tage in Folge</p>
+        </div>
       </div>
-      <div class="rounded-2xl p-4 text-center bg-brand-subtle border border-brand-muted" style="box-shadow: var(--shadow-card);">
-        <p class="text-2xl font-bold text-brand">{{ totalStats.seen }}</p>
-        <p class="text-xs text-brand/70 mt-1">Gesehen</p>
-      </div>
-      <div class="rounded-2xl p-4 text-center bg-correct-bg border border-correct-border" style="box-shadow: var(--shadow-card);">
-        <p class="text-2xl font-bold text-correct">{{ totalStats.mastered }}</p>
-        <p class="text-xs text-correct/70 mt-1">Gemeistert</p>
+      <div class="flex flex-col gap-3 w-28">
+        <div class="rounded-2xl px-3 py-3 bg-brand-subtle border border-brand-muted flex-1 flex flex-col justify-between" style="box-shadow: var(--shadow-card);">
+          <p class="text-[10px] font-bold uppercase tracking-[0.1em] text-brand/50">Gesehen</p>
+          <p class="text-2xl font-bold text-brand leading-none">{{ totalStats.seen }}</p>
+        </div>
+        <div class="rounded-2xl px-3 py-3 bg-correct-bg border border-correct-border flex-1 flex flex-col justify-between" style="box-shadow: var(--shadow-card);">
+          <p class="text-[10px] font-bold uppercase tracking-[0.1em] text-correct/50">Gemeistert</p>
+          <p class="text-2xl font-bold text-correct leading-none">{{ totalStats.mastered }}</p>
+        </div>
       </div>
     </div>
 

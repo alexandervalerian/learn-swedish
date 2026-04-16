@@ -56,7 +56,8 @@
   --color-wrong-border:   #FCA5A5;
 
   /* ── Typography ── */
-  --font-sans: 'Sora', system-ui, sans-serif;
+  --font-sans:    'Sora', system-ui, sans-serif;
+  --font-display: 'Schibsted Grotesk', system-ui, sans-serif;
 
   /* ── Shadows ── */
   --shadow-card:   0 1px 4px 0 rgb(0 0 0 / 0.06), 0 2px 8px 0 rgb(0 0 0 / 0.04);
@@ -68,6 +69,17 @@
   --color-swedish-yellow:     #FECC02;
   --color-swedish-blue-dark:  #005389;
   --color-swedish-blue-light: #EAF4FB;
+}
+
+/* ── Display font on headings ── */
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
+
+/* ── Stagger entrance ── */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ── Card flip ── */

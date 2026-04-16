@@ -68,10 +68,8 @@ function blockingLevelInfo(lockedLevelIdx: number): { label: string; seenPct: nu
     <NuxtLink
       to="/learn?mode=daily"
       class="block mb-6 rounded-2xl p-5 text-white relative overflow-hidden"
-      style="background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-brand-dark) 100%); box-shadow: var(--shadow-raised);"
+      style="background: var(--color-brand); box-shadow: var(--shadow-raised);"
     >
-      <!-- Gold left accent -->
-      <div class="absolute left-0 top-0 bottom-0 w-1 bg-gold rounded-l-2xl"></div>
 
       <!-- First-use state -->
       <template v-if="totalSeenEver === 0">
@@ -126,13 +124,14 @@ function blockingLevelInfo(lockedLevelIdx: number): { label: string; seenPct: nu
 
     <!-- Level cards -->
     <div class="space-y-3">
-      <template v-for="lvl in levels" :key="lvl.data.level">
+      <template v-for="(lvl, i) in levels" :key="lvl.data.level">
 
         <!-- Locked card -->
         <div
           v-if="!userStore.isLevelUnlocked(lvl.data.level as CefrLevel)"
           class="flex items-center gap-4 rounded-2xl border p-4 opacity-35 cursor-not-allowed"
           :class="lvl.color"
+          :style="{ animation: `fadeSlideIn 0.35s ease-out ${i * 55}ms both` }"
         >
           <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0">
             <svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -145,9 +144,9 @@ function blockingLevelInfo(lockedLevelIdx: number): { label: string; seenPct: nu
               <span class="text-xs font-bold">{{ lvl.data.level }}</span>
               <span class="text-xs text-gray-500">{{ lvl.name }}</span>
             </div>
-            <p v-if="blockingLevelInfo(levels.indexOf(lvl))" class="text-xs text-gray-400">
-              Entsperre {{ blockingLevelInfo(levels.indexOf(lvl))!.label }} zuerst
-              ({{ blockingLevelInfo(levels.indexOf(lvl))!.seenPct }}% gesehen)
+            <p v-if="blockingLevelInfo(i)" class="text-xs text-gray-400">
+              Entsperre {{ blockingLevelInfo(i)!.label }} zuerst
+              ({{ blockingLevelInfo(i)!.seenPct }}% gesehen)
             </p>
             <p v-else class="text-xs text-gray-400">Noch gesperrt</p>
           </div>
@@ -157,19 +156,20 @@ function blockingLevelInfo(lockedLevelIdx: number): { label: string; seenPct: nu
         <NuxtLink
           v-else
           :to="`/level?level=${lvl.data.level}`"
-          class="rounded-2xl border p-4 transition-all active:scale-[0.98] block"
-          :class="lvl.color"
+          class="rounded-2xl border transition-all active:scale-[0.98] block"
+          :class="[lvl.color, i === highestUnlockedIndex ? 'p-5' : 'p-4']"
+          :style="{ animation: `fadeSlideIn 0.35s ease-out ${i * 55}ms both` }"
         >
           <div class="flex items-center gap-4">
             <!-- Progress ring -->
             <div class="relative flex-shrink-0">
               <ProgressRing
                 :percentage="levelMasteredPercent(lvl.data.words.map(w => w.id))"
-                :size="56"
-                :stroke-width="6"
+                :size="i === highestUnlockedIndex ? 64 : 56"
+                :stroke-width="i === highestUnlockedIndex ? 7 : 6"
                 :color="lvl.ringColor"
               />
-              <span class="absolute inset-0 flex items-center justify-center text-xs font-bold text-ink-secondary">
+              <span class="absolute inset-0 flex items-center justify-center font-bold text-ink-secondary" :class="i === highestUnlockedIndex ? 'text-sm' : 'text-xs'">
                 {{ levelMasteredPercent(lvl.data.words.map(w => w.id)) }}%
               </span>
             </div>
@@ -177,9 +177,9 @@ function blockingLevelInfo(lockedLevelIdx: number): { label: string; seenPct: nu
             <!-- Info -->
             <div class="flex-1 min-w-0">
               <div class="flex items-center gap-2 mb-1">
-                <span class="text-base leading-none">{{ lvl.emoji }}</span>
-                <span class="text-xs font-bold px-2 py-0.5 rounded-full" :class="lvl.badge">{{ lvl.data.level }}</span>
-                <span class="text-xs text-ink-tertiary truncate">{{ lvl.name }} · {{ lvl.data.description }}</span>
+                <span :class="i === highestUnlockedIndex ? 'text-lg' : 'text-base'" class="leading-none">{{ lvl.emoji }}</span>
+                <span class="font-bold px-2 py-0.5 rounded-full" :class="[lvl.badge, i === highestUnlockedIndex ? 'text-sm' : 'text-xs']">{{ lvl.data.level }}</span>
+                <span class="text-xs text-ink-tertiary truncate">{{ lvl.name }}<template v-if="i === highestUnlockedIndex"> · {{ lvl.data.description }}</template></span>
               </div>
               <div class="flex items-center gap-3 text-xs text-ink-tertiary flex-wrap">
                 <span>{{ store.statsForLevel(lvl.data.words.map(w => w.id)).seen }}/{{ lvl.data.words.length }} gesehen</span>
@@ -203,7 +203,7 @@ function blockingLevelInfo(lockedLevelIdx: number): { label: string; seenPct: nu
           </div>
 
           <!-- Unlock progress -->
-          <template v-if="levels.indexOf(lvl) === highestUnlockedIndex && highestUnlockedIndex < levels.length - 1">
+          <template v-if="i === highestUnlockedIndex && highestUnlockedIndex < levels.length - 1">
             <div class="mt-3 pt-3 border-t border-black/5">
               <p class="text-[11px] text-ink-tertiary font-medium mb-2">Nächstes Niveau freischalten</p>
               <div class="flex gap-4">
