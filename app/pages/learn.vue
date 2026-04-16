@@ -176,7 +176,7 @@ function onRate(rating: Rating) {
     <div v-if="!done && queue.length > 0" class="mb-8 progress-track">
       <div
         class="progress-fill"
-        :style="{ width: `${(currentIndex / Math.max(queue.length, 1)) * 100}%` }"
+        :style="{ width: isDailyMode ? `${Math.min((store.dailyLearnedToday() / DAILY_CARD_TARGET) * 100, 100)}%` : `${(currentIndex / Math.max(queue.length, 1)) * 100}%` }"
       />
     </div>
 
