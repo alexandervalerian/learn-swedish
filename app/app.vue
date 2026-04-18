@@ -17,7 +17,7 @@ useHead({
 
 <template>
   <div class="min-h-screen bg-surface-page font-sans antialiased">
-    <main class="pb-20 min-h-screen">
+    <main :class="userStore.onboardingComplete ? 'pb-20' : ''" class="min-h-screen">
       <NuxtPage />
     </main>
     <BottomNav v-if="userStore.onboardingComplete" />
