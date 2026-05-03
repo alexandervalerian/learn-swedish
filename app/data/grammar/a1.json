@@ -178,11 +178,11 @@
         { "swedish": "Hon börjar att arbeta.", "german": "Sie fängt an zu arbeiten.", "highlight": "att arbeta" }
       ],
       "exercises": [
-        { "prompt": "Det är svårt ___ lära sig svenska. (zu)", "translation": "Es ist schwer, Schwedisch zu lernen.", "answer": "att" },
-        { "prompt": "Jag vill ___ äta pizza. (essen, nach Modalverb → kein att)", "translation": "Ich will Pizza essen.", "answer": "äta" },
-        { "prompt": "Hon försöker ___ sova. (zu schlafen)", "translation": "Sie versucht zu schlafen.", "answer": "att" },
-        { "prompt": "Vi måste ___ gå nu. (gehen, nach Modalverb)", "translation": "Wir müssen jetzt gehen.", "answer": "gå" },
-        { "prompt": "Han börjar ___ förstå. (zu verstehen)", "translation": "Er beginnt zu verstehen.", "answer": "att" }
+        { "prompt": "Det är svårt ___ svenska. (zu lernen)", "translation": "Es ist schwer, Schwedisch zu lernen.", "answer": "att lära sig" },
+        { "prompt": "Jag vill ___ pizza. (essen – Modalverb, kein att!)", "translation": "Ich will Pizza essen.", "answer": "äta" },
+        { "prompt": "Hon försöker ___. (zu schlafen)", "translation": "Sie versucht zu schlafen.", "answer": "att sova" },
+        { "prompt": "Vi måste ___ nu. (gehen – Modalverb, kein att!)", "translation": "Wir müssen jetzt gehen.", "answer": "gå" },
+        { "prompt": "Han börjar ___. (zu verstehen)", "translation": "Er beginnt zu verstehen.", "answer": "att förstå" }
       ]
     }
   ]
