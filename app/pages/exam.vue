@@ -170,6 +170,9 @@ function submitAnswer() {
   const norm = userInput.value.toLowerCase().trim()
   isCorrect.value = current.value.accepted.some(a => a === norm)
   results.value.push({ question: current.value, userAnswer: userInput.value.trim(), correct: isCorrect.value })
+  if (!isCorrect.value) {
+    progressStore.rateCard(current.value.word.id, 0, false)
+  }
   submitted.value = true
 }
 
