@@ -1,9 +1,11 @@
 <script setup lang="ts">
 const store = useProgressStore()
 const userStore = useUserStore()
+const writingStore = useWritingStore()
 onMounted(() => {
   store.load()
   userStore.load()
+  writingStore.load()
 })
 
 useHead({

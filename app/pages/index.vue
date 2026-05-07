@@ -4,11 +4,18 @@ import a2 from '~/data/vocabulary/a2.json'
 import b1 from '~/data/vocabulary/b1.json'
 import b2 from '~/data/vocabulary/b2.json'
 import c1 from '~/data/vocabulary/c1.json'
-import { type CefrLevel, VOCAB_SEEN_THRESHOLD } from '~/stores/user'
+import { type CefrLevel, LEVEL_ORDER, VOCAB_SEEN_THRESHOLD } from '~/stores/user'
 import { LEVEL_META } from '~/utils/levels'
 
 const store = useProgressStore()
 const userStore = useUserStore()
+const writingStore = useWritingStore()
+
+const currentWritingLevel = computed<CefrLevel>(() =>
+  (LEVEL_ORDER as readonly CefrLevel[]).findLast(l => userStore.isLevelUnlocked(l)) ?? userStore.startingLevel
+)
+const todayWritingTask = computed(() => writingStore.getTodayTask(currentWritingLevel.value))
+const writingDone = computed(() => writingStore.isTodayDone(currentWritingLevel.value))
 
 const levels = [
   { data: a1, ...LEVEL_META.A1 },
@@ -120,6 +127,32 @@ function blockingLevelInfo(lockedLevelIdx: number): { label: string; seenPct: nu
           <span>Ziel: 40</span>
         </div>
       </template>
+    </NuxtLink>
+
+    <!-- Writing task card -->
+    <NuxtLink
+      to="/writing"
+      class="block mb-6 rounded-2xl p-5 text-white relative overflow-hidden transition-all active:scale-[0.98]"
+      :style="writingDone ? 'background: var(--color-correct); box-shadow: var(--shadow-raised);' : 'background: #5C5F6E; box-shadow: var(--shadow-raised);'"
+    >
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-sm font-medium text-white/80">Tagesaufgabe · Schreiben</p>
+          <p class="text-xl font-bold mt-0.5">{{ todayWritingTask.title }}</p>
+          <p class="text-xs text-white/60 mt-1">
+            <template v-if="!writingDone">{{ todayWritingTask.minWords }}–{{ todayWritingTask.maxWords }} Wörter · auf Schwedisch</template>
+            <template v-else>Erledigt ✓</template>
+          </p>
+        </div>
+        <div class="bg-white/15 rounded-xl p-3 flex-shrink-0">
+          <svg v-if="!writingDone" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+          </svg>
+          <svg v-else class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+      </div>
     </NuxtLink>
 
     <!-- Level cards -->
