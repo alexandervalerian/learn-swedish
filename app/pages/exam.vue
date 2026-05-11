@@ -65,12 +65,15 @@ const canStart = computed(() => selectedTypes.value.length > 0)
 
 const isDailyExam = computed(() => route.query.mode === 'daily')
 
+const dailyPool = ref<Word[]>([])
+
 onMounted(() => {
   if (isDailyExam.value) {
     progressStore.load()
     const allWords = allLevels.flatMap(l => l.data.words as Word[])
     const ids = new Set(progressStore.dailyLearnedIds())
     const pool = allWords.filter(w => ids.has(w.id))
+    dailyPool.value = pool
     if (pool.length > 0) {
       selectedTypes.value = ['de-sv']
       startExam(pool)
@@ -403,7 +406,7 @@ const scorePercent = computed(() =>
       </div>
 
       <div class="flex flex-col gap-3">
-        <button class="btn-primary" @click="() => startExam()">Nochmal prüfen</button>
+        <button class="btn-primary" @click="isDailyExam ? startExam([...dailyPool.value].sort(() => Math.random() - 0.5)) : startExam()">Nochmal prüfen</button>
         <button class="btn-secondary" @click="phase = 'setup'">Einstellungen ändern</button>
       </div>
     </div>
