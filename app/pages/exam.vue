@@ -109,7 +109,7 @@ function stripArticle(s: string): string {
 }
 
 function canMakeLueckentext(word: Word): boolean {
-  const bare = word.swedish.replace(/^att /, '')
+  const bare = word.swedish.replace(/^(att |en |ett )/, '')
   return word.example.toLowerCase().includes(bare.toLowerCase())
 }
 
@@ -118,9 +118,10 @@ function buildQuestion(word: Word, type: ExamType): ExamQuestion {
     return { word, type, prompt: word.swedish, accepted: normalizeAnswer(word.german), correctDisplay: word.german }
   }
   if (type === 'de-sv') {
-    return { word, type, prompt: stripArticle(word.german), accepted: [word.swedish.toLowerCase().trim()], correctDisplay: word.swedish }
+    const bare = word.swedish.replace(/^(att |en |ett )/, '').toLowerCase().trim()
+    return { word, type, prompt: stripArticle(word.german), accepted: [word.swedish.toLowerCase().trim(), bare], correctDisplay: word.swedish }
   }
-  const bare = word.swedish.replace(/^att /, '')
+  const bare = word.swedish.replace(/^(att |en |ett )/, '')
   const gapped = word.example.replace(new RegExp(escapeRegex(bare), 'i'), '___')
   return {
     word, type, prompt: gapped,
