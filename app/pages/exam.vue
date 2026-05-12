@@ -415,7 +415,7 @@ const scorePercent = computed(() =>
       </div>
 
       <div class="flex flex-col gap-3">
-        <button class="btn-primary" @click="isDailyExam ? startExam([...dailyPool.value].sort(() => Math.random() - 0.5)) : startExam()">Nochmal prüfen</button>
+        <button class="btn-primary" @click="isDailyExam ? startExam([...dailyPool].sort(() => Math.random() - 0.5)) : startExam()">Nochmal prüfen</button>
         <button class="btn-secondary" @click="phase = 'setup'">Einstellungen ändern</button>
       </div>
     </div>
