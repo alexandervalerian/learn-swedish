@@ -86,6 +86,8 @@ onMounted(() => {
   }
 })
 
+const requirePrefix = computed(() => localStorage.getItem('swedish_require_prefix') !== 'false')
+
 const queue = ref<ExamQuestion[]>([])
 const currentIndex = ref(0)
 const results = ref<QuestionResult[]>([])
@@ -119,13 +121,19 @@ function buildQuestion(word: Word, type: ExamType): ExamQuestion {
   }
   if (type === 'de-sv') {
     const bare = word.swedish.replace(/^(att |en |ett )/, '').toLowerCase().trim()
-    return { word, type, prompt: stripArticle(word.german), accepted: [word.swedish.toLowerCase().trim(), bare], correctDisplay: word.swedish }
+    const accepted = requirePrefix.value
+      ? [word.swedish.toLowerCase().trim()]
+      : [word.swedish.toLowerCase().trim(), bare]
+    return { word, type, prompt: stripArticle(word.german), accepted, correctDisplay: word.swedish }
   }
   const bare = word.swedish.replace(/^(att |en |ett )/, '')
   const gapped = word.example.replace(new RegExp(escapeRegex(bare), 'i'), '___')
+  const accepted = requirePrefix.value
+    ? [word.swedish.toLowerCase().trim()]
+    : [bare.toLowerCase().trim(), word.swedish.toLowerCase().trim()]
   return {
     word, type, prompt: gapped,
-    accepted: [bare.toLowerCase().trim(), word.swedish.toLowerCase().trim()],
+    accepted,
     correctDisplay: word.swedish,
   }
 }

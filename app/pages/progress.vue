@@ -27,6 +27,10 @@ const learnMode = ref<LearnMode>(
 )
 watch(learnMode, val => localStorage.setItem(MODE_KEY, val))
 
+const PREFIX_KEY = 'swedish_require_prefix'
+const requirePrefix = ref<boolean>(localStorage.getItem(PREFIX_KEY) !== 'false')
+watch(requirePrefix, v => localStorage.setItem(PREFIX_KEY, String(v)))
+
 const learnModes: { value: LearnMode; label: string }[] = [
   { value: 'sv-de', label: 'SV → DE' },
   { value: 'de-sv', label: 'DE → SV' },
@@ -70,6 +74,7 @@ function exportData() {
     swedish_progress: localStorage.getItem('swedish_progress'),
     swedish_user: localStorage.getItem('swedish_user'),
     swedish_mode: localStorage.getItem('swedish_mode'),
+    swedish_require_prefix: localStorage.getItem('swedish_require_prefix'),
   }
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
   const url = URL.createObjectURL(blob)
@@ -94,6 +99,7 @@ function onImportFile(e: Event) {
       if (data.swedish_progress) localStorage.setItem('swedish_progress', data.swedish_progress)
       if (data.swedish_user) localStorage.setItem('swedish_user', data.swedish_user)
       if (data.swedish_mode) localStorage.setItem('swedish_mode', data.swedish_mode)
+      if (data.swedish_require_prefix != null) localStorage.setItem('swedish_require_prefix', data.swedish_require_prefix)
       dataStatus.value = { type: 'success', msg: 'Importiert! Seite wird neu geladen…' }
       setTimeout(() => window.location.reload(), 1000)
     } catch {
@@ -191,6 +197,24 @@ const totalStats = computed(() => {
             {{ m.label }}
           </button>
         </div>
+      </div>
+
+      <!-- Präfix erforderlich -->
+      <div class="px-4 py-4 flex items-center justify-between gap-3">
+        <div>
+          <p class="text-sm font-medium text-ink-primary">Präfix erforderlich</p>
+          <p class="text-xs text-ink-tertiary">z.B. „en man" statt nur „man"</p>
+        </div>
+        <button
+          class="relative inline-flex h-6 w-11 items-center rounded-full transition-colors"
+          :class="requirePrefix ? 'bg-brand' : 'bg-surface-inset border border-surface-border'"
+          @click="requirePrefix = !requirePrefix"
+        >
+          <span
+            class="inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform"
+            :class="requirePrefix ? 'translate-x-6' : 'translate-x-1'"
+          />
+        </button>
       </div>
 
       <!-- Export / Import -->
