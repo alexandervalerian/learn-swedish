@@ -365,6 +365,10 @@ function highlightSentence(swedish: string, highlight: string): { before: string
               ref="exerciseInputRef"
               v-model="exerciseInput"
               type="text"
+              autocorrect="off"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
               placeholder="Antwort eintippen…"
               class="w-full px-4 py-3 rounded-2xl border-2 text-ink-primary text-base outline-none transition-colors"
               :class="exerciseSubmitted

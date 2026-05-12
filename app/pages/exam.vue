@@ -339,6 +339,10 @@ const scorePercent = computed(() =>
           ref="inputRef"
           v-model="userInput"
           type="text"
+          autocorrect="off"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
           placeholder="Antwort eintippen…"
           class="w-full px-4 py-3 rounded-2xl border-2 text-ink-primary text-lg outline-none transition-colors"
           :class="submitted
