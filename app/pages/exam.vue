@@ -124,7 +124,7 @@ function buildQuestion(word: Word, type: ExamType): ExamQuestion {
     const accepted = requirePrefix.value
       ? [word.swedish.toLowerCase().trim()]
       : [word.swedish.toLowerCase().trim(), bare]
-    return { word, type, prompt: stripArticle(word.german), accepted, correctDisplay: word.swedish }
+    return { word, type, prompt: word.german.replace(/^(der|die|das)\s+/i, '').trim(), accepted, correctDisplay: word.swedish }
   }
   const bare = word.swedish.replace(/^(att |en |ett )/, '')
   const gapped = word.example.replace(new RegExp(escapeRegex(bare), 'i'), '___')

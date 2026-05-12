@@ -18,6 +18,7 @@ interface StoredData {
   streak: { lastDate: string | null; count: number }
   newToday: { date: string; count: number }
   dailyProgress: { date: string; remaining: number; learned: number; learnedIds: string[] }
+  nochmalIds: string[]
 }
 
 export const useProgressStore = defineStore('progress', () => {
@@ -36,6 +37,7 @@ export const useProgressStore = defineStore('progress', () => {
     learned: 0,
     learnedIds: []
   })
+  const nochmalIds = ref<string[]>([])
 
   function syncDailyProgressDate() {
     const todayStr = today()
@@ -62,6 +64,7 @@ export const useProgressStore = defineStore('progress', () => {
         learned: data.dailyProgress?.learned ?? 0,
         learnedIds: data.dailyProgress?.learnedIds ?? []
       }
+      nochmalIds.value = data.nochmalIds ?? []
       syncDailyProgressDate()
     } catch {
       // corrupted storage — start fresh
@@ -73,7 +76,8 @@ export const useProgressStore = defineStore('progress', () => {
       cards: cards.value,
       streak: streak.value,
       newToday: newToday.value,
-      dailyProgress: dailyProgress.value
+      dailyProgress: dailyProgress.value,
+      nochmalIds: nochmalIds.value
     }
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
   }
@@ -105,6 +109,11 @@ export const useProgressStore = defineStore('progress', () => {
     syncDailyProgressDate()
     const wasNew = getCard(id).lastReviewed === null
     cards.value[id] = updateCard(getCard(id), rating)
+    if (rating === 0) {
+      if (!nochmalIds.value.includes(id)) nochmalIds.value.push(id)
+    } else {
+      nochmalIds.value = nochmalIds.value.filter(x => x !== id)
+    }
     if (countDaily) {
       dailyProgress.value.remaining = Math.max(0, dailyProgress.value.remaining - 1)
       dailyProgress.value.learned++
@@ -162,21 +171,33 @@ export const useProgressStore = defineStore('progress', () => {
   }
 
   // Returns unmastered card IDs, working through levels in order.
-  // Within each level: due reviews first, then new (unseen) cards.
+  // Nochmal cards are always front-loaded; remaining slots filled with due reviews then new cards.
   // If `target` is provided, the result is capped to that size.
   function dailySessionIds(levelWordIds: string[][], target?: number): string[] {
-    const result: string[] = []
+    const cap = target ?? Infinity
+    const allIds = levelWordIds.flat()
+
+    const prioritized = nochmalIds.value.filter(id =>
+      allIds.includes(id) && isDue(getCard(id)) && !isMastered(getCard(id))
+    )
+
+    const result: string[] = [...prioritized]
+    const seen = new Set(prioritized)
+
     for (const ids of levelWordIds) {
+      if (result.length >= cap) break
       const due = ids.filter(id => {
         const card = getCard(id)
-        return card.lastReviewed !== null && isDue(card) && !isMastered(card)
+        return !seen.has(id) && card.lastReviewed !== null && isDue(card) && !isMastered(card)
       })
-      const newCards = ids.filter(id => getCard(id).lastReviewed === null)
-      result.push(...[...due, ...newCards])
-      if (target !== undefined && result.length >= target) {
-        return result.slice(0, target)
+      const newCards = ids.filter(id => !seen.has(id) && getCard(id).lastReviewed === null)
+      for (const id of [...due, ...newCards]) {
+        if (result.length >= cap) break
+        result.push(id)
+        seen.add(id)
       }
     }
+
     return result
   }
 
@@ -209,6 +230,7 @@ export const useProgressStore = defineStore('progress', () => {
     dailyLearnedIds,
     statsForLevel,
     dailySessionIds,
+    nochmalIds,
     DAILY_NEW_LIMIT
   }
 })
