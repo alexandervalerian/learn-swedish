@@ -1313,14 +1313,14 @@
     },
     {
       "id": "a1_188",
-      "swedish": "nyckel",
+      "swedish": "en nyckel",
       "german": "Schlüssel",
       "example": "Var är mina nycklar?",
       "exampleTranslation": "Wo sind meine Schlüssel?"
     },
     {
       "id": "a1_189",
-      "swedish": "väska",
+      "swedish": "en väska",
       "german": "Tasche",
       "example": "Min väska är tung.",
       "exampleTranslation": "Meine Tasche ist schwer."
@@ -1334,14 +1334,14 @@
     },
     {
       "id": "a1_191",
-      "swedish": "soffa",
+      "swedish": "en soffa",
       "german": "Sofa",
       "example": "Vi sitter i soffan.",
       "exampleTranslation": "Wir sitzen auf dem Sofa."
     },
     {
       "id": "a1_192",
-      "swedish": "TV",
+      "swedish": "en TV",
       "german": "Fernseher",
       "example": "Vi tittar på TV.",
       "exampleTranslation": "Wir schauen Fernsehen."
@@ -1950,21 +1950,21 @@
     },
     {
       "id": "a1_279",
-      "swedish": "frukost",
+      "swedish": "en frukost",
       "german": "Frühstück",
       "example": "Vi äter frukost klockan sju.",
       "exampleTranslation": "Wir frühstücken um sieben Uhr."
     },
     {
       "id": "a1_280",
-      "swedish": "lunch",
+      "swedish": "en lunch",
       "german": "Mittagessen",
       "example": "Vad äter du till lunch?",
       "exampleTranslation": "Was isst du zum Mittagessen?"
     },
     {
       "id": "a1_281",
-      "swedish": "middag",
+      "swedish": "en middag",
       "german": "Abendessen",
       "example": "Vi äter middag klockan sex.",
       "exampleTranslation": "Wir essen um sechs zu Abend."
@@ -2069,7 +2069,7 @@
     },
     {
       "id": "a1_296",
-      "swedish": "vän",
+      "swedish": "en vän",
       "german": "Freund / Freundin",
       "example": "Han är min bästa vän.",
       "exampleTranslation": "Er ist mein bester Freund."
@@ -2286,7 +2286,7 @@
     },
     {
       "id": "a1_327",
-      "swedish": "finger",
+      "swedish": "ett finger",
       "german": "Finger",
       "example": "Jag har tio fingrar.",
       "exampleTranslation": "Ich habe zehn Finger."
@@ -2321,7 +2321,7 @@
     },
     {
       "id": "a1_332",
-      "swedish": "ansikte",
+      "swedish": "ett ansikte",
       "german": "Gesicht",
       "example": "Tvätta ansiktet på morgonen.",
       "exampleTranslation": "Wasch das Gesicht am Morgen."
@@ -2356,14 +2356,14 @@
     },
     {
       "id": "a1_337",
-      "swedish": "hall",
+      "swedish": "en hall",
       "german": "Flur / Diele",
       "example": "Hängt jackan i hallen.",
       "exampleTranslation": "Häng die Jacke im Flur auf."
     },
     {
       "id": "a1_338",
-      "swedish": "trädgård",
+      "swedish": "en trädgård",
       "german": "Garten",
       "example": "Barnen leker i trädgården.",
       "exampleTranslation": "Die Kinder spielen im Garten."
@@ -2398,28 +2398,28 @@
     },
     {
       "id": "a1_343",
-      "swedish": "balkong",
+      "swedish": "en balkong",
       "german": "Balkon",
       "example": "Vi dricker kaffe på balkongen.",
       "exampleTranslation": "Wir trinken Kaffee auf dem Balkon."
     },
     {
       "id": "a1_344",
-      "swedish": "källare",
+      "swedish": "en källare",
       "german": "Keller",
       "example": "Vi förvarar cykeln i källaren.",
       "exampleTranslation": "Wir lagern das Fahrrad im Keller."
     },
     {
       "id": "a1_345",
-      "swedish": "skåp",
+      "swedish": "ett skåp",
       "german": "Schrank",
       "example": "Kläderna ligger i skåpet.",
       "exampleTranslation": "Die Kleidung liegt im Schrank."
     },
     {
       "id": "a1_346",
-      "swedish": "hylla",
+      "swedish": "en hylla",
       "german": "Regal",
       "example": "Böckerna står på hyllan.",
       "exampleTranslation": "Die Bücher stehen im Regal."
@@ -2454,21 +2454,21 @@
     },
     {
       "id": "a1_351",
-      "swedish": "kylskåp",
+      "swedish": "ett kylskåp",
       "german": "Kühlschrank",
       "example": "Mjölken finns i kylskåpet.",
       "exampleTranslation": "Die Milch ist im Kühlschrank."
     },
     {
       "id": "a1_352",
-      "swedish": "spis",
+      "swedish": "en spis",
       "german": "Herd",
       "example": "Maten kokar på spisen.",
       "exampleTranslation": "Das Essen kocht auf dem Herd."
     },
     {
       "id": "a1_353",
-      "swedish": "ugn",
+      "swedish": "en ugn",
       "german": "Backofen / Ofen",
       "example": "Kakan är i ugnen.",
       "exampleTranslation": "Der Kuchen ist im Ofen."
@@ -2496,35 +2496,35 @@
     },
     {
       "id": "a1_357",
-      "swedish": "badkar",
+      "swedish": "ett badkar",
       "german": "Badewanne",
       "example": "Barnen badar i badkaret.",
       "exampleTranslation": "Die Kinder baden in der Badewanne."
     },
     {
       "id": "a1_358",
-      "swedish": "spegel",
+      "swedish": "en spegel",
       "german": "Spiegel",
       "example": "Titta i spegeln!",
       "exampleTranslation": "Schau in den Spiegel!"
     },
     {
       "id": "a1_359",
-      "swedish": "handduk",
+      "swedish": "en handduk",
       "german": "Handtuch",
       "example": "Kan jag låna en handduk?",
       "exampleTranslation": "Kann ich ein Handtuch ausleihen?"
     },
     {
       "id": "a1_360",
-      "swedish": "tvål",
+      "swedish": "en tvål",
       "german": "Seife",
       "example": "Tvätta händerna med tvål.",
       "exampleTranslation": "Wasch die Hände mit Seife."
     },
     {
       "id": "a1_361",
-      "swedish": "tandborste",
+      "swedish": "en tandborste",
       "german": "Zahnbürste",
       "example": "Jag glömde min tandborste.",
       "exampleTranslation": "Ich habe meine Zahnbürste vergessen."
@@ -2538,7 +2538,7 @@
     },
     {
       "id": "a1_363",
-      "swedish": "handfat",
+      "swedish": "ett handfat",
       "german": "Waschbecken",
       "example": "Handfatet är igensatt.",
       "exampleTranslation": "Das Waschbecken ist verstopft."
@@ -2552,7 +2552,7 @@
     },
     {
       "id": "a1_365",
-      "swedish": "skjorta",
+      "swedish": "en skjorta",
       "german": "Hemd",
       "example": "Han bär en vit skjorta.",
       "exampleTranslation": "Er trägt ein weißes Hemd."
@@ -2566,21 +2566,21 @@
     },
     {
       "id": "a1_367",
-      "swedish": "kjol",
+      "swedish": "en kjol",
       "german": "Rock",
       "example": "Hon har på sig en röd kjol.",
       "exampleTranslation": "Sie trägt einen roten Rock."
     },
     {
       "id": "a1_368",
-      "swedish": "klänning",
+      "swedish": "en klänning",
       "german": "Kleid",
       "example": "Hon är klädd i en blå klänning.",
       "exampleTranslation": "Sie trägt ein blaues Kleid."
     },
     {
       "id": "a1_369",
-      "swedish": "jacka",
+      "swedish": "en jacka",
       "german": "Jacke",
       "example": "Ta på dig jackan, det är kallt.",
       "exampleTranslation": "Zieh die Jacke an, es ist kalt."
@@ -2594,7 +2594,7 @@
     },
     {
       "id": "a1_371",
-      "swedish": "tröja",
+      "swedish": "en tröja",
       "german": "Pullover / Sweatshirt",
       "example": "Jag har en grön tröja.",
       "exampleTranslation": "Ich habe einen grünen Pullover."
@@ -2622,7 +2622,7 @@
     },
     {
       "id": "a1_375",
-      "swedish": "mössa",
+      "swedish": "en mössa",
       "german": "Mütze",
       "example": "Ta på dig mössan, det snöar.",
       "exampleTranslation": "Setz die Mütze auf, es schneit."
@@ -2636,7 +2636,7 @@
     },
     {
       "id": "a1_377",
-      "swedish": "halsduk",
+      "swedish": "en halsduk",
       "german": "Schal",
       "example": "En varm halsduk hjälper mot kylan.",
       "exampleTranslation": "Ein warmer Schal hilft gegen die Kälte."
@@ -2650,21 +2650,21 @@
     },
     {
       "id": "a1_379",
-      "swedish": "ring",
+      "swedish": "en ring",
       "german": "Ring",
       "example": "Hon bär en ring på fingret.",
       "exampleTranslation": "Sie trägt einen Ring am Finger."
     },
     {
       "id": "a1_380",
-      "swedish": "halsband",
+      "swedish": "ett halsband",
       "german": "Halskette",
       "example": "Hon fick ett halsband i present.",
       "exampleTranslation": "Sie bekam eine Halskette als Geschenk."
     },
     {
       "id": "a1_381",
-      "swedish": "hatt",
+      "swedish": "en hatt",
       "german": "Hut",
       "example": "Han har en svart hatt.",
       "exampleTranslation": "Er hat einen schwarzen Hut."
@@ -3497,7 +3497,7 @@
     },
     {
       "id": "a1_500",
-      "swedish": "café",
+      "swedish": "ett café",
       "german": "Café",
       "example": "Vi fikar på ett café.",
       "exampleTranslation": "Wir trinken Kaffee in einem Café."
@@ -3525,7 +3525,7 @@
     },
     {
       "id": "a1_504",
-      "swedish": "hamn",
+      "swedish": "en hamn",
       "german": "Hafen",
       "example": "Båten ligger i hamnen.",
       "exampleTranslation": "Das Boot liegt im Hafen."
@@ -3539,49 +3539,49 @@
     },
     {
       "id": "a1_506",
-      "swedish": "museum",
+      "swedish": "ett museum",
       "german": "Museum",
       "example": "Vi besöker museet på söndag.",
       "exampleTranslation": "Wir besuchen das Museum am Sonntag."
     },
     {
       "id": "a1_507",
-      "swedish": "bio",
+      "swedish": "en bio",
       "german": "Kino",
       "example": "Vi går på bio ikväll.",
       "exampleTranslation": "Wir gehen heute Abend ins Kino."
     },
     {
       "id": "a1_508",
-      "swedish": "post",
+      "swedish": "en post",
       "german": "Post",
       "example": "Jag skickar brevet på posten.",
       "exampleTranslation": "Ich schicke den Brief auf der Post."
     },
     {
       "id": "a1_509",
-      "swedish": "bank",
+      "swedish": "en bank",
       "german": "Bank",
       "example": "Jag tar ut pengar på banken.",
       "exampleTranslation": "Ich hebe Geld an der Bank ab."
     },
     {
       "id": "a1_510",
-      "swedish": "marknad",
+      "swedish": "en marknad",
       "german": "Markt",
       "example": "Vi handlar på marknaden.",
       "exampleTranslation": "Wir kaufen auf dem Markt ein."
     },
     {
       "id": "a1_511",
-      "swedish": "torg",
+      "swedish": "ett torg",
       "german": "Marktplatz / Platz",
       "example": "Det finns ett torg i centrum.",
       "exampleTranslation": "Es gibt einen Platz im Stadtzentrum."
     },
     {
       "id": "a1_512",
-      "swedish": "bro",
+      "swedish": "en bro",
       "german": "Brücke",
       "example": "Vi går över bron.",
       "exampleTranslation": "Wir gehen über die Brücke."
@@ -5548,7 +5548,7 @@
     },
     {
       "id": "a1_793",
-      "swedish": "lingon",
+      "swedish": "ett lingon",
       "german": "Preiselbeere",
       "example": "Lingonsylt är gott till köttbullar.",
       "exampleTranslation": "Preiselbeermarmelade schmeckt gut zu Hackbällchen."
@@ -6297,7 +6297,7 @@
     },
     {
       "id": "a1_900",
-      "swedish": "match",
+      "swedish": "en match",
       "german": "Spiel / Match",
       "example": "Vi ser matchen på TV.",
       "exampleTranslation": "Wir schauen das Spiel im Fernsehen."
