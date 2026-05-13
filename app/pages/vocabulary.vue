@@ -73,9 +73,9 @@ const levels: LevelFilter[] = ['ALL', 'A1', 'A2', 'B1', 'B2', 'C1']
     </div>
 
     <!-- Filters -->
-    <div class="card p-4 mb-5">
+    <div class="card p-4 mb-5 space-y-3">
       <!-- Level filter pills -->
-      <div class="flex gap-1.5 flex-wrap mb-3">
+      <div class="flex gap-1.5 flex-wrap">
         <button
           v-for="l in levels"
           :key="l"
@@ -87,18 +87,23 @@ const levels: LevelFilter[] = ['ALL', 'A1', 'A2', 'B1', 'B2', 'C1']
         >
           {{ l }}
         </button>
+        <span class="ml-auto text-xs text-ink-tertiary self-center">{{ sortedWords.length }} Wörter</span>
       </div>
-      <!-- Sort -->
-      <div class="flex items-center gap-3">
+      <!-- Sort toggle -->
+      <div class="flex items-center gap-2">
         <span class="text-xs text-ink-tertiary flex-shrink-0">Sortierung</span>
-        <select
-          v-model="sortMode"
-          class="flex-1 rounded-xl border border-gray-200 bg-white px-3 py-1.5 text-sm text-ink-primary focus:border-brand focus:outline-none"
-        >
-          <option value="relevance">Relevanz (Häufigkeit)</option>
-          <option value="alpha">Alphabetisch (Schwedisch)</option>
-        </select>
-        <span class="text-xs text-ink-tertiary flex-shrink-0">{{ sortedWords.length }} Wörter</span>
+        <div class="flex-1 flex rounded-xl overflow-hidden border border-gray-200 bg-surface-inset">
+          <button
+            class="flex-1 py-2 text-xs font-semibold transition-all"
+            :class="sortMode === 'relevance' ? 'bg-brand text-white' : 'text-ink-secondary hover:text-brand'"
+            @click="sortMode = 'relevance'"
+          >Relevanz</button>
+          <button
+            class="flex-1 py-2 text-xs font-semibold transition-all"
+            :class="sortMode === 'alpha' ? 'bg-brand text-white' : 'text-ink-secondary hover:text-brand'"
+            @click="sortMode = 'alpha'"
+          >Alphabetisch</button>
+        </div>
       </div>
     </div>
 
