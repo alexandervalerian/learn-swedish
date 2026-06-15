@@ -152,6 +152,20 @@ export const useUserStore = defineStore('user', () => {
     return unlockedLevels.value.has(level)
   }
 
+  // Lowest unlocked level that still has new or due cards; falls back to highest unlocked.
+  const focusLevel = computed<CefrLevel>(() => {
+    const progressStore = useProgressStore()
+    for (const level of LEVEL_ORDER) {
+      if (!unlockedLevels.value.has(level)) continue
+      const wordIds = VOCAB_WORD_IDS[level]
+      if (progressStore.reviewIds(wordIds).length > 0) return level
+      if (progressStore.newIds(wordIds, 1).length > 0) return level
+    }
+    return [...LEVEL_ORDER].reverse().find(l => unlockedLevels.value.has(l)) ?? LEVEL_ORDER[0]
+  })
+
+  const focusLevelWordIds = computed<string[]>(() => VOCAB_WORD_IDS[focusLevel.value])
+
   function isLevelComplete(level: CefrLevel): boolean {
     return _isLevelComplete(level)
   }
@@ -203,6 +217,8 @@ export const useUserStore = defineStore('user', () => {
     isLevelComplete,
     changeStartingLevel,
     grammarCompletionForLevel,
+    focusLevel,
+    focusLevelWordIds,
     unlockedLevels
   }
 })

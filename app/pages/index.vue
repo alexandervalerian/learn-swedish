@@ -6,6 +6,7 @@ import b2 from '~/data/vocabulary/b2.json'
 import c1 from '~/data/vocabulary/c1.json'
 import { type CefrLevel, LEVEL_ORDER, VOCAB_SEEN_THRESHOLD } from '~/stores/user'
 import { LEVEL_META } from '~/utils/levels'
+import { getTodayTopic } from '~/utils/topics'
 
 const store = useProgressStore()
 const userStore = useUserStore()
@@ -25,14 +26,14 @@ const levels = [
   { data: c1, ...LEVEL_META.C1 },
 ]
 
-const unlockedLevelWordIdArrays = computed(() =>
-  levels
-    .filter(l => userStore.isLevelUnlocked(l.data.level as CefrLevel))
-    .map(l => l.data.words.map(w => w.id))
-)
 const dailyRemaining = computed(() => store.dailyRemaining())
 const dailyLearned = computed(() => store.dailyLearnedToday())
-const dailyIds = computed(() => store.dailySessionIds(unlockedLevelWordIdArrays.value, dailyRemaining.value))
+const todayTopic = computed(() => getTodayTopic())
+const allWordsFlat = [...a1.words, ...a2.words, ...b1.words, ...b2.words, ...c1.words]
+const topicWordIds = computed(() =>
+  allWordsFlat.filter(w => w.topic === todayTopic.value).map(w => w.id)
+)
+const dailyIds = computed(() => store.dailySessionIds([userStore.focusLevelWordIds], dailyRemaining.value, topicWordIds.value))
 const dailyReviewCount = computed(() => dailyIds.value.filter(id => store.getCard(id).lastReviewed !== null).length)
 const dailyNewCount = computed(() => dailyIds.value.filter(id => store.getCard(id).lastReviewed === null).length)
 
@@ -73,7 +74,7 @@ function blockingLevelInfo(lockedLevelIdx: number): { label: string; seenPct: nu
 
     <!-- Daily session banner -->
     <NuxtLink
-      to="/learn?mode=daily"
+      :to="`/learn?mode=daily&topic=${todayTopic}`"
       class="block mb-6 rounded-2xl p-5 text-white relative overflow-hidden"
       style="background: var(--color-brand); box-shadow: var(--shadow-raised);"
     >
@@ -98,7 +99,7 @@ function blockingLevelInfo(lockedLevelIdx: number): { label: string; seenPct: nu
       <template v-else>
         <div class="flex items-center justify-between">
           <div>
-            <p class="text-sm font-medium text-white/80">Heute lernen · Tagespensum</p>
+            <p class="text-sm font-medium text-white/80">Heute: {{ todayTopic }} · Tagespensum</p>
             <p class="text-3xl font-bold">{{ dailyRemaining }} <span class="text-lg font-normal">Karten</span></p>
             <p class="text-xs text-white/70">verbleibend heute</p>
             <p class="text-xs text-white/60 mt-0.5">

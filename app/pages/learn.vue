@@ -7,6 +7,7 @@ import c1 from '~/data/vocabulary/c1.json'
 import type { Rating } from '~/composables/useSpacedRepetition'
 import { DAILY_CARD_TARGET } from '~/stores/progress'
 import { type CefrLevel, LEVEL_ORDER } from '~/stores/user'
+import { getTodayTopic } from '~/utils/topics'
 
 const store = useProgressStore()
 const userStore = useUserStore()
@@ -14,19 +15,13 @@ const route = useRoute()
 
 const allWords = [...a1.words, ...a2.words, ...b1.words, ...b2.words, ...c1.words]
 
-const allLevelWordIdArrays = [
-  a1.words.map(w => w.id),
-  a2.words.map(w => w.id),
-  b1.words.map(w => w.id),
-  b2.words.map(w => w.id),
-  c1.words.map(w => w.id),
-]
-
 const levelFilter = computed(() => route.query.level as string | undefined)
 const isDailyMode = computed(() => route.query.mode === 'daily')
-
-const unlockedLevelWordIdArrays = computed(() =>
-  allLevelWordIdArrays.filter((_, i) => userStore.isLevelUnlocked(LEVEL_ORDER[i]))
+const topicParam = computed(() => route.query.topic as string | undefined)
+const topicWordIds = computed(() =>
+  topicParam.value
+    ? allWords.filter(w => w.topic === topicParam.value).map(w => w.id)
+    : []
 )
 
 const filteredWords = computed(() =>
@@ -62,7 +57,7 @@ function startSession() {
   }
 
   if (isDailyMode.value) {
-    const ids = store.dailySessionIds(unlockedLevelWordIdArrays.value)
+    const ids = store.dailySessionIds([userStore.focusLevelWordIds], store.dailyRemaining(), topicWordIds.value)
     const words = resolveIds(ids)
     sessionReviewCount.value = ids.filter(id => store.getCard(id).lastReviewed !== null).length
     sessionNewCount.value = ids.filter(id => store.getCard(id).lastReviewed === null).length
@@ -154,7 +149,9 @@ function onRate(rating: Rating) {
       </NuxtLink>
       <div class="flex-1">
         <h2 class="font-bold text-ink-primary">
-          {{ isDailyMode ? 'Tagespensum' : (levelFilter ? `Niveau ${levelFilter}` : 'Alle Niveau') }}
+          {{ isDailyMode
+              ? `Tagespensum · ${userStore.focusLevel}`
+              : (levelFilter ? `Niveau ${levelFilter}` : 'Alle Niveau') }}
         </h2>
         <p v-if="!done && queue.length > 0" class="text-xs text-ink-tertiary mt-0.5">
           <template v-if="isDailyMode">

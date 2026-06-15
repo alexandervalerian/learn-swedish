@@ -171,11 +171,14 @@ export const useProgressStore = defineStore('progress', () => {
   }
 
   // Returns unmastered card IDs, working through levels in order.
-  // Nochmal cards are always front-loaded; remaining slots filled with due reviews then new cards.
+  // Nochmal cards are front-loaded; remaining slots filled in priority order:
+  //   topic due → topic new → non-topic due → non-topic new.
   // If `target` is provided, the result is capped to that size.
-  function dailySessionIds(levelWordIds: string[][], target?: number): string[] {
+  function dailySessionIds(levelWordIds: string[][], target?: number, topicWordIds?: string[]): string[] {
     const cap = target ?? Infinity
     const allIds = levelWordIds.flat()
+    const topicSet = new Set(topicWordIds ?? [])
+    const hasTopic = topicSet.size > 0
 
     const prioritized = nochmalIds.value.filter(id =>
       allIds.includes(id) && isDue(getCard(id)) && !isMastered(getCard(id))
@@ -184,17 +187,58 @@ export const useProgressStore = defineStore('progress', () => {
     const result: string[] = [...prioritized]
     const seen = new Set(prioritized)
 
+    if (hasTopic) {
+      // Topic due reviews (across all levels)
+      for (const ids of levelWordIds) {
+        if (result.length >= cap) break
+        for (const id of ids) {
+          if (result.length >= cap) break
+          if (seen.has(id) || !topicSet.has(id)) continue
+          const card = getCard(id)
+          if (card.lastReviewed !== null && isDue(card) && !isMastered(card)) {
+            result.push(id)
+            seen.add(id)
+          }
+        }
+      }
+      // Topic new cards (across all levels)
+      for (const ids of levelWordIds) {
+        if (result.length >= cap) break
+        for (const id of ids) {
+          if (result.length >= cap) break
+          if (seen.has(id) || !topicSet.has(id)) continue
+          if (getCard(id).lastReviewed === null) {
+            result.push(id)
+            seen.add(id)
+          }
+        }
+      }
+    }
+
+    // Non-topic due reviews (original level-based logic)
     for (const ids of levelWordIds) {
       if (result.length >= cap) break
-      const due = ids.filter(id => {
-        const card = getCard(id)
-        return !seen.has(id) && card.lastReviewed !== null && isDue(card) && !isMastered(card)
-      })
-      const newCards = ids.filter(id => !seen.has(id) && getCard(id).lastReviewed === null)
-      for (const id of [...due, ...newCards]) {
+      for (const id of ids) {
         if (result.length >= cap) break
-        result.push(id)
-        seen.add(id)
+        if (seen.has(id)) continue
+        const card = getCard(id)
+        if (card.lastReviewed !== null && isDue(card) && !isMastered(card)) {
+          result.push(id)
+          seen.add(id)
+        }
+      }
+    }
+
+    // Non-topic new cards (original level-based logic)
+    for (const ids of levelWordIds) {
+      if (result.length >= cap) break
+      for (const id of ids) {
+        if (result.length >= cap) break
+        if (seen.has(id)) continue
+        if (getCard(id).lastReviewed === null) {
+          result.push(id)
+          seen.add(id)
+        }
       }
     }
 

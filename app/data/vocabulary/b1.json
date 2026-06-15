@@ -7,1400 +7,1600 @@
       "swedish": "ett samhälle",
       "german": "Gesellschaft",
       "example": "Vi lever i ett demokratiskt samhälle.",
-      "exampleTranslation": "Wir leben in einer demokratischen Gesellschaft."
+      "exampleTranslation": "Wir leben in einer demokratischen Gesellschaft.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_002",
       "swedish": "en miljö",
       "german": "Umwelt / Umgebung",
       "example": "Vi måste skydda miljön.",
-      "exampleTranslation": "Wir müssen die Umwelt schützen."
+      "exampleTranslation": "Wir müssen die Umwelt schützen.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_003",
       "swedish": "en ekonomi",
       "german": "Wirtschaft / Ökonomie",
       "example": "Sveriges ekonomi är stark.",
-      "exampleTranslation": "Die schwedische Wirtschaft ist stark."
+      "exampleTranslation": "Die schwedische Wirtschaft ist stark.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_004",
       "swedish": "en politik",
       "german": "Politik",
       "example": "Hon är intresserad av politik.",
-      "exampleTranslation": "Sie interessiert sich für Politik."
+      "exampleTranslation": "Sie interessiert sich für Politik.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_005",
       "swedish": "en kultur",
       "german": "Kultur",
       "example": "Sverige har en rik kultur.",
-      "exampleTranslation": "Schweden hat eine reiche Kultur."
+      "exampleTranslation": "Schweden hat eine reiche Kultur.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_006",
       "swedish": "en historia",
       "german": "Geschichte",
       "example": "Vi studerar Sveriges historia.",
-      "exampleTranslation": "Wir studieren die Geschichte Schwedens."
+      "exampleTranslation": "Wir studieren die Geschichte Schwedens.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_007",
       "swedish": "en framtid",
       "german": "Zukunft",
       "example": "Framtiden ser ljus ut.",
-      "exampleTranslation": "Die Zukunft sieht hell aus."
+      "exampleTranslation": "Die Zukunft sieht hell aus.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_008",
       "swedish": "en förändring",
       "german": "Veränderung / Wandel",
       "example": "Förändring är nödvändig.",
-      "exampleTranslation": "Veränderung ist notwendig."
+      "exampleTranslation": "Veränderung ist notwendig.",
+      "topic": "Zuhause & Wohnen"
     },
     {
       "id": "b1_009",
       "swedish": "en möjlighet",
       "german": "Möglichkeit / Chance",
       "example": "Det finns många möjligheter.",
-      "exampleTranslation": "Es gibt viele Möglichkeiten."
+      "exampleTranslation": "Es gibt viele Möglichkeiten.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_010",
       "swedish": "en lösning",
       "german": "Lösung",
       "example": "Vi behöver en bra lösning.",
-      "exampleTranslation": "Wir brauchen eine gute Lösung."
+      "exampleTranslation": "Wir brauchen eine gute Lösung.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_011",
       "swedish": "ett beslut",
       "german": "Entscheidung / Beschluss",
       "example": "Det var ett svårt beslut.",
-      "exampleTranslation": "Das war eine schwierige Entscheidung."
+      "exampleTranslation": "Das war eine schwierige Entscheidung.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_012",
       "swedish": "att bestämma",
       "german": "entscheiden / bestimmen",
       "example": "Vem bestämmer här?",
-      "exampleTranslation": "Wer entscheidet hier?"
+      "exampleTranslation": "Wer entscheidet hier?",
+      "topic": "Alltag"
     },
     {
       "id": "b1_013",
       "swedish": "att beskriva",
       "german": "beschreiben",
       "example": "Kan du beskriva problemet?",
-      "exampleTranslation": "Kannst du das Problem beschreiben?"
+      "exampleTranslation": "Kannst du das Problem beschreiben?",
+      "topic": "Schule & Bildung"
     },
     {
       "id": "b1_014",
       "swedish": "att förklara",
       "german": "erklären",
       "example": "Kan du förklara det igen?",
-      "exampleTranslation": "Kannst du das nochmal erklären?"
+      "exampleTranslation": "Kannst du das nochmal erklären?",
+      "topic": "Alltag"
     },
     {
       "id": "b1_015",
       "swedish": "att diskutera",
       "german": "diskutieren",
       "example": "Vi diskuterade frågan länge.",
-      "exampleTranslation": "Wir diskutierten die Frage lange."
+      "exampleTranslation": "Wir diskutierten die Frage lange.",
+      "topic": "Tiere"
     },
     {
       "id": "b1_016",
       "swedish": "att jämföra",
       "german": "vergleichen",
       "example": "Jämför priserna innan du köper.",
-      "exampleTranslation": "Vergleiche die Preise, bevor du kaufst."
+      "exampleTranslation": "Vergleiche die Preise, bevor du kaufst.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_017",
       "swedish": "att lyckas",
       "german": "gelingen / erfolgreich sein",
       "example": "Jag hoppas att vi lyckas.",
-      "exampleTranslation": "Ich hoffe, dass wir Erfolg haben."
+      "exampleTranslation": "Ich hoffe, dass wir Erfolg haben.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_018",
       "swedish": "att misslyckas",
       "german": "scheitern / misslingen",
       "example": "Det är okej att misslyckas ibland.",
-      "exampleTranslation": "Es ist okay, manchmal zu scheitern."
+      "exampleTranslation": "Es ist okay, manchmal zu scheitern.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_019",
       "swedish": "att påverka",
       "german": "beeinflussen",
       "example": "Klimatförändringen påverkar alla.",
-      "exampleTranslation": "Der Klimawandel beeinflusst alle."
+      "exampleTranslation": "Der Klimawandel beeinflusst alle.",
+      "topic": "Natur & Wetter"
     },
     {
       "id": "b1_020",
       "swedish": "att delta",
       "german": "teilnehmen / teilhaben",
       "example": "Alla kan delta i mötet.",
-      "exampleTranslation": "Alle können an dem Meeting teilnehmen."
+      "exampleTranslation": "Alle können an dem Meeting teilnehmen.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_021",
       "swedish": "viktig",
       "german": "wichtig",
       "example": "Det är en viktig fråga.",
-      "exampleTranslation": "Das ist eine wichtige Frage."
+      "exampleTranslation": "Das ist eine wichtige Frage.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_022",
       "swedish": "nödvändig",
       "german": "notwendig / erforderlich",
       "example": "Det är nödvändigt att sova.",
-      "exampleTranslation": "Es ist notwendig zu schlafen."
+      "exampleTranslation": "Es ist notwendig zu schlafen.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_023",
       "swedish": "ansvarig",
       "german": "verantwortlich / zuständig",
       "example": "Vem är ansvarig?",
-      "exampleTranslation": "Wer ist verantwortlich?"
+      "exampleTranslation": "Wer ist verantwortlich?",
+      "topic": "Alltag"
     },
     {
       "id": "b1_024",
       "swedish": "noggrann",
       "german": "sorgfältig / genau / gründlich",
       "example": "Han är mycket noggrann i sitt arbete.",
-      "exampleTranslation": "Er ist sehr sorgfältig in seiner Arbeit."
+      "exampleTranslation": "Er ist sehr sorgfältig in seiner Arbeit.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_025",
       "swedish": "allvarlig",
       "german": "ernst / ernsthaft / schwerwiegend",
       "example": "Det är ett allvarligt problem.",
-      "exampleTranslation": "Das ist ein ernstes Problem."
+      "exampleTranslation": "Das ist ein ernstes Problem.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_026",
       "swedish": "en utbildning",
       "german": "Bildung / Ausbildung / Ausbildung",
       "example": "Utbildning är viktigt.",
-      "exampleTranslation": "Bildung ist wichtig."
+      "exampleTranslation": "Bildung ist wichtig.",
+      "topic": "Schule & Bildung"
     },
     {
       "id": "b1_027",
       "swedish": "ett yrke",
       "german": "Beruf",
       "example": "Vilket yrke har du?",
-      "exampleTranslation": "Welchen Beruf hast du?"
+      "exampleTranslation": "Welchen Beruf hast du?",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_028",
       "swedish": "ett företag",
       "german": "Unternehmen / Firma",
       "example": "Hon driver ett litet företag.",
-      "exampleTranslation": "Sie führt ein kleines Unternehmen."
+      "exampleTranslation": "Sie führt ein kleines Unternehmen.",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_029",
       "swedish": "en chef",
       "german": "Chef / Vorgesetzter",
       "example": "Min chef är väldigt snäll.",
-      "exampleTranslation": "Mein Chef ist sehr nett."
+      "exampleTranslation": "Mein Chef ist sehr nett.",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_030",
       "swedish": "en kollega",
       "german": "Kollege / Kollegin",
       "example": "Mina kollegor är trevliga.",
-      "exampleTranslation": "Meine Kollegen sind nett."
+      "exampleTranslation": "Meine Kollegen sind nett.",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_031",
       "swedish": "ett möte",
       "german": "Meeting / Treffen / Besprechung",
       "example": "Mötet börjar klockan tio.",
-      "exampleTranslation": "Das Meeting beginnt um zehn Uhr."
+      "exampleTranslation": "Das Meeting beginnt um zehn Uhr.",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_032",
       "swedish": "lagom",
       "german": "genau richtig (kein dt. Äquivalent)",
       "example": "Temperaturen är lagom idag.",
-      "exampleTranslation": "Die Temperatur ist heute genau richtig."
+      "exampleTranslation": "Die Temperatur ist heute genau richtig.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_033",
       "swedish": "en fika",
       "german": "Kaffeepause mit Gebäck (schwed. Tradition)",
       "example": "Vi tar en fika klockan tre.",
-      "exampleTranslation": "Wir machen eine Kaffeepause um drei Uhr."
+      "exampleTranslation": "Wir machen eine Kaffeepause um drei Uhr.",
+      "topic": "Essen & Trinken"
     },
     {
       "id": "b1_034",
       "swedish": "allemansrätten",
       "german": "das Jedermannsrecht",
       "example": "Allemansrätten ger oss rätt att vandra i naturen.",
-      "exampleTranslation": "Das Jedermannsrecht gibt uns das Recht, in der Natur zu wandern."
+      "exampleTranslation": "Das Jedermannsrecht gibt uns das Recht, in der Natur zu wandern.",
+      "topic": "Freizeit & Kultur"
     },
     {
       "id": "b1_035",
       "swedish": "midsommar",
       "german": "Mittsommer",
       "example": "Vi firar midsommar i juni.",
-      "exampleTranslation": "Wir feiern Mittsommer im Juni."
+      "exampleTranslation": "Wir feiern Mittsommer im Juni.",
+      "topic": "Freizeit & Kultur"
     },
     {
       "id": "b1_036",
       "swedish": "en erfarenhet",
       "german": "Erfahrung",
       "example": "Han har lång erfarenhet.",
-      "exampleTranslation": "Er hat viel Erfahrung."
+      "exampleTranslation": "Er hat viel Erfahrung.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_037",
       "swedish": "en kunskap",
       "german": "Wissen / Kenntnisse",
       "example": "Kunskap är makt.",
-      "exampleTranslation": "Wissen ist Macht."
+      "exampleTranslation": "Wissen ist Macht.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_038",
       "swedish": "ett förhållande",
       "german": "Verhältnis / Beziehung",
       "example": "De har ett bra förhållande.",
-      "exampleTranslation": "Sie haben eine gute Beziehung."
+      "exampleTranslation": "Sie haben eine gute Beziehung.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_039",
       "swedish": "ett val",
       "german": "Wahl / Auswahl",
       "example": "Det är ditt val.",
-      "exampleTranslation": "Es ist deine Wahl."
+      "exampleTranslation": "Es ist deine Wahl.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_040",
       "swedish": "resan",
       "german": "die Reise",
       "example": "Resan tog tre timmar.",
-      "exampleTranslation": "Die Reise dauerte drei Stunden."
+      "exampleTranslation": "Die Reise dauerte drei Stunden.",
+      "topic": "Essen & Trinken"
     },
     {
       "id": "b1_041",
       "swedish": "en hälsa",
       "german": "Gesundheit",
       "example": "Din hälsa är viktig.",
-      "exampleTranslation": "Deine Gesundheit ist wichtig."
+      "exampleTranslation": "Deine Gesundheit ist wichtig.",
+      "topic": "Körper & Gesundheit"
     },
     {
       "id": "b1_042",
       "swedish": "en sjukdom",
       "german": "Krankheit",
       "example": "Sjukdomen spred sig snabbt.",
-      "exampleTranslation": "Die Krankheit breitete sich schnell aus."
+      "exampleTranslation": "Die Krankheit breitete sich schnell aus.",
+      "topic": "Körper & Gesundheit"
     },
     {
       "id": "b1_043",
       "swedish": "en rättighet",
       "german": "Recht / Berechtigung",
       "example": "Alla har rätt till utbildning.",
-      "exampleTranslation": "Jeder hat das Recht auf Bildung."
+      "exampleTranslation": "Jeder hat das Recht auf Bildung.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_044",
       "swedish": "en skyldighet",
       "german": "Pflicht / Verpflichtung",
       "example": "Det är vår skyldighet att hjälpa.",
-      "exampleTranslation": "Es ist unsere Pflicht zu helfen."
+      "exampleTranslation": "Es ist unsere Pflicht zu helfen.",
+      "topic": "Natur & Wetter"
     },
     {
       "id": "b1_045",
       "swedish": "en frihet",
       "german": "Freiheit",
       "example": "Frihet är grundläggande.",
-      "exampleTranslation": "Freiheit ist grundlegend."
+      "exampleTranslation": "Freiheit ist grundlegend.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_046",
       "swedish": "en gräns",
       "german": "Grenze",
       "example": "Vi passerade gränsen.",
-      "exampleTranslation": "Wir überquerten die Grenze."
+      "exampleTranslation": "Wir überquerten die Grenze.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_047",
       "swedish": "att ansöka",
       "german": "beantragen / sich bewerben",
       "example": "Jag ansökte om jobbet.",
-      "exampleTranslation": "Ich habe mich um die Stelle beworben."
+      "exampleTranslation": "Ich habe mich um die Stelle beworben.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_048",
       "swedish": "att planera",
       "german": "planen",
       "example": "Vi planerar en resa.",
-      "exampleTranslation": "Wir planen eine Reise."
+      "exampleTranslation": "Wir planen eine Reise.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_049",
       "swedish": "att lösa",
       "german": "lösen",
       "example": "Kan vi lösa det här problemet?",
-      "exampleTranslation": "Können wir dieses Problem lösen?"
+      "exampleTranslation": "Können wir dieses Problem lösen?",
+      "topic": "Alltag"
     },
     {
       "id": "b1_050",
       "swedish": "förvånande",
       "german": "überraschend / erstaunlich",
       "example": "Det var ett förvånande resultat.",
-      "exampleTranslation": "Das war ein überraschendes Ergebnis."
+      "exampleTranslation": "Das war ein überraschendes Ergebnis.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_051",
       "swedish": "en teknik",
       "german": "Technik / Technologie",
       "example": "Tekniken utvecklas snabbt.",
-      "exampleTranslation": "Die Technik entwickelt sich schnell."
+      "exampleTranslation": "Die Technik entwickelt sich schnell.",
+      "topic": "Technologie & Medien"
     },
     {
       "id": "b1_052",
       "swedish": "en digitalisering",
       "german": "Digitalisierung",
       "example": "Digitaliseringen förändrar samhället.",
-      "exampleTranslation": "Die Digitalisierung verändert die Gesellschaft."
+      "exampleTranslation": "Die Digitalisierung verändert die Gesellschaft.",
+      "topic": "Natur & Wetter"
     },
     {
       "id": "b1_053",
       "swedish": "artificiell intelligens",
       "german": "künstliche Intelligenz",
       "example": "Artificiell intelligens används allt mer.",
-      "exampleTranslation": "Künstliche Intelligenz wird immer mehr eingesetzt."
+      "exampleTranslation": "Künstliche Intelligenz wird immer mehr eingesetzt.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_054",
       "swedish": "sociala medier",
       "german": "soziale Medien",
       "example": "Sociala medier påverkar unga människor.",
-      "exampleTranslation": "Soziale Medien beeinflussen junge Menschen."
+      "exampleTranslation": "Soziale Medien beeinflussen junge Menschen.",
+      "topic": "Technologie & Medien"
     },
     {
       "id": "b1_055",
       "swedish": "ett nätverk",
       "german": "Netzwerk",
       "example": "Ett starkt nätverk är viktigt.",
-      "exampleTranslation": "Ein starkes Netzwerk ist wichtig."
+      "exampleTranslation": "Ein starkes Netzwerk ist wichtig.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_056",
       "swedish": "en plattform",
       "german": "Plattform",
       "example": "Företaget lanserade en ny plattform.",
-      "exampleTranslation": "Das Unternehmen hat eine neue Plattform gestartet."
+      "exampleTranslation": "Das Unternehmen hat eine neue Plattform gestartet.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_057",
       "swedish": "en databas",
       "german": "Datenbank",
       "example": "All information lagras i en databas.",
-      "exampleTranslation": "Alle Informationen werden in einer Datenbank gespeichert."
+      "exampleTranslation": "Alle Informationen werden in einer Datenbank gespeichert.",
+      "topic": "Einkaufen & Geld"
     },
     {
       "id": "b1_058",
       "swedish": "en kryptering",
       "german": "Verschlüsselung",
       "example": "Kryptering skyddar din information.",
-      "exampleTranslation": "Verschlüsselung schützt deine Informationen."
+      "exampleTranslation": "Verschlüsselung schützt deine Informationen.",
+      "topic": "Technologie & Medien"
     },
     {
       "id": "b1_059",
       "swedish": "en cybersäkerhet",
       "german": "Cybersicherheit",
       "example": "Cybersäkerhet är en viktig fråga.",
-      "exampleTranslation": "Cybersicherheit ist eine wichtige Frage."
+      "exampleTranslation": "Cybersicherheit ist eine wichtige Frage.",
+      "topic": "Technologie & Medien"
     },
     {
       "id": "b1_060",
       "swedish": "en innovation",
       "german": "Innovation",
       "example": "Innovation driver ekonomisk tillväxt.",
-      "exampleTranslation": "Innovation treibt das Wirtschaftswachstum an."
+      "exampleTranslation": "Innovation treibt das Wirtschaftswachstum an.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_061",
       "swedish": "en klimatförändring",
       "german": "Klimawandel",
       "example": "Klimatförändringen är en global utmaning.",
-      "exampleTranslation": "Der Klimawandel ist eine globale Herausforderung."
+      "exampleTranslation": "Der Klimawandel ist eine globale Herausforderung.",
+      "topic": "Zuhause & Wohnen"
     },
     {
       "id": "b1_062",
       "swedish": "ett utsläpp",
       "german": "Emission / Ausstoß",
       "example": "Vi måste minska utsläppen.",
-      "exampleTranslation": "Wir müssen die Emissionen reduzieren."
+      "exampleTranslation": "Wir müssen die Emissionen reduzieren.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_063",
       "swedish": "förnybar energi",
       "german": "erneuerbare Energie",
       "example": "Sverige satsar på förnybar energi.",
-      "exampleTranslation": "Schweden setzt auf erneuerbare Energie."
+      "exampleTranslation": "Schweden setzt auf erneuerbare Energie.",
+      "topic": "Natur & Wetter"
     },
     {
       "id": "b1_064",
       "swedish": "en återvinning",
       "german": "Recycling / Wiederverwertung",
       "example": "Återvinning är viktigt för miljön.",
-      "exampleTranslation": "Recycling ist wichtig für die Umwelt."
+      "exampleTranslation": "Recycling ist wichtig für die Umwelt.",
+      "topic": "Natur & Wetter"
     },
     {
       "id": "b1_065",
       "swedish": "en hållbarhet",
       "german": "Nachhaltigkeit",
       "example": "Hållbarhet är en central fråga.",
-      "exampleTranslation": "Nachhaltigkeit ist eine zentrale Frage."
+      "exampleTranslation": "Nachhaltigkeit ist eine zentrale Frage.",
+      "topic": "Natur & Wetter"
     },
     {
       "id": "b1_066",
       "swedish": "ett ekosystem",
       "german": "Ökosystem",
       "example": "Ekosystemen är hotade.",
-      "exampleTranslation": "Die Ökosysteme sind bedroht."
+      "exampleTranslation": "Die Ökosysteme sind bedroht.",
+      "topic": "Natur & Wetter"
     },
     {
       "id": "b1_067",
       "swedish": "biologisk mångfald",
       "german": "biologische Vielfalt / Biodiversität",
       "example": "Vi måste skydda den biologiska mångfalden.",
-      "exampleTranslation": "Wir müssen die biologische Vielfalt schützen."
+      "exampleTranslation": "Wir müssen die biologische Vielfalt schützen.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_068",
       "swedish": "ett naturskydd",
       "german": "Naturschutz",
       "example": "Naturskydd är allas ansvar.",
-      "exampleTranslation": "Naturschutz ist die Verantwortung aller."
+      "exampleTranslation": "Naturschutz ist die Verantwortung aller.",
+      "topic": "Kleidung & Mode"
     },
     {
       "id": "b1_069",
       "swedish": "en koldioxid",
       "german": "Kohlendioxid / CO2",
       "example": "Koldioxidutsläppen måste minska.",
-      "exampleTranslation": "Die CO2-Emissionen müssen sinken."
+      "exampleTranslation": "Die CO2-Emissionen müssen sinken.",
+      "topic": "Natur & Wetter"
     },
     {
       "id": "b1_070",
       "swedish": "globalt",
       "german": "global",
       "example": "Det är ett globalt problem.",
-      "exampleTranslation": "Das ist ein globales Problem."
+      "exampleTranslation": "Das ist ein globales Problem.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_071",
       "swedish": "ett välmående",
       "german": "Wohlbefinden",
       "example": "Välmående handlar om mer än hälsa.",
-      "exampleTranslation": "Wohlbefinden geht über Gesundheit hinaus."
+      "exampleTranslation": "Wohlbefinden geht über Gesundheit hinaus.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_072",
       "swedish": "en stress",
       "german": "Stress",
       "example": "Stress kan leda till sjukdom.",
-      "exampleTranslation": "Stress kann zu Krankheit führen."
+      "exampleTranslation": "Stress kann zu Krankheit führen.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_073",
       "swedish": "mental hälsa",
       "german": "psychische Gesundheit",
       "example": "Mental hälsa är lika viktig som fysisk hälsa.",
-      "exampleTranslation": "Psychische Gesundheit ist genauso wichtig wie körperliche Gesundheit."
+      "exampleTranslation": "Psychische Gesundheit ist genauso wichtig wie körperliche Gesundheit.",
+      "topic": "Körper & Gesundheit"
     },
     {
       "id": "b1_074",
       "swedish": "en terapi",
       "german": "Therapie",
       "example": "Han går i terapi.",
-      "exampleTranslation": "Er geht zur Therapie."
+      "exampleTranslation": "Er geht zur Therapie.",
+      "topic": "Körper & Gesundheit"
     },
     {
       "id": "b1_075",
       "swedish": "en motion",
       "german": "Bewegung / Sport",
       "example": "Regelbunden motion är bra för hälsan.",
-      "exampleTranslation": "Regelmäßige Bewegung ist gut für die Gesundheit."
+      "exampleTranslation": "Regelmäßige Bewegung ist gut für die Gesundheit.",
+      "topic": "Freizeit & Kultur"
     },
     {
       "id": "b1_076",
       "swedish": "en kost",
       "german": "Ernährung / Kost",
       "example": "En bra kost är viktig.",
-      "exampleTranslation": "Eine gute Ernährung ist wichtig."
+      "exampleTranslation": "Eine gute Ernährung ist wichtig.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_077",
       "swedish": "ett sömnproblem",
       "german": "Schlafprobleme",
       "example": "Många lider av sömnproblem.",
-      "exampleTranslation": "Viele leiden unter Schlafproblemen."
+      "exampleTranslation": "Viele leiden unter Schlafproblemen.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_078",
       "swedish": "en rehabilitering",
       "german": "Rehabilitation",
       "example": "Rehabiliteringen tog flera månader.",
-      "exampleTranslation": "Die Rehabilitation dauerte mehrere Monate."
+      "exampleTranslation": "Die Rehabilitation dauerte mehrere Monate.",
+      "topic": "Körper & Gesundheit"
     },
     {
       "id": "b1_079",
       "swedish": "en vaccination",
       "german": "Impfung",
       "example": "Vaccination skyddar mot sjukdomar.",
-      "exampleTranslation": "Impfung schützt vor Krankheiten."
+      "exampleTranslation": "Impfung schützt vor Krankheiten.",
+      "topic": "Körper & Gesundheit"
     },
     {
       "id": "b1_080",
       "swedish": "ett symptom",
       "german": "Symptom",
       "example": "Vilka symptom har du?",
-      "exampleTranslation": "Welche Symptome hast du?"
+      "exampleTranslation": "Welche Symptome hast du?",
+      "topic": "Körper & Gesundheit"
     },
     {
       "id": "b1_081",
       "swedish": "en diagnos",
       "german": "Diagnose",
       "example": "Läkaren ställde en diagnos.",
-      "exampleTranslation": "Der Arzt stellte eine Diagnose."
+      "exampleTranslation": "Der Arzt stellte eine Diagnose.",
+      "topic": "Körper & Gesundheit"
     },
     {
       "id": "b1_082",
       "swedish": "en medborgare",
       "german": "Bürger / Bürgerin",
       "example": "Alla medborgare har rösträtt.",
-      "exampleTranslation": "Alle Bürger haben Wahlrecht."
+      "exampleTranslation": "Alle Bürger haben Wahlrecht.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_083",
       "swedish": "en invandring",
       "german": "Einwanderung",
       "example": "Invandring är en viktig politisk fråga.",
-      "exampleTranslation": "Einwanderung ist ein wichtiges politisches Thema."
+      "exampleTranslation": "Einwanderung ist ein wichtiges politisches Thema.",
+      "topic": "Zuhause & Wohnen"
     },
     {
       "id": "b1_084",
       "swedish": "en integration",
       "german": "Integration",
       "example": "Integration kräver insatser från hela samhället.",
-      "exampleTranslation": "Integration erfordert Anstrengungen der gesamten Gesellschaft."
+      "exampleTranslation": "Integration erfordert Anstrengungen der gesamten Gesellschaft.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_085",
       "swedish": "en minoritet",
       "german": "Minderheit",
       "example": "Minoriteters rättigheter ska skyddas.",
-      "exampleTranslation": "Die Rechte von Minderheiten sollen geschützt werden."
+      "exampleTranslation": "Die Rechte von Minderheiten sollen geschützt werden.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_086",
       "swedish": "en majoritet",
       "german": "Mehrheit",
       "example": "Majoriteten röstade ja.",
-      "exampleTranslation": "Die Mehrheit stimmte mit Ja."
+      "exampleTranslation": "Die Mehrheit stimmte mit Ja.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_087",
       "swedish": "en demokrati",
       "german": "Demokratie",
       "example": "Demokrati bygger på delaktighet.",
-      "exampleTranslation": "Demokratie basiert auf Teilhabe."
+      "exampleTranslation": "Demokratie basiert auf Teilhabe.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_088",
       "swedish": "mänskliga rättigheter",
       "german": "Menschenrechte",
       "example": "Mänskliga rättigheter gäller alla.",
-      "exampleTranslation": "Menschenrechte gelten für alle."
+      "exampleTranslation": "Menschenrechte gelten für alle.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_089",
       "swedish": "en jämställdhet",
       "german": "Gleichstellung / Gleichberechtigung",
       "example": "Sverige arbetar aktivt med jämställdhet.",
-      "exampleTranslation": "Schweden arbeitet aktiv an der Gleichstellung."
+      "exampleTranslation": "Schweden arbeitet aktiv an der Gleichstellung.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_090",
       "swedish": "en välfärd",
       "german": "Wohlfahrt / Sozialstaat",
       "example": "Den svenska välfärden är känd.",
-      "exampleTranslation": "Der schwedische Sozialstaat ist bekannt."
+      "exampleTranslation": "Der schwedische Sozialstaat ist bekannt.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_091",
       "swedish": "en skattebetalare",
       "german": "Steuerzahler",
       "example": "Skattebetalarna finansierar välfärden.",
-      "exampleTranslation": "Die Steuerzahler finanzieren den Sozialstaat."
+      "exampleTranslation": "Die Steuerzahler finanzieren den Sozialstaat.",
+      "topic": "Einkaufen & Geld"
     },
     {
       "id": "b1_092",
       "swedish": "en myndighet",
       "german": "Behörde",
       "example": "Myndigheten beslutade om nya regler.",
-      "exampleTranslation": "Die Behörde beschloss neue Regeln."
+      "exampleTranslation": "Die Behörde beschloss neue Regeln.",
+      "topic": "Gesellschaft & Politik"
     },
     {
       "id": "b1_093",
       "swedish": "ett universitet",
       "german": "Universität",
       "example": "Hon studerar vid universitetet.",
-      "exampleTranslation": "Sie studiert an der Universität."
+      "exampleTranslation": "Sie studiert an der Universität.",
+      "topic": "Schule & Bildung"
     },
     {
       "id": "b1_094",
       "swedish": "en kurs",
       "german": "Kurs",
       "example": "Jag går en kurs i svenska.",
-      "exampleTranslation": "Ich besuche einen Schwedischkurs."
+      "exampleTranslation": "Ich besuche einen Schwedischkurs.",
+      "topic": "Schule & Bildung"
     },
     {
       "id": "b1_095",
       "swedish": "ett ämne",
       "german": "Fach / Thema",
       "example": "Matematik är mitt favoritämne.",
-      "exampleTranslation": "Mathematik ist mein Lieblingsfach."
+      "exampleTranslation": "Mathematik ist mein Lieblingsfach.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_096",
       "swedish": "ett betyg",
       "german": "Note / Zeugnis",
       "example": "Han fick bra betyg.",
-      "exampleTranslation": "Er hat gute Noten bekommen."
+      "exampleTranslation": "Er hat gute Noten bekommen.",
+      "topic": "Schule & Bildung"
     },
     {
       "id": "b1_097",
       "swedish": "en examen",
       "german": "Abschluss / Examen",
       "example": "Hon tog examen förra året.",
-      "exampleTranslation": "Sie hat letztes Jahr ihren Abschluss gemacht."
+      "exampleTranslation": "Sie hat letztes Jahr ihren Abschluss gemacht.",
+      "topic": "Schule & Bildung"
     },
     {
       "id": "b1_098",
       "swedish": "en forskning",
       "german": "Forschung",
       "example": "Forskningen visar nya resultat.",
-      "exampleTranslation": "Die Forschung zeigt neue Ergebnisse."
+      "exampleTranslation": "Die Forschung zeigt neue Ergebnisse.",
+      "topic": "Schule & Bildung"
     },
     {
       "id": "b1_099",
       "swedish": "en avhandling",
       "german": "Abhandlung / Dissertation",
       "example": "Hon skriver sin avhandling.",
-      "exampleTranslation": "Sie schreibt ihre Dissertation."
+      "exampleTranslation": "Sie schreibt ihre Dissertation.",
+      "topic": "Körper & Gesundheit"
     },
     {
       "id": "b1_100",
       "swedish": "en praktik",
       "german": "Praktikum",
       "example": "Jag gjorde praktik på ett företag.",
-      "exampleTranslation": "Ich habe ein Praktikum bei einem Unternehmen gemacht."
+      "exampleTranslation": "Ich habe ein Praktikum bei einem Unternehmen gemacht.",
+      "topic": "Schule & Bildung"
     },
     {
       "id": "b1_101",
       "swedish": "ett stipendium",
       "german": "Stipendium",
       "example": "Hon fick ett stipendium.",
-      "exampleTranslation": "Sie hat ein Stipendium bekommen."
+      "exampleTranslation": "Sie hat ein Stipendium bekommen.",
+      "topic": "Schule & Bildung"
     },
     {
       "id": "b1_102",
       "swedish": "ett studielån",
       "german": "Studienkredit",
       "example": "Många studenter har studielån.",
-      "exampleTranslation": "Viele Studenten haben einen Studienkredit."
+      "exampleTranslation": "Viele Studenten haben einen Studienkredit.",
+      "topic": "Schule & Bildung"
     },
     {
       "id": "b1_103",
       "swedish": "en karriär",
       "german": "Karriere",
       "example": "Hon har gjort karriär inom IT.",
-      "exampleTranslation": "Sie hat in der IT Karriere gemacht."
+      "exampleTranslation": "Sie hat in der IT Karriere gemacht.",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_104",
       "swedish": "en lön",
       "german": "Gehalt / Lohn",
       "example": "Lönen i Sverige är relativt hög.",
-      "exampleTranslation": "Das Gehalt in Schweden ist relativ hoch."
+      "exampleTranslation": "Das Gehalt in Schweden ist relativ hoch.",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_105",
       "swedish": "en intervju",
       "german": "Interview / Vorstellungsgespräch",
       "example": "Jag har en intervju imorgon.",
-      "exampleTranslation": "Ich habe morgen ein Vorstellungsgespräch."
+      "exampleTranslation": "Ich habe morgen ein Vorstellungsgespräch.",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_106",
       "swedish": "en ansökan",
       "german": "Bewerbung / Antrag",
       "example": "Skicka in din ansökan.",
-      "exampleTranslation": "Reiche deine Bewerbung ein."
+      "exampleTranslation": "Reiche deine Bewerbung ein.",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_107",
       "swedish": "en meritlista",
       "german": "Lebenslauf",
       "example": "Bifoga din meritlista.",
-      "exampleTranslation": "Lege deinen Lebenslauf bei."
+      "exampleTranslation": "Lege deinen Lebenslauf bei.",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_108",
       "swedish": "en vidareutbildning",
       "german": "Weiterbildung",
       "example": "Vidareutbildning är viktigt.",
-      "exampleTranslation": "Weiterbildung ist wichtig."
+      "exampleTranslation": "Weiterbildung ist wichtig.",
+      "topic": "Schule & Bildung"
     },
     {
       "id": "b1_109",
       "swedish": "deltid",
       "german": "Teilzeit",
       "example": "Hon arbetar deltid.",
-      "exampleTranslation": "Sie arbeitet Teilzeit."
+      "exampleTranslation": "Sie arbeitet Teilzeit.",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_110",
       "swedish": "heltid",
       "german": "Vollzeit",
       "example": "Han arbetar heltid.",
-      "exampleTranslation": "Er arbeitet Vollzeit."
+      "exampleTranslation": "Er arbeitet Vollzeit.",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_111",
       "swedish": "en frilansare",
       "german": "Freiberufler / Freelancer",
       "example": "Hon jobbar som frilansare.",
-      "exampleTranslation": "Sie arbeitet als Freiberuflerin."
+      "exampleTranslation": "Sie arbeitet als Freiberuflerin.",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_112",
       "swedish": "ett startup",
       "german": "Startup",
       "example": "Han startade ett startup.",
-      "exampleTranslation": "Er hat ein Startup gegründet."
+      "exampleTranslation": "Er hat ein Startup gegründet.",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_113",
       "swedish": "en kulturskillnad",
       "german": "Kulturunterschied",
       "example": "Kulturskillnader kan vara utmanande.",
-      "exampleTranslation": "Kulturunterschiede können herausfordernd sein."
+      "exampleTranslation": "Kulturunterschiede können herausfordernd sein.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_114",
       "swedish": "en tradition",
       "german": "Tradition",
       "example": "Lucia är en svensk tradition.",
-      "exampleTranslation": "Lucia ist eine schwedische Tradition."
+      "exampleTranslation": "Lucia ist eine schwedische Tradition.",
+      "topic": "Freizeit & Kultur"
     },
     {
       "id": "b1_115",
       "swedish": "en sedvänja",
       "german": "Brauch / Sitte",
       "example": "Det är en gammal sedvänja.",
-      "exampleTranslation": "Das ist ein alter Brauch."
+      "exampleTranslation": "Das ist ein alter Brauch.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_116",
       "swedish": "en högtid",
       "german": "Feiertag / Feier",
       "example": "Jul är en viktig högtid.",
-      "exampleTranslation": "Weihnachten ist ein wichtiger Feiertag."
+      "exampleTranslation": "Weihnachten ist ein wichtiger Feiertag.",
+      "topic": "Freizeit & Kultur"
     },
     {
       "id": "b1_117",
       "swedish": "ett firande",
       "german": "Feier / Feiern",
       "example": "Firandet pågick hela natten.",
-      "exampleTranslation": "Die Feier dauerte die ganze Nacht."
+      "exampleTranslation": "Die Feier dauerte die ganze Nacht.",
+      "topic": "Freizeit & Kultur"
     },
     {
       "id": "b1_118",
       "swedish": "en pilgrimsfärd",
       "german": "Pilgerreise",
       "example": "Han gick på en pilgrimsfärd.",
-      "exampleTranslation": "Er ging auf eine Pilgerreise."
+      "exampleTranslation": "Er ging auf eine Pilgerreise.",
+      "topic": "Essen & Trinken"
     },
     {
       "id": "b1_119",
       "swedish": "en besöksnäring",
       "german": "Tourismusbranche",
       "example": "Besöksnäringen växer i Sverige.",
-      "exampleTranslation": "Die Tourismusbranche wächst in Schweden."
+      "exampleTranslation": "Die Tourismusbranche wächst in Schweden.",
+      "topic": "Arbeit & Beruf"
     },
     {
       "id": "b1_120",
       "swedish": "en debatt",
       "german": "Debatte",
       "example": "Debatten var livlig.",
-      "exampleTranslation": "Die Debatte war lebhaft."
+      "exampleTranslation": "Die Debatte war lebhaft.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_121",
       "swedish": "en presentation",
       "german": "Präsentation / Vortrag",
       "example": "Hon höll en bra presentation.",
-      "exampleTranslation": "Sie hielt einen guten Vortrag."
+      "exampleTranslation": "Sie hielt einen guten Vortrag.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_122",
       "swedish": "ett argument",
       "german": "Argument",
       "example": "Han hade starka argument.",
-      "exampleTranslation": "Er hatte starke Argumente."
+      "exampleTranslation": "Er hatte starke Argumente.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_123",
       "swedish": "en förhandling",
       "german": "Verhandlung",
       "example": "Förhandlingarna pågår.",
-      "exampleTranslation": "Die Verhandlungen laufen."
+      "exampleTranslation": "Die Verhandlungen laufen.",
+      "topic": "Körper & Gesundheit"
     },
     {
       "id": "b1_124",
       "swedish": "en kompromiss",
       "german": "Kompromiss",
       "example": "Vi måste hitta en kompromiss.",
-      "exampleTranslation": "Wir müssen einen Kompromiss finden."
+      "exampleTranslation": "Wir müssen einen Kompromiss finden.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_125",
       "swedish": "ett samförstånd",
       "german": "Einvernehmen / Verständigung",
       "example": "Vi nådde samförstånd.",
-      "exampleTranslation": "Wir haben ein Einvernehmen erzielt."
+      "exampleTranslation": "Wir haben ein Einvernehmen erzielt.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_126",
       "swedish": "en konflikt",
       "german": "Konflikt",
       "example": "Vi måste lösa konflikten.",
-      "exampleTranslation": "Wir müssen den Konflikt lösen."
+      "exampleTranslation": "Wir müssen den Konflikt lösen.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_127",
       "swedish": "en medling",
       "german": "Mediation / Schlichtung",
       "example": "Medling kan hjälpa vid konflikter.",
-      "exampleTranslation": "Mediation kann bei Konflikten helfen."
+      "exampleTranslation": "Mediation kann bei Konflikten helfen.",
+      "topic": "Natur & Wetter"
     },
     {
       "id": "b1_128",
       "swedish": "att påstå",
       "german": "behaupten",
       "example": "Han påstår att han har rätt.",
-      "exampleTranslation": "Er behauptet, dass er recht hat."
+      "exampleTranslation": "Er behauptet, dass er recht hat.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_129",
       "swedish": "att hävda",
       "german": "behaupten / geltend machen",
       "example": "Hon hävdar sin rätt.",
-      "exampleTranslation": "Sie macht ihr Recht geltend."
+      "exampleTranslation": "Sie macht ihr Recht geltend.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_130",
       "swedish": "att tillåta",
       "german": "erlauben / zulassen",
       "example": "Det är inte tillåtet att röka här.",
-      "exampleTranslation": "Rauchen ist hier nicht erlaubt."
+      "exampleTranslation": "Rauchen ist hier nicht erlaubt.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_131",
       "swedish": "att kräva",
       "german": "fordern / erfordern",
       "example": "Jobbet kräver erfarenhet.",
-      "exampleTranslation": "Die Arbeit erfordert Erfahrung."
+      "exampleTranslation": "Die Arbeit erfordert Erfahrung.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_132",
       "swedish": "att uppnå",
       "german": "erreichen / erzielen",
       "example": "Vi uppnådde vårt mål.",
-      "exampleTranslation": "Wir haben unser Ziel erreicht."
+      "exampleTranslation": "Wir haben unser Ziel erreicht.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_133",
       "swedish": "att hantera",
       "german": "bewältigen / handhaben",
       "example": "Hon hanterar stress bra.",
-      "exampleTranslation": "Sie bewältigt Stress gut."
+      "exampleTranslation": "Sie bewältigt Stress gut.",
+      "topic": "Körper & Gesundheit"
     },
     {
       "id": "b1_134",
       "swedish": "att bidra",
       "german": "beitragen",
       "example": "Alla kan bidra till förändring.",
-      "exampleTranslation": "Jeder kann zur Veränderung beitragen."
+      "exampleTranslation": "Jeder kann zur Veränderung beitragen.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_135",
       "swedish": "att stödja",
       "german": "unterstützen",
       "example": "Vi stödjer varandra.",
-      "exampleTranslation": "Wir unterstützen einander."
+      "exampleTranslation": "Wir unterstützen einander.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_136",
       "swedish": "att leda",
       "german": "leiten / führen",
       "example": "Hon leder projektet.",
-      "exampleTranslation": "Sie leitet das Projekt."
+      "exampleTranslation": "Sie leitet das Projekt.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_137",
       "swedish": "att genomföra",
       "german": "durchführen / umsetzen",
       "example": "Vi genomförde planen.",
-      "exampleTranslation": "Wir haben den Plan umgesetzt."
+      "exampleTranslation": "Wir haben den Plan umgesetzt.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_138",
       "swedish": "att förbereda",
       "german": "vorbereiten",
       "example": "Jag förbereder mig inför mötet.",
-      "exampleTranslation": "Ich bereite mich auf das Meeting vor."
+      "exampleTranslation": "Ich bereite mich auf das Meeting vor.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_139",
       "swedish": "att representera",
       "german": "vertreten / repräsentieren",
       "example": "Hon representerar sitt land.",
-      "exampleTranslation": "Sie vertritt ihr Land."
+      "exampleTranslation": "Sie vertritt ihr Land.",
+      "topic": "Tiere"
     },
     {
       "id": "b1_140",
       "swedish": "att konstatera",
       "german": "feststellen",
       "example": "Jag kan konstatera att det fungerar.",
-      "exampleTranslation": "Ich kann feststellen, dass es funktioniert."
+      "exampleTranslation": "Ich kann feststellen, dass es funktioniert.",
+      "topic": "Freizeit & Kultur"
     },
     {
       "id": "b1_141",
       "swedish": "att erkänna",
       "german": "anerkennen / zugeben",
       "example": "Han erkände sitt misstag.",
-      "exampleTranslation": "Er gab seinen Fehler zu."
+      "exampleTranslation": "Er gab seinen Fehler zu.",
+      "topic": "Reisen & Transport"
     },
     {
       "id": "b1_142",
       "swedish": "att förneka",
       "german": "leugnen / verneinen",
       "example": "Han förnekade allting.",
-      "exampleTranslation": "Er leugnete alles."
+      "exampleTranslation": "Er leugnete alles.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_143",
       "swedish": "en tillit",
       "german": "Vertrauen / Zuversicht",
       "example": "Tillit tar tid att bygga upp.",
-      "exampleTranslation": "Vertrauen braucht Zeit, um aufgebaut zu werden."
+      "exampleTranslation": "Vertrauen braucht Zeit, um aufgebaut zu werden.",
+      "topic": "Gefühle & Charakter"
     },
     {
       "id": "b1_144",
       "swedish": "en respekt",
       "german": "Respekt",
       "example": "Vi ska visa respekt för varandra.",
-      "exampleTranslation": "Wir sollen einander Respekt zeigen."
+      "exampleTranslation": "Wir sollen einander Respekt zeigen.",
+      "topic": "Gefühle & Charakter"
     },
     {
       "id": "b1_145",
       "swedish": "en ärlighet",
       "german": "Ehrlichkeit",
       "example": "Ärlighet är viktigt i relationer.",
-      "exampleTranslation": "Ehrlichkeit ist wichtig in Beziehungen."
+      "exampleTranslation": "Ehrlichkeit ist wichtig in Beziehungen.",
+      "topic": "Gefühle & Charakter"
     },
     {
       "id": "b1_146",
       "swedish": "en lojalitet",
       "german": "Loyalität / Treue",
       "example": "Lojalitet är en viktig egenskap.",
-      "exampleTranslation": "Loyalität ist eine wichtige Eigenschaft."
+      "exampleTranslation": "Loyalität ist eine wichtige Eigenschaft.",
+      "topic": "Gefühle & Charakter"
     },
     {
       "id": "b1_147",
       "swedish": "ett engagemang",
       "german": "Engagement",
       "example": "Hans engagemang inspirerar andra.",
-      "exampleTranslation": "Sein Engagement inspiriert andere."
+      "exampleTranslation": "Sein Engagement inspiriert andere.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_148",
       "swedish": "en motivation",
       "german": "Motivation",
       "example": "Motivation är nyckeln till framgång.",
-      "exampleTranslation": "Motivation ist der Schlüssel zum Erfolg."
+      "exampleTranslation": "Motivation ist der Schlüssel zum Erfolg.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_149",
       "swedish": "en ambition",
       "german": "Ambition / Ehrgeiz",
       "example": "Hon har stor ambition.",
-      "exampleTranslation": "Sie hat großen Ehrgeiz."
+      "exampleTranslation": "Sie hat großen Ehrgeiz.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_150",
       "swedish": "en kreativitet",
       "german": "Kreativität",
       "example": "Kreativitet är viktigt i arbetslivet.",
-      "exampleTranslation": "Kreativität ist wichtig im Arbeitsleben."
+      "exampleTranslation": "Kreativität ist wichtig im Arbeitsleben.",
+      "topic": "Gefühle & Charakter"
     },
     {
       "id": "b1_151",
       "swedish": "en flexibilitet",
       "german": "Flexibilität",
       "example": "Flexibilitet krävs i dagens arbetsliv.",
-      "exampleTranslation": "Flexibilität wird im heutigen Arbeitsleben verlangt."
+      "exampleTranslation": "Flexibilität wird im heutigen Arbeitsleben verlangt.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_152",
       "swedish": "en anpassning",
       "german": "Anpassung",
       "example": "Anpassning till nya situationer är viktig.",
-      "exampleTranslation": "Anpassung an neue Situationen ist wichtig."
+      "exampleTranslation": "Anpassung an neue Situationen ist wichtig.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_153",
       "swedish": "komplex",
       "german": "komplex",
       "example": "Det är ett komplext problem.",
-      "exampleTranslation": "Das ist ein komplexes Problem."
+      "exampleTranslation": "Das ist ein komplexes Problem.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_154",
       "swedish": "genomförbar",
       "german": "durchführbar / machbar",
       "example": "Planen är genomförbar.",
-      "exampleTranslation": "Der Plan ist machbar."
+      "exampleTranslation": "Der Plan ist machbar.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_155",
       "swedish": "pålitlig",
       "german": "zuverlässig",
       "example": "Han är en pålitlig kollega.",
-      "exampleTranslation": "Er ist ein zuverlässiger Kollege."
+      "exampleTranslation": "Er ist ein zuverlässiger Kollege.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_156",
       "swedish": "effektiv",
       "german": "effektiv / wirksam",
       "example": "Det är en effektiv metod.",
-      "exampleTranslation": "Das ist eine effektive Methode."
+      "exampleTranslation": "Das ist eine effektive Methode.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_157",
       "swedish": "kostnadseffektiv",
       "german": "kosteneffizient",
       "example": "Lösningen är kostnadseffektiv.",
-      "exampleTranslation": "Die Lösung ist kosteneffizient."
+      "exampleTranslation": "Die Lösung ist kosteneffizient.",
+      "topic": "Reisen & Transport"
     },
     {
       "id": "b1_158",
       "swedish": "innovativ",
       "german": "innovativ",
       "example": "Företaget är mycket innovativt.",
-      "exampleTranslation": "Das Unternehmen ist sehr innovativ."
+      "exampleTranslation": "Das Unternehmen ist sehr innovativ.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_159",
       "swedish": "hållbar",
       "german": "nachhaltig",
       "example": "Vi behöver hållbara lösningar.",
-      "exampleTranslation": "Wir brauchen nachhaltige Lösungen."
+      "exampleTranslation": "Wir brauchen nachhaltige Lösungen.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_160",
       "swedish": "transparent",
       "german": "transparent",
       "example": "Processen måste vara transparent.",
-      "exampleTranslation": "Der Prozess muss transparent sein."
+      "exampleTranslation": "Der Prozess muss transparent sein.",
+      "topic": "Einkaufen & Geld"
     },
     {
       "id": "b1_161",
       "swedish": "inkluderande",
       "german": "inklusiv / einbeziehend",
       "example": "Vi strävar efter ett inkluderande samhälle.",
-      "exampleTranslation": "Wir streben eine inklusive Gesellschaft an."
+      "exampleTranslation": "Wir streben eine inklusive Gesellschaft an.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_162",
       "swedish": "exkluderande",
       "german": "ausgrenzend / exklusiv",
       "example": "Exkluderande beteende accepteras inte.",
-      "exampleTranslation": "Ausgrenzendes Verhalten wird nicht akzeptiert."
+      "exampleTranslation": "Ausgrenzendes Verhalten wird nicht akzeptiert.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_163",
       "swedish": "en utmaning",
       "german": "Herausforderung",
       "example": "Det är en stor utmaning.",
-      "exampleTranslation": "Das ist eine große Herausforderung."
+      "exampleTranslation": "Das ist eine große Herausforderung.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_164",
       "swedish": "en utveckling",
       "german": "Entwicklung",
       "example": "Utvecklingen går snabbt framåt.",
-      "exampleTranslation": "Die Entwicklung schreitet schnell voran."
+      "exampleTranslation": "Die Entwicklung schreitet schnell voran.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_165",
       "swedish": "en tillväxt",
       "german": "Wachstum",
       "example": "Ekonomisk tillväxt är inte allt.",
-      "exampleTranslation": "Wirtschaftswachstum ist nicht alles."
+      "exampleTranslation": "Wirtschaftswachstum ist nicht alles.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_166",
       "swedish": "en resurs",
       "german": "Ressource",
       "example": "Vi måste använda resurserna klokt.",
-      "exampleTranslation": "Wir müssen die Ressourcen klug nutzen."
+      "exampleTranslation": "Wir müssen die Ressourcen klug nutzen.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_167",
       "swedish": "en påverkan",
       "german": "Einfluss / Auswirkung",
       "example": "Beslutet har stor påverkan.",
-      "exampleTranslation": "Die Entscheidung hat große Auswirkungen."
+      "exampleTranslation": "Die Entscheidung hat große Auswirkungen.",
+      "topic": "Natur & Wetter"
     },
     {
       "id": "b1_168",
       "swedish": "en insats",
       "german": "Einsatz / Beitrag",
       "example": "Det krävs en stor insats.",
-      "exampleTranslation": "Es erfordert einen großen Einsatz."
+      "exampleTranslation": "Es erfordert einen großen Einsatz.",
+      "topic": "Zeit & Kalender"
     },
     {
       "id": "b1_169",
       "swedish": "ett samarbete",
       "german": "Zusammenarbeit",
       "example": "Samarbete leder till bättre resultat.",
-      "exampleTranslation": "Zusammenarbeit führt zu besseren Ergebnissen."
+      "exampleTranslation": "Zusammenarbeit führt zu besseren Ergebnissen.",
+      "topic": "Körper & Gesundheit"
     },
     {
       "id": "b1_170",
       "swedish": "ett ansvar",
       "german": "Verantwortung",
       "example": "Vi har ett ansvar gentemot framtiden.",
-      "exampleTranslation": "Wir haben eine Verantwortung gegenüber der Zukunft."
+      "exampleTranslation": "Wir haben eine Verantwortung gegenüber der Zukunft.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_171",
       "swedish": "en inverkan",
       "german": "Einwirkung / Einfluss",
       "example": "Miljön har stor inverkan på hälsan.",
-      "exampleTranslation": "Die Umwelt hat großen Einfluss auf die Gesundheit."
+      "exampleTranslation": "Die Umwelt hat großen Einfluss auf die Gesundheit.",
+      "topic": "Natur & Wetter"
     },
     {
       "id": "b1_172",
       "swedish": "en åsikt",
       "german": "Meinung / Ansicht",
       "example": "Alla har rätt till sin åsikt.",
-      "exampleTranslation": "Jeder hat das Recht auf seine Meinung."
+      "exampleTranslation": "Jeder hat das Recht auf seine Meinung.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_173",
       "swedish": "en värdering",
       "german": "Wert / Wertvorstellung",
       "example": "Våra värderingar styr våra handlingar.",
-      "exampleTranslation": "Unsere Werte steuern unser Handeln."
+      "exampleTranslation": "Unsere Werte steuern unser Handeln.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_174",
       "swedish": "en norm",
       "german": "Norm",
       "example": "Samhällets normer förändras.",
-      "exampleTranslation": "Die Normen der Gesellschaft verändern sich."
+      "exampleTranslation": "Die Normen der Gesellschaft verändern sich.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_175",
       "swedish": "en identitet",
       "german": "Identität",
       "example": "Kultur formar vår identitet.",
-      "exampleTranslation": "Kultur formt unsere Identität."
+      "exampleTranslation": "Kultur formt unsere Identität.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_176",
       "swedish": "att förbättra",
       "german": "verbessern",
       "example": "Vi vill förbättra kvaliteten.",
-      "exampleTranslation": "Wir wollen die Qualität verbessern."
+      "exampleTranslation": "Wir wollen die Qualität verbessern.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_177",
       "swedish": "att minska",
       "german": "verringern / reduzieren",
       "example": "Vi måste minska kostnaderna.",
-      "exampleTranslation": "Wir müssen die Kosten reduzieren."
+      "exampleTranslation": "Wir müssen die Kosten reduzieren.",
+      "topic": "Kleidung & Mode"
     },
     {
       "id": "b1_178",
       "swedish": "att öka",
       "german": "erhöhen / steigern",
       "example": "Priserna har ökat.",
-      "exampleTranslation": "Die Preise sind gestiegen."
+      "exampleTranslation": "Die Preise sind gestiegen.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_179",
       "swedish": "att skapa",
       "german": "schaffen / kreieren",
       "example": "Vi skapar nya möjligheter.",
-      "exampleTranslation": "Wir schaffen neue Möglichkeiten."
+      "exampleTranslation": "Wir schaffen neue Möglichkeiten.",
+      "topic": "Tiere"
     },
     {
       "id": "b1_180",
       "swedish": "att undvika",
       "german": "vermeiden",
       "example": "Vi bör undvika konflikter.",
-      "exampleTranslation": "Wir sollten Konflikte vermeiden."
+      "exampleTranslation": "Wir sollten Konflikte vermeiden.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_181",
       "swedish": "att utveckla",
       "german": "entwickeln",
       "example": "Vi utvecklar nya produkter.",
-      "exampleTranslation": "Wir entwickeln neue Produkte."
+      "exampleTranslation": "Wir entwickeln neue Produkte.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_182",
       "swedish": "att kommunicera",
       "german": "kommunizieren",
       "example": "Det är viktigt att kommunicera tydligt.",
-      "exampleTranslation": "Es ist wichtig, klar zu kommunizieren."
+      "exampleTranslation": "Es ist wichtig, klar zu kommunizieren.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_183",
       "swedish": "att analysera",
       "german": "analysieren",
       "example": "Vi analyserar resultaten.",
-      "exampleTranslation": "Wir analysieren die Ergebnisse."
+      "exampleTranslation": "Wir analysieren die Ergebnisse.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_184",
       "swedish": "att organisera",
       "german": "organisieren",
       "example": "Hon organiserar en konferens.",
-      "exampleTranslation": "Sie organisiert eine Konferenz."
+      "exampleTranslation": "Sie organisiert eine Konferenz.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_185",
       "swedish": "att anpassa",
       "german": "anpassen",
       "example": "Vi måste anpassa oss.",
-      "exampleTranslation": "Wir müssen uns anpassen."
+      "exampleTranslation": "Wir müssen uns anpassen.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_186",
       "swedish": "att ifrågasätta",
       "german": "infrage stellen / hinterfragen",
       "example": "Det är bra att ifrågasätta.",
-      "exampleTranslation": "Es ist gut, Dinge zu hinterfragen."
+      "exampleTranslation": "Es ist gut, Dinge zu hinterfragen.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_187",
       "swedish": "relevant",
       "german": "relevant",
       "example": "Frågan är relevant.",
-      "exampleTranslation": "Die Frage ist relevant."
+      "exampleTranslation": "Die Frage ist relevant.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_188",
       "swedish": "konkret",
       "german": "konkret",
       "example": "Ge mig ett konkret exempel.",
-      "exampleTranslation": "Gib mir ein konkretes Beispiel."
+      "exampleTranslation": "Gib mir ein konkretes Beispiel.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_189",
       "swedish": "abstrakt",
       "german": "abstrakt",
       "example": "Begreppet är abstrakt.",
-      "exampleTranslation": "Der Begriff ist abstrakt."
+      "exampleTranslation": "Der Begriff ist abstrakt.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_190",
       "swedish": "aktuell",
       "german": "aktuell",
       "example": "Det är en aktuell fråga.",
-      "exampleTranslation": "Das ist eine aktuelle Frage."
+      "exampleTranslation": "Das ist eine aktuelle Frage.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_191",
       "swedish": "grundläggande",
       "german": "grundlegend",
       "example": "Det är ett grundläggande problem.",
-      "exampleTranslation": "Das ist ein grundlegendes Problem."
+      "exampleTranslation": "Das ist ein grundlegendes Problem.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_192",
       "swedish": "avgörande",
       "german": "entscheidend",
       "example": "Det var en avgörande faktor.",
-      "exampleTranslation": "Das war ein entscheidender Faktor."
+      "exampleTranslation": "Das war ein entscheidender Faktor.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_193",
       "swedish": "betydande",
       "german": "bedeutend / erheblich",
       "example": "Det var en betydande förbättring.",
-      "exampleTranslation": "Das war eine erhebliche Verbesserung."
+      "exampleTranslation": "Das war eine erhebliche Verbesserung.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_194",
       "swedish": "måttlig",
       "german": "mäßig / moderat",
       "example": "Prisökningen var måttlig.",
-      "exampleTranslation": "Die Preiserhöhung war moderat."
+      "exampleTranslation": "Die Preiserhöhung war moderat.",
+      "topic": "Kleidung & Mode"
     },
     {
       "id": "b1_195",
       "swedish": "rimlig",
       "german": "vernünftig / angemessen",
       "example": "Det är ett rimligt pris.",
-      "exampleTranslation": "Das ist ein angemessener Preis."
+      "exampleTranslation": "Das ist ein angemessener Preis.",
+      "topic": "Essen & Trinken"
     },
     {
       "id": "b1_196",
       "swedish": "tydlig",
       "german": "deutlich / klar",
       "example": "Instruktionerna är tydliga.",
-      "exampleTranslation": "Die Anweisungen sind klar."
+      "exampleTranslation": "Die Anweisungen sind klar.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_197",
       "swedish": "otydlig",
       "german": "unklar / undeutlich",
       "example": "Reglerna är otydliga.",
-      "exampleTranslation": "Die Regeln sind unklar."
+      "exampleTranslation": "Die Regeln sind unklar.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_198",
       "swedish": "beroende",
       "german": "abhängig",
       "example": "Resultatet är beroende av insatsen.",
-      "exampleTranslation": "Das Ergebnis ist abhängig vom Einsatz."
+      "exampleTranslation": "Das Ergebnis ist abhängig vom Einsatz.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_199",
       "swedish": "oberoende",
       "german": "unabhängig",
       "example": "Domstolen ska vara oberoende.",
-      "exampleTranslation": "Das Gericht soll unabhängig sein."
+      "exampleTranslation": "Das Gericht soll unabhängig sein.",
+      "topic": "Alltag"
     },
     {
       "id": "b1_200",
       "swedish": "rättvis",
       "german": "gerecht / fair",
       "example": "Vi vill ha ett rättvist samhälle.",
-      "exampleTranslation": "Wir wollen eine gerechte Gesellschaft."
+      "exampleTranslation": "Wir wollen eine gerechte Gesellschaft.",
+      "topic": "Gesellschaft & Politik"
     }
   ]
 }
