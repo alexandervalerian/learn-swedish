@@ -36,6 +36,10 @@ function resolveIds(ids: string[]) {
   return ids.map(id => filteredWords.value.find(w => w.id === id)!).filter(Boolean)
 }
 
+const PREVIEW_KEY = 'swedish_show_preview'
+const previewEnabled = ref(false)
+const inPreview = ref(false)
+
 type LearnMode = 'sv-de' | 'de-sv' | 'listen'
 const MODE_KEY = 'swedish_mode'
 const mode = ref<LearnMode>('de-sv')
@@ -76,9 +80,11 @@ function startSession() {
     reviewedCount.value = 0
     done.value = combined.length === 0
   }
+  inPreview.value = previewEnabled.value && queue.value.length > 0 && !done.value
 }
 
 onMounted(() => {
+  previewEnabled.value = localStorage.getItem(PREVIEW_KEY) === 'true'
   const saved = localStorage.getItem(MODE_KEY)
   if (saved === 'de-sv' || saved === 'listen') mode.value = saved
   startSession()
@@ -238,6 +244,24 @@ function onRate(rating: Rating) {
           Zurück zur Übersicht
         </NuxtLink>
       </div>
+    </div>
+
+    <!-- Word preview table -->
+    <div v-else-if="inPreview" class="flex flex-col" style="min-height: calc(100dvh - 180px)">
+      <p class="text-sm text-ink-secondary mb-4">{{ queue.length }} Wörter in dieser Session:</p>
+      <div class="card overflow-hidden divide-y divide-surface-inset flex-1 overflow-y-auto mb-4">
+        <div
+          v-for="word in queue"
+          :key="word.id"
+          class="px-4 py-3 flex items-center justify-between gap-3"
+        >
+          <span class="font-semibold text-ink-primary">{{ word.swedish }}</span>
+          <span class="text-ink-secondary text-sm">{{ word.german }}</span>
+        </div>
+      </div>
+      <button class="btn-primary w-full" @click="inPreview = false">
+        Los geht's
+      </button>
     </div>
 
     <!-- Flash card -->

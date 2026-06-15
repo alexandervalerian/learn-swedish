@@ -31,6 +31,10 @@ const PREFIX_KEY = 'swedish_require_prefix'
 const requirePrefix = ref<boolean>(localStorage.getItem(PREFIX_KEY) !== 'false')
 watch(requirePrefix, v => localStorage.setItem(PREFIX_KEY, String(v)))
 
+const PREVIEW_KEY = 'swedish_show_preview'
+const showWordPreview = ref<boolean>(localStorage.getItem(PREVIEW_KEY) === 'true')
+watch(showWordPreview, v => localStorage.setItem(PREVIEW_KEY, String(v)))
+
 const learnModes: { value: LearnMode; label: string }[] = [
   { value: 'sv-de', label: 'SV → DE' },
   { value: 'de-sv', label: 'DE → SV' },
@@ -213,6 +217,24 @@ const totalStats = computed(() => {
           <span
             class="inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform"
             :class="requirePrefix ? 'translate-x-6' : 'translate-x-1'"
+          />
+        </button>
+      </div>
+
+      <!-- Word preview -->
+      <div class="px-4 py-4 flex items-center justify-between gap-3">
+        <div>
+          <p class="text-sm font-medium text-ink-primary">Wörterliste vor dem Lernen</p>
+          <p class="text-xs text-ink-tertiary">Alle Wörter der Session zuerst ansehen</p>
+        </div>
+        <button
+          class="relative inline-flex h-6 w-11 items-center rounded-full transition-colors"
+          :class="showWordPreview ? 'bg-brand' : 'bg-surface-inset border border-surface-border'"
+          @click="showWordPreview = !showWordPreview"
+        >
+          <span
+            class="inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform"
+            :class="showWordPreview ? 'translate-x-6' : 'translate-x-1'"
           />
         </button>
       </div>
