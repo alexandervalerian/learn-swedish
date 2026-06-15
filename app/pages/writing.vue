@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { LEVEL_ORDER, type CefrLevel } from '~/stores/user'
+import { getTodayTopic } from '~/utils/topics'
 
 const userStore = useUserStore()
 const writingStore = useWritingStore()
@@ -8,8 +9,9 @@ const currentLevel = computed<CefrLevel>(() =>
   (LEVEL_ORDER as readonly CefrLevel[]).findLast(l => userStore.isLevelUnlocked(l)) ?? userStore.startingLevel
 )
 
-const task = computed(() => writingStore.getTodayTask(currentLevel.value))
-const isTodayDone = computed(() => writingStore.isTodayDone(currentLevel.value))
+const todayTopic = getTodayTopic()
+const task = computed(() => writingStore.getTodayTask(currentLevel.value, todayTopic))
+const isTodayDone = computed(() => writingStore.isTodayDone(currentLevel.value, todayTopic))
 
 const phase = ref<'write' | 'submitted'>(isTodayDone.value ? 'submitted' : 'write')
 const copied = ref(false)

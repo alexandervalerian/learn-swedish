@@ -7,6 +7,7 @@ const STORAGE_KEY = 'swedish_writing'
 
 export interface WritingTask {
   id: string
+  topic?: string
   title: string
   prompt: string
   minWords: number
@@ -54,13 +55,17 @@ export const useWritingStore = defineStore('writing', () => {
     return daysSinceEpoch(today()) % pool.length
   }
 
-  function getTodayTask(level: CefrLevel): WritingTask {
+  function getTodayTask(level: CefrLevel, topic?: string): WritingTask {
     const pool = (tasksData as Record<string, WritingTask[]>)[level]
+    if (topic) {
+      const match = pool.find(t => t.topic === topic)
+      if (match) return match
+    }
     return pool[getTodayTaskIndex(level)]!
   }
 
-  function isTodayDone(level: CefrLevel): boolean {
-    const task = getTodayTask(level)
+  function isTodayDone(level: CefrLevel, topic?: string): boolean {
+    const task = getTodayTask(level, topic)
     return entries.value[task.id]?.date === today()
   }
 

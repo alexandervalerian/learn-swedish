@@ -15,8 +15,8 @@ const writingStore = useWritingStore()
 const currentWritingLevel = computed<CefrLevel>(() =>
   (LEVEL_ORDER as readonly CefrLevel[]).findLast(l => userStore.isLevelUnlocked(l)) ?? userStore.startingLevel
 )
-const todayWritingTask = computed(() => writingStore.getTodayTask(currentWritingLevel.value))
-const writingDone = computed(() => writingStore.isTodayDone(currentWritingLevel.value))
+const todayWritingTask = computed(() => writingStore.getTodayTask(currentWritingLevel.value, todayTopic.value))
+const writingDone = computed(() => writingStore.isTodayDone(currentWritingLevel.value, todayTopic.value))
 
 const levels = [
   { data: a1, ...LEVEL_META.A1 },
