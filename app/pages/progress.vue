@@ -32,7 +32,7 @@ const requirePrefix = ref<boolean>(localStorage.getItem(PREFIX_KEY) !== 'false')
 watch(requirePrefix, v => localStorage.setItem(PREFIX_KEY, String(v)))
 
 const PREVIEW_KEY = 'swedish_show_preview'
-const showWordPreview = ref<boolean>(localStorage.getItem(PREVIEW_KEY) === 'true')
+const showWordPreview = ref<boolean>(localStorage.getItem(PREVIEW_KEY) !== 'false')
 watch(showWordPreview, v => localStorage.setItem(PREVIEW_KEY, String(v)))
 
 const learnModes: { value: LearnMode; label: string }[] = [

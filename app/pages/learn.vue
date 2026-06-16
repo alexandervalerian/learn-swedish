@@ -48,6 +48,7 @@ const listenMode = computed(() => mode.value === 'listen')
 const autoPlay = computed(() => mode.value === 'listen')
 
 const queue = ref<typeof allWords>([])
+const sortedQueue = computed(() => [...queue.value].sort((a, b) => a.german.localeCompare(b.german)))
 const currentIndex = ref(0)
 const reviewedCount = ref(0)
 const done = ref(false)
@@ -84,7 +85,7 @@ function startSession() {
 }
 
 onMounted(() => {
-  previewEnabled.value = localStorage.getItem(PREVIEW_KEY) === 'true'
+  previewEnabled.value = localStorage.getItem(PREVIEW_KEY) !== 'false'
   const saved = localStorage.getItem(MODE_KEY)
   if (saved === 'de-sv' || saved === 'listen') mode.value = saved
   startSession()
@@ -251,12 +252,12 @@ function onRate(rating: Rating) {
       <p class="text-sm text-ink-secondary mb-4">{{ queue.length }} Wörter in dieser Session:</p>
       <div class="card overflow-hidden divide-y divide-surface-inset flex-1 overflow-y-auto mb-4">
         <div
-          v-for="word in queue"
+          v-for="word in sortedQueue"
           :key="word.id"
           class="px-4 py-3 flex items-center justify-between gap-3"
         >
-          <span class="font-semibold text-ink-primary">{{ word.swedish }}</span>
-          <span class="text-ink-secondary text-sm">{{ word.german }}</span>
+          <span class="font-semibold text-ink-primary">{{ word.german }}</span>
+          <span class="text-ink-secondary text-sm">{{ word.swedish }}</span>
         </div>
       </div>
       <button class="btn-primary w-full" @click="inPreview = false">
